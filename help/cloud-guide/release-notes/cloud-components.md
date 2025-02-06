@@ -2,9 +2,10 @@
 title: Componentes de nube para Commerce
 description: Consulte la lista de las mejoras más recientes en el paquete de componentes en la nube.
 recommendations: noDisplay, catalog
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 34aec593-e2ea-4060-a6b9-6f4cb95a11c0
+source-git-commit: 33f89e5c9af7c172ad0592b61343e285b456fc1a
 workflow-type: tm+mt
-source-wordcount: '590'
+source-wordcount: '618'
 ht-degree: 0%
 
 ---
@@ -22,7 +23,16 @@ Las notas de la versión incluyen:
 
 <!--Add release notes below-->
 
-## Versión 1.1.0 {#latest}
+## Versión 1.1.1 {#latest}
+
+
+Fecha de publicación: 6 de febrero de 2025
+
+- ![nuevo icono](../../assets/new.svg) **PHP 8.4**—Se agregó compatibilidad con PHP 8.4.<!-- MCLOUD-13148	 - -->
+- ![icono de corrección](../../assets/fix.svg) **Corrección para el calentamiento de la caché**—Se ha corregido un problema con las direcciones URL de categoría durante el calentamiento de la caché.<!-- MCLOUD-12454 - -->
+
+
+## Versión 1.1.0
 
 Fecha de la versión: 7 de octubre de 2024
 
