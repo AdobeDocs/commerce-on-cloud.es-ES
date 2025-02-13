@@ -4,9 +4,9 @@ description: Consulte la lista de las mejoras más recientes del paquete Parches
 recommendations: noDisplay, catalog
 last-substantial-update: 2025-02-06T00:00:00Z
 exl-id: a4454ebc-72a4-42c1-b591-6237c97fe913
-source-git-commit: 33f89e5c9af7c172ad0592b61343e285b456fc1a
+source-git-commit: 4c8da3e40561a43674906cdf7f461bbcb1066c30
 workflow-type: tm+mt
-source-wordcount: '2326'
+source-wordcount: '2347'
 ht-degree: 0%
 
 ---
@@ -29,14 +29,17 @@ El paquete `magento/magento-cloud-patches` usa la siguiente secuencia de version
 
 <!--Add release notes below-->
 
-## Versión 1.1.3 {#latest}
+## Versión 1.1.4 {#latest}
 
+Fecha de publicación: 13 de febrero de 2025
+
+- ![nuevo icono](../../assets/new.svg) **Se ha agregado un parche para Commerce 2.4.4 a 2.4.7**—Esta actualización revisa [CVE-2025-24434](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-08).<!-- MCLOUD-13240	 - -->
+
+## Versión 1.1.3
 
 Fecha de publicación: 6 de febrero de 2025
 
 - ![nuevo icono](../../assets/new.svg) **PHP 8.4**—Se agregó compatibilidad con PHP 8.4.<!-- MCLOUD-13149	 - -->
-
-
 
 ## Versión 1.1.2
 
@@ -124,9 +127,9 @@ Fecha de lanzamiento: 11 de agosto de 2022
 
 Parche crítico para Adobe Commerce 2.4.5:
 
-- **Problema con pedidos que utilizan pagos de Braintree**: este parche resuelve un problema crítico que impide a los administradores realizar nuevos pedidos o repedidos.<!-- MCLOUD-9137 -->
+- **Problema con pedidos que utilizan Braintree payments**: este parche resuelve un problema crítico que impide a los administradores realizar nuevos pedidos o repedidos.<!-- MCLOUD-9137 -->
 
-Ver [El administrador no puede crear un pedido/repedido cuando el pago del Braintree está habilitado](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/admin-cant-create-order-reorder-when-braintree-payment-enabled.html).
+Ver [El administrador no puede crear un pedido/repedido cuando el pago de Braintree está habilitado](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/admin-cant-create-order-reorder-when-braintree-payment-enabled.html).
 
 ## Versión 1.0.17
 
@@ -142,7 +145,7 @@ Parche crítico para Adobe Commerce 2.3.3-p1 y versiones posteriores:
 
 Se han actualizado los parches para resolver una vulnerabilidad **critical** que provoca la ejecución de código remoto no autenticado.<!-- MCLOUD-8479 -->
 
-Consulte [Boletín de seguridad del Adobe APSB22-12](https://helpx.adobe.com/security/products/magento/apsb22-12.html).
+Consulte [Boletín de seguridad de Adobe APSB22-12](https://helpx.adobe.com/security/products/magento/apsb22-12.html).
 
 ## Versión 1.0.15
 
@@ -159,7 +162,7 @@ Parche crítico para Adobe Commerce 2.3.3-p1 y versiones posteriores:
 
 Se ha agregado un parche para resolver una vulnerabilidad **critical** que da como resultado la ejecución de código remoto no autenticado.<!-- MCLOUD-8461 -->
 
-Consulte [Boletín de seguridad del Adobe APSB22-12](https://helpx.adobe.com/security/products/magento/apsb22-12.html).
+Consulte [Boletín de seguridad de Adobe APSB22-12](https://helpx.adobe.com/security/products/magento/apsb22-12.html).
 
 ## Versión 1.0.13
 
@@ -216,7 +219,7 @@ Fecha de la versión: 14 de octubre de 2020
 
 - **Revisiones de Redis para Adobe Commerce 2.3.0 a 2.3.5, 2.4.0**: se han actualizado las revisiones de Redis para admitir la adición de productos a una categoría al implementar una caché de nivel 2. <!--MCLOUD-6659-->
 
-- **Parche de VBE de Braintree**: corrige un problema que generaba un error cuando un administrador intentaba ver un informe de liquidación de Braintree. <!--MCLOUD-6684-->
+- **Parche de Braintree VBE**: corrige un problema que generaba un error cuando un administrador intentaba ver un informe de liquidación de Braintree. <!--MCLOUD-6684-->
 
 - Ahora, el comando `ece-patches apply` usa el comando Unix `patch` para aplicar parches si Git no está disponible en el sistema host. <!--MCLOUD-7069-->
 
@@ -261,9 +264,9 @@ Fecha de la versión: 12 de mayo de 2020
 
 - **Mejora del rendimiento del sitio**: corrige un problema de rendimiento con la función `Magento\Framework\App\DeploymentConfig\Reader::load`, que periódicamente experimentaba largos tiempos de carga que afectaban al rendimiento del sitio. <!--MCLOUD-5650-->
 
-- Se ha actualizado la asignación de parches para los parches de método de pago con el fin de que se dirijan a los módulos de pago en lugar del paquete base de Magento (base de magento/magento2), de modo que los parches de pago se apliquen únicamente si existen los módulos de pago.<!--MCLOUD-5666-->
+- Se ha actualizado la asignación de parches para los parches de métodos de pago con el fin de que se dirijan a los módulos de pago en lugar del paquete base de Magento (base de magento/magento2), de modo que los parches de pago se apliquen únicamente si existen los módulos de pago.<!--MCLOUD-5666-->
 
-- Se han actualizado los parches para comprobar la compatibilidad con el Magento Open Source.<!--MCLOUD-5701-->
+- Se han actualizado los parches para la compatibilidad con Magento Open Source.<!--MCLOUD-5701-->
 
 ## Versión 1.0.3
 
@@ -287,7 +290,7 @@ Esta versión de incluye las siguientes revisiones y correcciones críticas:
 
 - **Corrección de implementación de aplicación**: se agregó un parche para corregir un problema que deshabilitaba la caché de página completa durante el proceso de implementación. Este parche se aplica a Adobe Commerce 2.3.2 y versiones posteriores.
 
-- **Parámetro de ámbito para API asincrónica/masiva**: se ha actualizado este parche para corregir un error de sintaxis en el archivo `composer.json`. Este parche se aplica al Magento Open Source 2.3.1 y 2.3.2. Consulte la descripción completa del parche en la página de descarga del parche.
+- **Parámetro de ámbito para API asincrónica/masiva**: se ha actualizado este parche para corregir un error de sintaxis en el archivo `composer.json`. Este parche se aplica a Magento Open Source 2.3.1 y 2.3.2. Consulte la descripción completa del parche en la página de descarga del parche.
 
 ## Versión 1.0.1
 
@@ -305,7 +308,7 @@ Esta versión de incluye las siguientes revisiones y correcciones críticas:
 
 - **Se ha actualizado `magento/magento-cloud-patches` para incluir todos los parches disponibles para Magento Open Source 2.x**—Se ha actualizado el paquete magento/magento-cloud-patches para incluir todos los parches de Magento Open Source 2.x disponibles en la página de descargas de software. Si anteriormente copió parches de Magento Open Source en su proyecto de Adobe Commerce en la nube, quítelos para evitar conflictos.<!--MAGECLOUD-4606-->
 
-- **Corrección de paginación del catálogo del Elasticsearch**: Se ha reemplazado el parche de paginación del catálogo del Elasticsearch entregado en magento/magento-cloud-patches v1.0 con una corrección más eficaz.<!--MAGECLOUD-4847-->
+- **Corrección de paginación del catálogo de Elasticsearch**: Se ha reemplazado el parche de paginación del catálogo de Elasticsearch entregado en magento/magento-cloud-patches v1.0 con una corrección más eficaz.<!--MAGECLOUD-4847-->
 
 - **Parches de Page Builder**: en Parches de Cloud para Commerce 1.0.0, hemos incorporado parches de Page Builder para resolver una vulnerabilidad conocida de ejecución de código remoto (RCE) de Page Builder, con la corrección inicial basada en Adobe Commerce 2.3.3. Hemos actualizado estos parches con una implementación más estable basada en Adobe Commerce 2.3.4., que incluye varias optimizaciones para solucionar el problema.<!--MAGECLOUD-4884-->
 
@@ -325,4 +328,4 @@ Esta versión de incluye las siguientes revisiones y correcciones críticas:
 
 - **Compatibilidad con versiones anteriores de las nuevas interfaces de correo**: corrige un problema de incompatibilidad con versiones anteriores causado por la interfaz PHP `Magento\Framework\Mail\EmailMessageInterface` introducida en Adobe Commerce v2.3.3. En el ámbito de esta revisión, el nuevo `EmailMessageInterface` hereda del antiguo `MessageInterface`, y los módulos principales de Adobe Commerce se revierten para depender de `MessageInterface`.<!--MAGECLOUD-4422-->
 
-- **La paginación del catálogo no funciona en el Elasticsearch 6.x**: corrige un problema crítico con la paginación de resultados de búsqueda que afecta a los clientes que usan el Elasticsearch 6.x como motor de búsqueda del catálogo.<!--MAGECLOUD-4448-->
+- **La paginación del catálogo no funciona en Elasticsearch 6.x**: corrige un problema crítico con la paginación de resultados de búsqueda que afecta a los clientes que usan Elasticsearch 6.x como motor de búsqueda del catálogo.<!--MAGECLOUD-4448-->
