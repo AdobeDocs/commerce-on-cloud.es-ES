@@ -2,9 +2,10 @@
 title: Administración de backup
 description: Obtenga información sobre cómo crear y restaurar manualmente una copia de seguridad para su proyecto de Adobe Commerce en la nube.
 feature: Cloud, Paas, Snapshots, Storage
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: e73a57e7-e56c-42b4-aa7b-2960673a7b68
+source-git-commit: b5fa153b4eb0569fd16c78fb7bf47c54222752cd
 workflow-type: tm+mt
-source-wordcount: '711'
+source-wordcount: '737'
 ht-degree: 0%
 
 ---
@@ -14,6 +15,10 @@ ht-degree: 0%
 Puede realizar una copia de seguridad manual de los entornos de inicio activos en cualquier momento mediante el botón **[!UICONTROL Backup]** en [!DNL Cloud Console] o mediante el comando `magento-cloud snapshot:create`.
 
 Una copia de seguridad de _snapshot_ es una copia de seguridad completa de los datos del entorno que incluye todos los datos persistentes de los servicios en ejecución (base de datos MySQL) y cualquier archivo almacenado en los volúmenes montados (var, pub/media, app/etc). La instantánea _no_ incluye código, ya que el código ya está almacenado en el repositorio basado en Git. No se puede descargar una copia de una instantánea.
+
+>[!WARNING]
+>
+>Mientras que las copias de seguridad normalmente contienen el contenido de directorios montados, incluidos directorios web públicos como `pub/media`, no mueva los archivos de salida de copia de seguridad a directorios web públicos como `pub/media` o `pub/static`.
 
 La función de copia de seguridad/instantánea **no** se aplica a los entornos de ensayo y producción de Pro, que reciben copias de seguridad regulares para la recuperación ante desastres de forma predeterminada. Consulte [Copia de seguridad Pro y recuperación ante desastres](../architecture/pro-architecture.md#backup-and-disaster-recovery) para obtener más información. A diferencia de las copias de seguridad automáticas en los entornos de ensayo y producción de Pro, las copias de seguridad son **no** automáticas. Es _su responsabilidad_ crear manualmente una copia de seguridad o configurar un trabajo cron para crear periódicamente una copia de seguridad de sus entornos de integración de Starter o Pro.
 
