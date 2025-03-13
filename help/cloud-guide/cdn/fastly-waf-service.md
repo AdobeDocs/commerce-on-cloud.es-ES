@@ -2,7 +2,8 @@
 title: Firewall de aplicaciones web (WAF)
 description: Descubra cómo el servicio Fastly WAF detecta, registra y bloquea el tráfico de solicitudes maliciosas antes de que pueda dañar la red o los sitios de Adobe Commerce.
 feature: Cloud, Configuration, Security
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: f00e35f2-9800-4e24-a4d0-d36fde59a003
+source-git-commit: 7e61673b343fb954b53bf7cbae88efaf7bbfab4c
 workflow-type: tm+mt
 source-wordcount: '930'
 ht-degree: 0%
@@ -17,10 +18,10 @@ El servicio WAF ofrece las siguientes ventajas:
 
 - **Cumplimiento de PCI**: la habilitación de WAF garantiza que las tiendas Adobe Commerce en entornos de producción cumplan con los requisitos de seguridad de PCI DSS 6.6.
 - **Directiva predeterminada de WAF**: la directiva predeterminada de WAF, configurada y mantenida por Fastly, proporciona una colección de reglas de seguridad diseñadas para proteger las aplicaciones web de Adobe Commerce de una amplia gama de ataques, incluidos ataques de inyección, entradas malintencionadas, scripts entre sitios, exfiltración de datos, infracciones del protocolo HTTP y otras amenazas de seguridad de [OWASP Top Ten](https://owasp.org/www-project-top-ten/).
-- **Incorporación y habilitación de WAF**: el Adobe implementa y habilita la directiva predeterminada de WAF en su entorno de producción en un plazo de 2 a 3 semanas después de que el aprovisionamiento sea final.
+- **Incorporación y habilitación de WAF**: Adobe implementa y habilita la directiva predeterminada de WAF en su entorno de producción en un plazo de 2 a 3 semanas después de que el aprovisionamiento sea final.
 - **Soporte de operaciones y mantenimiento**—
-   - Configure y administre rápidamente sus registros, reglas y Adobes para el servicio de WAF.
-   - El Adobe clasifica los tickets de asistencia al cliente relacionados con problemas del servicio de WAF que bloquean el tráfico legítimo como problemas de prioridad 1.
+   - Adobe y Fastly configuran y administran sus registros, reglas y alertas para el servicio de WAF.
+   - Adobe clasifica los tickets de asistencia al cliente relacionados con problemas del servicio de WAF que bloquean el tráfico legítimo como problemas de prioridad 1.
    - Las actualizaciones automatizadas de la versión del servicio WAF garantizan una cobertura inmediata para vulnerabilidades nuevas o en evolución. Ver [Mantenimiento y actualizaciones de WAF](#waf-maintenance-and-updates).
 
 >[!TIP]
@@ -29,7 +30,7 @@ El servicio WAF ofrece las siguientes ventajas:
 
 ## Activación de WAF
 
-El Adobe habilita el servicio de WAF en nuevas cuentas en un plazo de 2 a 3 semanas después de que el aprovisionamiento sea final. WAF se implementa mediante el servicio Fastly de CDN. No tiene que instalar ni mantener ningún hardware o software.
+Adobe habilita el servicio WAF en nuevas cuentas en un plazo de 2 a 3 semanas después de que el aprovisionamiento sea final. WAF se implementa mediante el servicio Fastly de CDN. No tiene que instalar ni mantener ningún hardware o software.
 
 >[!NOTE]
 >
@@ -39,7 +40,7 @@ El Adobe habilita el servicio de WAF en nuevas cuentas en un plazo de 2 a 3 sema
 
 El servicio WAF se integra con Fastly y utiliza la lógica de caché dentro del servicio CDN de Fastly para filtrar el tráfico en los nodos globales de Fastly. Habilitamos el servicio WAF en su entorno de producción con una directiva predeterminada de WAF basada en [reglas de ModSecurity de Trustwave SpiderLabs](https://github.com/owasp-modsecurity/ModSecurity) y las diez amenazas de seguridad principales de OWASP.
 
-El servicio WAF inspecciona el tráfico HTTP y HTTPS (solicitudes del GET y del POST) con el conjunto de reglas de WAF y bloquea el tráfico que es malicioso o que no cumple con reglas específicas. El servicio inspecciona únicamente el tráfico enlazado al origen que intenta actualizar la caché. Como resultado, detenemos la mayoría del tráfico de ataques en la caché de Fastly, lo que protege el tráfico de origen de ataques maliciosos. Al procesar únicamente el tráfico de origen, el servicio WAF preserva el rendimiento de la caché e introduce solo una latencia estimada de 1,5 milisegundos a 20 milisegundos en cada solicitud no almacenada en caché.
+El servicio WAF inspecciona el tráfico HTTP y HTTPS (solicitudes GET y POST) con el conjunto de reglas de WAF y bloquea el tráfico que es malicioso o que no cumple con reglas específicas. El servicio inspecciona únicamente el tráfico enlazado al origen que intenta actualizar la caché. Como resultado, detenemos la mayoría del tráfico de ataques en la caché de Fastly, lo que protege el tráfico de origen de ataques maliciosos. Al procesar únicamente el tráfico de origen, el servicio WAF preserva el rendimiento de la caché e introduce solo una latencia estimada de 1,5 milisegundos a 20 milisegundos en cada solicitud no almacenada en caché.
 
 ## Solución de problemas de solicitudes bloqueadas
 
@@ -49,7 +50,7 @@ Cuando el servicio de WAF está habilitado, inspecciona todo el tráfico web y d
 
 Puede personalizar esta página de respuesta de error desde el Administrador. Consulte [Personalizar la página de respuesta de WAF](fastly-custom-response.md#customize-the-waf-error-page).
 
-Si su tienda o página de administración de Adobe Commerce devuelve una página de error `403 Forbidden` en respuesta a una solicitud de URL legítima, envíe un [ticket de asistencia de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket). Copie el ID de referencia de la página de respuesta de error y péguelo en la descripción del ticket.
+Si su tienda o página de administración de Adobe Commerce devuelve una página de error `403 Forbidden` en respuesta a una solicitud de URL legítima, envíe un [ticket de asistencia de Adobe Commerce](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case). Copie el ID de referencia de la página de respuesta de error y péguelo en la descripción del ticket.
 
 Para identificar la respuesta de WAF para una solicitud concreta mediante New Relic, consulte lo siguiente:
 
@@ -60,7 +61,7 @@ Para identificar la respuesta de WAF para una solicitud concreta mediante New Re
 
 Actualiza y despliega rápidamente parches para nuevas CVE/reglas con plantilla en función de actualizaciones de reglas de terceros comerciales, investigación de Fastly y fuentes abiertas. Actualiza rápidamente las reglas publicadas en una directiva según sea necesario o cuando los cambios en las reglas están disponibles en sus respectivas fuentes. Además, puede agregar rápidamente reglas que coincidan con las clases de reglas publicadas en la instancia de WAF de cualquier servicio después de habilitar el servicio de WAF. Estas actualizaciones garantizan una cobertura inmediata para las vulnerabilidades nuevas o en evolución.
 
-Guarde en Adobe y administre rápidamente el proceso de actualización para asegurarse de que las reglas de WAF nuevas o modificadas funcionen correctamente en el entorno de producción antes de que las actualizaciones se implementen en modo de bloqueo.
+Adobe y Fastly administran el proceso de actualización para garantizar que las reglas de WAF nuevas o modificadas funcionen correctamente en el entorno de producción antes de que las actualizaciones se implementen en modo de bloqueo.
 
 ## Problemas
 
