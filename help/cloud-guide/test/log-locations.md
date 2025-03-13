@@ -2,7 +2,8 @@
 title: Visualización y administración de registros
 description: Comprenda los tipos de archivos de registro disponibles en la infraestructura de la nube y dónde encontrarlos.
 last-substantial-update: 2023-05-23T00:00:00Z
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: f0bb8830-8010-4764-ac23-d63d62dc0117
+source-git-commit: 7615347cd5b528406c2a0e72be3450350655eeb9
 workflow-type: tm+mt
 source-wordcount: '1083'
 ht-degree: 0%
@@ -111,7 +112,7 @@ Re-deploying environment project-integration-ID
 
 >[!TIP]
 >
->Al configurar su entorno de nube, puede configurar [notificaciones por correo electrónico y Slack basadas en registros](../environment/set-up-notifications.md) para acciones de compilación e implementación.
+>Al configurar su entorno de nube, puede configurar [notificaciones de correo electrónico y Slack basadas en registros](../environment/set-up-notifications.md) para acciones de compilación e implementación.
 
 Los siguientes registros tienen una ubicación común para todos los proyectos en la nube:
 
@@ -208,13 +209,13 @@ Para los entornos de ensayo y producción Pro, los registros de implementación,
 
 | Archivo de registro | Ensayo profesional | Producción profesional |
 | ------------------- | --------------------------------------------------- | ----------------------------------------------- |
-| **Implementar registro** | Solo el primer nodo: <br>`/var/log/platform/<project-ID>_stg/deploy.log` | Solo el primer nodo: <br>`/var/log/platform/<project-ID>/deploy.log` |
-| **Registro posterior a la implementación** | Solo el primer nodo: <br>`/var/log/platform/<project-ID>_stg/post_deploy.log` | Solo el primer nodo: <br>`/var/log/platform/<project-ID>/post_deploy.log` |
-| **Registro Cron** | Solo el primer nodo: <br>`/var/log/platform/<project-ID>_stg/cron.log` | Solo el primer nodo: <br>`/var/log/platform/<project-ID>/cron.log` |
-| **Registro de acceso de Nginx** | `/var/log/platform/<project-ID>_stg/access.log` | `/var/log/platform/<project-ID>/access.log` |
-| **Registro de errores Nginx** | `/var/log/platform/<project-ID>_stg/error.log` | `/var/log/platform/<project-ID>/error.log` |
-| **Registro de acceso de PHP** | `/var/log/platform/<project-ID>_stg/php.access.log` | `/var/log/platform/<project-ID>/php.access.log` |
-| **Registro FPM de PHP** | `/var/log/platform/<project-ID>_stg/php5-fpm.log` | `/var/log/platform/<project-ID>/php5-fpm.log` |
+| **Implementar registro** | Solo el primer nodo: <br>`/var/log/platform/<project-ID>_stg*/deploy.log` | Solo el primer nodo: <br>`/var/log/platform/<project-ID>/deploy.log` |
+| **Registro posterior a la implementación** | Solo el primer nodo: <br>`/var/log/platform/<project-ID>_stg*/post_deploy.log` | Solo el primer nodo: <br>`/var/log/platform/<project-ID>/post_deploy.log` |
+| **Registro Cron** | Solo el primer nodo: <br>`/var/log/platform/<project-ID>_stg*/cron.log` | Solo el primer nodo: <br>`/var/log/platform/<project-ID>/cron.log` |
+| **Registro de acceso de Nginx** | `/var/log/platform/<project-ID>_stg*/access.log` | `/var/log/platform/<project-ID>/access.log` |
+| **Registro de errores Nginx** | `/var/log/platform/<project-ID>_stg*/error.log` | `/var/log/platform/<project-ID>/error.log` |
+| **Registro de acceso de PHP** | `/var/log/platform/<project-ID>_stg*/php.access.log` | `/var/log/platform/<project-ID>/php.access.log` |
+| **Registro FPM de PHP** | `/var/log/platform/<project-ID>_stg*/php5-fpm.log` | `/var/log/platform/<project-ID>/php5-fpm.log` |
 
 ### Archivos de registro archivados
 
@@ -234,8 +235,8 @@ Los archivos de registro archivados siempre se almacenan en el directorio en el 
 
 Dado que cada servicio se ejecuta en un contenedor independiente, los registros del servicio no están disponibles en el entorno de integración. Adobe Commerce en la infraestructura en la nube proporciona acceso al contenedor del servidor web solo en el entorno de integración. Las siguientes ubicaciones de registro de servicio son para los entornos de ensayo y producción de Pro:
 
-- **Registro de redis**: `/var/log/platform/<project-ID>_stg/redis-server-<project-ID>_stg.log`
-- **registro de Elasticsearch**: `/var/log/elasticsearch/elasticsearch.log`
+- **Registro de redis**: `/var/log/platform/<project-ID>*/redis-server-<project-ID>*.log`
+- **Registro de Elasticsearch**: `/var/log/elasticsearch/elasticsearch.log`
 - **Registro de recolección de elementos no utilizados de Java**: `/var/log/elasticsearch/gc.log`
 - **Registro de correo**: `/var/log/mail.log`
 - **Registro de errores de MySQL**: `/var/log/mysql/mysql-error.log`
