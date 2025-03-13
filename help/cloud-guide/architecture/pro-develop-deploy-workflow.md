@@ -2,9 +2,10 @@
 title: Flujo de trabajo de proyecto profesional
 description: Aprenda a utilizar los flujos de trabajo de desarrollo e implementación de Pro.
 feature: Cloud, Iaas, Paas
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: efe41991-8940-4d5c-a720-80369274bee3
+source-git-commit: b4905acf71e4cb71eb369cb6d4bb3abe9ada4e9d
 workflow-type: tm+mt
-source-wordcount: '782'
+source-wordcount: '800'
 ht-degree: 0%
 
 ---
@@ -27,7 +28,7 @@ El siguiente gráfico muestra el flujo de trabajo de desarrollo e implementació
 
 ## Flujo de trabajo de desarrollo
 
-El entorno de integración proporciona una sola rama `integration` base que contiene su Adobe Commerce en el código de infraestructura de la nube. Puede crear una rama de entorno activa adicional. Esto permite implementar hasta dos ramas activas en contenedores de Platform as a service (PaaS). No hay límite en el número de entornos inactivos.
+El entorno de integración proporciona una sola rama `integration` base que contiene su Adobe Commerce en el código de infraestructura de la nube. Puede crear una rama de entorno activa adicional. Esto permite implementar hasta dos ramas activas en contenedores de Platform as a service (PaaS). No hay límite en el número de entornos inactivos, sin embargo, cuantos más entornos inactivos haya, más tardará la consola de Cloud en cargarse.
 
 {{enhanced-integration-envs}}
 
