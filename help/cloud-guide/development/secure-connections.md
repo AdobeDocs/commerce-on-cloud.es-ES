@@ -4,16 +4,17 @@ description: Aprenda a aplicar claves SSH a su proyecto de infraestructura de Ad
 role: Developer
 feature: Cloud, Security
 topic: Security
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 73af13d8-7085-4ac8-9cfe-9772bc6bc112
+source-git-commit: c25e5b74ae8105995107860246ecb9ba45910bb1
 workflow-type: tm+mt
-source-wordcount: '976'
+source-wordcount: '979'
 ht-degree: 0%
 
 ---
 
 # Conexiones seguras a entornos remotos
 
-Secure Shell (SSH) es un protocolo común que se utiliza para iniciar sesión de forma segura en servidores y sistemas remotos. Puede utilizar SSH para acceder a sus entornos remotos para administrar la aplicación de Adobe Commerce y acceder a los registros de entornos remotos. El Adobe solo admite conexiones FTP seguras (sFTP) mediante la clave pública SSH. No se admiten conexiones FTP.
+Secure Shell (SSH) es un protocolo común que se utiliza para iniciar sesión de forma segura en servidores y sistemas remotos. Puede utilizar SSH para acceder a sus entornos remotos para administrar la aplicación de Adobe Commerce y acceder a los registros de entornos remotos. Adobe solo admite conexiones FTP seguras (sFTP) mediante la clave pública SSH. No se admiten conexiones FTP.
 
 ## Generar un par de claves SSH
 
@@ -28,7 +29,7 @@ Cree un par de claves SSH en cada equipo y espacio de trabajo que requiera acces
 
 ## Añada una clave pública SSH a su cuenta
 
-Después de añadir la clave pública SSH a la cuenta de Adobe Commerce en la nube, vuelva a implementar todos los entornos activos de la cuenta para instalar la clave.
+Después de agregar o actualizar la clave pública SSH a su cuenta de Adobe Commerce en la nube, [vuelva a implementar todos los entornos activos](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-reference#environmentredeploy) en su cuenta para instalar la clave.
 
 Puede agregar claves SSH a su cuenta mediante uno de los siguientes métodos: CLI de nube o [!DNL Cloud Console].
 
