@@ -2,9 +2,10 @@
 title: Configuración de PHP
 description: Obtenga información sobre la configuración óptima de PHP para la configuración de aplicaciones de Commerce en la infraestructura en la nube.
 feature: Cloud, Configuration, Extensions
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 83094c16-7407-41fa-ba1c-46b206aa160d
+source-git-commit: 1725741cfab62a2791fe95cfae9ed9dffa352339
 workflow-type: tm+mt
-source-wordcount: '536'
+source-wordcount: '537'
 ht-degree: 0%
 
 ---
@@ -66,10 +67,16 @@ Estos ajustes permiten a los procesos de PHP almacenar en caché las rutas a los
 
 ### Compruebe la configuración personalizada de PHP
 
-Después de insertar los cambios de `php.ini` en su entorno de nube, puede comprobar que la configuración personalizada de PHP se haya agregado a su entorno. Por ejemplo, utilice SSH para iniciar sesión en el entorno remoto y ver el archivo con algo similar a lo siguiente:
+Después de insertar los cambios de `php.ini` en su entorno de nube, puede comprobar que la configuración personalizada de PHP se haya agregado a su entorno. Por ejemplo, use SSH para iniciar sesión en el entorno remoto, mostrar la información de configuración de PHP y filtrar por la directiva `register_argc_argv`:
 
 ```bash
-cat /etc/php/<php-version>/fpm/php.ini
+php -i | grep register_argc_ar
+```
+
+Salida de ejemplo:
+
+```text
+register_argc_argv => On => On
 ```
 
 >[!WARNING]
