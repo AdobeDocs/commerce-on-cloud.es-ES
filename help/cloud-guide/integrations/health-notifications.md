@@ -2,9 +2,10 @@
 title: Notificaciones de estado
 description: Obtenga información sobre cómo configurar las notificaciones de Slack, correo electrónico y PagerDuty para el uso del espacio en disco en su proyecto de Adobe Commerce en la nube.
 feature: Cloud, Observability, Integration
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 5a7f37e9-e8f9-4b6b-b628-60dcaa60cc64
+source-git-commit: c3c708656e3d79c0893d1c02e60dcdf2ad8d7c7c
 workflow-type: tm+mt
-source-wordcount: '312'
+source-wordcount: '370'
 ht-degree: 0%
 
 ---
@@ -29,9 +30,9 @@ La integración del correo electrónico de mantenimiento requiere una dirección
 magento-cloud integration:add --type health.email --from-address you@example.com --recipients them@example.com --recipients others@example.com
 ```
 
-## Notificaciones del canal del Slack
+## Notificaciones del canal de Slack
 
-Slack es un servicio externo que utiliza aplicaciones interactivas denominadas bots para publicar mensajes en una sala de chat. Para poder recibir notificaciones de mantenimiento en Slack, debe crear un [usuario de bots](https://api.slack.com/bot-users) personalizado para el grupo de Slack. Después de configurar el usuario del bot para el canal o los canales, guarde el [token de bot](https://api.slack.com/docs/token-types#bot) proporcionado por el Slack para registrar la integración. El siguiente ejemplo registra las notificaciones de mantenimiento en un canal de Slack:
+Slack es un servicio externo que utiliza aplicaciones interactivas denominadas bots para publicar mensajes en una sala de chat. Para poder recibir notificaciones de mantenimiento en Slack, debes crear un [usuario de bots](https://api.slack.com/bot-users) personalizado para tu grupo de Slack. Después de configurar el usuario del bot para el canal o los canales, guarde el [token de bot](https://api.slack.com/docs/token-types#bot) proporcionado por Slack para registrar la integración. El siguiente ejemplo registra las notificaciones de estado en un canal de Slack:
 
 ```bash
 magento-cloud integration:add --type health.slack --token SLACK_BOT_TOKEN --channel '#slack-channel-name'
@@ -44,3 +45,13 @@ PagerDuty es un servicio externo que puede notificar a los miembros del equipo d
 ```bash
 magento-cloud integration:add --type health.pagerduty --routing-key PAGERDUTY_ROUTING_KEY
 ```
+
+## Administración de registros
+
+Para aumentar el espacio disponible en disco, puede truncar o quitar archivos de registro de su entorno. Si logrotate está habilitado, descargue primero una copia de seguridad de los registros y, a continuación, elimínelos:
+
+```bash
+rm -rf some-log-file.log.gz
+```
+
+Como alternativa, puede truncar archivos de registro individuales para reducir su tamaño. Para ver un ejemplo detallado del truncamiento de archivos de registro, vea el tutorial de vídeo Truncar archivos de registro {target="_blank"}.
