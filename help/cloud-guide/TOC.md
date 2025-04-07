@@ -3,10 +3,10 @@ user-guide-title: Guía de Commerce en la nube
 user-guide-description: Aprenda a administrar la aplicación de Adobe Commerce en la infraestructura en la nube.
 product: magento
 feature: Cloud
-source-git-commit: 4e107bb8696c3c7cb76a0a702624aeb754648f70
+source-git-commit: fd7879e8f3c9e1965cf4aa3d99824e577971529d
 workflow-type: tm+mt
-source-wordcount: '356'
-ht-degree: 6%
+source-wordcount: '357'
+ht-degree: 7%
 
 ---
 
@@ -136,6 +136,7 @@ ht-degree: 6%
       + [OpenSearch](services/opensearch.md)
       + [RabbitMQ](services/rabbitmq.md)
       + [Redis](services/redis.md)
+      + [Valkey](services/valkey.md)
 + Servicios rápidos {#cdn}
    + [Información general](cdn/fastly.md)
    + Configurar rápidamente {#setup-fastly}
