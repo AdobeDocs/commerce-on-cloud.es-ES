@@ -2,11 +2,11 @@
 title: Notas de la versión de ECE-Tools
 description: Vea una lista de las mejoras más recientes del paquete ECE-Tools.
 recommendations: noDisplay, catalog
-last-substantial-update: 2024-04-03T00:00:00Z
+last-substantial-update: 2024-04-07T00:00:00Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
-source-git-commit: 3d5c84890f48a26938b42783b591b876fd2a2fd1
+source-git-commit: 2522e606aebac79285793cd40428d3e064a3c1db
 workflow-type: tm+mt
-source-wordcount: '3059'
+source-wordcount: '3065'
 ht-degree: 0%
 
 ---
@@ -30,17 +30,17 @@ Las notas de la versión incluyen:
 
 ## v2002.2.2 {#latest}
 
-Fecha de publicación: 3 de abril de 2025
+Fecha de publicación: 7 de abril de 2025
 
-- ![nuevo icono](../../assets/new.svg) **Valkey**—Se agregó compatibilidad con un nuevo servicio (Valkey), que reemplaza a Redis.<!-- MCLOUD-13455	 - -->
-- ![Icono de corrección](../../assets/fix.svg) **Opensearch2 para 2.4.4/2.4.5**—Se ha agregado compatibilidad con `opensearch2` en las versiones de Adobe Commerce 2.4.4/2.4.5. <!-- MCLOUD-13493	 - -->
+- ![nuevo icono](../../assets/new.svg) **Valkey**—Se agregó compatibilidad con un nuevo servicio (Valkey), que reemplaza a Redis.&lt;!— MCLOUD-13455 —>
+- ![Icono de corrección](../../assets/fix.svg) **Opensearch2 para 2.4.4/2.4.5**—Se ha agregado compatibilidad con `opensearch2` en las versiones de Adobe Commerce 2.4.4/2.4.5. &lt;!— MCLOUD-13493 —>
 
 ## v2002.2.1
 
 Fecha de publicación: 6 de febrero de 2024
 
-- ![nuevo icono](../../assets/new.svg) **PHP 8.4**—Se agregó compatibilidad con PHP 8.4.<!-- MCLOUD-13145	 - -->
-- ![Icono de corrección](../../assets/fix.svg) **Validador para Opensearch**: se ha corregido el validador que generaba un mensaje engañoso acerca de la versión incorrecta del servicio.<!-- MCLOUD-13184	 - -->
+- ![nuevo icono](../../assets/new.svg) **PHP 8.4**—Se agregó compatibilidad con PHP 8.4.<!-- MCLOUD-13145     - -->
+- ![Icono de corrección](../../assets/fix.svg) **Validador para Opensearch**: se ha corregido el validador que generaba un mensaje engañoso acerca de la versión incorrecta del servicio.&lt;!— MCLOUD-13184 —>
 
 
 ## v2002.2.0
