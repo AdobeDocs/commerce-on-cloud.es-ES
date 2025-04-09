@@ -2,7 +2,8 @@
 title: Propiedades
 description: Utilice la lista de propiedades como referencia al configurar la aplicación  [!DNL Commerce] para compilarla e implementarla en la infraestructura de la nube.
 feature: Cloud, Configuration, Build, Deploy, Roles/Permissions, Storage
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 32bd1f64-43d6-48a3-84b7-bea22f125bb0
+source-git-commit: 1cea1cdebf3aba2a1b43f305a61ca6b55e3b9d08
 workflow-type: tm+mt
 source-wordcount: '816'
 ht-degree: 0%
@@ -54,7 +55,7 @@ La propiedad `build` determina qué sucede de forma predeterminada al crear el p
 
 ```yaml
 # The toolstack used to build the application.
-type: php:8.3
+type: php:8.4
 build:
     flavor: none
 
@@ -135,7 +136,7 @@ Define el tamaño del disco persistente de la aplicación en MB.
 disk: 5120
 ```
 
-El tamaño mínimo de disco recomendado es de 256 MB. Si ve el error `UserError: Error building the project: Disk size may not be smaller than 128MB`, aumente el tamaño a 256 MB.
+El tamaño de disco mínimo recomendado es 256 MB. Si ve el error `UserError: Error building the project: Disk size may not be smaller than 128MB`, aumente el tamaño a 256 MB.
 
 >[!NOTE]
 >

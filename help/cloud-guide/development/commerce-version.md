@@ -2,7 +2,8 @@
 title: Actualizar la versión de Commerce
 description: Obtenga información sobre cómo actualizar la versión de Adobe Commerce en el proyecto de infraestructura en la nube.
 feature: Cloud, Upgrade
-source-git-commit: 0d9d3d64cd0ad4792824992af354653f61e4388d
+exl-id: 0cc070cf-ab25-4269-b18c-b2680b895c17
+source-git-commit: 1cea1cdebf3aba2a1b43f305a61ca6b55e3b9d08
 workflow-type: tm+mt
 source-wordcount: '1547'
 ht-degree: 0%
@@ -64,7 +65,7 @@ Al actualizar desde una versión anterior, debe migrar el archivo `config.local.
 
 ### Verificar las dependencias del compositor de Zend Framework
 
-Al actualizar a **2.3.x o posterior desde 2.2.x**, compruebe que las dependencias de Zend Framework se hayan agregado a la propiedad `autoload` del archivo `composer.json` para admitir Laminas. Este complemento admite nuevos requisitos para el marco Zend, que ha migrado al proyecto Laminas. Ver [Migración de Zend Framework al proyecto Laminas](https://community.magento.com/t5/Magento-DevBlog/Migration-of-Zend-Framework-to-the-Laminas-Project/ba-p/443251) en _Magento DevBlog_.
+Al actualizar a **2.3.x o posterior desde 2.2.x**, compruebe que las dependencias de Zend Framework se hayan agregado a la propiedad `autoload` del archivo `composer.json` para admitir Laminas. Este complemento admite nuevos requisitos para el marco Zend, que ha migrado al proyecto Laminas. Consulte [Migración de Zend Framework al proyecto Laminas](https://community.magento.com/t5/Magento-DevBlog/Migration-of-Zend-Framework-to-the-Laminas-Project/ba-p/443251) en _Magento DevBlog_.
 
 **Para comprobar la configuración de `auto-load:psr-4`**:
 
@@ -123,7 +124,7 @@ Antes de actualizar la aplicación, debe actualizar los archivos de configuraci�
 
 ### .magento.app.yaml
 
-Revise siempre los valores contenidos en el archivo [.magento.app.yaml](../application/configure-app-yaml.md) para la versión instalada, ya que controla la forma en que la aplicación se genera e implementa en la infraestructura de la nube. El siguiente ejemplo es para la versión 2.4.7 y utiliza Composer 2.7.2. La propiedad `build: flavor:` no se usa para Composer 2.x; consulte [Instalación y uso de Composer 2](../application/properties.md#installing-and-using-composer-2).
+Revise siempre los valores contenidos en el archivo [.magento.app.yaml](../application/configure-app-yaml.md) para la versión instalada, ya que controla la forma en que la aplicación se genera e implementa en la infraestructura de la nube. El siguiente ejemplo es para la versión 2.4.8 y utiliza Composer 2.8.4. La propiedad `build: flavor:` no se usa para Composer 2.x; consulte [Instalación y uso de Composer 2](../application/properties.md#installing-and-using-composer-2).
 
 **Para actualizar el archivo `.magento.app.yaml`**:
 
@@ -134,13 +135,13 @@ Revise siempre los valores contenidos en el archivo [.magento.app.yaml](../appli
 1. Actualice las opciones de PHP.
 
    ```yaml
-   type: php:8.3
+   type: php:8.4
    
    build:
        flavor: none
    dependencies:
        php:
-           composer/composer: '2.7.2'
+           composer/composer: '2.8.4'
    ```
 
 1. Modifique los comandos `build` y `deploy` de la propiedad `hooks`.
@@ -383,7 +384,7 @@ Revise las páginas de módulos y extensiones de terceros en Marketplace u otros
 
 1. Insertar en el entorno de ensayo para realizar pruebas en un entorno de preproducción.
 
-El Adobe recomienda encarecidamente actualizar el entorno de producción _antes de_, incluidas las extensiones actualizadas en el proceso de lanzamiento del sitio.
+Adobe recomienda encarecidamente actualizar el entorno de producción _antes de_, incluidas las extensiones actualizadas en el proceso de lanzamiento del sitio.
 
 >[!NOTE]
 >
