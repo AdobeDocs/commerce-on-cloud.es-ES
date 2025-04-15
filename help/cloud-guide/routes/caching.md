@@ -2,9 +2,10 @@
 title: Almacenamiento en caché
 description: Obtenga información sobre cómo habilitar el almacenamiento en caché para su Adobe Commerce en entornos de infraestructura en la nube.
 feature: Cloud, Cache, Routes
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: e73c36d6-9a58-45c0-9220-86074c1f46f0
+source-git-commit: a1ed2818cbaf5adf8b673df0ee9b9218e6f700a2
 workflow-type: tm+mt
-source-wordcount: '378'
+source-wordcount: '400'
 ht-degree: 0%
 
 ---
@@ -130,7 +131,7 @@ Existe un caso especial si la clave `cookies` tiene el valor `["*"]`. Este valor
 
 Las cookies tienen las siguientes restricciones:
 
-- Puede establecer un máximo de **50 cookies** en el sistema. De lo contrario, la aplicación genera una excepción `Unable to send the cookie. Maximum number of cookies would be exceeded`.
+- Hay un máximo establecido de **50 cookies** en el sistema. De lo contrario, la aplicación genera una excepción `Unable to send the cookie. Maximum number of cookies would be exceeded`. Para aumentar el número de cookies a 200, aplique el [parche MDVA-12304](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/release-notes.html) con la [herramienta Parches de calidad](https://experienceleague.adobe.com/en/docs/commerce-learn/tutorials/tools/quality-patch-tool).
 - Un tamaño máximo de cookie es de **4096 bytes**. De lo contrario, la aplicación genera una excepción `Unable to send the cookie. Size of '%name' is %size bytes`.
 
 ### `default_ttl`
