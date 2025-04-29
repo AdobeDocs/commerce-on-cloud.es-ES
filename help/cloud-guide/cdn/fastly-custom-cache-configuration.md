@@ -2,9 +2,10 @@
 title: Personalizar configuración de caché
 description: Obtenga información sobre cómo revisar y personalizar los ajustes de configuración de la caché después de completar la instalación del servicio de Fastly.
 feature: Cloud, Configuration, Iaas, Cache
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: f6901931-7b3f-40a8-9514-168c6243cc43
+source-git-commit: dcf585e25a4b06ff903642e42e72a71820bad008
 workflow-type: tm+mt
-source-wordcount: '1808'
+source-wordcount: '1857'
 ht-degree: 0%
 
 ---
@@ -13,11 +14,11 @@ ht-degree: 0%
 
 Después de configurar y probar el servicio de Fastly en los entornos de ensayo y producción, revise y personalice la configuración de la caché. Por ejemplo, puede actualizar la configuración para permitir que TLS redirija solicitudes HTTP a Fastly, actualizar la configuración de depuración y habilitar la autenticación básica para proteger con contraseña el sitio durante el desarrollo.
 
-Las siguientes secciones proporcionan información general e instrucciones para configurar algunos ajustes de la caché. Encuentre información adicional acerca de las opciones de configuración disponibles en el [Módulo Fastly de CDN para la documentación de Magento 2](https://github.com/fastly/fastly-magento2/tree/master/Documentation).
+Las siguientes secciones proporcionan información general e instrucciones para configurar algunos ajustes de la caché. Encuentre información adicional acerca de las opciones de configuración disponibles en el [Módulo Fastly CDN para la documentación de Magento 2](https://github.com/fastly/fastly-magento2/tree/master/Documentation).
 
 ## Forzar TLS
 
-Proporciona rápidamente la opción _Forzar TLS_ para redirigir solicitudes sin cifrar (HTTP) a Fastly. Una vez que su entorno de ensayo o producción se haya aprovisionado con un [certificado SSL/TLS válido](fastly-configuration.md#provision-ssltls-certificates), puede actualizar la configuración de Fastly para su almacén para habilitar la opción Forzar TLS. Consulte la guía Fastly [Force TLS](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/FORCE-TLS.md) en el módulo _Fastly CDN para la documentación de Magento 2_.
+Proporciona rápidamente la opción _Forzar TLS_ para redirigir solicitudes sin cifrar (HTTP) a Fastly. Una vez que su entorno de ensayo o producción se haya aprovisionado con un [certificado SSL/TLS válido](fastly-configuration.md#provision-ssltls-certificates), puede actualizar la configuración de Fastly para su almacén para habilitar la opción Forzar TLS. Consulte la guía Fastly [Force TLS](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/FORCE-TLS.md) en el módulo _Fastly CDN para Magento 2_.
 
 >[!NOTE]
 >
@@ -30,6 +31,8 @@ La configuración del servicio Fastly especifica un periodo de tiempo de espera 
 Para completar acciones masivas que tomen más de 3 minutos, cambie el _tiempo de espera de ruta de administración_ value_ para evitar errores 503.
 
 >[!NOTE]
+>
+>Si ha especificado un extremo de ruta de administración personalizada en el campo **Ruta de administración personalizada** en **Tiendas** > **Configuración** > **Avanzada** > **Administración** > **URL de base de administración**, también deberá establecer la [variable ADMIN_URL](../environment/variables-admin.md#change-the-admin-url) en ese entorno con el mismo valor. Si la configuración es diferente, el tiempo de espera no funcionará.
 >
 >Para ampliar los parámetros de tiempo de espera de Fastly para otros usuarios que no sean administradores en la IU de Fastly, consulte [Aumentar los tiempos de espera para trabajos largos](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/Edge-Modules/EDGE-MODULE-INCREASE-TIMEOUTS-LONG-JOBS.md).
 
@@ -51,7 +54,7 @@ Recupera rápidamente la ruta de acceso de administración para generar el archi
 
 ## Configuración de opciones de depuración
 
-Proporciona rápidamente varios tipos de opciones de depuración en la página Administración de caché de Magento, incluidas las opciones para depurar categoría de producto, recursos de producto y contenido. Cuando está habilitado, Fastly observa los eventos para purgar automáticamente esas cachés. Si desactiva una opción de depuración, puede depurar manualmente las cachés de Fastly después de finalizar las actualizaciones a través de la página Gestión de Cachés.
+Proporciona rápidamente varios tipos de opciones de depuración en la página Administración de caché de Magento, incluidas las opciones para purgar la categoría del producto, los recursos del producto y el contenido. Cuando está habilitado, Fastly observa los eventos para purgar automáticamente esas cachés. Si desactiva una opción de depuración, puede depurar manualmente las cachés de Fastly después de finalizar las actualizaciones a través de la página Gestión de Cachés.
 
 Las opciones de depuración incluyen:
 
@@ -218,4 +221,4 @@ Utilice la opción _Modo de mantenimiento_ para permitir el acceso administrativ
 
    Después de habilitar el modo de mantenimiento, se bloqueará todo el tráfico excepto las solicitudes de las direcciones IP de la ACL `maint_allowlist`. Puede actualizar `maint_allowlist` para cambiar las direcciones IP en la ACL.
 
-   Para obtener instrucciones de configuración detalladas, consulte la [guía del modo de mantenimiento](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/MAINTENANCE-MODE.md) en la documentación del módulo Fastly CDN para el Magento 2.
+   Para obtener instrucciones de configuración detalladas, consulte la [guía del modo de mantenimiento](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/MAINTENANCE-MODE.md) en la documentación del módulo Fastly CDN para Magento 2.
