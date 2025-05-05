@@ -78,7 +78,7 @@ Revise y actualice los ajustes de configuración de E/S predeterminados para la 
 
    - **Cambiar el tamaño del filtro**: deje la configuración predeterminada (`Lancsoz3`) o seleccione una alternativa. Esta configuración especifica el filtro utilizado para enviar una imagen cuyo tamaño se ha cambiado. Según el filtro seleccionado, la imagen cuyo tamaño se haya cambiado puede tener un número de píxeles mayor o menor.
 
-      - `Lanczos3` (predeterminado): ofrece la mejor calidad de imagen. Aumenta la capacidad de detectar bordes y características lineales dentro de una imagen y utiliza el remuestreo de _[!DNL sinc]_para proporcionar la mejor reconstrucción posible.
+      - `Lanczos3` (predeterminado): ofrece la mejor calidad de imagen. Aumenta la capacidad de detectar bordes y características lineales dentro de una imagen y utiliza el remuestreo de _[!DNL sinc]_&#x200B;para proporcionar la mejor reconstrucción posible.
       - `Lanczos2`: utiliza el mismo filtro que `Lancsoz3`, pero con una aproximación menos precisa de la función de remuestreo _[!DNL sinc]_.
       - `Bicubic`: tiene un efecto de enfoque natural al reducir el tamaño de una imagen.
       - `Bilinear`: tiene un efecto de suavizado natural al aumentar el tamaño de una imagen.

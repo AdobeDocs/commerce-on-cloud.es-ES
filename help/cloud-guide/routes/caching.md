@@ -76,7 +76,7 @@ La duración de la caché está determinada por el valor del encabezado de respu
 
 ## Clave de caché
 
-Para decidir cómo almacenar en caché una respuesta, Adobe Commerce crea una clave de caché que depende de varios factores y almacena la respuesta asociada a esta clave. Cuando una solicitud viene con la misma clave de caché, la respuesta se reutiliza. Su propósito es similar al del encabezado ](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.44) HTTP [`Vary`.
+Para decidir cómo almacenar en caché una respuesta, Adobe Commerce crea una clave de caché que depende de varios factores y almacena la respuesta asociada a esta clave. Cuando una solicitud viene con la misma clave de caché, la respuesta se reutiliza. Su propósito es similar al del encabezado [&#128279;](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.44) HTTP `Vary`.
 
 Los parámetros `headers` y `cookies` claves permiten cambiar esta clave de caché.
 

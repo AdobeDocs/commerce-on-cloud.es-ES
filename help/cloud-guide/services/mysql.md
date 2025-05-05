@@ -72,7 +72,7 @@ mysql:
             optimizer_use_condition_selectivity: 1
 ```
 
-El `properties` del ejemplo anterior modifica la configuración predeterminada de `optimizer` como se recomienda en la guía de prácticas recomendadas de rendimiento](https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/configuration.html#indexers).[
+El `properties` del ejemplo anterior modifica la configuración predeterminada de `optimizer` como se recomienda en la guía de prácticas recomendadas de rendimiento[&#128279;](https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/configuration.html#indexers).
 
 **Opciones de configuración de MariaDB**:
 

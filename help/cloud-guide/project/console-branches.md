@@ -87,7 +87,7 @@ Antes de poder eliminar un entorno, debe desactivarlo. Una vez que un entorno es
 
 1. Haga clic en el icono de configuración en la parte derecha de la barra de navegación superior, que abre la configuración del entorno.
 
-1. En la ficha _[!UICONTROL General]_, desplácese hacia abajo hasta la sección_[!UICONTROL Deactivate environment]_, haga clic en **[!UICONTROL Deactivate environment and delete data]** y siga las instrucciones.
+1. En la ficha _[!UICONTROL General]_, desplácese hacia abajo hasta la sección&#x200B;_[!UICONTROL Deactivate environment]_, haga clic en **[!UICONTROL Deactivate environment and delete data]** y siga las instrucciones.
 
 ## Sincronizar un entorno
 

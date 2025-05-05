@@ -48,7 +48,7 @@ La página proporciona un estado para los componentes y servicios de Adobe Comme
 >
 > Abra el(la) nuevo(a) [!DNL Cloud Console] y vea las actividades de proyecto y entorno.
 >
->**Siguiente paso**: [Inicie sesión en la consola Cl[!DNL ]Cloud](cloud-console.md)
+>**Siguiente paso**: [Inicie sesión en la consola ClCloud](cloud-console.md)
 
 <!-- link definitions -->
 
