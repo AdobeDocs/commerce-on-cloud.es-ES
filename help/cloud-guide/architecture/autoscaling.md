@@ -58,14 +58,14 @@ SELECT average(cpuPercent) FROM SystemSample FACET hostname, apmApplicationNames
 
 ## Habilitar escalado automático
 
-Para habilitar o deshabilitar el escalado automático para su proyecto de infraestructura de Adobe Commerce en la nube, [Envíe un ticket de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket). Elija las siguientes razones en el ticket:
+Para habilitar o deshabilitar el escalado automático para su proyecto de infraestructura de Adobe Commerce en la nube, [Envíe un ticket de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=es#submit-ticket). Elija las siguientes razones en el ticket:
 
 - **Razón de contacto**: Solicitud de cambio de infraestructura
 - **Motivo de contacto de infraestructura de Adobe Commerce**: otra solicitud de cambio de infraestructura
 
 >[!IMPORTANT]
 >
->La función de escalado automático captura eventos no anticipados. Aunque tenga habilitada la escala automática, Adobe recomienda que continúe [enviando un ticket de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) si espera un evento próximo.
+>La función de escalado automático captura eventos no anticipados. Aunque tenga habilitada la escala automática, Adobe recomienda que continúe [enviando un ticket de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=es#submit-ticket) si espera un evento próximo.
 
 ### Prueba de carga
 

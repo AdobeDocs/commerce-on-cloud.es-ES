@@ -90,7 +90,7 @@ Cuando esté listo para iniciar el sitio, debe actualizar la configuración DNS 
      php bin/magento setup:store-config:set --base-url="https://www.<domain-name>.com/"
      ```
 
-   **NOTA**: también puede actualizar la dirección URL base desde el administrador. Ver [URL de la tienda](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html) en la _Guía de experiencia de compra y tiendas Adobe Commerce_.
+   **NOTA**: también puede actualizar la dirección URL base desde el administrador. Ver [URL de la tienda](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html?lang=es) en la _Guía de experiencia de compra y tiendas Adobe Commerce_.
 
 1. Espere unos minutos para que el sitio se actualice.
 
@@ -104,7 +104,7 @@ Se recomiendan los siguientes cambios y comprobaciones:
 
 - [Prueba de correo electrónico saliente completada](../project/outgoing-emails.md)
 
-- [Configuración segura para credenciales de administrador y URL de administrador base](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-admin)
+- [Configuración segura para credenciales de administrador y URL de administrador base](https://experienceleague.adobe.com/es/docs/commerce-admin/systems/security/security-admin)
 
 - [Optimización de todas las imágenes para la web](../cdn/fastly-image-optimization.md)
 
@@ -136,9 +136,9 @@ También puede realizar pruebas con las siguientes opciones de terceros:
 
 - [Configurar el análisis de seguridad](overview.md#set-up-the-security-scan-tool)
 
-- [Configuración segura para el usuario administrador](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-admin)
+- [Configuración segura para el usuario administrador](https://experienceleague.adobe.com/es/docs/commerce-admin/systems/security/security-admin)
 
-- [Configuración segura para la URL de administración](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-urls#use-a-custom-admin-url)
+- [Configuración segura para la URL de administración](https://experienceleague.adobe.com/es/docs/commerce-admin/stores-sales/site-store/store-urls#use-a-custom-admin-url)
 
 - [Elimine los usuarios que ya no estén en el proyecto de infraestructura de Adobe Commerce en la nube](../project/user-access.md)
 

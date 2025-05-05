@@ -26,7 +26,7 @@ Al actualizar el valor de la propiedad `enable_smtp` por [línea de comandos](#e
 
 Use la opción **[!UICONTROL Outgoing emails]** en la vista _Configurar entorno_ para habilitar o deshabilitar la compatibilidad con el correo electrónico.
 
-Si los correos electrónicos salientes deben deshabilitarse o volver a habilitarse en entornos de ensayo o producción profesional, puede enviar un [ticket de asistencia de Adobe Commerce](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide).
+Si los correos electrónicos salientes deben deshabilitarse o volver a habilitarse en entornos de ensayo o producción profesional, puede enviar un [ticket de asistencia de Adobe Commerce](https://experienceleague.adobe.com/es/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide).
 
 >[!TIP]
 >

@@ -14,7 +14,7 @@ ht-degree: 0%
 
 Debe tener una clave de autenticación para acceder al repositorio de Adobe Commerce y habilitar los comandos de instalación y actualización para su proyecto de Adobe Commerce en la nube. Existen dos métodos para especificar las credenciales de autorización del Compositor.
 
-- **archivo de autenticación**: un archivo que contiene las [credenciales de autorización](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/authentication-keys.html) de Adobe Commerce en el directorio raíz de la infraestructura de Adobe Commerce en la nube.
+- **archivo de autenticación**: un archivo que contiene las [credenciales de autorización](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/authentication-keys.html?lang=es) de Adobe Commerce en el directorio raíz de la infraestructura de Adobe Commerce en la nube.
 - **variable de entorno**: una variable de entorno para configurar claves de autenticación en su proyecto de Adobe Commerce en la nube para evitar la exposición accidental.
 
 >[!BEGINSHADEBOX]

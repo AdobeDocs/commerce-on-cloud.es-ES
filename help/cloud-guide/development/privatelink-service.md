@@ -35,7 +35,7 @@ La integración del servicio PrivateLink para Adobe Commerce en proyectos de inf
 - No puede establecer conexiones SSH mediante PrivateLink. Consulte [Habilitar claves SSH](secure-connections.md).
 - La compatibilidad con Adobe Commerce no cubre la resolución de problemas de AWS PrivateLink más allá de la activación inicial.
 - Los clientes son responsables de los costes asociados con la administración de su propio VPC.
-- No puede usar el protocolo HTTPS (puerto 443) para conectarse a Adobe Commerce en la infraestructura de la nube a través de Azure Private Link debido a [encubrimiento de origen rápido](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/faq/fastly-origin-cloaking-enablement-faq.html). Esta limitación no se aplica a AWS PrivateLink.
+- No puede usar el protocolo HTTPS (puerto 443) para conectarse a Adobe Commerce en la infraestructura de la nube a través de Azure Private Link debido a [encubrimiento de origen rápido](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/faq/fastly-origin-cloaking-enablement-faq.html?lang=es). Esta limitación no se aplica a AWS PrivateLink.
 - PrivateDNS no está disponible.
 
 ## Tipos de conexión de PrivateLink
@@ -202,7 +202,7 @@ Puede utilizar la aplicación Telnet para probar la conexión con el servicio ex
 
 ## Cambiar la configuración de PrivateLink
 
-[Envíe un ticket de asistencia de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) para cambiar una configuración de PrivateLink existente. Por ejemplo, puede solicitar cambios como los siguientes:
+[Envíe un ticket de asistencia de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=es#submit-ticket) para cambiar una configuración de PrivateLink existente. Por ejemplo, puede solicitar cambios como los siguientes:
 
 - Elimine la conexión PrivateLink del entorno de ensayo o producción de Adobe Commerce en la infraestructura en la nube Pro.
 - Cambie el número de cuenta de la plataforma de customer Cloud para acceder al servicio de extremo de Adobe.

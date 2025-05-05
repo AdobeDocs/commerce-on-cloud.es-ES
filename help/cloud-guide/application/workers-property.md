@@ -17,7 +17,7 @@ Puede definir un trabajador para que se ejecute independientemente de la instanc
 
 Los trabajadores solo están disponibles para su uso con los entornos de ensayo y producción de Pro. Los entornos de integración profesional y de inicio pueden optar por usar la variable [CRON_CONSUMERS_RUNNER](../environment/variables-deploy.md#cron_consumers_runner).
 
-Para configurar un trabajador en Ensayo o Producción profesional, [envíe un vale de soporte técnico de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) e incluya la siguiente información:
+Para configurar un trabajador en Ensayo o Producción profesional, [envíe un vale de soporte técnico de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=es#submit-ticket) e incluya la siguiente información:
 
 - Identificador de proyecto
 - ID de entorno

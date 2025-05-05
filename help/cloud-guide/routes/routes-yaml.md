@@ -167,7 +167,7 @@ Enviar todas las páginas a través de TLS. Para esta configuración, debe confi
       upstream: "mymagento:http"
   ```
 
-- Para entornos de ensayo y producción, habilite la opción [Forzar TLS en Fastly](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/redirect-http-to-https-for-all-pages-on-cloud-force-tls.html) desde la interfaz de usuario de administración. Cuando utiliza esta opción, Fastly gestiona la redirección a HTTPS, por lo que no tiene que actualizar la configuración de `routes.yaml`.
+- Para entornos de ensayo y producción, habilite la opción [Forzar TLS en Fastly](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/redirect-http-to-https-for-all-pages-on-cloud-force-tls.html?lang=es) desde la interfaz de usuario de administración. Cuando utiliza esta opción, Fastly gestiona la redirección a HTTPS, por lo que no tiene que actualizar la configuración de `routes.yaml`.
 
 ## Opciones de ruta
 

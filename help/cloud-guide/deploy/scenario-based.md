@@ -40,7 +40,7 @@ hooks:
 
 >[!NOTE]
 >
->Con la versión de `ece-tools` 2002.1.x, hay un nuevo formato de [configuración de enlaces](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/app/properties/hooks-property.html). El formato heredado de `ece-tools` versiones 2002.0.x sigue siendo compatible. Sin embargo, debe actualizar al nuevo formato para utilizar la función de implementación basada en escenarios.
+>Con la versión de `ece-tools` 2002.1.x, hay un nuevo formato de [configuración de enlaces](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/app/properties/hooks-property.html?lang=es). El formato heredado de `ece-tools` versiones 2002.0.x sigue siendo compatible. Sin embargo, debe actualizar al nuevo formato para utilizar la función de implementación basada en escenarios.
 
 ## Revisar pasos del escenario
 

@@ -58,7 +58,7 @@ Para configurar PayPal Express Checkout:
    * **Modo de espacio aislado** seleccione Sí o No para indicar si las credenciales que ha introducido son para espacio aislado. Si ha introducido credenciales de producción, seleccione No.
    * **API utiliza Proxy** seleccione Sí o No para establecer si el sistema utiliza un servidor proxy para establecer una conexión entre Adobe Commerce y el sistema de pago de PayPal. En caso afirmativo, introduzca el host y el puerto del proxy.
 
-1. Para obtener información detallada y ver los pasos para configurar tu cuenta, consulta [Pago y envío exprés de PayPal](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/payments/paypal/paypal-express-checkout), a partir del Paso 2, para completar la configuración requerida.
+1. Para obtener información detallada y ver los pasos para configurar tu cuenta, consulta [Pago y envío exprés de PayPal](https://experienceleague.adobe.com/es/docs/commerce-admin/stores-sales/payments/paypal/paypal-express-checkout), a partir del Paso 2, para completar la configuración requerida.
 
 Con la cuenta configurada y autenticada, puedes activar y desactivar las opciones de pago de PayPal en Configuración de PayPal requerida:
 

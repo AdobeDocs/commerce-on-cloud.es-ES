@@ -15,7 +15,7 @@ ht-degree: 0%
 Puede utilizar los siguientes servicios para monitorizar el rendimiento de los entornos de la nube:
 
 - [Notificaciones de estado](../integrations/health-notifications.md): una integración que proporciona una alerta de espacio en disco en entornos de integración de Starter y Pro.
-- [Guía de observación para Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-operations/tools/observation-for-adobe-commerce/intro.html): supervisión completa de todos los sitios de Commerce que combina datos de registro de varias fuentes para ayudarle a administrar mejor el rendimiento del sitio de Adobe Commerce y diagnosticar problemas.
+- [Guía de observación para Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-operations/tools/observation-for-adobe-commerce/intro.html?lang=es): supervisión completa de todos los sitios de Commerce que combina datos de registro de varias fuentes para ayudarle a administrar mejor el rendimiento del sitio de Adobe Commerce y diagnosticar problemas.
 
 ## servicio de New Relic
 

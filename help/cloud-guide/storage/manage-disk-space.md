@@ -131,7 +131,7 @@ Dos [archivos de configuración](../environment/overview.md) controlan la asigna
 
 >[!IMPORTANT]
 >
->Para los entornos de ensayo y producción profesional, debe [enviar un vale de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) para cambiar la asignación del espacio en disco. Solo se puede producir un aumento de tamaño de los entornos de ensayo y producción de Pro a determinados intervalos, por lo que, según el uso actual del espacio en disco, la asistencia técnica puede recomendar aumentar la asignación del espacio en disco en un mínimo de 10 GB. Una vez asignado, el aumento del almacenamiento para el ensayo y la producción de Pro no se puede revertir. El almacenamiento no se puede reasignar ni redistribuir entre los recursos. Para agregar más espacio de almacenamiento de archivos, reduzca el espacio en disco asignado para MySQL.
+>Para los entornos de ensayo y producción profesional, debe [enviar un vale de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=es#submit-ticket) para cambiar la asignación del espacio en disco. Solo se puede producir un aumento de tamaño de los entornos de ensayo y producción de Pro a determinados intervalos, por lo que, según el uso actual del espacio en disco, la asistencia técnica puede recomendar aumentar la asignación del espacio en disco en un mínimo de 10 GB. Una vez asignado, el aumento del almacenamiento para el ensayo y la producción de Pro no se puede revertir. El almacenamiento no se puede reasignar ni redistribuir entre los recursos. Para agregar más espacio de almacenamiento de archivos, reduzca el espacio en disco asignado para MySQL.
 
 ### Espacio en disco de aplicación
 
@@ -187,7 +187,7 @@ El archivo `.magento/services.yaml` controla el espacio en disco disponible para
 
 ## Monitorización del espacio en disco
 
-En entornos de Pro Production, puede supervisar el espacio en disco y otros indicadores de rendimiento mediante la directiva Alertas administradas para alertas de Adobe Commerce para New Relic. Para obtener más información, vea [Supervisar el rendimiento con alertas administradas](../monitor/investigate-performance.md#monitor-performance-with-managed-alerts). Para obtener más información, consulte [Prácticas recomendadas para resolver problemas de rendimiento de bases de datos](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/resolve-database-performance-issues.html).
+En entornos de Pro Production, puede supervisar el espacio en disco y otros indicadores de rendimiento mediante la directiva Alertas administradas para alertas de Adobe Commerce para New Relic. Para obtener más información, vea [Supervisar el rendimiento con alertas administradas](../monitor/investigate-performance.md#monitor-performance-with-managed-alerts). Para obtener más información, consulte [Prácticas recomendadas para resolver problemas de rendimiento de bases de datos](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/resolve-database-performance-issues.html?lang=es).
 
 ## No queda espacio
 

@@ -55,7 +55,7 @@ Fecha de la versión: 10 de marzo de 2023
 
 Fecha de la versión: 13 de septiembre de 2022
 
-- ![Icono de corrección](../../assets/fix.svg) **Errores en el calentamiento**—Se ha corregido un problema que intentaba [calentar](../environment/variables-post-deploy.md#warm_up_pages) cuando la visibilidad de la página se establece en [**No visible de forma individual**](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/data-transfer/data-attributes-product#simple-product-csv-file-structure) en el administrador, lo que da como resultado `ERROR: Warming up failed: <link to page>` errores en el registro de implementación.<!-- MCLOUD-9134 -->
+- ![Icono de corrección](../../assets/fix.svg) **Errores en el calentamiento**—Se ha corregido un problema que intentaba [calentar](../environment/variables-post-deploy.md#warm_up_pages) cuando la visibilidad de la página se establece en [**No visible de forma individual**](https://experienceleague.adobe.com/es/docs/commerce-admin/systems/data-transfer/data-attributes-product#simple-product-csv-file-structure) en el administrador, lo que da como resultado `ERROR: Warming up failed: <link to page>` errores en el registro de implementación.<!-- MCLOUD-9134 -->
 
 ## Versión 1.0.11
 

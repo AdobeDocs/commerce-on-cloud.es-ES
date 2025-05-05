@@ -18,7 +18,7 @@ Los usuarios que tienen acceso administrativo al proyecto de infraestructura de 
 
 Puede anular las credenciales de usuario de administrador durante la instalación de Commerce con las variables ADMIN de la siguiente tabla.
 
-Si desea cambiar los valores después de la instalación, conéctese a su entorno usando SSH y use el comando [`admin:user` de la CLI de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/admin.html) para crear o editar las credenciales del usuario administrador.
+Si desea cambiar los valores después de la instalación, conéctese a su entorno usando SSH y use el comando [`admin:user` de la CLI de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/admin.html?lang=es) para crear o editar las credenciales del usuario administrador.
 
 | Variable | Predeterminado | Descripción |
 | -------------- | --------------------------- | ----------- |

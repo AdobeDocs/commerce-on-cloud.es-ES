@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Propiedad Variables
 
-Puede utilizar variables de entorno basadas en aplicaciones para personalizar las configuraciones de tienda. Estas variables utilizan una sintaxis específica. Consulte [Anular la configuración](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/paths/override-config-settings.html) en la _Guía de configuración_.
+Puede utilizar variables de entorno basadas en aplicaciones para personalizar las configuraciones de tienda. Estas variables utilizan una sintaxis específica. Consulte [Anular la configuración](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/paths/override-config-settings.html?lang=es) en la _Guía de configuración_.
 
 Las siguientes variables de entorno incluidas en el archivo `.magento.app.yaml` son necesarias para versiones específicas de la aplicación [!DNL Commerce].
 

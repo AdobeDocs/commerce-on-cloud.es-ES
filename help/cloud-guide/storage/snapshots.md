@@ -137,7 +137,7 @@ Los tiempos de restauración varían según el tamaño de la base de datos:
 
 ## Restaurar una instantánea de recuperación ante desastres
 
-Para restaurar la instantánea de recuperación ante desastres en entornos de ensayo y producción de Pro, [Importe el volcado de la base de datos directamente desde el servidor](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3).
+Para restaurar la instantánea de recuperación ante desastres en entornos de ensayo y producción de Pro, [Importe el volcado de la base de datos directamente desde el servidor](https://experienceleague.adobe.com/es/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3).
 
 ## Revertir código
 

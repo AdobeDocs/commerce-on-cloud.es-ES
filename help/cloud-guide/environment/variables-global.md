@@ -177,7 +177,7 @@ stage:
 - **Predeterminado**—_No establecido_
 - **Versión**: Adobe Commerce 2.1.4 y posterior
 
-Utilice la variable `X_FRAME_CONFIGURATION` para cambiar la configuración del encabezado [`X-Frame-Options`](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/security/xframe-options.html) para su sitio de Adobe Commerce. Esta configuración controla cómo el explorador procesa una página en `<frame>`, `<iframe>` o `<object>`. Utilice una de las siguientes opciones:
+Utilice la variable `X_FRAME_CONFIGURATION` para cambiar la configuración del encabezado [`X-Frame-Options`](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/security/xframe-options.html?lang=es) para su sitio de Adobe Commerce. Esta configuración controla cómo el explorador procesa una página en `<frame>`, `<iframe>` o `<object>`. Utilice una de las siguientes opciones:
 
 - `DENY`: la página no se puede mostrar en un marco.
 - `SAMEORIGIN`—(La configuración predeterminada de Adobe Commerce). La página solo se puede mostrar en un marco del mismo origen que la propia página.

@@ -27,7 +27,7 @@ Antes de configurar un espacio de trabajo, recopile las siguientes claves y acce
 
 - **Clave de cifrado de Adobe Commerce**
 
-  Al importar un sistema existente solamente, capture la clave de cifrado utilizada para proteger el acceso y los datos de la base de datos. Para obtener detalles sobre esta clave, consulte [Resolver problemas con la clave de cifrado](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/resolve-issues-with-encryption-key.html)
+  Al importar un sistema existente solamente, capture la clave de cifrado utilizada para proteger el acceso y los datos de la base de datos. Para obtener detalles sobre esta clave, consulte [Resolver problemas con la clave de cifrado](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/resolve-issues-with-encryption-key.html?lang=es)
 
 ## Herramientas para desarrolladores
 

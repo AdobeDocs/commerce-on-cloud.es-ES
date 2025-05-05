@@ -74,7 +74,7 @@ El siguiente código de fragmento de VCL personalizado (formato JSON) muestra la
 }
 ```
 
-Antes de [crear un fragmento personalizado](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/cdn/custom-vcl-snippets/fastly-vcl-allowlist.html#add-the-custom-vcl-snippet) a partir de este ejemplo, revise los valores para determinar si necesita realizar algún cambio. A continuación, introduzca cada valor en los campos respectivos, como `type` en el campo Tipo, `content` en el campo Contenido.
+Antes de [crear un fragmento personalizado](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/cdn/custom-vcl-snippets/fastly-vcl-allowlist.html?lang=es#add-the-custom-vcl-snippet) a partir de este ejemplo, revise los valores para determinar si necesita realizar algún cambio. A continuación, introduzca cada valor en los campos respectivos, como `type` en el campo Tipo, `content` en el campo Contenido.
 
 - `name`: nombre del fragmento de VCL. Para este ejemplo, `allowlist`.
 

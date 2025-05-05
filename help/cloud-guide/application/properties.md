@@ -140,7 +140,7 @@ El tamaño de disco mínimo recomendado es 256 MB. Si ve el error `UserError: Er
 
 >[!NOTE]
 >
->Para los entornos de ensayo y producción de Pro, debe [enviar un vale de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) para actualizar la configuración de `mounts` y `disk` de su aplicación. Cuando envíe el ticket, indique los cambios de configuración necesarios e incluya una versión actualizada del archivo `.magento.app.yaml`.
+>Para los entornos de ensayo y producción de Pro, debe [enviar un vale de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=es#submit-ticket) para actualizar la configuración de `mounts` y `disk` de su aplicación. Cuando envíe el ticket, indique los cambios de configuración necesarios e incluya una versión actualizada del archivo `.magento.app.yaml`.
 >
 >No es posible aumentar temporalmente el almacenamiento en disco en Ensayo o Producción; este proceso no es reversible.
 
@@ -191,7 +191,7 @@ El formato para agregar el montaje a esta lista es el siguiente:
 
 >[!NOTE]
 >
->Para los entornos de ensayo y producción de Pro, debe [enviar un vale de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) para actualizar la configuración de `mounts` y `disk` de su aplicación. Cuando envíe el ticket, indique los cambios de configuración necesarios e incluya una versión actualizada del archivo `.magento.app.yaml`.
+>Para los entornos de ensayo y producción de Pro, debe [enviar un vale de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=es#submit-ticket) para actualizar la configuración de `mounts` y `disk` de su aplicación. Cuando envíe el ticket, indique los cambios de configuración necesarios e incluya una versión actualizada del archivo `.magento.app.yaml`.
 
 Puede hacer accesible el Web de montaje agregándolo al bloque de ubicaciones [`web`](web-property.md).
 

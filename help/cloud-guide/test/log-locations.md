@@ -78,7 +78,7 @@ ssh 1.ent-project-environment-id@ssh.region.magento.cloud "cat var/log/cron.log"
 >
 >En los entornos Pro Staging y Pro Production, la rotación, compresión y eliminación automáticas de registros están habilitadas para los archivos de registro con un nombre de archivo fijo. Cada tipo de archivo de registro tiene un patrón giratorio y una duración.
 >Se pueden encontrar todos los detalles sobre la rotación del registro del entorno y la duración de los registros comprimidos en: `/etc/logrotate.conf` y `/etc/logrotate.d/<various>`.
->Para los entornos Pro Staging y Pro Production, debe [enviar un vale de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) para solicitar cambios en la configuración de rotación del registro.
+>Para los entornos Pro Staging y Pro Production, debe [enviar un vale de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=es#submit-ticket) para solicitar cambios en la configuración de rotación del registro.
 
 >[!TIP]
 >
@@ -189,7 +189,7 @@ title: The configured state is not ideal
 type: warning
 ```
 
-La mayoría de los mensajes de error contienen una descripción y una acción sugerida. Use la referencia de mensaje de error [para ECE-Tools](../dev-tools/error-reference.md) para buscar el código de error y obtener más instrucciones. Para obtener más información, use el [solucionador de problemas de implementación de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html).
+La mayoría de los mensajes de error contienen una descripción y una acción sugerida. Use la referencia de mensaje de error [para ECE-Tools](../dev-tools/error-reference.md) para buscar el código de error y obtener más instrucciones. Para obtener más información, use el [solucionador de problemas de implementación de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html?lang=es).
 
 ## Registros de aplicaciones
 

@@ -16,12 +16,12 @@ La herramienta CLI `magento-cloud` permite a los desarrolladores y administrador
 >[!NOTE]
 >
 >Se trata de una herramienta local y no se puede instalar en el entorno de la nube (que es de solo lectura) mediante este método. Solo puede instalar módulos en el entorno de la nube a través de **flujo de trabajo de implementación**
->- [Flujo de trabajo de implementación Pro](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)
->- [Flujo de trabajo de implementación inicial](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/starter-develop-deploy-workflow)
+>- [Flujo de trabajo de implementación Pro](https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)
+>- [Flujo de trabajo de implementación inicial](https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/architecture/starter-develop-deploy-workflow)
 
 **Para instalar la CLI** de `magento-cloud`:
 
-1. En su _estación de trabajo local_, cambie al directorio donde quiere clonar el proyecto de Cloud y donde el [propietario del sistema de archivos](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html) tiene acceso de _escritura_.
+1. En su _estación de trabajo local_, cambie al directorio donde quiere clonar el proyecto de Cloud y donde el [propietario del sistema de archivos](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html?lang=es) tiene acceso de _escritura_.
 
 1. Instale la CLI `magento-cloud`.
 
@@ -134,7 +134,7 @@ Los siguientes pasos muestran el uso de los comandos CLI y Git de forma intercam
 
 1. En la estación de trabajo local, cambie al directorio del proyecto.
 
-1. Cambiar al [propietario del sistema de archivos](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html).
+1. Cambiar al [propietario del sistema de archivos](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html?lang=es).
 
 1. Inicie sesión en el proyecto.
 

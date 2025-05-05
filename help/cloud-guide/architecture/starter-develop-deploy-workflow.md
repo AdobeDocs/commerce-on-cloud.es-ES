@@ -104,9 +104,9 @@ Cuando esté listo para configurar su tienda, inserte todo el código en el ento
 Para obtener la mejor información sobre las configuraciones, consulte la documentación de Adobe Commerce y las extensiones instaladas. A continuación se muestran algunos vínculos e ideas que le ayudan a empezar:
 
 - [Prácticas recomendadas para la configuración de tiendas](../store/best-practices.md) para prácticas recomendadas específicas en la nube
-- [Configuración básica](https://experienceleague.adobe.com/en/docs/commerce-admin/start/setup/store-details) para acceso de administrador de tienda, nombre, idiomas, divisas, marca, sitios, vistas de tienda y mucho más
-- [Tema](https://experienceleague.adobe.com/en/docs/commerce-admin/content-design/content-menu#design-features) por tu aspecto del sitio y de las tiendas, incluyendo CSS y diseños
-- [Configuración del sistema](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/guide-overview) para funciones, herramientas, notificaciones y la clave de cifrado de la base de datos
+- [Configuración básica](https://experienceleague.adobe.com/es/docs/commerce-admin/start/setup/store-details) para acceso de administrador de tienda, nombre, idiomas, divisas, marca, sitios, vistas de tienda y mucho más
+- [Tema](https://experienceleague.adobe.com/es/docs/commerce-admin/content-design/content-menu#design-features) por tu aspecto del sitio y de las tiendas, incluyendo CSS y diseños
+- [Configuración del sistema](https://experienceleague.adobe.com/es/docs/commerce-admin/systems/guide-overview) para funciones, herramientas, notificaciones y la clave de cifrado de la base de datos
 - Configuración de extensión mediante su documentación
 
 Más allá de la configuración de tienda, puede configurar varios sitios y tiendas, servicios configurados y mucho más. Ver [Configurar tu tienda](../store/overview.md).
@@ -162,9 +162,9 @@ A medida que desarrolla funciones, agrega extensiones y diseña temas, es útil 
 
 Para ayudar a exportar los datos de producción como datos de prueba para utilizarlos en entornos de ensayo e integración:
 
-- [Ejecute los comandos CLI de ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html) de las utilidades de soporte técnico (recomendado) al exportar una copia de seguridad protegida del cliente y almacenar datos mediante la clave de cifrado de Adobe Commerce
+- [Ejecute los comandos CLI de ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html?lang=es) de las utilidades de soporte técnico (recomendado) al exportar una copia de seguridad protegida del cliente y almacenar datos mediante la clave de cifrado de Adobe Commerce
 
-- Herramienta [Recopilación de datos](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/support#data-collector) para generar y exportar datos
+- Herramienta [Recopilación de datos](https://experienceleague.adobe.com/es/docs/commerce-admin/systems/tools/support#data-collector) para generar y exportar datos
 
 Para migrar estos datos, consulte [Migrar e implementar datos y archivos estáticos](../deploy/staging-production.md#migrate-static-files).
 
@@ -172,7 +172,7 @@ Para migrar estos datos, consulte [Migrar e implementar datos y archivos estáti
 
 >[!NOTE]
 >
->Antes de transferir los datos a otro entorno, debe considerar la posibilidad de sanearlos. Tiene un par de opciones, entre ellas [usar utilidades de soporte](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html) o desarrollar un script para eliminar los datos de los clientes.
+>Antes de transferir los datos a otro entorno, debe considerar la posibilidad de sanearlos. Tiene un par de opciones, entre ellas [usar utilidades de soporte](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html?lang=es) o desarrollar un script para eliminar los datos de los clientes.
 
 >[!WARNING]
 >

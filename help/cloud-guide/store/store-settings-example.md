@@ -56,7 +56,7 @@ En el entorno de integración, puede iniciar sesión en Admin para modificar los
    ![Cambiar la configuración regional](../../assets/locale-options.png)
 
 1. Haga clic en **Guardar configuración**.
-1. Si se le solicita, [vacíe la caché](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/cache-management).
+1. Si se le solicita, [vacíe la caché](https://experienceleague.adobe.com/es/docs/commerce-admin/systems/tools/cache-management).
 1. Cierre la sesión del administrador.
 
 ## Exportar valores y transferir config.php a su sistema local
@@ -159,7 +159,7 @@ Para añadir valores de configuración en el entorno de integración Administrad
 1. En el panel derecho, expanda **Configuración de JavaScript**.
 1. En la lista **Combinar archivos de JavaScript**, haga clic en **Sí**.
 1. Haga clic en **Guardar configuración**.
-1. Si se le solicita, [vacíe la caché](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/cache-management).
+1. Si se le solicita, [vacíe la caché](https://experienceleague.adobe.com/es/docs/commerce-admin/systems/tools/cache-management).
 1. Cierre la sesión del administrador.
 
 Al volver a ejecutar el comando de volcado, la nueva configuración se anexa al archivo.
