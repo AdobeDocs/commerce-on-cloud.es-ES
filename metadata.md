@@ -10,7 +10,7 @@ mini-toc-levels: 2
 git-repo: https://github.com/AdobeDocs/commerce-on-cloud.es-ES
 description: Guías de Adobe Commerce en infraestructura en la nube
 index: true
-badgePaas: label="Solo PaaS" type="Informative" url="https://experienceleague.adobe.com/en/docs/commerce/user-guides/product-solutions" tooltip="Se aplica solo a proyectos de Adobe Commerce en la nube (infraestructura PaaS administrada por Adobe) y a proyectos locales."
+badgePaas: label="Solo PaaS" type="Informative" url="https://experienceleague.adobe.com/es/docs/commerce/user-guides/product-solutions" tooltip="Se aplica solo a proyectos de Adobe Commerce en la nube (infraestructura PaaS administrada por Adobe) y a proyectos locales."
 source-git-commit: cb478d1f34e68784b3d7e9fe69bee62fcda00a60
 workflow-type: tm+mt
 source-wordcount: '58'
