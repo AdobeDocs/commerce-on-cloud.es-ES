@@ -39,7 +39,7 @@ OpenSearch le permite tomar datos de cualquier fuente, cualquier formato, y busc
        disk: 1024
    ```
 
-   Para los proyectos Pro, debe [enviar un ticket de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) para cambiar la versión de OpenSearch en los entornos de ensayo y producción.
+   Para los proyectos Pro, debe [enviar un ticket de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=es#submit-ticket) para cambiar la versión de OpenSearch en los entornos de ensayo y producción.
 
 1. Establezca o compruebe la propiedad `relationships` en el archivo `.magento.app.yaml`.
 
@@ -92,7 +92,7 @@ Cuando instale o actualice su proyecto de infraestructura en la nube de Adobe Co
 
 - **Actualización del proyecto**-Compruebe que el cliente OpenSearch de PHP en la nueva versión de la aplicación es compatible con la versión del servicio OpenSearch instalada en la infraestructura en la nube.
 
-La compatibilidad y la versión del servicio están determinadas por las versiones probadas e implementadas en la infraestructura en la nube, y a veces difieren de las versiones admitidas por las implementaciones locales de Adobe Commerce. Consulte [Requisitos del sistema](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html) en la _Guía de instalación_ para obtener una lista de las versiones compatibles.
+La compatibilidad y la versión del servicio están determinadas por las versiones probadas e implementadas en la infraestructura en la nube, y a veces difieren de las versiones admitidas por las implementaciones locales de Adobe Commerce. Consulte [Requisitos del sistema](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=es) en la _Guía de instalación_ para obtener una lista de las versiones compatibles.
 
 **Para comprobar la compatibilidad del software OpenSearch**:
 
