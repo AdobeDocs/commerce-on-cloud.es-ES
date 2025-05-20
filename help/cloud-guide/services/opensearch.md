@@ -2,16 +2,17 @@
 title: Configuración del servicio OpenSearch
 description: Obtenga información sobre cómo habilitar el servicio OpenSearch para Adobe Commerce en la infraestructura en la nube.
 feature: Cloud, Search, Services
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: e704ab2a-2f6b-480b-9b36-1e97c406e873
+source-git-commit: 81b8ac7b611f9b8c6fe3011a554786bd2e48aabc
 workflow-type: tm+mt
-source-wordcount: '651'
+source-wordcount: '639'
 ht-degree: 0%
 
 ---
 
 # Configuración del servicio OpenSearch
 
-El servicio [OpenSearch](https://www.opensearch.org) es una ramificación de código abierto de Elasticsearch 7.10.2, tras los cambios de licencia de Elasticsearch. Ver el [proyecto de código abierto](https://github.com/opensearch-project) en GitHub.
+El servicio [OpenSearch](https://www.opensearch.org) es una ramificación de código abierto de Elasticsearch 7.10.2, tras los cambios de licencia para Elasticsearch. Ver el [proyecto de código abierto](https://github.com/opensearch-project) en GitHub.
 
 {{elasticsearch-support}}
 
@@ -30,7 +31,7 @@ OpenSearch le permite tomar datos de cualquier fuente, cualquier formato, y busc
 
 **Para habilitar OpenSearch**:
 
-1. Para los entornos de integración de Starter y Pro, agregue el servicio `opensearch` al archivo `.magento/services.yaml` con la versión adecuada y el espacio en disco asignado en MB. En este caso, la versión 2 es apropiada. La versión secundaria no es necesaria porque la infraestructura de nube utiliza la última versión de OpenSearch.
+1. Para entornos de integración, agregue el servicio `opensearch` al archivo `.magento/services.yaml` con la versión adecuada y el espacio en disco asignado en MB. En este caso, la versión 2 es apropiada. La versión secundaria no es obligatoria.
 
    ```yaml
    opensearch:
@@ -38,7 +39,7 @@ OpenSearch le permite tomar datos de cualquier fuente, cualquier formato, y busc
        disk: 1024
    ```
 
-   Para los proyectos Pro, debe [enviar un ticket de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=es#submit-ticket) para cambiar la versión de OpenSearch en los entornos de ensayo y producción.
+   Para los proyectos Pro, debe [enviar un ticket de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) para cambiar la versión de OpenSearch en los entornos de ensayo y producción.
 
 1. Establezca o compruebe la propiedad `relationships` en el archivo `.magento.app.yaml`.
 
@@ -91,7 +92,7 @@ Cuando instale o actualice su proyecto de infraestructura en la nube de Adobe Co
 
 - **Actualización del proyecto**-Compruebe que el cliente OpenSearch de PHP en la nueva versión de la aplicación es compatible con la versión del servicio OpenSearch instalada en la infraestructura en la nube.
 
-La compatibilidad y la versión del servicio están determinadas por las versiones probadas e implementadas en la infraestructura en la nube, y a veces difieren de las versiones admitidas por las implementaciones locales de Adobe Commerce. Consulte [Requisitos del sistema](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=es) en la _Guía de instalación_ para obtener una lista de las versiones compatibles.
+La compatibilidad y la versión del servicio están determinadas por las versiones probadas e implementadas en la infraestructura en la nube, y a veces difieren de las versiones admitidas por las implementaciones locales de Adobe Commerce. Consulte [Requisitos del sistema](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html) en la _Guía de instalación_ para obtener una lista de las versiones compatibles.
 
 **Para comprobar la compatibilidad del software OpenSearch**:
 
