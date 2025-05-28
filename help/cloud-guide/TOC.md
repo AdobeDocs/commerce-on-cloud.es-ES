@@ -3,10 +3,10 @@ user-guide-title: Guía de Commerce en la nube
 user-guide-description: Aprenda a administrar la aplicación de Adobe Commerce en la infraestructura en la nube.
 product: magento
 feature: Cloud
-source-git-commit: fd7879e8f3c9e1965cf4aa3d99824e577971529d
+source-git-commit: 3347ad0a5fe202cbd80d08b7289c20a1c98ed1e3
 workflow-type: tm+mt
-source-wordcount: '357'
-ht-degree: 7%
+source-wordcount: '359'
+ht-degree: 8%
 
 ---
 
@@ -24,7 +24,7 @@ ht-degree: 7%
    + [Flujo de trabajo profesional](architecture/pro-develop-deploy-workflow.md)
    + [Arquitectura a escala](architecture/scaled-architecture.md)
    + [Escalado automático](architecture/autoscaling.md)
-+ [Introducción](https://experienceleague.adobe.com/docs/commerce-on-cloud/start/overview.html?lang=es)
++ [Introducción](https://experienceleague.adobe.com/docs/commerce-on-cloud/start/overview.html)
 + Notas de la versión {#release-notes}
    + [Conjunto de herramientas de nube](release-notes/cloud-tools-suite.md)
    + [Paquete ECE-Tools](release-notes/ece-tools-package.md)
@@ -34,7 +34,7 @@ ht-degree: 7%
    + [Paquetes de nube](release-notes/cloud-packages.md)
    + [Cambios incompatibles con versiones anteriores](release-notes/backward-incompatible-changes.md)
    + [Archivo de notas de versión](release-notes/cloud-release-archive.md)
-+ Proyecto en la nube {#project}
++ Proyecto de nube {#project}
    + [Resumen del proyecto](project/overview.md)
    + [Estructura del proyecto](project/file-structure.md)
    + [Acceso de usuario](project/user-access.md)
@@ -121,7 +121,7 @@ ht-degree: 7%
          + [Generar](environment/variables-build.md)
          + [Implementar](environment/variables-deploy.md)
          + [Posterior a la implementación](environment/variables-post-deploy.md)
-      + Configurar notificaciones {#log}
+      + Configuración de notificaciones {#log}
          + [Notificaciones](environment/set-up-notifications.md)
          + [Controladores de registro](environment/log-handlers.md)
    + Rutas {#routes}
@@ -139,7 +139,7 @@ ht-degree: 7%
       + [Valkey](services/valkey.md)
 + Servicios rápidos {#cdn}
    + [Información general](cdn/fastly.md)
-   + Configurar rápidamente {#setup-fastly}
+   + Configuración rápida {#setup-fastly}
       + [Configurar servicios de Fastly](cdn/fastly-configuration.md)
       + [Personalizar configuración de caché](cdn/fastly-custom-cache-configuration.md)
       + [Personalización de páginas de error y mantenimiento](cdn/fastly-custom-response.md)
@@ -167,12 +167,13 @@ ht-degree: 7%
    + [Información general](launch/overview.md)
    + [Iniciar lista de comprobación](launch/checklist.md)
    + [Pasos del inicio](launch/steps.md)
-+ Supervisar el sitio {#monitor}
++ Supervisar sitio {#monitor}
    + [Rendimiento](monitor/performance.md)
-   + Servicio de New Relic {#new-relic}
+   + [Telemetría operativa](monitor/operational-telemetry.md)
+   + servicio de New Relic {#new-relic}
       + [Información general de New Relic](monitor/new-relic-service.md)
       + [Administración de cuentas y usuarios](monitor/account-management.md)
-      + Investigar rendimiento {#investigate}
+      + Investigación del rendimiento {#investigate}
          + [Políticas, alertas y flujos de trabajo](monitor/investigate-performance.md)
          + [Ingesta de datos](monitor/ingest-data.md)
          + [Seguimiento de implementaciones](monitor/track-deployments.md)
