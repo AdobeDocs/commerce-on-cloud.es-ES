@@ -83,7 +83,7 @@ Puede crear una copia de seguridad manual de cualquier entorno de inicio activo 
    +---------------------------+----------------------+------------+
    ```
 
-Para crear un volcado de base de datos de cualquier entorno, incluidos Ensayo y Producción, consulte el artículo de la base de conocimiento [Crear un volcado de base de datos](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud).
+Para crear un volcado de base de datos de cualquier entorno, incluidos Ensayo y Producción, consulte el artículo de la base de conocimiento [Crear un volcado de base de datos](https://experienceleague.adobe.com/es/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud).
 
 ## Restaurar una copia de seguridad manual
 
@@ -139,7 +139,7 @@ Los tiempos de restauración varían según el tamaño de la base de datos:
 
 ## Restaurar una instantánea de recuperación ante desastres
 
-Para restaurar la instantánea de recuperación ante desastres en entornos de ensayo y producción de Pro, [Importe el volcado de la base de datos directamente desde el servidor](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3).
+Para restaurar la instantánea de recuperación ante desastres en entornos de ensayo y producción de Pro, [Importe el volcado de la base de datos directamente desde el servidor](https://experienceleague.adobe.com/es/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3).
 
 ## Revertir código
 
