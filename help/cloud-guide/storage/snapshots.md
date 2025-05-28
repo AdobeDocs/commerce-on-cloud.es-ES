@@ -3,9 +3,9 @@ title: Administración de backup
 description: Obtenga información sobre cómo crear y restaurar manualmente una copia de seguridad para su proyecto de Adobe Commerce en la nube.
 feature: Cloud, Paas, Snapshots, Storage
 exl-id: e73a57e7-e56c-42b4-aa7b-2960673a7b68
-source-git-commit: b5fa153b4eb0569fd16c78fb7bf47c54222752cd
+source-git-commit: 3efc5478428c4ede9e2106e1cbef8362c525ccd8
 workflow-type: tm+mt
-source-wordcount: '737'
+source-wordcount: '759'
 ht-degree: 0%
 
 ---
@@ -83,6 +83,8 @@ Puede crear una copia de seguridad manual de cualquier entorno de inicio activo 
    +---------------------------+----------------------+------------+
    ```
 
+Para crear un volcado de base de datos de cualquier entorno, incluidos Ensayo y Producción, consulte el artículo de la base de conocimiento [Crear un volcado de base de datos](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud).
+
 ## Restaurar una copia de seguridad manual
 
 Debe tener [acceso de administrador](../project/user-access.md) al entorno. Tiene hasta **siete días** para _restaurar_ una copia de seguridad manual. La restauración de una copia de seguridad no cambia el código de la rama de Git actual. La restauración de una copia de seguridad de esta manera no se aplica a los entornos de ensayo y producción Pro; consulte [Copia de seguridad Pro y recuperación ante desastres](../architecture/pro-architecture.md#backup-and-disaster-recovery).
@@ -137,7 +139,7 @@ Los tiempos de restauración varían según el tamaño de la base de datos:
 
 ## Restaurar una instantánea de recuperación ante desastres
 
-Para restaurar la instantánea de recuperación ante desastres en entornos de ensayo y producción de Pro, [Importe el volcado de la base de datos directamente desde el servidor](https://experienceleague.adobe.com/es/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3).
+Para restaurar la instantánea de recuperación ante desastres en entornos de ensayo y producción de Pro, [Importe el volcado de la base de datos directamente desde el servidor](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3).
 
 ## Revertir código
 
