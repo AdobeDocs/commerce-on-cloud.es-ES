@@ -3,9 +3,9 @@ title: Personalizar configuración de caché
 description: Obtenga información sobre cómo revisar y personalizar los ajustes de configuración de la caché después de completar la instalación del servicio de Fastly.
 feature: Cloud, Configuration, Iaas, Cache
 exl-id: f6901931-7b3f-40a8-9514-168c6243cc43
-source-git-commit: dcf585e25a4b06ff903642e42e72a71820bad008
+source-git-commit: eaa9980c437a9398f0d20d3c27832aecffc78fd9
 workflow-type: tm+mt
-source-wordcount: '1857'
+source-wordcount: '1898'
 ht-degree: 0%
 
 ---
@@ -45,6 +45,10 @@ Para completar acciones masivas que tomen más de 3 minutos, cambie el _tiempo d
 1. En la sección _Configuración rápida_, expanda **Configuración avanzada**.
 
 1. Establezca el valor de **tiempo de espera de ruta de administración** en segundos. Este valor no puede ser superior a 10 minutos (600 segundos).
+
+>[!NOTE]
+>
+>La configuración **_tiempo de espera de ruta de administración_** no controla los valores de tiempo de espera fuera de Adobe Commerce, como el tiempo de espera de Fastly WAF. Para ajustar el valor de tiempo de espera de Fastly WAF, debe abrir un ticket de asistencia de Adobe para actualizarlo en el servicio de Fastly.
 
 1. Haga clic en **Guardar configuración** en la parte superior de la página.
 
@@ -181,7 +185,7 @@ Tanto para los proyectos Starter como Pro, puede usar la opción [!UICONTROL Dom
 
 - Para proyectos iniciales, vaya a la dirección URL del proyecto en la ficha [!UICONTROL Domains] de [!DNL Cloud Console] para agregar la dirección URL del proyecto.
 
-- Para proyectos Pro, envía un [ticket de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=es#submit-ticket) para agregar el dominio a la configuración de tu proyecto en la nube. El equipo de asistencia también actualiza la configuración de cuenta de Adobe Commerce Fastly para agregar el dominio.
+- Para proyectos Pro, envía un [ticket de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) para agregar el dominio a la configuración de tu proyecto en la nube. El equipo de asistencia también actualiza la configuración de cuenta de Adobe Commerce Fastly para agregar el dominio.
 
 **Para administrar la configuración de dominio de Fastly desde el administrador**:
 
