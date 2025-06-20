@@ -2,9 +2,10 @@
 title: Implementación de contenido estático
 description: Obtenga información acerca de las estrategias para implementar contenido estático, como imágenes, scripts y CSS, en Adobe Commerce en proyectos de infraestructura en la nube.
 feature: Cloud, Build, Deploy, SCD
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 8f30cae7-a3a0-4ce4-9c73-d52649ef4d7a
+source-git-commit: 325b7584daa38ad788905a6124e6d037cf679332
 workflow-type: tm+mt
-source-wordcount: '707'
+source-wordcount: '836'
 ht-degree: 0%
 
 ---
@@ -19,7 +20,7 @@ Puede utilizar el agrupamiento y la minificación para crear contenido optimizad
 
 ### Minimizar contenido
 
-Puede mejorar el tiempo de carga del SCD durante el proceso de implementación si omite copiar los archivos de vista estática en el directorio `var/view_preprocessed` y genera el HTML _minificado_ cuando se solicita. Puede activarlo si establece la variable de entorno global [SKIP_HTML_MINIFICATION](../environment/variables-global.md#skiphtmlminification) en `true` en el archivo `.magento.env.yaml`.
+Puede mejorar el tiempo de carga del SCD durante el proceso de implementación si omite copiar los archivos de vista estática en el directorio `var/view_preprocessed` y genera HTML _minificado_ cuando se solicita. Puede activarlo si establece la variable de entorno global [SKIP_HTML_MINIFICATION](../environment/variables-global.md#skiphtmlminification) en `true` en el archivo `.magento.env.yaml`.
 
 >[!NOTE]
 >
@@ -29,15 +30,20 @@ Puede ahorrar **más** tiempo de implementación y espacio en disco si reduce el
 
 ## Elección de una estrategia de implementación
 
-Las estrategias de implementación difieren según si elige generar contenido estático durante la fase _build_, la fase _deploy_ o _on-demand_. Como se ve en el gráfico siguiente, la generación de contenido estático durante la fase de implementación es la opción menos óptima. Incluso con el HTML minificado, cada archivo de contenido debe copiarse en el directorio `~/pub/static` montado, lo que puede llevar mucho tiempo. La generación de contenido estático bajo demanda parece la opción óptima. Sin embargo, si el archivo de contenido no existe en la caché que genera en el momento en que se solicita, lo que añade tiempo de carga a la experiencia del usuario. Por lo tanto, la generación de contenido estático durante la fase de compilación es la mejor opción.
+Las estrategias de implementación difieren según si elige generar contenido estático durante la fase _build_, la fase _deploy_ o _on-demand_. Como se ve en el gráfico siguiente, la generación de contenido estático durante la fase de implementación es la opción menos óptima. Incluso con HTML minificado, cada archivo de contenido debe copiarse en el directorio `~/pub/static` montado, lo que puede llevar mucho tiempo. La generación de contenido estático bajo demanda parece la opción óptima. Sin embargo, si el archivo de contenido no existe en la caché que genera en el momento en que se solicita, lo que añade tiempo de carga a la experiencia del usuario. Por lo tanto, la generación de contenido estático durante la fase de compilación es la mejor opción.
 
 ![Comparación de carga de SCD](../../assets/scd-load-times.png)
 
 ### Configuración del SCD durante la compilación
 
-La generación de contenido estático durante la fase de compilación con un HTML reducido es la configuración óptima para [**cero tiempo de inactividad** implementaciones](reduce-downtime.md), también conocida como **estado ideal**. En lugar de copiar archivos en una unidad montada, crea un enlace simbólico desde el directorio `./init/pub/static`.
+La generación de contenido estático durante la fase de compilación con HTML minificado es la configuración óptima para [**implementaciones sin tiempo de inactividad**](reduce-downtime.md), también conocida como **estado ideal**. En lugar de copiar archivos en una unidad montada, crea un enlace simbólico desde el directorio `./init/pub/static`.
 
 La generación de contenido estático requiere acceso a temáticas y configuraciones regionales. Adobe Commerce almacena las temáticas en el sistema de archivos, al que se puede acceder durante la fase de compilación; sin embargo, Adobe Commerce almacena las configuraciones regionales en la base de datos. La base de datos _no_ está disponible durante la fase de compilación. Para generar el contenido estático durante la fase de compilación, debe utilizar el comando `config:dump` en el paquete `ece-tools` para mover configuraciones regionales al sistema de archivos. Lee las configuraciones regionales y las guarda en el archivo `app/etc/config.php`.
+
+>[!NOTE]
+>Después de ejecutar el comando `config:dump` en el paquete `ece-tools`, las configuraciones que se descargan en el archivo `config.php` [están bloqueadas (atenuadas) en el panel de administración](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/locked-fields-in-magento-admin). la única manera de actualizar esas configuraciones en el Administrador es eliminarlas del archivo localmente y volver a implementar el proyecto.
+>>Además, cada vez que agregue un nuevo almacén/grupo de almacén/sitio web a la instancia, recuerde ejecutar el comando `config:dump` para asegurarse de que la base de datos esté sincronizada. También puede elegir [qué configuraciones se deben volcar](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/configuration-management/export-configuration?lang=en) en el archivo `config.php`.
+>>Si elimina la configuración de tienda/grupo de tienda/sitio web del archivo `config.php` porque los campos están atenuados, pero no realiza este paso, las nuevas entidades que no se descargaron se eliminarán de la base de datos en la siguiente implementación.
 
 **Para configurar el proyecto de modo que genere un SCD en la compilación**:
 
