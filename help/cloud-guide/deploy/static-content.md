@@ -42,8 +42,8 @@ La generación de contenido estático requiere acceso a temáticas y configuraci
 
 >[!NOTE]
 >Después de ejecutar el comando `config:dump` en el paquete `ece-tools`, las configuraciones que se descargan en el archivo `config.php` [están bloqueadas (atenuadas) en el panel de administración](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/locked-fields-in-magento-admin). la única manera de actualizar esas configuraciones en el Administrador es eliminarlas del archivo localmente y volver a implementar el proyecto.
->>Además, cada vez que agregue un nuevo almacén/grupo de almacén/sitio web a la instancia, recuerde ejecutar el comando `config:dump` para asegurarse de que la base de datos esté sincronizada. También puede elegir [qué configuraciones se deben volcar](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/configuration-management/export-configuration?lang=en) en el archivo `config.php`.
->>Si elimina la configuración de tienda/grupo de tienda/sitio web del archivo `config.php` porque los campos están atenuados, pero no realiza este paso, las nuevas entidades que no se descargaron se eliminarán de la base de datos en la siguiente implementación.
+>&#x200B;>Además, cada vez que agregue un nuevo almacén/grupo de almacén/sitio web a la instancia, recuerde ejecutar el comando `config:dump` para asegurarse de que la base de datos esté sincronizada. También puede elegir [qué configuraciones se deben volcar](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/configuration-management/export-configuration?lang=en) en el archivo `config.php`.
+>&#x200B;>Si elimina la configuración de tienda/grupo de tienda/sitio web del archivo `config.php` porque los campos están atenuados, pero no realiza este paso, las nuevas entidades que no se descargaron se eliminarán de la base de datos en la siguiente implementación.
 
 **Para configurar el proyecto de modo que genere un SCD en la compilación**:
 
