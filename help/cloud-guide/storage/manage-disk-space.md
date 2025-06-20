@@ -2,9 +2,10 @@
 title: Administrar espacio en disco
 description: Obtenga información acerca de cómo administrar el espacio en disco mediante la interfaz de línea de comandos.
 feature: Cloud, Storage
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 1d13dc4e-56eb-4153-a8b1-48d2263ebc4c
+source-git-commit: b8cabaad4b7805858563cecbe5ffc2fdb9aeac58
 workflow-type: tm+mt
-source-wordcount: '714'
+source-wordcount: '716'
 ht-degree: 0%
 
 ---
@@ -35,7 +36,7 @@ _&quot;Nuestra supervisión ha detectado que el almacenamiento de archivos en su
 
 >[!TIP]
 >
->Se recomienda supervisar regularmente su capacidad de almacenamiento y mantenerla por debajo del 90 % para evitar estos aumentos automáticos. Una vez asignado, el aumento del almacenamiento para el ensayo y la producción de Pro no se puede revertir.
+>Adobe recomienda monitorizar regularmente la capacidad de almacenamiento y mantenerla por debajo del 90 % para evitar estos aumentos automáticos. Una vez asignado, el aumento del almacenamiento para el ensayo y la producción de Pro es permanente y no se puede revertir.
 
 ## Compruebe el entorno de integración
 
@@ -131,7 +132,7 @@ Dos [archivos de configuración](../environment/overview.md) controlan la asigna
 
 >[!IMPORTANT]
 >
->Para los entornos de ensayo y producción profesional, debe [enviar un vale de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=es#submit-ticket) para cambiar la asignación del espacio en disco. Solo se puede producir un aumento de tamaño de los entornos de ensayo y producción de Pro a determinados intervalos, por lo que, según el uso actual del espacio en disco, la asistencia técnica puede recomendar aumentar la asignación del espacio en disco en un mínimo de 10 GB. Una vez asignado, el aumento del almacenamiento para el ensayo y la producción de Pro no se puede revertir. El almacenamiento no se puede reasignar ni redistribuir entre los recursos. Para agregar más espacio de almacenamiento de archivos, reduzca el espacio en disco asignado para MySQL.
+>Para los entornos de ensayo y producción profesional, debe [enviar un vale de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) para cambiar la asignación del espacio en disco. Solo se puede producir un aumento de tamaño de los entornos de ensayo y producción de Pro a determinados intervalos, por lo que, según el uso actual del espacio en disco, la asistencia técnica puede recomendar aumentar la asignación del espacio en disco en un mínimo de 10 GB. Una vez asignado, el aumento del almacenamiento para el ensayo y la producción de Pro no se puede revertir. El almacenamiento no se puede reasignar ni redistribuir entre los recursos. Para agregar más espacio de almacenamiento de archivos, reduzca el espacio en disco asignado para MySQL.
 
 ### Espacio en disco de aplicación
 
@@ -187,7 +188,7 @@ El archivo `.magento/services.yaml` controla el espacio en disco disponible para
 
 ## Monitorización del espacio en disco
 
-En entornos de Pro Production, puede supervisar el espacio en disco y otros indicadores de rendimiento mediante la directiva Alertas administradas para alertas de Adobe Commerce para New Relic. Para obtener más información, vea [Supervisar el rendimiento con alertas administradas](../monitor/investigate-performance.md#monitor-performance-with-managed-alerts). Para obtener más información, consulte [Prácticas recomendadas para resolver problemas de rendimiento de bases de datos](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/resolve-database-performance-issues.html?lang=es).
+En entornos de Pro Production, puede supervisar el espacio en disco y otros indicadores de rendimiento mediante la directiva Alertas administradas para alertas de Adobe Commerce para New Relic. Para obtener más información, vea [Supervisar el rendimiento con alertas administradas](../monitor/investigate-performance.md#monitor-performance-with-managed-alerts). Para obtener más información, consulte [Prácticas recomendadas para resolver problemas de rendimiento de bases de datos](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/resolve-database-performance-issues.html).
 
 ## No queda espacio
 
