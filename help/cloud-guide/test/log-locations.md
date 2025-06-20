@@ -77,13 +77,13 @@ ssh 1.ent-project-environment-id@ssh.region.magento.cloud "cat var/log/cron.log"
 >[!TIP]
 >
 >En los entornos Pro Staging y Pro Production, la rotación, compresión y eliminación automáticas de registros están habilitadas para los archivos de registro con un nombre de archivo fijo. Cada tipo de archivo de registro tiene un patrón giratorio y una duración.
->>Se pueden encontrar todos los detalles sobre la rotación del registro del entorno y la duración de los registros comprimidos en: `/etc/logrotate.conf` y `/etc/logrotate.d/<various>`.
->>Para los entornos Pro Staging y Pro Production, debe [enviar un vale de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) para solicitar cambios en la configuración de rotación del registro.
+>&#x200B;>Se pueden encontrar todos los detalles sobre la rotación del registro del entorno y la duración de los registros comprimidos en: `/etc/logrotate.conf` y `/etc/logrotate.d/<various>`.
+>&#x200B;>Para los entornos Pro Staging y Pro Production, debe [enviar un vale de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) para solicitar cambios en la configuración de rotación del registro.
 
 >[!TIP]
 >
 >La rotación de registros no se puede configurar en entornos de Pro Integration.
->>Para la integración Pro, debe implementar una solución/script personalizado y [configurar su cron](../application/crons-property.md) para ejecutar el script según sea necesario.
+>&#x200B;>Para la integración Pro, debe implementar una solución/script personalizado y [configurar su cron](../application/crons-property.md) para ejecutar el script según sea necesario.
 
 >[!NOTE]
 >
