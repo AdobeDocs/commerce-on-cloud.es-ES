@@ -3,9 +3,9 @@ title: Administración de backup
 description: Obtenga información sobre cómo crear y restaurar manualmente una copia de seguridad para su proyecto de Adobe Commerce en la nube.
 feature: Cloud, Paas, Snapshots, Storage
 exl-id: e73a57e7-e56c-42b4-aa7b-2960673a7b68
-source-git-commit: b9bbbb9b83ed995951feaa9391015f02a9661206
+source-git-commit: 13cb5e3231c2173d5687aec3e4e64ecc154ee962
 workflow-type: tm+mt
-source-wordcount: '768'
+source-wordcount: '819'
 ht-degree: 0%
 
 ---
@@ -26,8 +26,18 @@ La función de copia de seguridad/instantánea **no** se aplica a los entornos d
 
 Puede crear una copia de seguridad manual de cualquier entorno de inicio activo y de integración Pro desde [!DNL Cloud Console] o crear una instantánea desde la CLI de la nube. Debe tener un [rol de administrador](../project/user-access.md) para el entorno.
 
+>[!NOTE]
+>
+>Puede crear una copia de seguridad del código directamente en los clústeres de Pro Production y Staging ejecutando el siguiente comando en el terminal, ajustándolo para cualquier carpeta o ruta que desee incluir o excluir:
+>
+```bash
+>mkdir -p var/support
+>/usr/bin/nice -n 15 /bin/tar -czhf var/support/code-$(date +"%Y%m%d%H%M%p").tar.gz app bin composer.* dev lib pub/*.php pub/errors setup vendor --exclude='pub/media'
+>```
+
 **Para crear una copia de seguridad de la base de datos del entorno Pro**:
-Para crear un volcado de base de datos de cualquier entorno Pro, incluidos Ensayo y Producción, consulte el artículo de la base de conocimiento [Crear un volcado de base de datos](https://experienceleague.adobe.com/es/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud).
+
+Para crear un volcado de base de datos de cualquier entorno Pro, incluidos Ensayo y Producción, consulte el artículo de la base de conocimiento [Crear un volcado de base de datos](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud).
 
 **Para crear una copia de seguridad de cualquier entorno de inicio con el[!DNL Cloud Console]**:
 
@@ -140,10 +150,15 @@ Los tiempos de restauración varían según el tamaño de la base de datos:
 
 ## Restaurar una instantánea de recuperación ante desastres
 
-Para restaurar la instantánea de recuperación ante desastres en entornos de ensayo y producción de Pro, [Importe el volcado de la base de datos directamente desde el servidor](https://experienceleague.adobe.com/es/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3).
+Para restaurar la instantánea de recuperación ante desastres en entornos de ensayo y producción de Pro, [Importe el volcado de la base de datos directamente desde el servidor](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3).
 
 ## Revertir código
 
 Las copias de seguridad e instantáneas _no_ incluyen una copia de su código. El código ya está almacenado en el repositorio basado en Git, por lo que puede utilizar comandos basados en Git para revertir código. Por ejemplo, use `git log --oneline` para desplazarse por confirmaciones anteriores; a continuación, use [`git revert`](https://git-scm.com/docs/git-revert) para restaurar el código de una confirmación específica.
 
 Además, puede elegir almacenar código en una rama _inactiva_. Use comandos git para crear una rama en lugar de usar `magento-cloud` comandos. Consulte acerca de [comandos Git](../dev-tools/cloud-cli-overview.md#git-commands) en el tema sobre la CLI de la nube.
+
+## Información relacionada
+
+- [Realizar copia de seguridad de la base de datos](database-dump.md)
+- [Copia de seguridad y recuperación ante desastres](../architecture/pro-architecture.md#backup-and-disaster-recovery) para clústeres de ensayo y producción profesional
