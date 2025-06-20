@@ -30,7 +30,7 @@ Puede crear una copia de seguridad manual de cualquier entorno de inicio activo 
 >
 >Puede crear una copia de seguridad del código directamente en los clústeres de Pro Production y Staging ejecutando el siguiente comando en el terminal, ajustándolo para cualquier carpeta o ruta que desee incluir o excluir:
 >
-```bash
+>```bash
 >mkdir -p var/support
 >/usr/bin/nice -n 15 /bin/tar -czhf var/support/code-$(date +"%Y%m%d%H%M%p").tar.gz app bin composer.* dev lib pub/*.php pub/errors setup vendor --exclude='pub/media'
 >```
