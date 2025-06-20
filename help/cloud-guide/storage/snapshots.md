@@ -27,7 +27,7 @@ La función de copia de seguridad/instantánea **no** se aplica a los entornos d
 Puede crear una copia de seguridad manual de cualquier entorno de inicio activo y de integración Pro desde [!DNL Cloud Console] o crear una instantánea desde la CLI de la nube. Debe tener un [rol de administrador](../project/user-access.md) para el entorno.
 
 **Para crear una copia de seguridad de la base de datos del entorno Pro**:
-Para crear un volcado de base de datos de cualquier entorno Pro, incluidos Ensayo y Producción, consulte el artículo de la base de conocimiento [Crear un volcado de base de datos](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud).
+Para crear un volcado de base de datos de cualquier entorno Pro, incluidos Ensayo y Producción, consulte el artículo de la base de conocimiento [Crear un volcado de base de datos](https://experienceleague.adobe.com/es/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud).
 
 **Para crear una copia de seguridad de cualquier entorno de inicio con el[!DNL Cloud Console]**:
 
@@ -140,7 +140,7 @@ Los tiempos de restauración varían según el tamaño de la base de datos:
 
 ## Restaurar una instantánea de recuperación ante desastres
 
-Para restaurar la instantánea de recuperación ante desastres en entornos de ensayo y producción de Pro, [Importe el volcado de la base de datos directamente desde el servidor](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3).
+Para restaurar la instantánea de recuperación ante desastres en entornos de ensayo y producción de Pro, [Importe el volcado de la base de datos directamente desde el servidor](https://experienceleague.adobe.com/es/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3).
 
 ## Revertir código
 
