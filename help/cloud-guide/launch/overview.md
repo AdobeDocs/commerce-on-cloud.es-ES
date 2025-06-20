@@ -1,9 +1,10 @@
 ---
 title: Lanzamiento del sitio
 description: Obtenga información sobre cómo comenzar la preparación del lanzamiento del sitio.
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 95abc7aa-ed4d-44f7-96aa-517c646bc00d
+source-git-commit: 38ac38d4edd0f317155d0d4537021a29a21d5761
 workflow-type: tm+mt
-source-wordcount: '902'
+source-wordcount: '924'
 ht-degree: 0%
 
 ---
@@ -42,7 +43,7 @@ Como parte de la suscripción a la infraestructura en la nube de Adobe Commerce,
 
 >[!NOTE]
 >
->Si desea implementar su propio certificado SSL de validación extendida para su compañía en lugar de usar el certificado Let&#39;s Encrypt, póngase en contacto con su CTA o [Envíe un ticket de asistencia de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=es#submit-ticket).
+>Si desea implementar su propio certificado SSL de validación extendida para su compañía en lugar de usar el certificado Let&#39;s Encrypt, póngase en contacto con su CTA o [Envíe un ticket de asistencia de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket).
 
 ## Configurar el escáner de seguridad
 
@@ -64,7 +65,11 @@ La herramienta de análisis de seguridad le permite supervisar periódicamente l
 
 - Recibir actualizaciones de seguridad y notificaciones específicas del sitio
 
-Consulte la [Guía del usuario](https://experienceleague.adobe.com/es/docs/commerce-admin/systems/security/security-scan) para obtener información sobre cómo configurar y utilizar la herramienta de análisis de seguridad. Normalmente, empezará a utilizar esta herramienta cuando comience la prueba de aceptación de usuarios (UAT).
+>[!NOTE]
+>
+>Adobe recomienda utilizar Security Scan Tool sobre otras herramientas de terceros para garantizar la mejor calidad de servicio durante la investigación de los resultados.
+
+Consulte la [Guía del usuario](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-scan) para obtener información sobre cómo configurar y utilizar la herramienta de análisis de seguridad. Normalmente, empezará a utilizar esta herramienta cuando comience la prueba de aceptación de usuarios (UAT).
 
 Cada sitio que se analiza debe registrarse a través de la ficha Security Scan. Durante el proceso de registro, debe aceptar el descargo de responsabilidad antes de empezar a escanear. Controla la programación y autoriza al usuario a recibir notificaciones cuando se completa cada análisis. Puede programar análisis para una fecha y hora específica y recurrente, o ejecutar un análisis bajo demanda según sea necesario.
 
