@@ -63,7 +63,7 @@ Para que SendGrid envíe correos electrónicos transaccionales en su nombre desd
 
 >[!TIP]
 >
->Asegúrese de configurar **[!UICONTROLSalmacenar direcciones de correo electrónico]** con el dominio correcto en **[!UICONTROL Stores > Configuration > General > Store Email Addresses]**. La autenticación de dominio se realiza en la dirección de correo electrónico del remitente. Si se configura la configuración predeterminada (`example.com`), Sendgrid bloquearía los mensajes de correo electrónico de `example.com`.
+>Asegúrese de configurar **[!UICONTROL Salmacenar direcciones de correo electrónico]** con el dominio correcto en **[!UICONTROL Stores > Configuration > General > Store Email Addresses]**. La autenticación de dominio se realiza en la dirección de correo electrónico del remitente. Si se configura la configuración predeterminada (`example.com`), Sendgrid bloquearía los mensajes de correo electrónico de `example.com`.
 
 **Para habilitar la autenticación de dominio**:
 
