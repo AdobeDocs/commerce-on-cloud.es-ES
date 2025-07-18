@@ -3,9 +3,9 @@ title: Configuración del servicio Valkey
 description: Aprenda a configurar y optimizar Valkey como solución de caché back-end para Adobe Commerce en infraestructura en la nube.
 feature: Cloud, Cache, Services
 exl-id: f8933e0d-a308-4c75-8547-cb26ab6df947
-source-git-commit: 242582ea61d0d93725a7f43f2ca834db9e1a7c29
+source-git-commit: cf2e659267445603b3f5eaf877f4eb7ac0c1b54c
 workflow-type: tm+mt
-source-wordcount: '188'
+source-wordcount: '201'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 [Valkey](https://valkey.io) es una solución de caché back-end opcional que reemplaza a `Zend Framework Zend_Cache_Backend_File`, que Adobe Commerce usa de forma predeterminada.
 
-Consulte [Configurar Valkey](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/valkey/config-valkey.html?lang=es){target="_blank"} en la _guía de configuración_.
+Consulte [Configurar Valkey](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/valkey/config-valkey.html){target="_blank"} en la _guía de configuración_.
 
 {{service-instruction}}
 
-**Para habilitar Valkey**:
+**Para reemplazar Redis por Valkey, actualice la configuración en los tres archivos siguientes**:
 
 1. Agregue el nombre y el tipo necesarios al archivo `.magento/services.yaml`.
 
@@ -41,10 +41,19 @@ Consulte [Configurar Valkey](https://experienceleague.adobe.com/docs/commerce-op
        valkey: "cache:valkey"
    ```
 
+1. Configure `.magento.env.yaml` de la siguiente manera:.
+
+   ```yaml
+    stage:
+        deploy:
+        VALKEY_USE_SLAVE_CONNECTION: true
+        VALKEY_BACKEND: '\Magento\Framework\Cache\Backend\RemoteSynchronizedCache'
+   ```
+
 1. Agregue, confirme e inserte los cambios de código.
 
    ```bash
-   git add .magento/services.yaml .magento.app.yaml && git commit -m "Enable valkey service" && git push origin <branch-name>
+   git add .magento/services.yaml .magento.app.yaml .magento.env.yaml && git commit -m "Enable valkey service" && git push origin <branch-name>
    ```
 
 1. [Compruebe las relaciones de servicio](services-yaml.md#service-relationships).
