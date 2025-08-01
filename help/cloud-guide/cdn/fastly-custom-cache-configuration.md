@@ -3,9 +3,9 @@ title: Personalizar configuración de caché
 description: Obtenga información sobre cómo revisar y personalizar los ajustes de configuración de la caché después de completar la instalación del servicio de Fastly.
 feature: Cloud, Configuration, Iaas, Cache
 exl-id: f6901931-7b3f-40a8-9514-168c6243cc43
-source-git-commit: eaa9980c437a9398f0d20d3c27832aecffc78fd9
+source-git-commit: 551a00932165dd1c0a876b8151ba14752ceac802
 workflow-type: tm+mt
-source-wordcount: '1898'
+source-wordcount: '1953'
 ht-degree: 0%
 
 ---
@@ -161,13 +161,15 @@ Para obtener más información, consulte la [Guía de configuración del servido
 
 ## Autenticación básica
 
-La autenticación básica es una función para proteger todas las páginas y recursos del sitio
-con un nombre de usuario y una contraseña. **no recomendamos** que se active la función básica
-en el entorno de producción. Puede configurarlo en Ensayo
-para proteger el sitio durante el proceso de desarrollo. Consulte la [Guía de autenticación básica](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/BASIC-AUTH.md) en la documentación del módulo Fastly CDN.
+La autenticación básica es una función que protege todas las páginas y recursos del sitio con un nombre de usuario y una contraseña.
 
-Si agrega acceso de usuario y habilita la autenticación básica en Ensayo, aún puede
-Acceda al administrador sin requerir credenciales adicionales.
+Adobe **no recomienda** la activación de la autenticación básica en su entorno de producción. Puede configurarlo en Ensayo para proteger el sitio durante el proceso de desarrollo. Consulte la [Guía de autenticación básica](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/BASIC-AUTH.md) en la documentación del módulo Fastly CDN.
+
+Si agrega acceso de usuario y habilita la autenticación básica en Ensayo, aún puede acceder al administrador sin requerir credenciales adicionales.
+
+>[!NOTE]
+>
+>**no** debe comprobar [!UICONTROL Enable HTTP access control] en la consola de Cloud para cualquier entorno en el que esté habilitado Fastly (como entornos de ensayo o de producción que no estén activos). Si el control de acceso se configura de esta manera, es posible que los usuarios que anteriormente tenían acceso puedan acceder al sitio si sus credenciales permanecen en la caché de Fastly, incluso después de que se haya rescindido su acceso.
 
 ## Creación de fragmentos de VCL personalizados
 
@@ -185,7 +187,7 @@ Tanto para los proyectos Starter como Pro, puede usar la opción [!UICONTROL Dom
 
 - Para proyectos iniciales, vaya a la dirección URL del proyecto en la ficha [!UICONTROL Domains] de [!DNL Cloud Console] para agregar la dirección URL del proyecto.
 
-- Para proyectos Pro, envía un [ticket de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=es#submit-ticket) para agregar el dominio a la configuración de tu proyecto en la nube. El equipo de asistencia también actualiza la configuración de cuenta de Adobe Commerce Fastly para agregar el dominio.
+- Para proyectos Pro, envía un [ticket de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) para agregar el dominio a la configuración de tu proyecto en la nube. El equipo de asistencia también actualiza la configuración de cuenta de Adobe Commerce Fastly para agregar el dominio.
 
 **Para administrar la configuración de dominio de Fastly desde el administrador**:
 
