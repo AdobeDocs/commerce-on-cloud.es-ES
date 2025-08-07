@@ -2,10 +2,11 @@
 title: Componentes de nube para Commerce
 description: Consulte la lista de las mejoras más recientes en el paquete de componentes en la nube.
 recommendations: noDisplay, catalog
+last-substantial-update: 2025-08-07T00:00:00Z
 exl-id: 34aec593-e2ea-4060-a6b9-6f4cb95a11c0
-source-git-commit: dcf71ffbdafae46e6a02735c090c33a8fe248bc6
+source-git-commit: b90959335c91dd0631d270ebb522524cf1db6ff0
 workflow-type: tm+mt
-source-wordcount: '637'
+source-wordcount: '653'
 ht-degree: 0%
 
 ---
@@ -23,7 +24,13 @@ Las notas de la versión incluyen:
 
 <!--Add release notes below-->
 
-## Versión 1.1.2 {#latest}
+## Versión 1.1.3 {#latest}
+
+Fecha de lanzamiento: 7 de agosto de 2025
+
+- ![nuevo icono](../../assets/new.svg) **PHP 8.4**—Se agregó prueba funcional para PHP 8.4 y correcciones.<!-- MCLOUD-13313 -->
+
+## Versión 1.1.2
 
 Fecha de publicación: 3 de junio de 2025
 
@@ -60,7 +67,7 @@ Fecha de la versión: 10 de marzo de 2023
 
 Fecha de la versión: 13 de septiembre de 2022
 
-- ![Icono de corrección](../../assets/fix.svg) **Errores en el calentamiento**—Se ha corregido un problema que intentaba [calentar](../environment/variables-post-deploy.md#warm_up_pages) cuando la visibilidad de la página se establece en [**No visible de forma individual**](https://experienceleague.adobe.com/es/docs/commerce-admin/systems/data-transfer/data-attributes-product#simple-product-csv-file-structure) en el administrador, lo que da como resultado `ERROR: Warming up failed: <link to page>` errores en el registro de implementación.<!-- MCLOUD-9134 -->
+- ![Icono de corrección](../../assets/fix.svg) **Errores en el calentamiento**—Se ha corregido un problema que intentaba [calentar](../environment/variables-post-deploy.md#warm_up_pages) cuando la visibilidad de la página se establece en [**No visible de forma individual**](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/data-transfer/data-attributes-product#simple-product-csv-file-structure) en el administrador, lo que da como resultado `ERROR: Warming up failed: <link to page>` errores en el registro de implementación.<!-- MCLOUD-9134 -->
 
 ## Versión 1.0.11
 
