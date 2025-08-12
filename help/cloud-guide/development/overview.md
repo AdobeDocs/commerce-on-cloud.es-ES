@@ -6,9 +6,9 @@ feature: Cloud, Install
 topic: Development
 last-substantial-update: 2024-02-06T00:00:00Z
 exl-id: 14fb0b41-1c3a-4abc-8726-cea16ab00ba8
-source-git-commit: 1cea1cdebf3aba2a1b43f305a61ca6b55e3b9d08
+source-git-commit: 1cf1f9097f9897591fe59a390b0e73921f2300fa
 workflow-type: tm+mt
-source-wordcount: '548'
+source-wordcount: '560'
 ht-degree: 0%
 
 ---
@@ -59,6 +59,7 @@ Los paquetes principales de este metapaquete son los siguientes:
 - **proveedor/magento/product-enterprise-edition**: este metapaquete requiere componentes de aplicación, incluidos módulos, marcos, temas y mucho más.
 - **proveedor/fastly2/magento2**: este módulo administra la CDN y los servicios de Fastly para los entornos de ensayo profesional, producción y producción inicial. Ver [Servicios rápidos](/help/cloud-guide/cdn/fastly.md#fastly-cdn-module-for-magento-2).
 - **proveedor/magento/módulo-paypal-on-boarding**: este módulo proporciona un pago de puerta de enlace de pago mediante conexión a tu cuenta de PayPal. Ver [Herramienta de incorporación a PayPal](../store/paypal.md).
+- **proveedor/aem/rum**: este módulo administra la herramienta de recopilación de datos [Telemetría operativa](../monitor/operational-telemetry.md).
 
 >[!TIP]
 >
