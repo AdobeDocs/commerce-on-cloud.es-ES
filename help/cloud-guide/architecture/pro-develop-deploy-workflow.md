@@ -3,9 +3,9 @@ title: Flujo de trabajo de proyecto profesional
 description: Aprenda a utilizar los flujos de trabajo de desarrollo e implementación de Pro.
 feature: Cloud, Iaas, Paas
 exl-id: efe41991-8940-4d5c-a720-80369274bee3
-source-git-commit: b4905acf71e4cb71eb369cb6d4bb3abe9ada4e9d
+source-git-commit: 8aacac9ae721bc98cbe29e67ddf23d784e478e55
 workflow-type: tm+mt
-source-wordcount: '800'
+source-wordcount: '835'
 ht-degree: 0%
 
 ---
@@ -20,11 +20,20 @@ El proyecto Pro incluye un único repositorio Git con una rama global `master` y
 
 ![Lista de entornos profesionales](../../assets/pro-environments.png)
 
-Estos entornos son `read-only`, y aceptan cambios de código implementado desde ramas insertadas desde el espacio de trabajo local. Consulte [Arquitectura Pro](pro-architecture.md) para obtener una descripción general completa de los entornos Pro. Consulte [[!DNL Cloud Console]](../project/overview.md#cloud-console) para obtener una descripción general de la lista Entornos profesionales en la vista de proyecto.
+Estos entornos son `read-only`, y aceptan cambios de código implementado desde ramas insertadas solamente desde el espacio de trabajo local.
 
 El siguiente gráfico muestra el flujo de trabajo de desarrollo e implementación de Pro, que utiliza un enfoque simple de ramificación de Git. Usted [desarrolla](#development-workflow) código utilizando una rama activa basada en el entorno `integration`, _insertando_ y _extrayendo_ cambios de código hacia y desde su rama activa remota. Usted implementa código verificado al _combinar_ la rama remota con la rama base, lo cual activa un proceso automatizado de [compilación e implementación](#deployment-workflow) para ese entorno.
 
 ![Vista de alto nivel del flujo de trabajo de desarrollo de arquitectura Pro](../../assets/pro-dev-workflow.png)
+
+Como el entorno es de solo lectura, no puede realizar ningún cambio de código directamente en el entorno de la nube. Si intenta ejecutar `composer install` para instalar cualquier módulo, obtendrá un error, por ejemplo:
+
+```bash
+file_put_contents(...): Failed to open stream: Read-only file system  
+The disk hosting /app/<cluster_ID> is full
+```
+
+Para obtener más información, consulte [Arquitectura Pro](pro-architecture.md) para obtener una descripción general de los entornos Pro y [[!DNL Cloud Console]](../project/overview.md#cloud-console) para obtener una descripción general de la lista de entornos Pro en la vista de proyecto.
 
 ## Flujo de trabajo de desarrollo
 
