@@ -3,7 +3,7 @@ title: Introducción a los fragmentos de VCL personalizados
 description: Aprenda a utilizar fragmentos de código del lenguaje de control de Barniz para personalizar la configuración del servicio de Fastly para Adobe Commerce.
 feature: Cloud, Configuration, Services
 exl-id: 90f0bea6-4365-4657-94e9-92a0fd1145fd
-source-git-commit: 71fb8f5b3f32553d8b247de44fea29b1bb945584
+source-git-commit: a51946f65ccd606cde6fbb4278f625a49ae42dad
 workflow-type: tm+mt
 source-wordcount: '2037'
 ht-degree: 0%
@@ -108,6 +108,20 @@ Los siguientes ejemplos muestran cómo crear y administrar fragmentos de VCL per
 - [VCL personalizado para lista de permitidos IP](fastly-vcl-allowlist.md)
 - [VCL personalizado para lista de bloqueados IP](fastly-vcl-blocking.md)
 - [Omitir caché de Fastly](fastly-vcl-bypass-to-origin.md)
+
+## Fragmentos de código que no se pueden ver ni modificar en el administrador de Commerce
+
+No puede ver ni modificar algunos fragmentos directamente desde el administrador de Commerce. Por ejemplo, [fragmentos dinámicos](https://docs.fastly.com/en/guides/using-dynamic-vcl-snippets). En la sección Fragmentos de VCL personalizados, no verá los fragmentos agregados por el equipo de soporte en la nube directamente al [panel de administración de Fastly](fastly.md#fastly-service-account-and-credentials).
+
+
+**Para observar los fragmentos agregados por el equipo de soporte en la nube:**
+
+1. Vaya a la sección **Herramientas**.
+
+1. Haga clic en **Enumerar todas las versiones** junto a _Historial de versiones_.
+
+1. Haga clic en el icono en forma de ojo situado junto a la versión de VCL aplicable para ver los fragmentos existentes.
+
 
 ## Administración de VCL mediante la API
 
@@ -270,6 +284,7 @@ Después de agregar un fragmento de VCL personalizado, inserta rápidamente el f
    curl -H "Fastly-Key: $FASTLY_API_TOKEN" https://api.fastly.com/service/$FASTLY_SERVICE_ID/version/$FASTLY_EDIT_VERSION/activate -X PUT
    ```
 
+
 ## Referencia rápida de API para fragmentos de VCL
 
 Estos ejemplos de solicitud de API utilizan variables de entorno exportadas para proporcionar las credenciales y autenticarse con Fastly. Para obtener más información sobre estos comandos, consulte [Referencia de la API de Fastly](https://docs.fastly.com/api/config#vcl).
@@ -317,16 +332,3 @@ Estos ejemplos de solicitud de API utilizan variables de entorno exportadas para
 - **Anular valores en el [código predeterminado de Fastly VCL](https://github.com/fastly/fastly-magento2/tree/master/etc/vcl_snippets)**
 
   Cree un fragmento con valores actualizados y asigne una prioridad de `100`.
-
-## Fragmentos de código que no se pueden ver ni modificar en el administrador de Commerce
-
-No puede ver ni modificar algunos fragmentos directamente desde el administrador de Commerce. Por ejemplo, [fragmentos dinámicos](https://docs.fastly.com/en/guides/using-dynamic-vcl-snippets). En la sección Fragmentos de VCL personalizados, no verá los fragmentos agregados por el equipo de soporte en la nube directamente al [panel de administración de Fastly](fastly.md#fastly-service-account-and-credentials).
-
-
-**Para observar los fragmentos agregados por el equipo de soporte en la nube:**
-
-1. Vaya a la sección **Herramientas**.
-
-1. Haga clic en **Enumerar todas las versiones** junto a _Historial de versiones_.
-
-1. Haga clic en el icono en forma de ojo situado junto a la versión de VCL aplicable para ver los fragmentos existentes.
