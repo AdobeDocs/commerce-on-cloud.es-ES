@@ -2,7 +2,8 @@
 title: Bloquear spam de referencia
 description: Bloquee el correo no deseado de referencia de su sitio mediante el diccionario Fastly de Edge y un fragmento de VCL personalizado.
 feature: Cloud, Configuration, Security
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 4ed47a71-7fee-4f37-a7da-3e30052004df
+source-git-commit: d08ef7d46e3b94ae54ee99aa63de1b267f4e94a0
 workflow-type: tm+mt
 source-wordcount: '684'
 ht-degree: 0%
@@ -79,7 +80,7 @@ Antes de crear un fragmento basado en este ejemplo, revise los valores para dete
 
 - `dynamic` — El valor 0 indica que hay [un fragmento normal](https://docs.fastly.com/en/guides/using-regular-vcl-snippets) que cargar en el VCL con versiones para la configuración de Fastly.
 
-- `priority` — Determina cuándo se ejecuta el fragmento de VCL. La prioridad es `5` para ejecutar este código de fragmento antes de que cualquiera de los fragmentos de VCL de Magento predeterminados (`magentomodule_*`) tenga asignada una prioridad de 50. Establezca la prioridad de cada fragmento personalizado por encima o por debajo de 50, según el momento en el que desee que se ejecute el fragmento. Los fragmentos con números de prioridad más bajos se ejecutan primero.
+- `priority` — Determina cuándo se ejecuta el fragmento de VCL. La prioridad es `5` para ejecutar este código de fragmento antes de que cualquiera de los fragmentos de VCL predeterminados de Magento (`magentomodule_*`) tenga asignada una prioridad de 50. Establezca la prioridad de cada fragmento personalizado por encima o por debajo de 50, según el momento en el que desee que se ejecute el fragmento. Los fragmentos con números de prioridad más bajos se ejecutan primero.
 
 - `type` — especifica una ubicación para insertar el fragmento de código en la versión de VCL. En este ejemplo, el fragmento VCL es un fragmento `recv`. Cuando el fragmento se inserta en la versión de VCL, se agrega a la subrutina `vcl_recv`, debajo del código VCL predeterminado de Fastly y encima de cualquier objeto.
 
@@ -135,3 +136,5 @@ Valida rápidamente la versión de VCL actualizada durante el proceso de carga. 
 {{$include /help/_includes/vcl-snippet-modify.md}}
 
 {{$include /help/_includes/vcl-snippet-delete.md}}
+
+<!-- Last updated from includes: 2025-01-27 17:16:28 -->

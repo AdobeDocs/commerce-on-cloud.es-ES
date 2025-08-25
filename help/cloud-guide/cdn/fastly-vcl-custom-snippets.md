@@ -3,7 +3,7 @@ title: Introducción a los fragmentos de VCL personalizados
 description: Aprenda a utilizar fragmentos de código del lenguaje de control de Barniz para personalizar la configuración del servicio de Fastly para Adobe Commerce.
 feature: Cloud, Configuration, Services
 exl-id: 90f0bea6-4365-4657-94e9-92a0fd1145fd
-source-git-commit: a51946f65ccd606cde6fbb4278f625a49ae42dad
+source-git-commit: d08ef7d46e3b94ae54ee99aa63de1b267f4e94a0
 workflow-type: tm+mt
 source-wordcount: '2037'
 ht-degree: 0%
@@ -332,3 +332,5 @@ Estos ejemplos de solicitud de API utilizan variables de entorno exportadas para
 - **Anular valores en el [código predeterminado de Fastly VCL](https://github.com/fastly/fastly-magento2/tree/master/etc/vcl_snippets)**
 
   Cree un fragmento con valores actualizados y asigne una prioridad de `100`.
+
+<!-- Last updated from includes: 2025-01-27 17:16:28 -->

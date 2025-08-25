@@ -2,7 +2,8 @@
 title: VCL personalizado para permitir solicitudes
 description: Filtre las solicitudes entrantes y permita el acceso por dirección IP a los sitios de Adobe Commerce mediante una lista ACL de Fastly Edge y un fragmento de VCL personalizado.
 feature: Cloud, Configuration, Security
-source-git-commit: 0d9d3d64cd0ad4792824992af354653f61e4388d
+exl-id: 836779b5-5029-4a21-ad77-0c82ebbbcdd5
+source-git-commit: d08ef7d46e3b94ae54ee99aa63de1b267f4e94a0
 workflow-type: tm+mt
 source-wordcount: '848'
 ht-degree: 0%
@@ -74,11 +75,11 @@ El siguiente código de fragmento de VCL personalizado (formato JSON) muestra la
 }
 ```
 
-Antes de [crear un fragmento personalizado](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/cdn/custom-vcl-snippets/fastly-vcl-allowlist.html?lang=es#add-the-custom-vcl-snippet) a partir de este ejemplo, revise los valores para determinar si necesita realizar algún cambio. A continuación, introduzca cada valor en los campos respectivos, como `type` en el campo Tipo, `content` en el campo Contenido.
+Antes de [crear un fragmento personalizado](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/cdn/custom-vcl-snippets/fastly-vcl-allowlist.html#add-the-custom-vcl-snippet) a partir de este ejemplo, revise los valores para determinar si necesita realizar algún cambio. A continuación, introduzca cada valor en los campos respectivos, como `type` en el campo Tipo, `content` en el campo Contenido.
 
 - `name`: nombre del fragmento de VCL. Para este ejemplo, `allowlist`.
 
-- `priority` — Determina cuándo se ejecuta el fragmento de VCL. La prioridad es `5` para ejecutar inmediatamente y comprobar si las solicitudes de un administrador provienen de una dirección IP permitida. El fragmento se ejecuta antes de que cualquiera de los fragmentos de VCL de Magento predeterminados (`magentomodule_*`) tenga asignada una prioridad de 50. Establezca la prioridad de cada fragmento personalizado por encima o por debajo de 50, según el momento en el que desee que se ejecute el fragmento. Los fragmentos con números de prioridad más bajos se ejecutan primero.
+- `priority` — Determina cuándo se ejecuta el fragmento de VCL. La prioridad es `5` para ejecutar inmediatamente y comprobar si las solicitudes de un administrador provienen de una dirección IP permitida. El fragmento se ejecuta antes de que cualquiera de los fragmentos de VCL predeterminados de Magento (`magentomodule_*`) tenga asignada una prioridad de 50. Establezca la prioridad de cada fragmento personalizado por encima o por debajo de 50, según el momento en el que desee que se ejecute el fragmento. Los fragmentos con números de prioridad más bajos se ejecutan primero.
 
 - `type` — especifica una ubicación para insertar el fragmento en el código de VCL con versiones. Este VCL es un tipo de fragmento `recv` que agrega el código de fragmento a la subrutina `vcl_recv` debajo del código VCL predeterminado de Fastly y encima de cualquier objeto.
 
@@ -90,7 +91,7 @@ En el ejemplo de código, la condición `!req.http.Fastly-FF` es importante cuan
 
 Después de revisar y actualizar el código para su entorno, utilice cualquiera de los siguientes métodos para agregar el fragmento de VCL personalizado a la configuración del servicio de Fastly:
 
-- [Agregar el fragmento de VCL personalizado del administrador](#add-the-custom-vcl-snippet). Se recomienda utilizar este método si puede acceder al administrador. (Requiere el módulo CDN de [Fastly para la versión 1.2.58](fastly-configuration.md#upgrade) de Magento 2 o posterior).
+- [Agregar el fragmento de VCL personalizado del administrador](#add-the-custom-vcl-snippet). Se recomienda utilizar este método si puede acceder al administrador. (Requiere el módulo [Fastly CDN para Magento 2 versión 1.2.58](fastly-configuration.md#upgrade) o posterior).
 
 - Guarde el ejemplo de código JSON en un archivo (por ejemplo, `allowlist.json`) y [cárguelo mediante la API de Fastly](fastly-vcl-custom-snippets.md#manage-custom-vcl-snippets-using-the-api). Utilice este método si no puede acceder al administrador.
 
@@ -129,3 +130,5 @@ Valida rápidamente la versión actualizada del código VCL durante el proceso d
 {{$include /help/_includes/vcl-snippet-modify.md}}
 
 {{$include /help/_includes/vcl-snippet-delete.md}}
+
+<!-- Last updated from includes: 2025-01-27 17:16:28 -->
