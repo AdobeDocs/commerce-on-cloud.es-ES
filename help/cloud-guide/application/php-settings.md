@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Configuración de PHP
 
-Puede elegir la [versión de PHP](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html) que se ejecutará en el archivo `.magento.app.yaml`:
+Puede elegir la [versión de PHP](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=es) que se ejecutará en el archivo `.magento.app.yaml`:
 
 ```yaml
 name: mymagento
@@ -63,7 +63,7 @@ Estos ajustes permiten a los procesos de PHP almacenar en caché las rutas a los
 
 >[!NOTE]
 >
->Para obtener una lista de los ajustes de configuración de PHP recomendados, consulte [Ajustes de PHP requeridos](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html) en la _Guía de instalación_.
+>Para obtener una lista de los ajustes de configuración de PHP recomendados, consulte [Ajustes de PHP requeridos](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html?lang=es) en la _Guía de instalación_.
 
 ### Compruebe la configuración personalizada de PHP
 
@@ -118,7 +118,7 @@ La siguiente tabla muestra las extensiones PHP compatibles al implementar Adobe 
 
 {{$include /help/_includes/templated/php-extensions-cloud.md}}
 
-Los requisitos del módulo PHP están vinculados a la versión de Adobe Commerce. Ver [requisitos de PHP](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html).
+Los requisitos del módulo PHP están vinculados a la versión de Adobe Commerce. Ver [requisitos de PHP](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/php-settings.html?lang=es).
 
 ### Compatibilidad con extensiones
 
@@ -136,7 +136,7 @@ sourceguardian.restrict_unencoded = "1"
 
 Consulte [sección 3.5 de la documentación de SourceGuardian](https://sourceguardian.com/demofiles/files/SourceGuardian%20for%20Linux%20User%20Manual.pdf). _Esto es un enlace a un PDF_.
 
-[Envíe un ticket de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) para obtener ayuda con la instalación de estas extensiones PHP en todos los entornos de producción y entornos de ensayo profesional. Incluya su archivo `.magento/services.yaml` actualizado, archivo `.magento.app.yaml` con la versión actualizada de PHP y cualquier extensión adicional de PHP. Para realizar cambios en un entorno de producción activo, debe proporcionar un aviso mínimo de 48 horas. El equipo de infraestructura en la nube puede tardar hasta 48 horas en actualizar el proyecto.
+[Envíe un ticket de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=es#submit-ticket) para obtener ayuda con la instalación de estas extensiones PHP en todos los entornos de producción y entornos de ensayo profesional. Incluya su archivo `.magento/services.yaml` actualizado, archivo `.magento.app.yaml` con la versión actualizada de PHP y cualquier extensión adicional de PHP. Para realizar cambios en un entorno de producción activo, debe proporcionar un aviso mínimo de 48 horas. El equipo de infraestructura en la nube puede tardar hasta 48 horas en actualizar el proyecto.
 
 >[!WARNING]
 >
