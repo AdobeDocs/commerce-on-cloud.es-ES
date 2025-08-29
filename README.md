@@ -9,8 +9,8 @@ ht-degree: 1%
 
 Este sitio contiene la documentación para desarrolladores más reciente de Commerce en la infraestructura en la nube.
 
-- [Guía de infraestructura de Commerce en la nube](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview)
-- [Introducción a Commerce](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/start/overview) en la infraestructura en la nube
+- [Guía de infraestructura de Commerce en la nube](https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/overview)
+- [Introducción a Commerce](https://experienceleague.adobe.com/es/docs/commerce-on-cloud/start/overview) en la infraestructura en la nube
 
 ## Código de conducta de Adobe Open Source
 
@@ -18,7 +18,7 @@ Este proyecto ha adoptado el [Código de conducta de Adobe Open Source](code-of-
 
 ## Acerca de sus contribuciones al contenido de Adobe
 
-Consulte la [Guía del colaborador de Adobe Docs](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction).
+Consulte la [Guía del colaborador de Adobe Docs](https://experienceleague.adobe.com/es/docs/contributor/contributor-guide/introduction).
 
 La forma en que contribuya depende de quién sea y del tipo de cambios con los que desee contribuir:
 
@@ -40,7 +40,7 @@ Si es redactor técnico, administrador de programa o desarrollador del equipo de
 
 Los colaboradores de la comunidad pueden utilizar la interfaz de usuario de GitHub para la edición básica o bifurcar el repositorio para realizar contribuciones importantes.
 
-Consulte la [Guía para colaboradores de Adobe Docs](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction) para obtener más información.
+Consulte la [Guía para colaboradores de Adobe Docs](https://experienceleague.adobe.com/es/docs/contributor/contributor-guide/introduction) para obtener más información.
 
 ## Utilizar Markdown para dar formato al tema
 
