@@ -23,7 +23,7 @@ Esta página contiene los cambios realizados en los últimos 60 días. Excluimos
   </thead>
   <tbody>
     <tr>
-      <td><p>Se ha actualizado <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">referencia de CLI</a> y <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/error-reference">mensajes de error</a> tras la versión de ECE-Tools, v2002.2.7.</p>
+      <td><p>Se ha actualizado <a href="https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">referencia de CLI</a> y <a href="https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/error-reference">mensajes de error</a> tras la versión de ECE-Tools, v2002.2.7.</p>
 </td>
       <td>
         Técnico
@@ -45,7 +45,7 @@ Esta página contiene los cambios realizados en los últimos 60 días. Excluimos
   </thead>
   <tbody>
     <tr>
-      <td><p>Se agregaron <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/release-notes/cloud-tools-suite">notas de la versión</a> para componentes de nube, Docker, parches y el paquete de herramientas de ECE.</p>
+      <td><p>Se agregaron <a href="https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/release-notes/cloud-tools-suite">notas de la versión</a> para componentes de nube, Docker, parches y el paquete de herramientas de ECE.</p>
 </td>
       <td>
         Actualización importante
@@ -67,7 +67,7 @@ Esta página contiene los cambios realizados en los últimos 60 días. Excluimos
   </thead>
   <tbody>
     <tr>
-      <td><p>Se agregó una nota sobre el período de reutilización obligatorio de 6 horas después de <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/storage/manage-disk-space">aumentar el espacio en disco</a> para los proyectos hospedados en AWS.</p>
+      <td><p>Se agregó una nota sobre el período de reutilización obligatorio de 6 horas después de <a href="https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/develop/storage/manage-disk-space">aumentar el espacio en disco</a> para los proyectos hospedados en AWS.</p>
 </td>
       <td>
         Técnico
@@ -89,7 +89,7 @@ Esta página contiene los cambios realizados en los últimos 60 días. Excluimos
   </thead>
   <tbody>
     <tr>
-      <td><p>Se agregó información adicional acerca de <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/setup-fastly/fastly-custom-cache-configuration">autenticación básica</a> en Fastly.</p>
+      <td><p>Se agregó información adicional acerca de <a href="https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/cdn/setup-fastly/fastly-custom-cache-configuration">autenticación básica</a> en Fastly.</p>
 </td>
       <td>
         Actualización importante
@@ -111,7 +111,7 @@ Esta página contiene los cambios realizados en los últimos 60 días. Excluimos
   </thead>
   <tbody>
     <tr>
-      <td><p>Se han agregado los detalles de la <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/valkey">configuración</a> que faltan para el servicio Valkey.</p>
+      <td><p>Se han agregado los detalles de la <a href="https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/configure/service/valkey">configuración</a> que faltan para el servicio Valkey.</p>
 </td>
       <td>
         Técnico
@@ -133,7 +133,7 @@ Esta página contiene los cambios realizados en los últimos 60 días. Excluimos
   </thead>
   <tbody>
     <tr>
-      <td><p>Se eliminaron <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/commerce-version">instrucciones de actualización</a> para las versiones de Commerce que han llegado al final de la compatibilidad y que estaban causando confusión.</p>
+      <td><p>Se eliminaron <a href="https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/develop/upgrade/commerce-version">instrucciones de actualización</a> para las versiones de Commerce que han llegado al final de la compatibilidad y que estaban causando confusión.</p>
 </td>
       <td>
         Actualización principal, comentarios
