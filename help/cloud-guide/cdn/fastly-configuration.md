@@ -3,9 +3,9 @@ title: Configurar servicios de Fastly
 description: Aprenda a configurar los servicios de Fastly para su proyecto de Adobe Commerce.
 feature: Cloud, Configuration, Iaas, Cache, Security
 exl-id: f9ce1e8b-4e9f-488e-8a4d-f866567c41d8
-source-git-commit: 867abffd6cbed6e026c20b646ff641cc6ab40580
+source-git-commit: 084e41d074f0abd9019bd45c8e337b174f8736b2
 workflow-type: tm+mt
-source-wordcount: '2063'
+source-wordcount: '2098'
 ht-degree: 0%
 
 ---
@@ -40,49 +40,57 @@ Necesita las credenciales de Fastly para configurar los servicios de CDN de Fast
 
 Con Adobe Commerce en la infraestructura en la nube, no puede acceder directamente al panel de administración de Fastly.
 
-Debe utilizar el administrador de Adobe Commerce para revisar y actualizar la configuración de Fastly para sus entornos. Si no puede resolver un problema con las funciones de Fastly en el administrador, envíe un [ticket de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=es#submit-ticket).
+Utilice el administrador de Adobe Commerce para revisar y actualizar la configuración de Fastly para sus entornos. Si no puede resolver un problema con las funciones de Fastly en el administrador, envíe un [ticket de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html).
 
 ## Obtener credenciales rápidamente
 
-Utilice los siguientes métodos para buscar y guardar el ID de servicio de Fastly y el token de API para su entorno:
+El ID de servicio y el token de API de Fastly para los entornos de ensayo y producción se almacenan en el entorno del proyecto de Cloud. Necesita las credenciales para ambos entornos.
 
-**Para ver tus credenciales de Fastly**:
+**Obtener credenciales para proyectos de Cloud Pro**:
 
->[!NOTE]
->
->No comparta su token de API en tickets de asistencia, foros públicos ni ninguna ubicación pública. Además, no asigne nunca tokens de API a repositorios de código: los repositorios solo deben contener archivos inmutables sin información confidencial.
->
->El Soporte de Adobe Commerce ya tiene acceso a las claves necesarias, por lo que no necesita proporcionar su token de API al solicitar asistencia.
->
->Si el token de API se comparte alguna vez públicamente o se adjunta a un ticket de asistencia, se considerará comprometido. En estos casos, Adobe deberá generar un nuevo token para usted.
->
->Relacionado: [Error al validar las credenciales de Fastly](https://experienceleague.adobe.com/es/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/error-when-validating-fastly-credentials#solution)
+En proyectos de Cloud Pro, compruebe las credenciales del directorio compartido montado en IaaS.
 
-El método para ver las credenciales es diferente para los proyectos Pro y Starter.
+1. Utilice SSH para conectarse al servidor.
 
-- Directorio compartido montado en IaaS: en proyectos Pro, utilice SSH para conectarse al servidor y obtener las credenciales de Fastly del archivo `/mnt/shared/fastly_tokens.txt`. Los entornos de ensayo y producción tienen credenciales únicas. Debe obtener las credenciales de cada entorno.
+2. Abra el archivo `/mnt/shared/fastly_tokens.txt` para obtener las credenciales.
 
-- Espacio de trabajo local: desde la línea de comandos, utilice la CLI `magento-cloud` para [enumerar y revisar](../environment/variables-cloud.md#viewing-environment-variables) variables de entorno de Fastly.
+   Los entornos de ensayo y producción tienen credenciales únicas. Debe obtener las credenciales de cada entorno.
 
-  ```bash
-  magento-cloud variable:get -e <environment-ID>
-  ```
+**Obtener credenciales para proyectos de Cloud Starter**:
 
-- [!DNL Cloud Console]: compruebe las siguientes variables de entorno en la [configuración del entorno](../project/overview.md#configure-environment).
+En proyectos de Cloud Starter, obtenga las credenciales de la consola en la nube o use la CLI de la nube:
+
+- En [!DNL Cloud Console], compruebe las siguientes variables de entorno en la [configuración del entorno](../project/overview.md#configure-environment).
 
    - `CONFIG__DEFAULT__SYSTEM__FULL_PAGE_CACHE__FASTLY__FASTLY_API_KEY`
 
    - `CONFIG__DEFAULT__SYSTEM__FULL_PAGE_CACHE__FASTLY__FASTLY_SERVICE_ID`
 
->[!NOTE]
->
->Si no encuentra las credenciales de Fastly para los entornos de ensayo o producción, póngase en contacto con su asesor técnico del cliente de Adobe (CTA).
+- Desde la línea de comandos de su área de trabajo local, utilice la CLI `magento-cloud` para [enumerar y revisar](../environment/variables-cloud.md#viewing-environment-variables) variables de entorno de Fastly.
+
+  ```bash
+  magento-cloud variable:get -e <environment-ID>
+  ```
+
+### Resolución de problemas
+
+- Si no encuentra las credenciales de Fastly para los entornos de ensayo o producción, póngase en contacto con su asesor técnico del cliente de Adobe (CTA).
+
+- [Error al validar las credenciales de Fastly](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/error-when-validating-fastly-credentials#solution).
+
+## Proteja sus credenciales
+
+No comparta su token de API en tickets de asistencia, foros públicos ni ninguna ubicación pública. Además, no confirme nunca tokens de API a repositorios de código: los repositorios solo deben contener archivos inmutables sin información confidencial.
+
+El Soporte de Adobe Commerce ya tiene acceso a las claves necesarias, por lo que no necesita proporcionar su token de API al solicitar asistencia.
+
+Si el token de la API se comparte alguna vez públicamente o se adjunta a un ticket de asistencia, se considera comprometido. En estos casos, Adobe debe generar un nuevo token.
 
 ## Habilitar almacenamiento en caché rápido
 
 Necesita los siguientes componentes para habilitar y configurar los servicios de Fastly:
 
-- Última versión del módulo [Fastly CDN para Magento 2](fastly.md#fastly-cdn-module-for-magento-2) instalado en los entornos de ensayo y producción. Ver [Actualizar rápidamente](#upgrade-the-fastly-module).
+- La última versión del módulo [Fastly CDN para Magento 2](fastly.md#fastly-cdn-module-for-magento-2) está instalada en los entornos de ensayo y producción. Ver [Actualizar rápidamente](#upgrade-the-fastly-module).
 
 - [Credenciales de Fastly](#get-fastly-credentials) para Adobe Commerce en entornos de ensayo y producción de infraestructura en la nube
 
@@ -148,11 +156,11 @@ Después de habilitar el módulo de Fastly, cargue el [código VCL predeterminad
 
 ## Aprovisionar certificados SSL/TLS
 
-Adobe proporciona un certificado Let&#39;s Encrypt SSL/TLS validado por el dominio para servir tráfico HTTPS seguro desde Fastly. Adobe proporciona un certificado para cada entorno de Producción profesional, Ensayo y Producción inicial para proteger todos los dominios de ese entorno. Para obtener información detallada sobre el certificado proporcionado, consulte [Certificados SSL (TLS) de Adobe para Adobe Commerce en la infraestructura en la nube](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/ssl-tls-certificates-for-magento-commerce-cloud-faq.html?lang=es).
+Adobe proporciona un certificado Let&#39;s Encrypt SSL/TLS validado por el dominio para servir tráfico HTTPS seguro desde Fastly. Adobe proporciona un certificado para cada entorno de Producción profesional, Ensayo y Producción inicial para proteger todos los dominios de ese entorno. Para obtener información detallada sobre el certificado proporcionado, consulte [Certificados SSL (TLS) de Adobe para Adobe Commerce en la infraestructura en la nube](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/ssl-tls-certificates-for-magento-commerce-cloud-faq).
 
 >[!NOTE]
 >
->Puede proporcionar su propio certificado TLS o SSL en lugar de utilizar el certificado Let&#39;s Encrypt proporcionado por Adobe. Sin embargo, este proceso requiere un trabajo adicional de configuración y mantenimiento. Para elegir esta opción, envíe un ticket de asistencia de Adobe Commerce o trabaje con Adobe para añadir certificados personalizados y alojados a su Adobe Commerce en entornos de infraestructura en la nube.
+>Puede proporcionar su propio certificado TLS o SSL en lugar de utilizar el certificado Let&#39;s Encrypt proporcionado por Adobe. Sin embargo, este proceso requiere un trabajo adicional para su configuración y mantenimiento. Para elegir esta opción, envíe un ticket de asistencia de Adobe Commerce o trabaje con Adobe para añadir certificados personalizados y alojados a su Adobe Commerce en entornos de infraestructura en la nube.
 
 Para habilitar los certificados SSL/TLS para entornos de Adobe Commerce, la automatización de Adobe completa los siguientes pasos:
 
@@ -169,7 +177,7 @@ Esta automatización requiere que actualice la configuración DNS del sitio para
 >
 >Si tiene un dominio de producción que no está activo, utilice los registros CNAME del desafío ACME para la validación del dominio. Añadir los registros a la configuración DNS antes de tiempo permite a Adobe aprovisionar el certificado SSL/TLS con los dominios correctos antes del inicio del sitio. Antes de iniciar la producción, debe reemplazar estos registros de marcador de posición con los registros CNAME proporcionados por Adobe.
 
-Cuando se completa la validación del dominio, Adobe aprovisiona el certificado TLS/SSL de Let&#39;s Encrypt y lo carga en entornos de ensayo o producción activos. Este proceso puede tardar hasta 12 horas. Le recomendamos que complete las actualizaciones de configuración de DNS con varios días de antelación para evitar retrasos en el desarrollo del sitio y el inicio del mismo.
+Cuando se completa la validación del dominio, Adobe aprovisiona el certificado TLS/SSL de Let&#39;s Encrypt y lo carga en entornos de ensayo o producción activos. Este proceso puede tardar hasta 12 horas. Adobe recomienda completar las actualizaciones de la configuración DNS con varios días de antelación para evitar retrasos en el desarrollo del sitio y el inicio del mismo.
 
 ## Actualizar la configuración de DNS con la configuración de desarrollo
 
@@ -252,7 +260,7 @@ Para enrutar el tráfico desde las direcciones URL de la tienda al servicio Fast
 
    >[!NOTE]
    >
-   >Como alternativa al uso de la CLI de la nube, puede actualizar la URL base desde [Admin](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html?lang=es)
+   >Como alternativa al uso de la CLI de la nube, puede actualizar la URL base desde [Admin](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-urls)
 
 1. Reinicie el explorador web.
 
@@ -276,10 +284,10 @@ Después de completar los cambios de configuración de DNS, use la herramienta d
    curl -vo /dev/null -H Fastly-Debug:1 --resolve <live-URL-hostname>:443:<live-IP-address>
    ```
 
-1. En la respuesta, compruebe los [encabezados](fastly-troubleshooting.md#check-cache-hit-and-miss-response-headers) para asegurarse de que Fastly funciona. Debería ver los siguientes encabezados únicos en la respuesta:
+1. En la respuesta, compruebe los [encabezados](fastly-troubleshooting.md#check-cache-hit-and-miss-response-headers) para asegurarse de que Fastly funciona. Por ejemplo, debería ver los siguientes encabezados únicos en la respuesta:
 
    ```http
-   < Fastly-Magento-VCL-Uploaded: yes
+   < Fastly-Magento-VCL-Uploaded: 1.2.228
    < X-Cache: HIT, MISS
    ```
 
@@ -288,7 +296,7 @@ Si los encabezados no tienen los valores correctos, consulte [Resolver errores e
 ## Actualización del módulo de Fastly
 
 Actualiza rápidamente el módulo de Fastly CDN para Magento 2 para resolver problemas, aumentar el rendimiento y proporcionar nuevas funciones.
-Le recomendamos que actualice el módulo Fastly en los entornos de ensayo y producción a la [última versión](https://github.com/fastly/fastly-magento2/blob/master/VERSION).
+Adobe recomienda actualizar el módulo Fastly en los entornos de ensayo y producción a la [última versión](https://github.com/fastly/fastly-magento2/blob/master/VERSION).
 
 Después de actualizar el módulo, debe cargar el código VCL para aplicar los cambios a la configuración del servicio de Fastly.
 
@@ -327,4 +335,4 @@ Después de comprobar los servicios de Fastly en el sitio de ensayo, repita el p
 
 >[!TIP]
 >
-> Si tiene problemas con los servicios de Fastly en sus entornos de Adobe Commerce, consulte [Solucionador de problemas de Fastly de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/magento-fastly-troubleshooter.html?lang=es).
+> Si tiene problemas con los servicios de Fastly en sus entornos de Adobe Commerce, consulte [Solucionador de problemas de Fastly de Adobe Commerce](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/magento-fastly-troubleshooter).
