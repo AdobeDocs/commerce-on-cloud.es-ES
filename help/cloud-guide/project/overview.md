@@ -2,9 +2,10 @@
 title: Proyecto de infraestructura en nube
 description: Lea información general sobre Adobe Commerce en la infraestructura en la nube [!DNL Cloud Console] y aprenda a acceder a la configuración de la cuenta.
 last-substantial-update: 2024-02-06T00:00:00Z
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 8eed04c7-6469-45a4-aa89-dc594c977264
+source-git-commit: 00b1b6578c226a304697963d17ba349ea17da260
 workflow-type: tm+mt
-source-wordcount: '987'
+source-wordcount: '1003'
 ht-degree: 0%
 
 ---
@@ -13,7 +14,7 @@ ht-degree: 0%
 
 El proyecto de Adobe Commerce en la nube incluye todo el código de las ramas de Git, los entornos asociados y los scripts para implementar la aplicación [!DNL Commerce]. Los entornos contienen servicios para admitir la aplicación [!DNL Commerce], incluida una base de datos, un servidor web y un servidor de almacenamiento en caché.
 
-El Adobe proporciona [!DNL Cloud Console] y herramientas para desarrolladores para administrar por completo todos los aspectos del proyecto. Usted, como propietario de la cuenta, tiene acceso completo a todos los entornos.
+Adobe proporciona [!DNL Cloud Console] y herramientas para desarrolladores para administrar por completo todos los aspectos del proyecto. Usted, como propietario de la cuenta, tiene acceso completo a todos los entornos.
 
 ## [!DNL Cloud Console]
 
@@ -42,11 +43,11 @@ La descripción general del proyecto, siempre que no tenga un entorno selecciona
 
 Y en la descripción general del proyecto principal:
 
-- La vista Entornos muestra una lista o vista de árbol de ![entornos de rama activos](../../assets/icon-active.png){width="32"} (active) and ![inactive branch](../../assets/icon-inactive.png){width="32"} (inactivos).
+- La vista Entornos muestra una lista o vista de árbol de los entornos de ![rama activa](../../assets/icon-active.png){width="32"} (activa) y ![rama inactiva](../../assets/icon-inactive.png){width="32"} (inactiva).
 - [Flujo de actividad](activity-stream.md) muestra actividades en ejecución, pendientes y recientes para el proyecto.
 <!-- - Apps & Services—Shows a topology of service containers -->
 
-Para **Proyectos iniciales**, hay una jerarquía de ramas a partir de `master` (Producción). Cualquier rama que cree se mostrará como rama secundaria de la rama `master`. El Adobe recomienda crear una rama `staging` y luego crear una rama `integration` para desarrollo. Consulte [Arquitectura inicial](../architecture/starter-architecture.md).
+Para **Proyectos iniciales**, hay una jerarquía de ramas a partir de `master` (Producción). Cualquier rama que cree se mostrará como rama secundaria de la rama `master`. Adobe recomienda crear una rama `staging` y luego crear una rama `integration` para desarrollo. Consulte [Arquitectura inicial](../architecture/starter-architecture.md).
 
 Para **Pro**, hay una jerarquía de ramas que comienza desde `production` hasta `staging` hasta `integration`. El icono ![Icono dedicado](../../assets/icon-dedicated.png){width="32"} indica que la rama se implementa en un entorno dedicado. Todas las ramas que cree se mostrarán como secundarias de la rama `integration`. Consulte [Arquitectura profesional](../architecture/pro-architecture.md).
 
@@ -140,7 +141,7 @@ Haga clic en **[!UICONTROL Environments]** y seleccione un entorno específico e
 
 >[!WARNING]
 >
->**NO** usa el método de control de acceso HTTP para proteger los entornos de ensayo y producción de Pro. Esto interrumpe el almacenamiento en caché de Fastly. En su lugar, use la característica [Bloqueo](../cdn/fastly-vcl-blocking.md) disponible en la CDN de Fastly para Adobe Commerce.
+>**NO** usa el método de control de acceso HTTP para proteger los entornos de ensayo y producción de Pro. Esto interrumpe el almacenamiento en caché de Fastly. En su lugar, use la característica [Bloqueo](../cdn/fastly-vcl-blocking.md) disponible en la CDN de Fastly para Adobe Commerce para bloquear el acceso o implementar el control de acceso mediante [Autenticación básica de Fastly](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/BASIC-AUTH.md).
 
 ## Credenciales de Fastly y New Relic
 
