@@ -1,7 +1,7 @@
 ---
-source-git-commit: 9166b44ae53e8cfc6b8022730a6b91406ba696c0
+source-git-commit: b29ca0d786bf8cd15e5a3ba1ee8218f3bed2ae2f
 workflow-type: tm+mt
-source-wordcount: '13341'
+source-wordcount: '13671'
 ht-degree: 0%
 
 ---
@@ -9,9 +9,9 @@ ht-degree: 0%
 
 <!-- The template to render with above values -->
 
-**Versión**: 1.46.1
+**Versión**: 1.47.0
 
-Esta referencia contiene 119 comandos disponibles mediante la herramienta de línea de comandos `magento-cloud`.
+Esta referencia contiene 123 comandos disponibles mediante la herramienta de línea de comandos `magento-cloud`.
 La lista inicial se genera automáticamente mediante el comando `magento-cloud list` en Adobe Commerce en la infraestructura en la nube.
 
 ## General
@@ -27,6 +27,13 @@ Mostrar este mensaje de ayuda
 - Predeterminado: `false`
 - No acepta un valor
 
+#### `--version`, `-V`
+
+Mostrar esta versión de la aplicación
+
+- Predeterminado: `false`
+- No acepta un valor
+
 #### `--verbose`, `-v|-vv|-vvv`
 
 Aumentar el detalle de los mensajes
@@ -34,9 +41,9 @@ Aumentar el detalle de los mensajes
 - Predeterminado: `false`
 - No acepta un valor
 
-#### `--version`, `-V`
+#### `--quiet`, `-q`
 
-Mostrar esta versión de la aplicación
+Imprimir sólo la salida necesaria; suprimir otros mensajes y errores. Esto implica —sin interacción. Se ignora en modo detallado.
 
 - Predeterminado: `false`
 - No acepta un valor
@@ -67,6 +74,44 @@ Borre la caché de CLI
 ### Opciones
 
 Para ver las opciones globales, consulte [Opciones globales](#global-options).
+
+
+## `console`
+
+```bash
+magento-cloud web [--browser BROWSER] [--pipe] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
+```
+
+Abra el proyecto en la consola
+
+### Opciones
+
+Para ver las opciones globales, consulte [Opciones globales](#global-options).
+
+#### `--browser`
+
+Explorador que se utiliza para abrir la dirección URL. Establezca 0 para ninguno.
+
+- Requiere un valor
+
+#### `--pipe`
+
+Envíe la URL a stdout.
+
+- Predeterminado: `false`
+- No acepta un valor
+
+#### `--project`, `-p`
+
+El ID o la URL del proyecto
+
+- Requiere un valor
+
+#### `--environment`, `-e`
+
+El ID del entorno. Utilice &quot;.&quot; para seleccionar el entorno predeterminado del proyecto.
+
+- Requiere un valor
 
 
 ## `decode`
@@ -292,44 +337,6 @@ Invertir el orden de las opciones del proyecto
 
 - Predeterminado: `false`
 - No acepta un valor
-
-
-## `web`
-
-```bash
-magento-cloud web [--browser BROWSER] [--pipe] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
-```
-
-Abra el proyecto en la interfaz de usuario web
-
-### Opciones
-
-Para ver las opciones globales, consulte [Opciones globales](#global-options).
-
-#### `--browser`
-
-Explorador que se utiliza para abrir la dirección URL. Establezca 0 para ninguno.
-
-- Requiere un valor
-
-#### `--pipe`
-
-Envíe la URL a stdout.
-
-- Predeterminado: `false`
-- No acepta un valor
-
-#### `--project`, `-p`
-
-El ID o la URL del proyecto
-
-- Requiere un valor
-
-#### `--environment`, `-e`
-
-El ID del entorno. Utilice &quot;.&quot; para seleccionar el entorno predeterminado del proyecto.
-
-- Requiere un valor
 
 
 ## `activity:cancel`
@@ -565,7 +572,7 @@ El formato de salida: tabla, csv, tsv o sin formato
 
 #### `--columns`, `-c`
 
-Columnas para mostrar. Columnas disponibles: id*, created*, description*, progress*, state*, result*, completed, environment, type (* = columnas predeterminadas). El carácter &quot;+&quot; se puede utilizar como marcador de posición para las columnas predeterminadas. Los caracteres % o * se pueden usar como comodín. Los valores se pueden dividir por comas (por ejemplo, &quot;a, b, c&quot;) y/o espacios en blanco.
+Columnas para mostrar. Columnas disponibles: id*, created*, description*, progress*, state*, result*, completed, environment, time_build, time_deploy, time_execute, time_wait, type (* = columnas predeterminadas). El carácter &quot;+&quot; se puede utilizar como marcador de posición para las columnas predeterminadas. Los caracteres % o * se pueden usar como comodín. Los valores se pueden dividir por comas (por ejemplo, &quot;a, b, c&quot;) y/o espacios en blanco.
 
 - Predeterminado: `[]`
 - Requiere un valor
@@ -829,7 +836,7 @@ Para ver las opciones globales, consulte [Opciones globales](#global-options).
 ## `auth:browser-login`
 
 ```bash
-magento-cloud login [-f|--force] [--browser BROWSER] [--pipe]
+magento-cloud login [-f|--force] [--method METHOD] [--max-age MAX-AGE] [--browser BROWSER] [--pipe]
 ```
 
 Inicie sesión en Magento Cloud mediante un explorador
@@ -860,6 +867,19 @@ Inicie sesión de nuevo, incluso si ya ha iniciado sesión
 
 - Predeterminado: `false`
 - No acepta un valor
+
+#### `--method`
+
+Requerir métodos de autenticación específicos
+
+- Predeterminado: `[]`
+- Requiere un valor
+
+#### `--max-age`
+
+La antigüedad máxima (en segundos) de la sesión de autenticación web
+
+- Requiere un valor
 
 #### `--browser`
 
@@ -960,6 +980,156 @@ Cerrar sesión en otras sesiones locales
 
 - Predeterminado: `false`
 - No acepta un valor
+
+
+## `autoscaling:get`
+
+```bash
+magento-cloud autoscaling [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
+```
+
+Ver la configuración de escalado automático de aplicaciones y trabajadores en un entorno
+
+### Opciones
+
+Para ver las opciones globales, consulte [Opciones globales](#global-options).
+
+#### `--project`, `-p`
+
+El ID o la URL del proyecto
+
+- Requiere un valor
+
+#### `--environment`, `-e`
+
+El ID del entorno. Utilice &quot;.&quot; para seleccionar el entorno predeterminado del proyecto.
+
+- Requiere un valor
+
+#### `--format`
+
+El formato de salida: tabla, csv, tsv o sin formato
+
+- Predeterminado: `table`
+- Requiere un valor
+
+#### `--columns`, `-c`
+
+Columnas para mostrar. Columnas disponibles: service*, metric*, direction*, threshold*, duration*, enabled*, instance_count*, cooldown, max_instances, min_instances (* = columnas predeterminadas). El carácter &quot;+&quot; se puede utilizar como marcador de posición para las columnas predeterminadas. Los caracteres % o * se pueden usar como comodín. Los valores se pueden dividir por comas (por ejemplo, &quot;a, b, c&quot;) y/o espacios en blanco.
+
+- Predeterminado: `[]`
+- Requiere un valor
+
+#### `--no-header`
+
+No generar el encabezado de tabla
+
+- Predeterminado: `false`
+- No acepta un valor
+
+
+## `autoscaling:set`
+
+```bash
+magento-cloud autoscaling:set [-s|--service SERVICE] [-m|--metric METRIC] [--enabled ENABLED] [--threshold-up THRESHOLD-UP] [--duration-up DURATION-UP] [--cooldown-up COOLDOWN-UP] [--threshold-down THRESHOLD-DOWN] [--duration-down DURATION-DOWN] [--cooldown-down COOLDOWN-DOWN] [--instances-min INSTANCES-MIN] [--instances-max INSTANCES-MAX] [--dry-run] [-p|--project PROJECT] [-e|--environment ENVIRONMENT]
+```
+
+Establecer la configuración de escalado automático de aplicaciones o trabajadores en un entorno
+
+```
+Configure automatic scaling for apps or workers in an environment.
+
+You can also configure resources statically by running: magento-cloud resources:set
+```
+
+### Opciones
+
+Para ver las opciones globales, consulte [Opciones globales](#global-options).
+
+#### `--service`, `-s`
+
+Nombre de la aplicación o del trabajador para el que se configurará el escalado automático
+
+- Requiere un valor
+
+#### `--metric`, `-m`
+
+Nombre de la métrica que se utilizará para activar el escalado automático
+
+- Requiere un valor
+
+#### `--enabled`
+
+Habilitar escalado automático en función de la métrica dada
+
+- Requiere un valor
+
+#### `--threshold-up`
+
+Umbral por encima del cual se ampliará el servicio
+
+- Requiere un valor
+
+#### `--duration-up`
+
+Duración sobre la que se evalúa la métrica respecto al umbral para ampliar
+
+- Requiere un valor
+
+#### `--cooldown-up`
+
+Duración de espera antes de intentar ampliar más después de un evento de escalado
+
+- Requiere un valor
+
+#### `--threshold-down`
+
+Umbral por debajo del cual se reducirá el servicio
+
+- Requiere un valor
+
+#### `--duration-down`
+
+Duración sobre la que se evalúa la métrica frente al umbral para reducirla
+
+- Requiere un valor
+
+#### `--cooldown-down`
+
+Duración de espera antes de intentar reducir aún más después de un evento de escalado
+
+- Requiere un valor
+
+#### `--instances-min`
+
+Cantidad mínima de instancias que se reducirán a
+
+- Requiere un valor
+
+#### `--instances-max`
+
+Número máximo de instancias que se ampliarán a
+
+- Requiere un valor
+
+#### `--dry-run`
+
+Mostrar los cambios que se realizarán, sin cambiar nada
+
+- Predeterminado: `false`
+- No acepta un valor
+
+#### `--project`, `-p`
+
+El ID o la URL del proyecto
+
+- Requiere un valor
+
+#### `--environment`, `-e`
+
+El ID del entorno. Utilice &quot;.&quot; para seleccionar el entorno predeterminado del proyecto.
+
+- Requiere un valor
 
 
 ## `blackfire:setup`
@@ -1362,7 +1532,7 @@ El formato de fecha (como una cadena de formato de fecha PHP)
 ## `db:dump`
 
 ```bash
-magento-cloud db:dump [--schema SCHEMA] [-f|--file FILE] [-d|--directory DIRECTORY] [-z|--gzip] [-t|--timestamp] [-o|--stdout] [--table TABLE] [--exclude-table EXCLUDE-TABLE] [--schema-only] [--charset CHARSET] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE]
+magento-cloud db:dump [--schema SCHEMA] [-f|--file FILE] [-d|--directory DIRECTORY] [-z|--gzip] [-t|--timestamp] [-o|--stdout] [--table TABLE] [--exclude-table EXCLUDE-TABLE] [--schema-only] [--charset CHARSET] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP]
 ```
 
 Crear un volcado local de la base de datos remota
@@ -1461,101 +1631,11 @@ La relación de servicio que se va a utilizar
 
 - Requiere un valor
 
-#### `--identity-file`, `-i`
-
-Una identidad SSH (clave privada) que utilizar
-
-- Requiere un valor
-
-
-## `db:size`
-
-```bash
-magento-cloud db:size [-B|--bytes] [-C|--cleanup] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-i|--identity-file IDENTITY-FILE]
-```
-
-Calcular el uso de disco de una base de datos
-
-```
-This is an estimate of the database disk usage. The real size on disk is usually higher because of overhead.
-
-To see more accurate disk usage, run: magento-cloud disk
-```
-
-### Opciones
-
-Para ver las opciones globales, consulte [Opciones globales](#global-options).
-
-#### `--bytes`, `-B`
-
-Mostrar tamaños en bytes.
-
-- Predeterminado: `false`
-- No acepta un valor
-
-#### `--cleanup`, `-C`
-
-Comprobar si las tablas se pueden limpiar y mostrar recomendaciones (solo InnoDb).
-
-- Predeterminado: `false`
-- No acepta un valor
-
-#### `--project`, `-p`
-
-El ID o la URL del proyecto
-
-- Requiere un valor
-
-#### `--environment`, `-e`
-
-El ID del entorno. Utilice &quot;.&quot; para seleccionar el entorno predeterminado del proyecto.
-
-- Requiere un valor
-
-#### `--app`, `-A`
-
-El nombre de la aplicación remota
-
-- Requiere un valor
-
-#### `--relationship`, `-r`
-
-La relación de servicio que se va a utilizar
-
-- Requiere un valor
-
-#### `--format`
-
-El formato de salida: tabla, csv, tsv o sin formato
-
-- Predeterminado: `table`
-- Requiere un valor
-
-#### `--columns`, `-c`
-
-Columnas para mostrar. Columnas disponibles: max, percent_used, used. Los caracteres % o * se pueden usar como comodín. Los valores se pueden dividir por comas (por ejemplo, &quot;a, b, c&quot;) y/o espacios en blanco.
-
-- Predeterminado: `[]`
-- Requiere un valor
-
-#### `--no-header`
-
-No generar el encabezado de tabla
-
-- Predeterminado: `false`
-- No acepta un valor
-
-#### `--identity-file`, `-i`
-
-Una identidad SSH (clave privada) que utilizar
-
-- Requiere un valor
-
 
 ## `db:sql`
 
 ```bash
-magento-cloud sql [--raw] [--schema SCHEMA] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [--] [<query>]
+magento-cloud sql [--raw] [--schema SCHEMA] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP] [--] [<query>]
 ```
 
 Ejecutar SQL en la base de datos remota
@@ -1607,12 +1687,6 @@ La relación de servicio que se va a utilizar
 
 - Requiere un valor
 
-#### `--identity-file`, `-i`
-
-Una identidad SSH (clave privada) que utilizar
-
-- Requiere un valor
-
 
 ## `domain:add`
 
@@ -1636,19 +1710,19 @@ Para ver las opciones globales, consulte [Opciones globales](#global-options).
 
 #### `--cert`
 
-Ruta de acceso al archivo de certificado para este dominio
+La ruta a un archivo de certificado personalizado
 
 - Requiere un valor
 
 #### `--key`
 
-Ruta de acceso al archivo de clave privada del certificado proporcionado.
+Ruta a la clave privada del certificado personalizado
 
 - Requiere un valor
 
 #### `--chain`
 
-Ruta de acceso al archivo o archivos de cadena de certificados para el certificado proporcionado
+Ruta de acceso a los archivos de cadena para el certificado personalizado
 
 - Predeterminado: `[]`
 - Requiere un valor
@@ -1866,19 +1940,19 @@ Para ver las opciones globales, consulte [Opciones globales](#global-options).
 
 #### `--cert`
 
-Ruta de acceso al archivo de certificado para este dominio
+La ruta a un archivo de certificado personalizado
 
 - Requiere un valor
 
 #### `--key`
 
-Ruta de acceso al archivo de clave privada del certificado proporcionado.
+Ruta a la clave privada del certificado personalizado
 
 - Requiere un valor
 
 #### `--chain`
 
-Ruta de acceso al archivo o archivos de cadena de certificados para el certificado proporcionado
+Ruta de acceso a los archivos de cadena para el certificado personalizado
 
 - Predeterminado: `[]`
 - Requiere un valor
@@ -1967,7 +2041,7 @@ Espere a que se complete la operación (valor predeterminado)
 ## `environment:branch`
 
 ```bash
-magento-cloud branch [--title TITLE] [--type TYPE] [--no-clone-parent] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<id>] [<parent>]
+magento-cloud branch [--title TITLE] [--type TYPE] [--no-clone-parent] [--no-checkout] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<id>] [<parent>]
 ```
 
 Rama de un entorno
@@ -2006,6 +2080,13 @@ No clonar los datos del entorno principal
 - Predeterminado: `false`
 - No acepta un valor
 
+#### `--no-checkout`
+
+No desproteja la rama localmente
+
+- Predeterminado: `false`
+- No acepta un valor
+
 #### `--project`, `-p`
 
 El ID o la URL del proyecto
@@ -2036,7 +2117,7 @@ Espere a que se complete la operación (valor predeterminado)
 ## `environment:checkout`
 
 ```bash
-magento-cloud checkout [-i|--identity-file IDENTITY-FILE] [--] [<id>]
+magento-cloud checkout [<id>]
 ```
 
 Desproteger un entorno
@@ -2051,17 +2132,11 @@ El ID del entorno que se va a desproteger. Por ejemplo: &quot;sprint2&quot;
 
 Para ver las opciones globales, consulte [Opciones globales](#global-options).
 
-#### `--identity-file`, `-i`
-
-Una identidad SSH (clave privada) que utilizar
-
-- Requiere un valor
-
 
 ## `environment:delete`
 
 ```bash
-magento-cloud environment:delete [--delete-branch] [--no-delete-branch] [--type TYPE] [-t|--only-type ONLY-TYPE] [--exclude EXCLUDE] [--exclude-type EXCLUDE-TYPE] [--inactive] [--merged] [--allow-delete-parent] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<environment>]...
+magento-cloud environment:delete [--delete-branch] [--no-delete-branch] [--type TYPE] [-t|--only-type ONLY-TYPE] [--exclude EXCLUDE] [--exclude-type EXCLUDE-TYPE] [--inactive] [--status STATUS] [--only-status ONLY-STATUS] [--exclude-status EXCLUDE-STATUS] [--merged] [--allow-delete-parent] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<environment>]...
 ```
 
 Eliminar uno o más entornos
@@ -2136,6 +2211,27 @@ Eliminar todos los entornos inactivos (añadir a cualquier otro seleccionado)
 - Predeterminado: `false`
 - No acepta un valor
 
+#### `--status`
+
+Eliminar todos los entornos de un estado (añadiendo a otros seleccionados) Los valores se pueden dividir por comas (por ejemplo, &quot;a,b,c&quot;) o espacios en blanco.
+
+- Predeterminado: `[]`
+- Requiere un valor
+
+#### `--only-status`
+
+Solo se pueden eliminar entornos de un estado específico. Los valores se pueden dividir por comas (por ejemplo, &quot;a,b,c&quot;) o espacios en blanco.
+
+- Predeterminado: `[]`
+- Requiere un valor
+
+#### `--exclude-status`
+
+Los estados de los entornos que no se eliminen. Los valores se pueden dividir por comas (por ejemplo, &quot;a,b,c&quot;) o espacios en blanco.
+
+- Predeterminado: `[]`
+- Requiere un valor
+
 #### `--merged`
 
 Eliminar todos los entornos combinados (añadir a cualquier otro seleccionado)
@@ -2146,6 +2242,108 @@ Eliminar todos los entornos combinados (añadir a cualquier otro seleccionado)
 #### `--allow-delete-parent`
 
 Permitir que se eliminen los entornos que tienen tareas secundarias
+
+- Predeterminado: `false`
+- No acepta un valor
+
+#### `--project`, `-p`
+
+El ID o la URL del proyecto
+
+- Requiere un valor
+
+#### `--environment`, `-e`
+
+El ID del entorno. Utilice &quot;.&quot; para seleccionar el entorno predeterminado del proyecto.
+
+- Requiere un valor
+
+#### `--no-wait`, `-W`
+
+No espere a que se complete la operación
+
+- Predeterminado: `false`
+- No acepta un valor
+
+#### `--wait`
+
+Espere a que se complete la operación (valor predeterminado)
+
+- Predeterminado: `false`
+- No acepta un valor
+
+
+## `environment:deploy`
+
+```bash
+magento-cloud deploy [-s|--strategy STRATEGY] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait]
+```
+
+Implementar los cambios clasificados de un entorno
+
+### Opciones
+
+Para ver las opciones globales, consulte [Opciones globales](#global-options).
+
+#### `--strategy`, `-s`
+
+La estrategia de implementación, stop start (predeterminado, reinicio con apagado) o roll (cero tiempo de inactividad)
+
+- Requiere un valor
+
+#### `--project`, `-p`
+
+El ID o la URL del proyecto
+
+- Requiere un valor
+
+#### `--environment`, `-e`
+
+El ID del entorno. Utilice &quot;.&quot; para seleccionar el entorno predeterminado del proyecto.
+
+- Requiere un valor
+
+#### `--no-wait`, `-W`
+
+No espere a que se complete la operación
+
+- Predeterminado: `false`
+- No acepta un valor
+
+#### `--wait`
+
+Espere a que se complete la operación (valor predeterminado)
+
+- Predeterminado: `false`
+- No acepta un valor
+
+
+## `environment:deploy:type`
+
+```bash
+magento-cloud environment:deploy:type [--pipe] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<type>]
+```
+
+Mostrar o establecer el tipo de implementación del entorno
+
+```
+Choose automatic (the default) if you want your changes to be deployed immediately as they are made.
+Choose manual to have changes staged until you trigger a deployment (including changes to code, variables, domains and settings).
+```
+
+### Argumentos
+
+#### `type`
+
+El tipo de implementación del entorno: automática o manual.
+
+### Opciones
+
+Para ver las opciones globales, consulte [Opciones globales](#global-options).
+
+#### `--pipe`
+
+Enviar el tipo de implementación a stdout
 
 - Predeterminado: `false`
 - No acepta un valor
@@ -2191,14 +2389,14 @@ Para ver las opciones globales, consulte [Opciones globales](#global-options).
 
 #### `--access`
 
-Restricción de acceso con el formato &quot;permission:address&quot;. Utilice 0 para borrar todas las direcciones.
+Restricción de acceso con el formato &quot;permiso:address&quot;. Utilice 0 para borrar todas las direcciones.
 
 - Predeterminado: `[]`
 - Requiere un valor
 
 #### `--auth`
 
-Credenciales de autenticación HTTP Basic en el formato &quot;nombre de usuario:contraseña&quot;. Utilice 0 para borrar todas las credenciales.
+Credenciales de autenticación HTTP Basic en formato &quot;nombre de usuario:password&quot;. Utilice 0 para borrar todas las credenciales.
 
 - Predeterminado: `[]`
 - Requiere un valor
@@ -2377,7 +2575,7 @@ Espere a que se complete la operación (valor predeterminado)
 ## `environment:list`
 
 ```bash
-magento-cloud environments [-I|--no-inactive] [--pipe] [--refresh REFRESH] [--sort SORT] [--reverse] [--type TYPE] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT]
+magento-cloud environments [-I|--no-inactive] [--status STATUS] [--pipe] [--refresh REFRESH] [--sort SORT] [--reverse] [--type TYPE] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT]
 ```
 
 Obtener una lista de entornos
@@ -2392,6 +2590,13 @@ No mostrar entornos inactivos
 
 - Predeterminado: `false`
 - No acepta un valor
+
+#### `--status`
+
+Filtrar entornos por estado (activo, inactivo, sucio, en pausa, eliminando). Los valores se pueden dividir por comas (por ejemplo, &quot;a, b, c&quot;) y/o espacios en blanco.
+
+- Predeterminado: `[]`
+- Requiere un valor
 
 #### `--pipe`
 
@@ -2616,7 +2821,7 @@ Espere a que se complete la operación (valor predeterminado)
 ## `environment:push`
 
 ```bash
-magento-cloud push [--target TARGET] [-f|--force] [--force-with-lease] [-u|--set-upstream] [--activate] [--parent PARENT] [--type TYPE] [--no-clone-parent] [-W|--no-wait] [--wait] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-i|--identity-file IDENTITY-FILE] [--] [<source>]
+magento-cloud push [--target TARGET] [-f|--force] [--force-with-lease] [-u|--set-upstream] [--activate] [--parent PARENT] [--type TYPE] [--no-clone-parent] [-W|--no-wait] [--wait] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<source>]
 ```
 
 Insertar código en un entorno
@@ -2625,7 +2830,7 @@ Insertar código en un entorno
 
 #### `source`
 
-La referencia de origen: un nombre de rama o hash de confirmación
+La referencia de fuente Git; por ejemplo, un nombre de rama o un hash de compromiso.
 
 - Predeterminado: `HEAD`
 
@@ -2662,14 +2867,14 @@ Establezca el entorno de destino como flujo ascendente para la rama de origen. E
 
 #### `--activate`
 
-Activar el entorno antes de insertar
+Active el entorno. Se reanudarán los entornos en pausa. Esto garantizará que el entorno esté activo aunque no se hayan insertado cambios.
 
 - Predeterminado: `false`
 - No acepta un valor
 
 #### `--parent`
 
-Establecer el nuevo entorno principal (solo se usa con —activate)
+Definir el elemento principal del entorno (solo se usa con —activate)
 
 - Requiere un valor
 
@@ -2709,12 +2914,6 @@ El ID o la URL del proyecto
 #### `--environment`, `-e`
 
 El ID del entorno. Utilice &quot;.&quot; para seleccionar el entorno predeterminado del proyecto.
-
-- Requiere un valor
-
-#### `--identity-file`, `-i`
-
-Una identidad SSH (clave privada) que utilizar
 
 - Requiere un valor
 
@@ -2761,7 +2960,7 @@ Espere a que se complete la operación (valor predeterminado)
 ## `environment:relationships`
 
 ```bash
-magento-cloud relationships [-P|--property PROPERTY] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-i|--identity-file IDENTITY-FILE] [--] [<environment>]
+magento-cloud relationships [-P|--property PROPERTY] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--] [<environment>]
 ```
 
 Mostrar las relaciones de un entorno
@@ -2804,12 +3003,6 @@ El ID del entorno. Utilice &quot;.&quot; para seleccionar el entorno predetermin
 #### `--app`, `-A`
 
 El nombre de la aplicación remota
-
-- Requiere un valor
-
-#### `--identity-file`, `-i`
-
-Una identidad SSH (clave privada) que utilizar
 
 - Requiere un valor
 
@@ -2856,7 +3049,7 @@ Espere a que se complete la operación (valor predeterminado)
 ## `environment:scp`
 
 ```bash
-magento-cloud scp [-r|--recursive] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE] [--] [<files>]...
+magento-cloud scp [-r|--recursive] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [--] [<files>]...
 ```
 
 Copiar archivos a y desde un entorno mediante scp
@@ -2911,17 +3104,11 @@ Un ID de instancia
 
 - Requiere un valor
 
-#### `--identity-file`, `-i`
-
-Una identidad SSH (clave privada) que utilizar
-
-- Requiere un valor
-
 
 ## `environment:ssh`
 
 ```bash
-magento-cloud ssh [--pipe] [--all] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE] [--] [<cmd>]...
+magento-cloud ssh [--pipe] [--all] [-o|--option OPTION] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [--] [<cmd>]...
 ```
 
 SSH al entorno actual
@@ -2953,6 +3140,13 @@ Mostrar todas las URL SSH (de cada aplicación).
 - Predeterminado: `false`
 - No acepta un valor
 
+#### `--option`, `-o`
+
+Pasar una opción adicional a SSH
+
+- Predeterminado: `[]`
+- Requiere un valor
+
 #### `--project`, `-p`
 
 El ID o la URL del proyecto
@@ -2983,12 +3177,6 @@ Un ID de instancia
 
 - Requiere un valor
 
-#### `--identity-file`, `-i`
-
-Una identidad SSH (clave privada) que utilizar
-
-- Requiere un valor
-
 
 ## `environment:synchronize`
 
@@ -3002,7 +3190,9 @@ Sincronizar el código o los datos de un entorno desde su elemento principal
 This command synchronizes to a child environment from its parent environment.
 
 Synchronizing "code" means there will be a Git merge from the parent to the
-child. Synchronizing "data" means that all files in all services (including
+child.
+
+Synchronizing "data" means that all files in all services (including
 static files, databases, logs, search indices, etc.) will be copied from the
 parent to the child.
 ```
@@ -3102,7 +3292,7 @@ El ID del entorno. Utilice &quot;.&quot; para seleccionar el entorno predetermin
 ## `environment:xdebug`
 
 ```bash
-magento-cloud xdebug [--port PORT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE]
+magento-cloud xdebug [--port PORT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE]
 ```
 
 Abrir un túnel a Xdebug en el entorno
@@ -3145,12 +3335,6 @@ Un nombre de trabajador
 #### `--instance`, `-I`
 
 Un ID de instancia
-
-- Requiere un valor
-
-#### `--identity-file`, `-i`
-
-Una identidad SSH (clave privada) que utilizar
 
 - Requiere un valor
 
@@ -3228,7 +3412,7 @@ El formato de fecha (como una cadena de formato de fecha PHP)
 ## `integration:activity:list`
 
 ```bash
-magento-cloud int:act [--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [--limit LIMIT] [--start START] [--state STATE] [--result RESULT] [-i|--incomplete] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<id>]
+magento-cloud integration:activities [--type TYPE] [-x|--exclude-type EXCLUDE-TYPE] [--limit LIMIT] [--start START] [--state STATE] [--result RESULT] [-i|--incomplete] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--] [<id>]
 ```
 
 Obtener una lista de actividades para una integración
@@ -3299,7 +3483,7 @@ El formato de salida: tabla, csv, tsv o sin formato
 
 #### `--columns`, `-c`
 
-Columnas para mostrar. Columnas disponibles: id*, created*, description*, type*, state*, result*, completed (* = columnas predeterminadas). El carácter &quot;+&quot; se puede utilizar como marcador de posición para las columnas predeterminadas. Los caracteres % o * se pueden usar como comodín. Los valores se pueden dividir por comas (por ejemplo, &quot;a, b, c&quot;) y/o espacios en blanco.
+Columnas para mostrar. Columnas disponibles: id*, created*, description*, type*, state*, result*, completed, progress, time_build, time_deploy, time_execute, time_wait (* = columnas predeterminadas). El carácter &quot;+&quot; se puede utilizar como marcador de posición para las columnas predeterminadas. Los caracteres % o * se pueden usar como comodín. Los valores se pueden dividir por comas (por ejemplo, &quot;a, b, c&quot;) y/o espacios en blanco.
 
 - Predeterminado: `[]`
 - Requiere un valor
@@ -3395,7 +3579,7 @@ Para ver las opciones globales, consulte [Opciones globales](#global-options).
 
 #### `--type`
 
-El tipo de integración (&quot;bitbucket&quot;, &quot;bitbucket_server&quot;, &quot;github&quot;, &quot;gitlab&quot;, &quot;webhook&quot;, &quot;health.email&quot;, &quot;health.pagerduty&quot;, &quot;health.slack&quot;, &quot;health.webhook&quot;, &quot;httplog&quot;, &quot;script&quot;, &quot;newrelic&quot;, &quot;splunk&quot;, &quot;sumologic&quot;, &quot;syslog&quot;)
+El tipo de integración (&quot;bitbucket&quot;, &quot;bitbucket_server&quot;, &quot;github&quot;, &quot;gitlab&quot;, &quot;webhook&quot;, &quot;health.email&quot;, &quot;health.pagerduty&quot;, &quot;health.slack&quot;, &quot;health.webhook&quot;, &quot;httplog&quot;, &quot;script&quot;, &quot;newrelic&quot;, &quot;splunk&quot;, &quot;sumologic&quot;, &quot;syslog&quot;, &quot;otlplog&quot;)
 
 - Requiere un valor
 
@@ -3793,7 +3977,7 @@ El ID o la URL del proyecto
 ## `integration:list`
 
 ```bash
-magento-cloud integrations [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT]
+magento-cloud integrations [-t|--type TYPE] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-p|--project PROJECT]
 ```
 
 Ver una lista de las integraciones del proyecto
@@ -3801,6 +3985,12 @@ Ver una lista de las integraciones del proyecto
 ### Opciones
 
 Para ver las opciones globales, consulte [Opciones globales](#global-options).
+
+#### `--type`, `-t`
+
+Filtrar por tipo
+
+- Requiere un valor
 
 #### `--format`
 
@@ -3850,7 +4040,7 @@ Para ver las opciones globales, consulte [Opciones globales](#global-options).
 
 #### `--type`
 
-El tipo de integración (&quot;bitbucket&quot;, &quot;bitbucket_server&quot;, &quot;github&quot;, &quot;gitlab&quot;, &quot;webhook&quot;, &quot;health.email&quot;, &quot;health.pagerduty&quot;, &quot;health.slack&quot;, &quot;health.webhook&quot;, &quot;httplog&quot;, &quot;script&quot;, &quot;newrelic&quot;, &quot;splunk&quot;, &quot;sumologic&quot;, &quot;syslog&quot;)
+El tipo de integración (&quot;bitbucket&quot;, &quot;bitbucket_server&quot;, &quot;github&quot;, &quot;gitlab&quot;, &quot;webhook&quot;, &quot;health.email&quot;, &quot;health.pagerduty&quot;, &quot;health.slack&quot;, &quot;health.webhook&quot;, &quot;httplog&quot;, &quot;script&quot;, &quot;newrelic&quot;, &quot;splunk&quot;, &quot;sumologic&quot;, &quot;syslog&quot;, &quot;otlplog&quot;)
 
 - Requiere un valor
 
@@ -4341,7 +4531,7 @@ Para ver las opciones globales, consulte [Opciones globales](#global-options).
 magento-cloud metrics [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--latest] [-s|--service SERVICE] [--type TYPE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
 ```
 
-BETA Mostrar métricas de CPU, disco y memoria para un entorno
+Mostrar las métricas de CPU, disco y memoria de un entorno
 
 ### Opciones
 
@@ -4440,7 +4630,7 @@ El formato de fecha (como una cadena de formato de fecha PHP)
 magento-cloud cpu [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--latest] [-s|--service SERVICE] [--type TYPE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
 ```
 
-Uso de un entorno con Beta Show CPU
+Mostrar el uso de CPU de un entorno
 
 ### Opciones
 
@@ -4638,7 +4828,7 @@ El formato de fecha (como una cadena de formato de fecha PHP)
 magento-cloud mem [-B|--bytes] [-r|--range RANGE] [-i|--interval INTERVAL] [--to TO] [-1|--latest] [-s|--service SERVICE] [--type TYPE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [--date-fmt DATE-FMT]
 ```
 
-BETA Mostrar el uso de memoria de un entorno
+Mostrar el uso de memoria de un entorno
 
 ### Opciones
 
@@ -4734,7 +4924,7 @@ El formato de fecha (como una cadena de formato de fecha PHP)
 ## `mount:download`
 
 ```bash
-magento-cloud mount:download [-a|--all] [-m|--mount MOUNT] [--target TARGET] [--source-path] [--delete] [--exclude EXCLUDE] [--include INCLUDE] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE]
+magento-cloud mount:download [-a|--all] [-m|--mount MOUNT] [--target TARGET] [--source-path] [--delete] [--exclude EXCLUDE] [--include INCLUDE] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE]
 ```
 
 Descargar archivos desde un montaje mediante rsync
@@ -4827,12 +5017,6 @@ Un ID de instancia
 
 - Requiere un valor
 
-#### `--identity-file`, `-i`
-
-Una identidad SSH (clave privada) que utilizar
-
-- Requiere un valor
-
 
 ## `mount:list`
 
@@ -4912,103 +5096,10 @@ Un ID de instancia
 - Requiere un valor
 
 
-## `mount:size`
-
-```bash
-magento-cloud mount:size [-B|--bytes] [--refresh] [--format FORMAT] [-c|--columns COLUMNS] [--no-header] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE]
-```
-
-Compruebe el uso de los soportes en el disco
-
-```
-Use this command to check the disk size and usage for an application's mounts.
-
-Mounts are directories mounted into the application from a persistent, writable
-filesystem. They are configured in the mounts key in the application configuration.
-
-The filesystem's total size is determined by the disk key in the same file.
-```
-
-### Opciones
-
-Para ver las opciones globales, consulte [Opciones globales](#global-options).
-
-#### `--bytes`, `-B`
-
-Mostrar tamaños en bytes
-
-- Predeterminado: `false`
-- No acepta un valor
-
-#### `--refresh`
-
-Actualizar la caché
-
-- Predeterminado: `false`
-- No acepta un valor
-
-#### `--format`
-
-El formato de salida: tabla, csv, tsv o sin formato
-
-- Predeterminado: `table`
-- Requiere un valor
-
-#### `--columns`, `-c`
-
-Columnas para mostrar. Columnas disponibles: available, max, mounts, percent_used, tamaños, used. Los caracteres % o * se pueden usar como comodín. Los valores se pueden dividir por comas (por ejemplo, &quot;a, b, c&quot;) y/o espacios en blanco.
-
-- Predeterminado: `[]`
-- Requiere un valor
-
-#### `--no-header`
-
-No generar el encabezado de tabla
-
-- Predeterminado: `false`
-- No acepta un valor
-
-#### `--identity-file`, `-i`
-
-Una identidad SSH (clave privada) que utilizar
-
-- Requiere un valor
-
-#### `--project`, `-p`
-
-El ID o la URL del proyecto
-
-- Requiere un valor
-
-#### `--environment`, `-e`
-
-El ID del entorno. Utilice &quot;.&quot; para seleccionar el entorno predeterminado del proyecto.
-
-- Requiere un valor
-
-#### `--app`, `-A`
-
-El nombre de la aplicación remota
-
-- Requiere un valor
-
-#### `--worker`
-
-Un nombre de trabajador
-
-- Requiere un valor
-
-#### `--instance`, `-I`
-
-Un ID de instancia
-
-- Requiere un valor
-
-
 ## `mount:upload`
 
 ```bash
-magento-cloud mount:upload [--source SOURCE] [-m|--mount MOUNT] [--delete] [--exclude EXCLUDE] [--include INCLUDE] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE] [-i|--identity-file IDENTITY-FILE]
+magento-cloud mount:upload [--source SOURCE] [-m|--mount MOUNT] [--delete] [--exclude EXCLUDE] [--include INCLUDE] [--refresh] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-I|--instance INSTANCE]
 ```
 
 Cargar archivos a un montaje mediante rsync
@@ -5087,12 +5178,6 @@ Un ID de instancia
 
 - Requiere un valor
 
-#### `--identity-file`, `-i`
-
-Una identidad SSH (clave privada) que utilizar
-
-- Requiere un valor
-
 
 ## `operation:list`
 
@@ -5100,7 +5185,7 @@ Una identidad SSH (clave privada) que utilizar
 magento-cloud ops [--full] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
 ```
 
-Operaciones de tiempo de ejecución de lista de Beta en un entorno
+Enumerar operaciones de tiempo de ejecución en un entorno
 
 ### Opciones
 
@@ -5165,7 +5250,7 @@ No generar el encabezado de tabla
 magento-cloud operation:run [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--worker WORKER] [-W|--no-wait] [--wait] [--] [<operation>]
 ```
 
-BETA Ejecute una operación en el entorno
+Ejecute una operación en el entorno
 
 ### Argumentos
 
@@ -5238,7 +5323,7 @@ El ID o la URL del proyecto
 ## `project:get`
 
 ```bash
-magento-cloud get [-e|--environment ENVIRONMENT] [--depth DEPTH] [--build] [-p|--project PROJECT] [-i|--identity-file IDENTITY-FILE] [--] [<project>] [<directory>]
+magento-cloud get [-e|--environment ENVIRONMENT] [--depth DEPTH] [--build] [-p|--project PROJECT] [--] [<project>] [<directory>]
 ```
 
 Clonar un proyecto localmente
@@ -5280,12 +5365,6 @@ Cree el proyecto después de la clonación
 #### `--project`, `-p`
 
 El ID o la URL del proyecto
-
-- Requiere un valor
-
-#### `--identity-file`, `-i`
-
-Una identidad SSH (clave privada) que utilizar
 
 - Requiere un valor
 
@@ -5449,7 +5528,7 @@ El formato de salida: tabla, csv, tsv o sin formato
 
 #### `--columns`
 
-Columnas para mostrar. Columnas disponibles: id*, title*, region*, created_at, organization_id, organization_label, organization_name, status (* = columnas predeterminadas). El carácter &quot;+&quot; se puede utilizar como marcador de posición para las columnas predeterminadas. Los caracteres % o * se pueden usar como comodín. Los valores se pueden dividir por comas (por ejemplo, &quot;a, b, c&quot;) y/o espacios en blanco.
+Columnas para mostrar. Columnas disponibles: id*, title*, region*, created_at, organization_id, organization_label, organization_name, organization_type, status (* = columnas predeterminadas). El carácter &quot;+&quot; se puede utilizar como marcador de posición para las columnas predeterminadas. Los caracteres % o * se pueden usar como comodín. Los valores se pueden dividir por comas (por ejemplo, &quot;a, b, c&quot;) y/o espacios en blanco.
 
 - Predeterminado: `[]`
 - Requiere un valor
@@ -5620,6 +5699,46 @@ El ID o la URL del proyecto
 El ID del entorno. Utilice &quot;.&quot; para seleccionar el entorno predeterminado del proyecto.
 
 - Requiere un valor
+
+
+## `resources:build:get`
+
+```bash
+magento-cloud build-resources:get [-p|--project PROJECT] [--format FORMAT] [-c|--columns COLUMNS] [--no-header]
+```
+
+Ver los recursos de compilación de un proyecto
+
+### Opciones
+
+Para ver las opciones globales, consulte [Opciones globales](#global-options).
+
+#### `--project`, `-p`
+
+El ID o la URL del proyecto
+
+- Requiere un valor
+
+#### `--format`
+
+El formato de salida: tabla, csv, tsv o sin formato
+
+- Predeterminado: `table`
+- Requiere un valor
+
+#### `--columns`, `-c`
+
+Columnas para mostrar. Columnas disponibles: cpu, memoria. Los caracteres % o * se pueden usar como comodín. Los valores se pueden dividir por comas (por ejemplo, &quot;a, b, c&quot;) y/o espacios en blanco.
+
+- Predeterminado: `[]`
+- Requiere un valor
+
+#### `--no-header`
+
+No generar el encabezado de tabla
+
+- Predeterminado: `false`
+- No acepta un valor
 
 
 ## `route:get`
@@ -5890,7 +6009,7 @@ No generar el encabezado de tabla
 ## `service:mongo:dump`
 
 ```bash
-magento-cloud mongodump [-c|--collection COLLECTION] [-z|--gzip] [-o|--stdout] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
+magento-cloud mongodump [-c|--collection COLLECTION] [-z|--gzip] [-o|--stdout] [-r|--relationship RELATIONSHIP] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
 ```
 
 Crear un volcado de archivo binario de datos de MongoDB
@@ -5925,12 +6044,6 @@ La relación de servicio que se va a utilizar
 
 - Requiere un valor
 
-#### `--identity-file`, `-i`
-
-Una identidad SSH (clave privada) que utilizar
-
-- Requiere un valor
-
 #### `--project`, `-p`
 
 El ID o la URL del proyecto
@@ -5953,7 +6066,7 @@ El nombre de la aplicación remota
 ## `service:mongo:export`
 
 ```bash
-magento-cloud mongoexport [-c|--collection COLLECTION] [--jsonArray] [--type TYPE] [-f|--fields FIELDS] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
+magento-cloud mongoexport [-c|--collection COLLECTION] [--jsonArray] [--type TYPE] [-f|--fields FIELDS] [-r|--relationship RELATIONSHIP] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
 ```
 
 Exportación de datos de MongoDB
@@ -5994,12 +6107,6 @@ La relación de servicio que se va a utilizar
 
 - Requiere un valor
 
-#### `--identity-file`, `-i`
-
-Una identidad SSH (clave privada) que utilizar
-
-- Requiere un valor
-
 #### `--project`, `-p`
 
 El ID o la URL del proyecto
@@ -6022,7 +6129,7 @@ El nombre de la aplicación remota
 ## `service:mongo:restore`
 
 ```bash
-magento-cloud mongorestore [-c|--collection COLLECTION] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
+magento-cloud mongorestore [-c|--collection COLLECTION] [-r|--relationship RELATIONSHIP] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
 ```
 
 Restaurar un archivo binario volcado de datos en MongoDB
@@ -6040,12 +6147,6 @@ Colección que se va a restaurar
 #### `--relationship`, `-r`
 
 La relación de servicio que se va a utilizar
-
-- Requiere un valor
-
-#### `--identity-file`, `-i`
-
-Una identidad SSH (clave privada) que utilizar
 
 - Requiere un valor
 
@@ -6071,7 +6172,7 @@ El nombre de la aplicación remota
 ## `service:mongo:shell`
 
 ```bash
-magento-cloud mongo [--eval EVAL] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
+magento-cloud mongo [--eval EVAL] [-r|--relationship RELATIONSHIP] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
 ```
 
 Usar el shell de MongoDB
@@ -6089,12 +6190,6 @@ Pasar un fragmento de JavaScript al shell
 #### `--relationship`, `-r`
 
 La relación de servicio que se va a utilizar
-
-- Requiere un valor
-
-#### `--identity-file`, `-i`
-
-Una identidad SSH (clave privada) que utilizar
 
 - Requiere un valor
 
@@ -6120,7 +6215,7 @@ El nombre de la aplicación remota
 ## `service:redis-cli`
 
 ```bash
-magento-cloud redis [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--] [<args>]
+magento-cloud redis [-r|--relationship RELATIONSHIP] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--] [<args>]...
 ```
 
 Acceso a la CLI de Redis
@@ -6129,7 +6224,10 @@ Acceso a la CLI de Redis
 
 #### `args`
 
-Argumentos para agregar al comando Redis
+Argumentos para agregar al comando redis-cli
+
+- Predeterminado: `[]`
+- Matriz
 
 ### Opciones
 
@@ -6141,9 +6239,49 @@ La relación de servicio que se va a utilizar
 
 - Requiere un valor
 
-#### `--identity-file`, `-i`
+#### `--project`, `-p`
 
-Una identidad SSH (clave privada) que utilizar
+El ID o la URL del proyecto
+
+- Requiere un valor
+
+#### `--environment`, `-e`
+
+El ID del entorno. Utilice &quot;.&quot; para seleccionar el entorno predeterminado del proyecto.
+
+- Requiere un valor
+
+#### `--app`, `-A`
+
+El nombre de la aplicación remota
+
+- Requiere un valor
+
+
+## `service:valkey-cli`
+
+```bash
+magento-cloud valkey [-r|--relationship RELATIONSHIP] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [--] [<args>]...
+```
+
+Acceso a la CLI de Valkey
+
+### Argumentos
+
+#### `args`
+
+Argumentos para agregar al comando valkey-cli
+
+- Predeterminado: `[]`
+- Matriz
+
+### Opciones
+
+Para ver las opciones globales, consulte [Opciones globales](#global-options).
+
+#### `--relationship`, `-r`
+
+La relación de servicio que se va a utilizar
 
 - Requiere un valor
 
@@ -6186,7 +6324,7 @@ Para ver las opciones globales, consulte [Opciones globales](#global-options).
 
 #### `--live`
 
-Copia de seguridad en vivo: no detenga el entorno. Si se establece, el entorno se mantendrá en ejecución y abierto a las conexiones durante la copia de seguridad. Esto reduce el tiempo de inactividad, con el riesgo de realizar copias de seguridad de los datos en un estado incoherente.
+Instantánea activa: no detenga el entorno. Si se configura, el entorno se deja en ejecución y abierto a las conexiones durante la instantánea. Esto reduce el tiempo de inactividad, con el riesgo de realizar copias de seguridad de los datos en un estado incoherente.
 
 - Predeterminado: `false`
 - No acepta un valor
@@ -6363,7 +6501,7 @@ El ID del entorno. Utilice &quot;.&quot; para seleccionar el entorno predetermin
 ## `snapshot:restore`
 
 ```bash
-magento-cloud snapshot:restore [--target TARGET] [--branch-from BRANCH-FROM] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<snapshot>]
+magento-cloud snapshot:restore [--target TARGET] [--branch-from BRANCH-FROM] [--no-code] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-W|--no-wait] [--wait] [--] [<snapshot>]
 ```
 
 Restaurar una instantánea de entorno
@@ -6372,7 +6510,7 @@ Restaurar una instantánea de entorno
 
 #### `snapshot`
 
-Nombre de la instantánea. Valores predeterminados del más reciente
+El ID de la instantánea. Valores predeterminados del más reciente
 
 ### Opciones
 
@@ -6389,6 +6527,13 @@ El entorno en el que restaurar. Valores predeterminados del entorno actual de la
 Si —target aún no existe, especifica el elemento principal del nuevo entorno
 
 - Requiere un valor
+
+#### `--no-code`
+
+No restaure código, solo datos.
+
+- Predeterminado: `false`
+- No acepta un valor
 
 #### `--project`, `-p`
 
@@ -6490,7 +6635,7 @@ Para ver las opciones globales, consulte [Opciones globales](#global-options).
 
 #### `--variable`
 
-Variable que se va a establecer durante la operación con el formato type:name=value
+Variable que se va a establecer durante la operación, con el formato type:name=value
 
 - Predeterminado: `[]`
 - Requiere un valor
@@ -6568,7 +6713,7 @@ Forzar la actualización del certificado
 
 #### `--new-key`
 
-[Obsoleto] Use —nuevo en su lugar
+Forzar generación de un nuevo par de claves
 
 - Predeterminado: `false`
 - No acepta un valor
@@ -6890,7 +7035,7 @@ No generar el encabezado de tabla
 ## `tunnel:open`
 
 ```bash
-magento-cloud tunnel:open [-g|--gateway-ports] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-i|--identity-file IDENTITY-FILE]
+magento-cloud tunnel:open [-g|--gateway-ports] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP]
 ```
 
 Apertura de túneles SSH para las relaciones de una aplicación
@@ -6937,17 +7082,11 @@ El nombre de la aplicación remota
 
 - Requiere un valor
 
-#### `--identity-file`, `-i`
-
-Una identidad SSH (clave privada) que utilizar
-
-- Requiere un valor
-
 
 ## `tunnel:single`
 
 ```bash
-magento-cloud tunnel:single [--port PORT] [-g|--gateway-ports] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP] [-i|--identity-file IDENTITY-FILE]
+magento-cloud tunnel:single [--port PORT] [-g|--gateway-ports] [-p|--project PROJECT] [-e|--environment ENVIRONMENT] [-A|--app APP] [-r|--relationship RELATIONSHIP]
 ```
 
 Apertura de un solo túnel SSH para una relación de aplicación
@@ -6993,12 +7132,6 @@ La relación de servicio que se va a utilizar
 
 - Requiere un valor
 
-#### `--identity-file`, `-i`
-
-Una identidad SSH (clave privada) que utilizar
-
-- Requiere un valor
-
 
 ## `user:add`
 
@@ -7020,7 +7153,7 @@ Para ver las opciones globales, consulte [Opciones globales](#global-options).
 
 #### `--role`, `-r`
 
-La función de proyecto del usuario (&quot;administrador&quot; o &quot;visualizador&quot;) o la función de tipo de entorno (por ejemplo, &quot;ensayo:colaborador&quot; o &quot;producción:visualizador&quot;). Para quitar un usuario de un tipo de entorno, establezca la función como &quot;ninguno&quot;. Los caracteres % o * se pueden usar como comodín para el tipo de entorno, p. ej. &#39;%:viewer&#39; para dar al usuario la función &#39;viewer&#39; en todos los tipos. La función puede abreviarse, por ejemplo, &quot;producción:v&quot;.
+La función de proyecto del usuario (&quot;administrador&quot; o &quot;visualizador&quot;) o la función de tipo de entorno (por ejemplo, &quot;ensayo:contributor&quot; o &quot;producción:viewer&quot;). Para quitar un usuario de un tipo de entorno, establezca la función como &quot;ninguno&quot;. Los caracteres % o * se pueden usar como comodín para el tipo de entorno, p. ej. &#39;%:viewer&#39; para dar al usuario la función &#39;visor&#39; en todos los tipos. La función se puede abreviar, p. ej. &#39;production:v&#39;.
 
 - Predeterminado: `[]`
 - Requiere un valor
@@ -7153,7 +7286,7 @@ Espere a que se complete la operación (valor predeterminado)
 
 #### `--role`, `-r`
 
-[Obsoleto: usar usuario:actualizar para cambiar los roles de un usuario]
+[Obsoleto: use el usuario:update para cambiar los roles de un usuario]
 
 - Requiere un valor
 
@@ -7218,7 +7351,7 @@ Para ver las opciones globales, consulte [Opciones globales](#global-options).
 
 #### `--role`, `-r`
 
-La función de proyecto del usuario (&quot;administrador&quot; o &quot;visualizador&quot;) o la función de tipo de entorno (por ejemplo, &quot;ensayo:colaborador&quot; o &quot;producción:visualizador&quot;). Para quitar un usuario de un tipo de entorno, establezca la función como &quot;ninguno&quot;. Los caracteres % o * se pueden usar como comodín para el tipo de entorno, p. ej. &#39;%:viewer&#39; para dar al usuario la función &#39;viewer&#39; en todos los tipos. La función puede abreviarse, por ejemplo, &quot;producción:v&quot;.
+La función de proyecto del usuario (&quot;administrador&quot; o &quot;visualizador&quot;) o la función de tipo de entorno (por ejemplo, &quot;ensayo:contributor&quot; o &quot;producción:viewer&quot;). Para quitar un usuario de un tipo de entorno, establezca la función como &quot;ninguno&quot;. Los caracteres % o * se pueden usar como comodín para el tipo de entorno, p. ej. &#39;%:viewer&#39; para dar al usuario la función &#39;visor&#39; en todos los tipos. La función se puede abreviar, p. ej. &#39;production:v&#39;.
 
 - Predeterminado: `[]`
 - Requiere un valor
