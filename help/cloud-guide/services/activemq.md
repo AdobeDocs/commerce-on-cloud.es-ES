@@ -11,7 +11,7 @@ ht-degree: 0%
 
 # Configurar el servicio [!DNL ActiveMQ]
 
-[Message Queue Framework (MQF)](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework.html) es un sistema de Adobe Commerce que permite que un [módulo](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary#module) publique mensajes en colas. También define los consumidores que reciben los mensajes de forma asincrónica.
+[Message Queue Framework (MQF)](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework.html?lang=es) es un sistema de Adobe Commerce que permite que un [módulo](https://experienceleague.adobe.com/es/docs/commerce-operations/implementation-playbook/glossary#module) publique mensajes en colas. También define los consumidores que reciben los mensajes de forma asincrónica.
 
 El MQF puede usar [ActiveMQ Artemis](https://activemq.apache.org/components/artemis/) como agente de mensajería, que proporciona una plataforma escalable para enviar y recibir mensajes. También incluye un mecanismo para almacenar mensajes no enviados. [!DNL ActiveMQ Artemis] admite el protocolo STOMP (Protocolo de mensajería orientada a texto de transmisión) para mensajes.
 
