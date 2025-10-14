@@ -38,7 +38,7 @@ La configuración predeterminada permite lo siguiente:
 - Desde la ruta de acceso raíz (`/`), solo se puede acceder a la web y a los medios
 - Se puede tener acceso a cualquier archivo desde las rutas de acceso `~/pub/static` y `~/pub/media`
 
-El siguiente ejemplo muestra la configuración predeterminada en el archivo `.magento.app.yaml` para un conjunto de ubicaciones accesibles desde la web asociadas a una entrada en la propiedad [`mounts` ](properties.md#mounts):
+El siguiente ejemplo muestra la configuración predeterminada en el archivo `.magento.app.yaml` para un conjunto de ubicaciones accesibles desde la web asociadas a una entrada en la propiedad [`mounts` &#x200B;](properties.md#mounts):
 
 ```yaml
  # The configuration of app when it is exposed to the web.

@@ -264,6 +264,6 @@ Al eliminar las entradas del complemento de `elasticsearch:` en `.magento/servic
 
 Consulte los siguientes artículos de soporte de Adobe Commerce para obtener ayuda sobre la resolución de problemas del Elasticsearch:
 
-- El Elasticsearch [5 está configurado, pero la página de búsqueda no se carga con el error &quot;Los datos de campo están deshabilitados...&quot; ](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/elasticsearch/elasticsearch-5-is-configured-but-search-page-does-not-load-with-fielddata-is-disabled...-error.html?lang=es)
+- El Elasticsearch [5 está configurado, pero la página de búsqueda no se carga con el error &quot;Los datos de campo están deshabilitados...&quot; &#x200B;](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/elasticsearch/elasticsearch-5-is-configured-but-search-page-does-not-load-with-fielddata-is-disabled...-error.html?lang=es)
 - [Elasticsearch en el solucionador de problemas de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/elasticsearch/elasticsearch-in-magento-troubleshooter.html)
 - [El estado del índice de Elasticsearch es `yellow` o `red`](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/elasticsearch/elasticsearch-index-status-is-yellow-or-red.html?lang=es)

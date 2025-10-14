@@ -162,7 +162,7 @@ A medida que desarrolla funciones, agrega extensiones y diseña temas, es útil 
 
 Para ayudar a exportar los datos de producción como datos de prueba para utilizarlos en entornos de ensayo e integración:
 
-- [Ejecute los comandos CLI de ](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html?lang=es) de las utilidades de soporte técnico (recomendado) al exportar una copia de seguridad protegida del cliente y almacenar datos mediante la clave de cifrado de Adobe Commerce
+- [Ejecute los comandos CLI de &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html?lang=es) de las utilidades de soporte técnico (recomendado) al exportar una copia de seguridad protegida del cliente y almacenar datos mediante la clave de cifrado de Adobe Commerce
 
 - Herramienta [Recopilación de datos](https://experienceleague.adobe.com/es/docs/commerce-admin/systems/tools/support#data-collector) para generar y exportar datos
 

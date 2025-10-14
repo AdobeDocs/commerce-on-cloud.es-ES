@@ -17,7 +17,7 @@ El TTL de caché (tiempo de vida) para los archivos estáticos y multimedia se e
 >
 >Antes de actualizar el entorno de producción, es importante probar los cambios en el entorno de ensayo. [Envíe un ticket de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=es#submit-ticket) para obtener ayuda con la actualización de la configuración en estos entornos.
 
-1. Especifique el tiempo TTL (en segundos) en la propiedad [`web` ](web-property.md) del archivo `.magento.app.yaml`. Puede agregar la clave `expires` en `locations` o en `"/media"` y `"/static"`.
+1. Especifique el tiempo TTL (en segundos) en la propiedad [`web` &#x200B;](web-property.md) del archivo `.magento.app.yaml`. Puede agregar la clave `expires` en `locations` o en `"/media"` y `"/static"`.
 
    Para evitar que la caché caduque, use el par clave-valor `expires: -1`. Consulte el siguiente ejemplo:
 

@@ -91,7 +91,7 @@ La versión `ece-tools` 2002.0.22 cambia la estructura del paquete `ece-tools` p
 
    - ![nuevo icono](../../assets/new.svg) Se agregó compatibilidad para configurar módulos PHP usando el archivo `.magento.app.yaml`. Cualquier extensión [PHP especificada en el archivo `.magento.app.yaml`](https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/configure/app/php-settings#enable-extensions) pasa a estar disponible en los contenedores Docker PHP.<!-- MAGECLOUD-3357 -->
 
-   - ![nuevo icono](../../assets/new.svg) Hay nuevos comandos disponibles para mejorar la experiencia de línea de comandos de Docker. Consulte la sección [`bin/magento-docker` de la referencia de Docker ](https://developer.adobe.com/commerce/cloud-tools/docker/quick-reference/#cloud-docker-cli).<!-- MAGECLOUD-3569 -->
+   - ![nuevo icono](../../assets/new.svg) Hay nuevos comandos disponibles para mejorar la experiencia de línea de comandos de Docker. Consulte la sección [`bin/magento-docker` de la referencia de Docker &#x200B;](https://developer.adobe.com/commerce/cloud-tools/docker/quick-reference/#cloud-docker-cli).<!-- MAGECLOUD-3569 -->
 
    - ![nuevo icono](../../assets/new.svg) agregó la capacidad de usar Mutagen.io para sincronizar archivos durante el desarrollo entre el host local y Docker.<!-- MAGECLOUD-3559 -->
 

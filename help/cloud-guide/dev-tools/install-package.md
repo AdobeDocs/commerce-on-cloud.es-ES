@@ -42,7 +42,7 @@ Cada versión de Adobe Commerce requiere una restricción diferente en función 
 
 Si desea instalar Adobe Commerce `2.3.5-p2`, establezca `current_version` en `2.3.5` y `next_version` en `2.3.6`. La restricción `">=2.3.5 <2.3.6"` instala el último paquete disponible para 2.3.5.
 
-Siempre puede encontrar la restricción de metapackage más reciente en la plantilla [`magento-cloud` ](https://github.com/magento/magento-cloud/blob/master/composer.json).
+Siempre puede encontrar la restricción de metapackage más reciente en la plantilla [`magento-cloud` &#x200B;](https://github.com/magento/magento-cloud/blob/master/composer.json).
 
 El siguiente ejemplo coloca una restricción para el metapaquete de infraestructura en la nube de Adobe Commerce en cualquier versión superior o igual a la versión actual 2.4.8 e inferior a la siguiente versión 2.4.9:
 
