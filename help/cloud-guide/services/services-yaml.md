@@ -2,9 +2,10 @@
 title: Configurar servicios
 description: Obtenga información sobre cómo configurar los servicios que utiliza Adobe Commerce en la infraestructura en la nube.
 feature: Cloud, Configuration, Services
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: ddf44b7c-e4ae-48f0-97a9-a219e6012492
+source-git-commit: 5fc2082ca2aae8a1466821075c01ce756ba382cc
 workflow-type: tm+mt
-source-wordcount: '1046'
+source-wordcount: '1047'
 ht-degree: 0%
 
 ---
@@ -31,13 +32,14 @@ Al cambiar una configuración de servicio, una implementación aprovisiona el en
 
 La infraestructura en la nube admite e implementa los siguientes servicios:
 
+- [ActiveMQ](activemq.md)
 - [MySQL](mysql.md)
 - [Redis](redis.md)
 - [RabbitMQ](rabbitmq.md)
 - [Elasticsearch](elasticsearch.md)
 - [OpenSearch](opensearch.md)
 
-Puede ver las versiones y los valores de disco predeterminados en el archivo [default `services.yaml`](https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml) actual. El siguiente ejemplo muestra los servicios `mysql`, `redis`, `opensearch` o `elasticsearch`, y `rabbitmq` definidos en el archivo de configuración `services.yaml`:
+Puede ver las versiones y los valores de disco predeterminados en el archivo [default `services.yaml`](https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml) actual. El siguiente ejemplo muestra los servicios `mysql`, `redis`, `opensearch` o `elasticsearch`, `rabbitmq` y `activemq-artemis` definidos en el archivo de configuración `services.yaml`:
 
 ```yaml
 mysql:
@@ -53,6 +55,10 @@ opensearch:
 
 rabbitmq:
     type: rabbitmq:3.9
+    disk: 1024
+
+activemq-artemis:
+    type: activemq-artemis:2.42
     disk: 1024
 ```
 
@@ -92,7 +98,7 @@ redis2:
 Al cambiar el nombre de un servicio en el archivo `services.yaml` **se quita de forma permanente** lo siguiente:
 
 - El servicio existente antes de crear un servicio con el nuevo nombre especificado.
-- Se eliminarán todos los datos existentes del servicio. El Adobe recomienda encarecidamente que [realice una copia de seguridad de su entorno de inicio](../storage/snapshots.md) antes de cambiar el nombre de un servicio existente.
+- Se eliminarán todos los datos existentes del servicio. Adobe recomienda encarecidamente que [haga una copia de seguridad de su entorno de inicio](../storage/snapshots.md) antes de cambiar el nombre de un servicio existente.
 
 ### `type`
 
@@ -171,7 +177,7 @@ Puede recuperar los datos de configuración de todas las relaciones de servicio 
 
 ## Versiones de servicio
 
-La compatibilidad y la versión del servicio para Adobe Commerce en la infraestructura en la nube están determinadas por las versiones implementadas y probadas en la infraestructura en la nube, y a veces difieren de las versiones admitidas por las implementaciones locales de Adobe Commerce. Consulte [Requisitos del sistema](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=es) en la guía _Instalación_ para obtener una lista de dependencias de software de terceros que el Adobe ha probado con versiones específicas de Adobe Commerce y Magento Open Source.
+La compatibilidad y la versión del servicio para Adobe Commerce en la infraestructura en la nube están determinadas por las versiones implementadas y probadas en la infraestructura en la nube, y a veces difieren de las versiones admitidas por las implementaciones locales de Adobe Commerce. Consulte [Requisitos del sistema](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html) en la guía _Instalación_ para obtener una lista de dependencias de software de terceros que Adobe ha probado con versiones específicas de Adobe Commerce y Magento Open Source.
 
 ### Comprobaciones de EOL de software
 
@@ -180,7 +186,7 @@ Durante el proceso de implementación, el paquete `ece-tools` comprueba las vers
 - Si la versión de un servicio se encuentra en los tres meses siguientes a la fecha límite, se muestra una notificación en el registro de implementación.
 - Si la fecha límite se sitúa en el pasado, aparece una notificación de advertencia.
 
-Para mantener la seguridad de la tienda, actualice las versiones de software instaladas antes de que lleguen a EOL. Puede revisar las fechas límite en el archivo `eol.yaml` de [ece-tools](https://github.com/magento/ece-tools/blob/develop/config/eol.yaml).
+Para mantener la seguridad de la tienda, actualice las versiones de software instaladas antes de que lleguen a EOL. Puede revisar las fechas límite en el archivo [ de `eol.yaml`ece-tools](https://github.com/magento/ece-tools/blob/develop/config/eol.yaml).
 
 ### Migrar a OpenSearch
 

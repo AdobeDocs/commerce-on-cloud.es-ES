@@ -1,21 +1,26 @@
 ---
-title: Configurar el servicio de RabbitMQ
-description: Obtenga información sobre cómo habilitar el servicio de RabbitMQ para administrar las colas de mensajes de Adobe Commerce en la infraestructura en la nube.
+title: Configuración del servicio RabbitMQ
+description: Aprenda a habilitar el servicio RabbitMQ para administrar las colas de mensajes de Adobe Commerce en la infraestructura en la nube.
 feature: Cloud, Services
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 64af1dfa-e3f0-4404-a352-659ca47c1121
+source-git-commit: 2df119f1c09b92e45ae30544e5c2ee0e0d21834c
 workflow-type: tm+mt
-source-wordcount: '398'
+source-wordcount: '417'
 ht-degree: 0%
 
 ---
 
 # Configurar el servicio [!DNL RabbitMQ]
 
-[Message Queue Framework (MQF)](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework.html?lang=es) es un sistema de Adobe Commerce que permite que un [módulo](https://experienceleague.adobe.com/es/docs/commerce-operations/implementation-playbook/glossary#module) publique mensajes en colas. También define los consumidores que reciben los mensajes de forma asincrónica.
+[Message Queue Framework (MQF)](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework.html) es un sistema de Adobe Commerce que permite que un [módulo](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary#module) publique mensajes en colas. También define los consumidores que reciben los mensajes de forma asincrónica.
 
 El MQF usa [RabbitMQ](https://www.rabbitmq.com/) como agente de mensajería, que proporciona una plataforma escalable para enviar y recibir mensajes. También incluye un mecanismo para almacenar mensajes no enviados. [!DNL RabbitMQ] se basa en la especificación 0.9.1 del Protocolo avanzado de Message Queue Server (AMQP).
 
->[!WARNING]
+>[!NOTE]
+>
+>Adobe Commerce en la infraestructura en la nube también admite [ActiveMQ Artemis](activemq.md) como servicio alternativo de cola de mensajes mediante el protocolo STOMP.
+
+>[!IMPORTANT]
 >
 >Si prefiere usar un servicio basado en AMQP existente, como [!DNL RabbitMQ], en lugar de depender de Adobe Commerce en la infraestructura en la nube para crearlo, use la variable de entorno [`QUEUE_CONFIGURATION`](../environment/variables-deploy.md#queue_configuration) para conectarlo a su sitio.
 
@@ -56,7 +61,7 @@ El MQF usa [RabbitMQ](https://www.rabbitmq.com/) como agente de mensajería, que
 
 {{service-change-tip}}
 
-## Conectarse a RabbitMQ para depurar
+## Conectar con RabbitMQ para depuración
 
 Para fines de depuración, es útil conectarse directamente a una instancia de servicio de una de las siguientes maneras:
 
@@ -113,19 +118,19 @@ Para fines de depuración, es útil conectarse directamente a una instancia de s
    }
    ```
 
-1. Habilite el reenvío de puertos locales a RabbitMQ (si su proyecto se encuentra en una región diferente, como la región US-3, EU-5 o AP-3, sustituya ``us-3``/``eu-5``/``ap-3`` por ``us``)
+1. Habilite el reenvío de puertos locales a RabbitMQ (si su proyecto se encuentra en una región diferente, como US-3, EU-5 o AP-3, sustituya ``us-3``/``eu-5``/``ap-3`` por ``us``)
 
    ```bash
    ssh -L <port-number>:rabbitmq.internal:<port-number> <project-ID>-<branch-ID>@ssh.us.magentosite.cloud
    ```
 
-   Un ejemplo de acceso a la interfaz web de administración de RabbitMQ en `http://localhost:15672` es:
+   Un ejemplo para acceder a la interfaz web de administración de RabbitMQ en `http://localhost:15672` es:
 
    ```bash
    ssh -L 15672:rabbitmq.internal:15672 <project-ID>-<branch-ID>@ssh.us.magentosite.cloud
    ```
 
-1. Mientras la sesión está abierta, puede iniciar un cliente de RabbitMQ de su elección desde la estación de trabajo local, configurado para conectarse a `localhost:<portnumber>` mediante el número de puerto, el nombre de usuario y la información de contraseña de la variable MAGENTO_CLOUD_RELATIONSHIPS.
+1. Mientras la sesión está abierta, puede iniciar un cliente RabbitMQ de su elección desde su estación de trabajo local, configurado para conectarse a `localhost:<portnumber>` mediante el número de puerto, el nombre de usuario y la información de contraseña de la variable MAGENTO_CLOUD_RELATIONSHIPS.
 
 ### Conectar desde la aplicación
 
