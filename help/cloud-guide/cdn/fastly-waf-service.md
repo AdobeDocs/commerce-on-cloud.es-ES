@@ -26,7 +26,7 @@ El servicio WAF ofrece las siguientes ventajas:
 
 >[!TIP]
 >
->Para obtener información adicional sobre cómo mantener la conformidad con PCI para su Adobe Commerce en los almacenes de infraestructura en la nube, consulte [conformidad con PCI](https://business.adobe.com/products/magento/pci-compliance.html).
+>Para obtener información adicional sobre cómo mantener la conformidad con PCI para su Adobe Commerce en los almacenes de infraestructura en la nube, consulte [conformidad con PCI](https://business.adobe.com/es/products/magento/pci-compliance.html).
 
 ## Activación de WAF
 
