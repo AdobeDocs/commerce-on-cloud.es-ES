@@ -3,7 +3,7 @@ title: Visualización y administración de registros
 description: Comprenda los tipos de archivos de registro disponibles en la infraestructura de la nube y dónde encontrarlos.
 last-substantial-update: 2023-05-23T00:00:00Z
 exl-id: f0bb8830-8010-4764-ac23-d63d62dc0117
-source-git-commit: 731cc36816afdb5374269e871d337e056a71c050
+source-git-commit: afdc6f2b72d53199634faff7f30fd87ff3b31f3f
 workflow-type: tm+mt
 source-wordcount: '1205'
 ht-degree: 0%
@@ -77,13 +77,13 @@ ssh 1.ent-project-environment-id@ssh.region.magento.cloud "cat var/log/cron.log"
 >[!TIP]
 >
 >En los entornos Pro Staging y Pro Production, la rotación, compresión y eliminación automáticas de registros están habilitadas para los archivos de registro con un nombre de archivo fijo. Cada tipo de archivo de registro tiene un patrón giratorio y una duración.
->&#x200B;>Se pueden encontrar todos los detalles sobre la rotación del registro del entorno y la duración de los registros comprimidos en: `/etc/logrotate.conf` y `/etc/logrotate.d/<various>`.
->&#x200B;>Para los entornos Pro Staging y Pro Production, debe [enviar un vale de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=es#submit-ticket) para solicitar cambios en la configuración de rotación del registro.
+>Se pueden encontrar todos los detalles sobre la rotación del registro del entorno y la duración de los registros comprimidos en: `/etc/logrotate.conf` y `/etc/logrotate.d/<various>`.
+>Para los entornos Pro Staging y Pro Production, debe [enviar un vale de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) para solicitar cambios en la configuración de rotación del registro.
 
 >[!TIP]
 >
 >La rotación de registros no se puede configurar en entornos de Pro Integration.
->&#x200B;>Para la integración Pro, debe implementar una solución/script personalizado y [configurar su cron](../application/crons-property.md) para ejecutar el script según sea necesario.
+>Para la integración Pro, debe implementar una solución/script personalizado y [configurar su cron](../application/crons-property.md) para ejecutar el script según sea necesario.
 
 >[!NOTE]
 >
@@ -189,7 +189,7 @@ title: The configured state is not ideal
 type: warning
 ```
 
-La mayoría de los mensajes de error contienen una descripción y una acción sugerida. Use la referencia de mensaje de error [para ECE-Tools](../dev-tools/error-reference.md) para buscar el código de error y obtener más instrucciones. Para obtener más información, use el [solucionador de problemas de implementación de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html?lang=es).
+La mayoría de los mensajes de error contienen una descripción y una acción sugerida. Use la referencia de mensaje de error [para ECE-Tools](../dev-tools/error-reference.md) para buscar el código de error y obtener más instrucciones. Para obtener más información, use el [solucionador de problemas de implementación de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html).
 
 ## Registros de aplicaciones
 
@@ -219,7 +219,7 @@ Para los entornos de ensayo y producción Pro, los registros de implementación,
 
 ### Archivos de registro archivados
 
-Los registros de la aplicación se comprimen y archivan una vez al día y se conservan durante **365 días** de forma predeterminada (para los clústeres de ensayo y producción de Pro), y la rotación del registro no está disponible en todos los entornos de integración/inicio. Los registros comprimidos reciben un nombre mediante un identificador único que corresponde al `Number of Days Ago + 1`. Por ejemplo, en entornos de producción Pro, se almacena un registro de acceso PHP de 21 días en el pasado y se le asigna el siguiente nombre:
+Los registros de la aplicación se comprimen y archivan una vez al día y se conservan durante **30 días** de forma predeterminada (para los clústeres de ensayo y producción de Pro); la rotación del registro no está disponible en todos los entornos de integración/inicio. Los registros comprimidos reciben un nombre mediante un identificador único que corresponde al `Number of Days Ago + 1`. Por ejemplo, en entornos de producción Pro, se almacena un registro de acceso PHP de 21 días en el pasado y se le asigna el siguiente nombre:
 
 ```
 /var/log/platform/<project-ID>/php.access.log.22.gz
@@ -227,7 +227,7 @@ Los registros de la aplicación se comprimen y archivan una vez al día y se con
 
 Los archivos de registro archivados siempre se almacenan en el directorio en el que se encontraba el archivo original antes de la compresión.
 
-Puede [enviar un ticket de asistencia](https://experienceleague.adobe.com/home?lang=es&support-tab=home#support) para solicitar cambios en el período de retención de registros o en la configuración de logrotate. Puede aumentar el período de retención hasta un máximo de 365 días, reducirlo para conservar la cuota de almacenamiento o agregar rutas de registro adicionales a la configuración de logrotate. Estos cambios están disponibles para los clústeres de ensayo y producción de Pro.
+Puede [enviar un ticket de asistencia](https://experienceleague.adobe.com/home?support-tab=home#support) para solicitar cambios en el período de retención de registros o en la configuración de logrotate. Puede aumentar el período de retención hasta un máximo de 365 días, reducirlo para conservar la cuota de almacenamiento o agregar rutas de registro adicionales a la configuración de logrotate. Estos cambios están disponibles para los clústeres de ensayo y producción de Pro.
 
 Por ejemplo, si crea una ruta de acceso personalizada para almacenar registros en el directorio `var/log/mymodule`, puede solicitar la rotación del registro para esta ruta de acceso. Sin embargo, la infraestructura actual requiere nombres de archivo coherentes para que Adobe configure correctamente la rotación del registro. Adobe recomienda mantener la coherencia de los nombres de registro para evitar problemas de configuración.
 
