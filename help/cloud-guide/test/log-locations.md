@@ -3,9 +3,9 @@ title: Visualización y administración de registros
 description: Comprenda los tipos de archivos de registro disponibles en la infraestructura de la nube y dónde encontrarlos.
 last-substantial-update: 2023-05-23T00:00:00Z
 exl-id: f0bb8830-8010-4764-ac23-d63d62dc0117
-source-git-commit: afdc6f2b72d53199634faff7f30fd87ff3b31f3f
+source-git-commit: 445c5162f9d3436d9e5fe3df41af47189e344cfd
 workflow-type: tm+mt
-source-wordcount: '1205'
+source-wordcount: '1313'
 ht-degree: 0%
 
 ---
@@ -33,6 +33,37 @@ Los registros del sistema se almacenan en las siguientes ubicaciones:
 El valor de `<project-ID>` depende del proyecto y de si el entorno es de ensayo o de producción. Por ejemplo, con un ID de proyecto de `yw1unoukjcawe`, el usuario del entorno de ensayo es `yw1unoukjcawe_stg` y el usuario del entorno de producción es `yw1unoukjcawe`.
 
 En ese ejemplo, el registro de implementación es: `/var/log/platform/yw1unoukjcawe_stg/deploy.log`
+
+### Búsqueda de registros de error específicos
+
+Cuando encuentre un error con un número de registro específico (como `475a3bca674d3bbc77b35973d028e6da1cbee7404888bfb113daffc6b2f4a7b9`), puede localizar el registro consultando los registros del entorno remoto del servidor de aplicaciones de Commerce mediante los siguientes métodos:
+
+>[!NOTE]
+>
+>Para obtener instrucciones sobre cómo acceder a los registros de entorno remotos para su aplicación de Commerce mediante Secure Shell (SSH), consulte [Conexiones seguras a entornos remotos](../development/secure-connections.md).
+
+#### Método 1: búsqueda mediante grep
+
+```bash
+# Search for the specific error record in all log files
+magento-cloud ssh -e <environment-ID> "grep -r '475a3bca674d3bbc77b35973d028e6da1cbee7404888bfb113daffc6b2f4a7b9' /var/log/"
+
+# Search in specific log files
+magento-cloud ssh -e <environment-ID> "grep '475a3bca674d3bbc77b35973d028e6da1cbee7404888bfb113daffc6b2f4a7b9' /var/log/exception.log"
+```
+
+#### Método 2: búsqueda en registros archivados
+
+Si el error se ha producido anteriormente, compruebe los archivos de registro archivados:
+
+```bash
+# Search in compressed log files
+magento-cloud ssh -e <environment-ID> "find /var/log -name '*.gz' -exec zgrep '475a3bca674d3bbc77b35973d028e6da1cbee7404888bfb113daffc6b2f4a7b9' {} \;"
+```
+
+#### Método 3: Uso de New Relic (entornos Pro)
+
+Para los entornos de ensayo y producción profesional, utilice Registros de New Relic para buscar registros de error específicos. Para obtener más información, consulte [Administración de registros de New Relic](../monitor/log-management.md).
 
 ### Ver registros de entorno remoto
 
@@ -78,7 +109,7 @@ ssh 1.ent-project-environment-id@ssh.region.magento.cloud "cat var/log/cron.log"
 >
 >En los entornos Pro Staging y Pro Production, la rotación, compresión y eliminación automáticas de registros están habilitadas para los archivos de registro con un nombre de archivo fijo. Cada tipo de archivo de registro tiene un patrón giratorio y una duración.
 >Se pueden encontrar todos los detalles sobre la rotación del registro del entorno y la duración de los registros comprimidos en: `/etc/logrotate.conf` y `/etc/logrotate.d/<various>`.
->Para los entornos Pro Staging y Pro Production, debe [enviar un vale de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=es#submit-ticket) para solicitar cambios en la configuración de rotación del registro.
+>Para los entornos Pro Staging y Pro Production, debe [enviar un vale de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) para solicitar cambios en la configuración de rotación del registro.
 
 >[!TIP]
 >
@@ -143,7 +174,7 @@ Respuesta de ejemplo:
 ```
 Reading log file projectID-branchname-ID--mymagento@ssh.zone.magento.cloud:/var/log/'deploy.log'
 
-[2023-04-24 18:58:03.080678] Launching command 'b'php ./vendor/bin/ece-tools run scenario/deploy.xml\n''.
+[2023-04-24 18:58:03.080678] Launching command 'b'php ./vendor/bin/ece-tools run scenario/deploy.xml\\n''.
 
 [2023-04-24T18:58:04.129888+00:00] INFO: Starting scenario(s): scenario/deploy.xml (magento/ece-tools version: 2002.1.14, magento/magento2-base version: 2.4.6)
 [2023-04-24T18:58:04.364714+00:00] NOTICE: Starting pre-deploy.
@@ -189,7 +220,7 @@ title: The configured state is not ideal
 type: warning
 ```
 
-La mayoría de los mensajes de error contienen una descripción y una acción sugerida. Use la referencia de mensaje de error [para ECE-Tools](../dev-tools/error-reference.md) para buscar el código de error y obtener más instrucciones. Para obtener más información, use el [solucionador de problemas de implementación de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html?lang=es).
+La mayoría de los mensajes de error contienen una descripción y una acción sugerida. Use la referencia de mensaje de error [para ECE-Tools](../dev-tools/error-reference.md) para buscar el código de error y obtener más instrucciones. Para obtener más información, use el [solucionador de problemas de implementación de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html).
 
 ## Registros de aplicaciones
 
@@ -227,7 +258,7 @@ Los registros de la aplicación se comprimen y archivan una vez al día y se con
 
 Los archivos de registro archivados siempre se almacenan en el directorio en el que se encontraba el archivo original antes de la compresión.
 
-Puede [enviar un ticket de asistencia](https://experienceleague.adobe.com/home?lang=es&support-tab=home#support) para solicitar cambios en el período de retención de registros o en la configuración de logrotate. Puede aumentar el período de retención hasta un máximo de 365 días, reducirlo para conservar la cuota de almacenamiento o agregar rutas de registro adicionales a la configuración de logrotate. Estos cambios están disponibles para los clústeres de ensayo y producción de Pro.
+Puede [enviar un ticket de asistencia](https://experienceleague.adobe.com/home?support-tab=home#support) para solicitar cambios en el período de retención de registros o en la configuración de logrotate. Puede aumentar el período de retención hasta un máximo de 365 días, reducirlo para conservar la cuota de almacenamiento o agregar rutas de registro adicionales a la configuración de logrotate. Estos cambios están disponibles para los clústeres de ensayo y producción de Pro.
 
 Por ejemplo, si crea una ruta de acceso personalizada para almacenar registros en el directorio `var/log/mymodule`, puede solicitar la rotación del registro para esta ruta de acceso. Sin embargo, la infraestructura actual requiere nombres de archivo coherentes para que Adobe configure correctamente la rotación del registro. Adobe recomienda mantener la coherencia de los nombres de registro para evitar problemas de configuración.
 
