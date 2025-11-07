@@ -3,9 +3,9 @@ title: Configurar servicios
 description: Obtenga información sobre cómo configurar los servicios que utiliza Adobe Commerce en la infraestructura en la nube.
 feature: Cloud, Configuration, Services
 exl-id: ddf44b7c-e4ae-48f0-97a9-a219e6012492
-source-git-commit: 5fc2082ca2aae8a1466821075c01ce756ba382cc
+source-git-commit: 322f7af2c79dd4eeeabafa2ba7e5a32cbd8b1925
 workflow-type: tm+mt
-source-wordcount: '1047'
+source-wordcount: '1070'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,6 @@ El archivo `services.yaml` define los servicios admitidos y utilizados por Adobe
 >[!NOTE]
 >
 >El archivo `.magento/services.yaml` se administra localmente en el directorio `.magento` del proyecto. Se accede a la configuración durante el proceso de compilación para definir las versiones de servicio necesarias solo en el entorno de integración y se elimina una vez completada la implementación, por lo que no se encontrarán en el servidor.
-
 
 El script de implementación utiliza los archivos de configuración del directorio `.magento` para aprovisionar el entorno con los servicios configurados. Hay un servicio disponible para su aplicación si está incluido en la propiedad [`relationships`](../application/properties.md#relationships) del archivo `.magento.app.yaml`. El archivo `services.yaml` contiene los valores _type_ y _disk_. El tipo de servicio define el servicio _name_ y _version_.
 
@@ -38,6 +37,10 @@ La infraestructura en la nube admite e implementa los siguientes servicios:
 - [RabbitMQ](rabbitmq.md)
 - [Elasticsearch](elasticsearch.md)
 - [OpenSearch](opensearch.md)
+
+>[!NOTE]
+>
+>Después de actualizar a una nueva versión de RabbitMQ, déclencheur una implementación completa para garantizar que las colas de mensajes personalizadas se vuelvan a crear en RabbitMQ.
 
 Puede ver las versiones y los valores de disco predeterminados en el archivo [default `services.yaml`](https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml) actual. El siguiente ejemplo muestra los servicios `mysql`, `redis`, `opensearch` o `elasticsearch`, `rabbitmq` y `activemq-artemis` definidos en el archivo de configuración `services.yaml`:
 
@@ -177,7 +180,7 @@ Puede recuperar los datos de configuración de todas las relaciones de servicio 
 
 ## Versiones de servicio
 
-La compatibilidad y la versión del servicio para Adobe Commerce en la infraestructura en la nube están determinadas por las versiones implementadas y probadas en la infraestructura en la nube, y a veces difieren de las versiones admitidas por las implementaciones locales de Adobe Commerce. Consulte [Requisitos del sistema](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=es) en la guía _Instalación_ para obtener una lista de dependencias de software de terceros que Adobe ha probado con versiones específicas de Adobe Commerce y Magento Open Source.
+La compatibilidad y la versión del servicio para Adobe Commerce en la infraestructura en la nube están determinadas por las versiones implementadas y probadas en la infraestructura en la nube, y a veces difieren de las versiones admitidas por las implementaciones locales de Adobe Commerce. Consulte [Requisitos del sistema](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html) en la guía _Instalación_ para obtener una lista de dependencias de software de terceros que Adobe ha probado con versiones específicas de Adobe Commerce y Magento Open Source.
 
 ### Comprobaciones de EOL de software
 
@@ -186,7 +189,7 @@ Durante el proceso de implementación, el paquete `ece-tools` comprueba las vers
 - Si la versión de un servicio se encuentra en los tres meses siguientes a la fecha límite, se muestra una notificación en el registro de implementación.
 - Si la fecha límite se sitúa en el pasado, aparece una notificación de advertencia.
 
-Para mantener la seguridad de la tienda, actualice las versiones de software instaladas antes de que lleguen a EOL. Puede revisar las fechas límite en el archivo [&#x200B; de `eol.yaml`ece-tools](https://github.com/magento/ece-tools/blob/develop/config/eol.yaml).
+Para mantener la seguridad de la tienda, actualice las versiones de software instaladas antes de que lleguen a EOL. Puede revisar las fechas límite en el archivo [ de `eol.yaml`ece-tools](https://github.com/magento/ece-tools/blob/develop/config/eol.yaml).
 
 ### Migrar a OpenSearch
 
