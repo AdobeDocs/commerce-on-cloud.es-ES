@@ -189,7 +189,7 @@ Durante el proceso de implementación, el paquete `ece-tools` comprueba las vers
 - Si la versión de un servicio se encuentra en los tres meses siguientes a la fecha límite, se muestra una notificación en el registro de implementación.
 - Si la fecha límite se sitúa en el pasado, aparece una notificación de advertencia.
 
-Para mantener la seguridad de la tienda, actualice las versiones de software instaladas antes de que lleguen a EOL. Puede revisar las fechas límite en el archivo [ de `eol.yaml`ece-tools](https://github.com/magento/ece-tools/blob/develop/config/eol.yaml).
+Para mantener la seguridad de la tienda, actualice las versiones de software instaladas antes de que lleguen a EOL. Puede revisar las fechas límite en el archivo [&#x200B; de `eol.yaml`ece-tools](https://github.com/magento/ece-tools/blob/develop/config/eol.yaml).
 
 ### Migrar a OpenSearch
 
