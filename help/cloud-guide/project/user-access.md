@@ -5,9 +5,10 @@ role: Admin
 feature: Cloud, Roles/Permissions
 last-substantial-update: 2023-06-27T00:00:00Z
 topic: Security
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 953593de-f675-49fd-988f-f11306f67fbd
+source-git-commit: c972d9f2029499cf53edc334c1d9a40b155a991d
 workflow-type: tm+mt
-source-wordcount: '1459'
+source-wordcount: '1463'
 ht-degree: 0%
 
 ---
@@ -38,7 +39,7 @@ Puede agregar usuarios y asignar funciones mediante la CLI `magento-cloud` o [!D
 
 **Requisitos previos:**
 
-- Un usuario registrado con una Adobe ID. Un usuario debe [registrarse para obtener una cuenta de Adobe](https://account.adobe.com) e [inicializar su cuenta de nube](https://console.adobecommerce.com) para poder agregarla a un proyecto de nube.
+- Un usuario registrado con una Adobe ID. Un usuario debe [registrarse para obtener una cuenta de Adobe](https://account.adobe.com) e inicializar su [cuenta de Cloud](https://console.adobecommerce.com) visitando [https://console.adobecommerce.com](https://console.adobecommerce.com) para poder agregarla a un proyecto de Cloud.
 - Un usuario asignado al rol **Admin** no puede administrar usuarios con la CLI `magento-cloud`. Solo los usuarios a los que se les haya concedido el rol **Propietario de la cuenta** pueden administrar usuarios.
 
 >[!ENDSHADEBOX]
@@ -95,7 +96,7 @@ Los siguientes ejemplos utilizan la CLI `magento-cloud` para agregar un usuario,
    Adding the user to the project
    ```
 
-   Después de agregar el usuario, el Adobe de envía un correo electrónico a la dirección especificada con instrucciones para acceder al proyecto de infraestructura de Adobe Commerce en la nube.
+   Después de agregar el usuario, Adobe envía un correo electrónico a la dirección especificada con instrucciones para acceder al proyecto de infraestructura de Adobe Commerce en la nube.
 
 ### Ver la función de proyecto de un usuario
 
@@ -166,11 +167,11 @@ Puede usar [[!DNL Cloud Console]](../../get-started/cloud-console.md) para agreg
 
 1. Después de agregar usuarios, vuelva a implementar todos los entornos para aplicar los cambios. Añadir un usuario no almacena en déclencheur una implementación automáticamente. La reimplementación es un paso importante para garantizar que el usuario puede acceder a un entorno mediante SSH o realizar tareas de administrador.
 
-Después de agregar el usuario, el Adobe de envía un correo electrónico a la dirección especificada con instrucciones para acceder al proyecto de infraestructura de Adobe Commerce en la nube.
+Después de agregar el usuario, Adobe envía un correo electrónico a la dirección especificada con instrucciones para acceder al proyecto de infraestructura de Adobe Commerce en la nube.
 
 ## Requisitos de autenticación de usuario
 
-Para obtener más seguridad, el Adobe de proporciona aplicación de autenticación multifactor (MFA) a nivel de proyecto para requerir autenticación de doble factor (TFA) para el acceso SSH a Adobe Commerce en el código fuente y los entornos del proyecto de infraestructura en la nube. Consulte [Habilitar MFA para SSH](multi-factor-authentication.md).
+Para obtener más seguridad, Adobe proporciona aplicación de autenticación multifactor (MFA) a nivel de proyecto para requerir autenticación de doble factor (TFA) para el acceso SSH a Adobe Commerce en el código fuente y los entornos del proyecto de infraestructura en la nube. Consulte [Habilitar MFA para SSH](multi-factor-authentication.md).
 
 Cuando la aplicación de MFA está habilitada en un proyecto de infraestructura en la nube de Adobe Commerce, todos los usuarios con acceso SSH a un entorno de ese proyecto deben habilitar TFA en su cuenta de infraestructura en la nube de Adobe Commerce. Para los procesos automatizados, puede crear un usuario del equipo y un token de API para autenticarse desde la línea de comandos.
 
@@ -213,7 +214,7 @@ Las instrucciones para instalar la aplicación autenticadora y habilitar TFA est
 
    - Haga clic en **[!UICONTROL Verify and save]**.
 
-     Si el código es válido, Adobe envía una notificación a la dirección de correo electrónico de la cuenta para confirmar que la cuenta ahora tiene TFA.
+     Si el código es válido, Adobe envía una notificación a la dirección de correo electrónico de la cuenta confirmando que la cuenta ahora tiene TFA.
 
 1. Opcional. Habilite la configuración de _Explorador de confianza_ para almacenar en caché el código de autenticación en el explorador durante 30 días.
 
@@ -231,7 +232,7 @@ Las instrucciones para instalar la aplicación autenticadora y habilitar TFA est
 
      >[!WARNING]
      >
-     >Si pierde el acceso a una cuenta con TFA y no tiene la lista de códigos de recuperación, debe ponerse en contacto con el administrador del proyecto o [enviar un vale de soporte técnico de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=es#submit-ticket) para restablecer la aplicación TFA.
+     >Si pierde el acceso a una cuenta con TFA y no tiene la lista de códigos de recuperación, debe ponerse en contacto con el administrador del proyecto o [enviar un vale de soporte técnico de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) para restablecer la aplicación TFA.
 
 1. Después de completar la configuración de TFA, haz clic en **Guardar** para actualizar tu cuenta.
 
@@ -266,7 +267,7 @@ En los proyectos que tengan habilitada la aplicación MFA, debe tener un token d
 
 >[!IMPORTANT]
 >
->Valores de token de la API de Protect para su cuenta. No exponga el valor en muestras de código, capturas de pantalla o comunicaciones cliente-servidor no seguras. Además, no exponga el valor en el código fuente almacenado en repositorios públicos.
+>Proteja los valores de token de API para su cuenta. No exponga el valor en muestras de código, capturas de pantalla o comunicaciones cliente-servidor no seguras. Además, no exponga el valor en el código fuente almacenado en repositorios públicos.
 
 **Para crear un token de API**:
 
