@@ -5,9 +5,9 @@ feature: Cloud, Docker, Release Notes
 recommendations: noDisplay, catalog
 last-substantial-update: 2025-08-07T00:00:00Z
 exl-id: 95cf4f30-6bce-4bac-8e11-cfe53cac2c70
-source-git-commit: 4f96ed89edbbc148c5558050368d8366bd89053a
+source-git-commit: 16d5577da8841c2f65f9b5298beaa7fb84a1ab47
 workflow-type: tm+mt
-source-wordcount: '3790'
+source-wordcount: '3806'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,13 @@ Las notas de la versión incluyen:
 
 <!--Add release notes below-->
 
-## Versión 1.4.5 {#latest}
+## Versión 1.4.6 {#latest}
+
+Fecha de la versión: 13 de noviembre de 2025
+
+- ![Icono de corrección](../../assets/fix.svg) **Paquete Symfony** agregó compatibilidad con los últimos paquetes Symfony YAML.<!-- MCLOUD-14020 -->
+
+## Versión 1.4.5
 
 Fecha de la versión: 8 de octubre de 2025
 
