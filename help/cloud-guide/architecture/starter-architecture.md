@@ -2,9 +2,10 @@
 title: Arquitectura de inicio
 description: Obtenga información acerca de los entornos admitidos por la arquitectura de inicio.
 feature: Cloud, Paas
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 2f16cc60-b5f7-4331-b80e-43042a3f9b8f
+source-git-commit: 2236d0b853e2f2b8d1bafcbefaa7c23ebd5d26b3
 workflow-type: tm+mt
-source-wordcount: '956'
+source-wordcount: '1017'
 ht-degree: 0%
 
 ---
@@ -15,7 +16,9 @@ La arquitectura inicial de su infraestructura en la nube de Adobe Commerce admit
 
 Todos los entornos están en contenedores PaaS (Platform as a service). Estos contenedores se implementan dentro de contenedores altamente restringidos en una cuadrícula de servidores. Estos entornos son de solo lectura, y aceptan cambios de código implementado desde ramas insertadas desde el espacio de trabajo local. Cada entorno proporciona una base de datos y un servidor web.
 
-Puede utilizar cualquier metodología de desarrollo y ramificación que desee. Cuando obtenga acceso inicial a su proyecto, cree un entorno `staging` a partir del entorno `master`. A continuación, cree el entorno `integration` ramificando desde `staging`.
+>[!NOTE]
+>
+>No es posible cambiar los permisos en carpetas de solo lectura en ninguno de los entornos de inicio. Esta restricción protege la integridad y seguridad de la aplicación. Los permisos de carpeta en estos sistemas de archivos de solo lectura no se pueden cambiar, ni siquiera la asistencia técnica puede modificarlos. Los cambios deben realizarse desde una rama del entorno de desarrollo local e insertarse en el entorno de la aplicación. Puede utilizar cualquier metodología de desarrollo y ramificación que desee. Cuando obtenga acceso inicial a su proyecto, cree un entorno `staging` a partir del entorno `master`. A continuación, cree el entorno `integration` ramificando desde `staging`.
 
 ## Arquitectura del entorno de inicio
 
@@ -29,17 +32,17 @@ El entorno de producción proporciona el código fuente para implementar Adobe C
 
 Dado que el entorno `production` es de solo lectura, use el entorno `integration` para realizar cambios en el código, implementar en toda la arquitectura desde `integration` hasta `staging` y, finalmente, en el entorno `production`. Ver [Implementar tu tienda](../deploy/staging-production.md) y [lanzamiento del sitio](../launch/overview.md).
 
-El Adobe recomienda realizar todas las pruebas en la rama `staging` antes de transferirla a la rama `master`, que se implementa en el entorno `production`.
+Adobe recomienda realizar todas las pruebas en la rama `staging` antes de transferirla a la rama `master`, que se implementa en el entorno `production`.
 
 ## Entorno de ensayo
 
-El Adobe recomienda crear una rama llamada `staging` desde `master`. La rama `staging` implementa código en el entorno de ensayo para proporcionar un entorno de preproducción que pruebe código, módulos y extensiones, puertas de enlace de pago, envío, datos de productos y mucho más. Este entorno proporciona la configuración para que todos los servicios coincidan con el entorno de producción, incluidos Fastly, New Relic APM y search.
+Adobe recomienda crear una rama llamada `staging` desde `master`. La rama `staging` implementa código en el entorno de ensayo para proporcionar un entorno de preproducción que pruebe código, módulos y extensiones, puertas de enlace de pago, envío, datos de productos y mucho más. Este entorno proporciona la configuración para que todos los servicios coincidan con el entorno de producción, incluidos Fastly, New Relic APM y search.
 
 En las secciones adicionales de esta guía se proporcionan instrucciones para las implementaciones de código finales y la prueba de interacciones a nivel de producción en un entorno de ensayo seguro. Para obtener el mejor rendimiento y las mejores pruebas de características, duplique la base de datos en el entorno de ensayo.
 
 >[!WARNING]
 >
->El Adobe recomienda probar la interacción de cada comerciante y cliente en el entorno de ensayo antes de implementarla en el entorno de producción. Ver [Implementar tu tienda](../deploy/staging-production.md) y [Probar la implementación](../test/staging-and-production.md).
+>Adobe recomienda probar la interacción de cada comerciante y cliente en el entorno de ensayo antes de implementarla en el entorno de producción. Ver [Implementar tu tienda](../deploy/staging-production.md) y [Probar la implementación](../test/staging-and-production.md).
 
 ## Entorno de integración
 
@@ -123,7 +126,7 @@ Adobe Commerce en la infraestructura en la nube utiliza el sistema operativo Deb
 
 - [OpenSearch](../services/opensearch.md)
 
-En los entornos de ensayo y producción, se utiliza Fastly para la CDN y el almacenamiento en caché. La última versión de la extensión CDN de Fastly se instala durante el aprovisionamiento inicial del proyecto. Puede actualizar la extensión para obtener las últimas correcciones y mejoras de errores. Consulte [Módulo de CDN de Fastly para el Magento 2](https://github.com/fastly/fastly-magento2). Además, tiene acceso a [New Relic](../monitor/account-management.md) para supervisar el rendimiento.
+En los entornos de ensayo y producción, se utiliza Fastly para la CDN y el almacenamiento en caché. La última versión de la extensión CDN de Fastly se instala durante el aprovisionamiento inicial del proyecto. Puede actualizar la extensión para obtener las últimas correcciones y mejoras de errores. Consulte [Módulo de CDN de Fastly para Magento 2](https://github.com/fastly/fastly-magento2). Además, tiene acceso a [New Relic](../monitor/account-management.md) para supervisar el rendimiento.
 
 Utilice los siguientes archivos para configurar las versiones de software que desea utilizar en la implementación.
 
