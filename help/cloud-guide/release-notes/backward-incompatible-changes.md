@@ -58,7 +58,7 @@ En versiones anteriores de ECE-Tools, se podían utilizar los comandos `m2-ece-b
 
 ## Cambios en Parches de nube
 
-- **Quitar parches descargados**-El paquete `magento/magento-cloud-patches` agrupa todos los parches disponibles en la página [descargas de software](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/commerce.html) y los aplica automáticamente al implementarlo en la nube. Para evitar conflictos de parches después de actualizar a ECE-Tools 2002.1.0 o posterior, elimine los parches suministrados por Adobe que haya descargado y agregado al proyecto manualmente.
+- **Quitar parches descargados**-El paquete `magento/magento-cloud-patches` agrupa todos los parches disponibles en la página [descargas de software](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/commerce.html?lang=es) y los aplica automáticamente al implementarlo en la nube. Para evitar conflictos de parches después de actualizar a ECE-Tools 2002.1.0 o posterior, elimine los parches suministrados por Adobe que haya descargado y agregado al proyecto manualmente.
 
 - **Actualizando el comando para aplicar parches**- Hemos movido el comando para aplicar parches del directorio `vendor/bin/ece-tools` al directorio `vendor/bin/ece-patches`. Si utiliza este comando para aplicar parches manualmente, utilice la nueva ruta.
 
