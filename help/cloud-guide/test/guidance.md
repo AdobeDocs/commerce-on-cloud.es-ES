@@ -1,7 +1,8 @@
 ---
 title: Guía de pruebas
 description: Obtenga información sobre los tipos de pruebas y las prácticas recomendadas para iniciar Adobe Commerce en la infraestructura en la nube.
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 70fdfbbd-1763-4b1b-9ffd-9ffdc92f4f91
+source-git-commit: d48b1844305e72b7b4a37568f2358f3aa4cf2e24
 workflow-type: tm+mt
 source-wordcount: '348'
 ht-degree: 0%
@@ -16,9 +17,9 @@ Después de configurar y personalizar el proyecto de Adobe Commerce en la nube, 
 
 Durante el desarrollo, es importante realizar pruebas funcionales completas en su proyecto de Adobe Commerce en la nube. Consulte las siguientes directrices para realizar pruebas funcionales en el entorno Docker:
 
-- **Pruebas de aplicaciones**: use [Marco de pruebas funcionales de Magento (MFTF)](https://developer.adobe.com/commerce/cloud-tools/docker/test/application-testing/) para las pruebas de aplicaciones en el entorno Cloud Docker.
+- **Pruebas de aplicaciones**: use [Magento Functional Testing Framework (MFTF)](https://developer.adobe.com/commerce/cloud-tools/docker/test/application-testing) para las pruebas de aplicaciones en el entorno Cloud Docker.
 
-- **Pruebas de código**: use el marco de pruebas de decepción [para PHP](https://developer.adobe.com/commerce/cloud-tools/docker/test/code-testing/) para validar el código destinado a la contribución a los repositorios de paquetes en la nube.
+- **Pruebas de código**: use el marco de pruebas de decepción [para PHP](https://developer.adobe.com/commerce/cloud-tools/docker/test/code-testing) para validar el código destinado a la contribución a los repositorios de paquetes en la nube.
 
 ## Prácticas recomendadas antes del lanzamiento
 
@@ -28,7 +29,7 @@ Considere los siguientes tipos de pruebas como una práctica recomendada para re
 
 - **Prueba de esfuerzo**: desafíe los límites superiores de capacidad dentro del sistema para determinar si el sistema funciona lo suficiente cuando la carga actual supera con creces el máximo esperado.
 
-- **Examen de seguridad**: el Adobe proporciona una [Herramienta de examen de seguridad](../launch/overview.md#set-up-the-security-scan-tool) gratuita para sus sitios.
+- **Examen de seguridad**: Adobe proporciona una [Herramienta de examen de seguridad](../launch/overview.md#set-up-the-security-scan-tool) gratuita para sus sitios.
 
 - **Prueba de penetración**: es un ataque cibernético simulado autorizado en un sistema informático diseñado para evaluar la seguridad del sistema. La prueba de penetración ayuda a identificar debilidades o vulnerabilidades, incluida la posibilidad de que partes no autorizadas obtengan acceso a las funciones y los datos del sistema.
 

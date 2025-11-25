@@ -1,7 +1,8 @@
 ---
 title: Configurar  [!DNL Xdebug]
 description: Obtenga información sobre cómo configurar la extensión Xdebug para depurar Adobe Commerce en el desarrollo de proyectos de infraestructura en la nube.
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 32857c9c-4a49-4337-9c15-a6e46c328df7
+source-git-commit: d48b1844305e72b7b4a37568f2358f3aa4cf2e24
 workflow-type: tm+mt
 source-wordcount: '1920'
 ht-degree: 0%
@@ -14,7 +15,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Puede configurar [!DNL Xdebug] para que se ejecute en el entorno de Cloud Docker para la depuración local sin cambiar la configuración del proyecto de Adobe Commerce en la infraestructura en la nube. Consulte [Configurar Xdebug para Docker](https://developer.adobe.com/commerce/cloud-tools/docker/test/configure-xdebug/).
+>Puede configurar [!DNL Xdebug] para que se ejecute en el entorno de Cloud Docker para la depuración local sin cambiar la configuración del proyecto de Adobe Commerce en la infraestructura en la nube. Consulte [Configurar Xdebug para Docker](https://developer.adobe.com/commerce/cloud-tools/docker/test/configure-xdebug).
 
 Para habilitar [!DNL Xdebug], debe configurar un archivo en el repositorio Git, configurar el IDE y configurar el reenvío de puertos. Puede establecer algunas opciones en el archivo `magento.app.yaml`. Después de editar, inserte los cambios de Git en todos los entornos de Starter y de integración de Pro para habilitar [!DNL Xdebug]. [!DNL Xdebug] ya está disponible en los entornos de ensayo y producción de Pro.
 
@@ -35,7 +36,7 @@ Para configurar [!DNL Xdebug], siga estos pasos:
 
 ### Introducción a una rama
 
-Para agregar [!DNL Xdebug], el Adobe recomienda trabajar en [una rama de desarrollo](../dev-tools/cloud-cli-overview.md#create-an-environment-branch).
+Para agregar [!DNL Xdebug], Adobe recomienda trabajar en [una rama de desarrollo](../dev-tools/cloud-cli-overview.md#create-an-environment-branch).
 
 ### Habilitar Xdebug en su entorno
 
@@ -305,7 +306,7 @@ Necesita lo siguiente:
 
 **Para iniciar la depuración con la URL del entorno**:
 
-Esta es una demostración de las configuraciones utilizadas, así como una demostración del parámetro de GET para iniciar una sesión de depuración remota.
+Esta es una demostración de las configuraciones utilizadas, así como una demostración del parámetro GET para iniciar una sesión de depuración remota.
 
 >[!VIDEO](https://video.tv.adobe.com/v/3437417?learn=on)
 

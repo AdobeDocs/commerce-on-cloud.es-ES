@@ -3,7 +3,8 @@ title: Cambios incompatibles con versiones anteriores
 description: Obtenga información acerca de la compatibilidad con versiones anteriores al actualizar proyectos existentes en la nube.
 feature: Cloud, Release Notes
 recommendations: noDisplay, catalog
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 3f3c1036-bfd0-4c70-8309-6c5e442134cd
+source-git-commit: de50fda78c28a57d76e5c0a4d5dac0f8d4d844a0
 workflow-type: tm+mt
 source-wordcount: '791'
 ht-degree: 0%
@@ -57,7 +58,7 @@ En versiones anteriores de ECE-Tools, se podían utilizar los comandos `m2-ece-b
 
 ## Cambios en Parches de nube
 
-- **Quitar parches descargados**-El paquete `magento/magento-cloud-patches` agrupa todos los parches disponibles en la página [descargas de software](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/commerce.html?lang=es) y los aplica automáticamente al implementarlo en la nube. Para evitar conflictos de parches después de actualizar a ECE-Tools 2002.1.0 o posterior, elimine los parches suministrados por el Adobe que haya descargado y agregado al proyecto manualmente.
+- **Quitar parches descargados**-El paquete `magento/magento-cloud-patches` agrupa todos los parches disponibles en la página [descargas de software](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/commerce.html) y los aplica automáticamente al implementarlo en la nube. Para evitar conflictos de parches después de actualizar a ECE-Tools 2002.1.0 o posterior, elimine los parches suministrados por Adobe que haya descargado y agregado al proyecto manualmente.
 
 - **Actualizando el comando para aplicar parches**- Hemos movido el comando para aplicar parches del directorio `vendor/bin/ece-tools` al directorio `vendor/bin/ece-patches`. Si utiliza este comando para aplicar parches manualmente, utilice la nueva ruta.
 
@@ -83,7 +84,7 @@ En versiones anteriores de ECE-Tools, se podían utilizar los comandos `m2-ece-b
 
    - **Actualizando los comandos de Cloud Docker-Compose**- Cambiamos el nombre de la ruta de acceso al archivo de comandos de `./bin/docker` a `./bin/magento-docker`. Actualice los scripts y comandos para utilizar la nueva ruta.
 
-   - **El contenedor Cron ya no se incluye en la configuración Docker predeterminada**-Ahora debe agregar la opción `--with-cron` al comando `ece-docker build:compose` para incluir el contenedor Cron en la configuración del entorno Docker. Consulte [Administrar trabajos cron](https://developer.adobe.com/commerce/cloud-tools/docker/configure/manage-cron-jobs/) en la guía de _Cloud Docker para Commerce_.
+   - **El contenedor Cron ya no se incluye en la configuración Docker predeterminada**-Ahora debe agregar la opción `--with-cron` al comando `ece-docker build:compose` para incluir el contenedor Cron en la configuración del entorno Docker. Consulte [Administrar trabajos cron](https://developer.adobe.com/commerce/cloud-tools/docker/configure/manage-cron-jobs) en la guía de _Cloud Docker para Commerce_.
 
      Los scripts que anteriormente generaban contenedores con trabajos cron ahora no tienen el contenedor cron.
 
