@@ -1,7 +1,8 @@
 ---
 title: Pruebas de ensayo y producción
 description: Aprenda a realizar pruebas en los entornos de ensayo y producción.
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 39625c97-5eb0-4039-ac5f-ddaeb43156de
+source-git-commit: 0d84d29c470a098c7238b6ca7cc9538463dda695
 workflow-type: tm+mt
 source-wordcount: '1329'
 ht-degree: 0%
@@ -211,7 +212,7 @@ Para obtener los mejores resultados, utilice las siguientes herramientas:
 
 ## Pruebas funcionales
 
-Puede utilizar el Marco de prueba funcional de Magento (MFTF) para completar las pruebas funcionales de Adobe Commerce desde el entorno de Cloud Docker. Consulte [Pruebas de aplicaciones](https://developer.adobe.com/commerce/cloud-tools/docker/test/application-testing/) en la guía de _Cloud Docker para Commerce_.
+Puede utilizar el Marco de prueba funcional de Magento (MFTF) para completar las pruebas funcionales de Adobe Commerce desde el entorno de Cloud Docker. Consulte [Pruebas de aplicaciones](https://developer.adobe.com/commerce/cloud-tools/docker/test/application-testing) en la guía de _Cloud Docker para Commerce_.
 
 ## Configurar el escáner de seguridad
 

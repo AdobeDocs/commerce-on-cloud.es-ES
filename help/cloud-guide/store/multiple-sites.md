@@ -2,7 +2,8 @@
 title: Configurar varios sitios web o tiendas
 description: Obtenga información sobre cómo configurar varios sitios web o tiendas para Adobe Commerce en la infraestructura en la nube.
 feature: Cloud, Configuration, Routes, Site Navigation
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 773d8d64-d235-4c2b-87e9-aadbf8471b2c
+source-git-commit: 0d84d29c470a098c7238b6ca7cc9538463dda695
 workflow-type: tm+mt
 source-wordcount: '1013'
 ht-degree: 0%
@@ -15,7 +16,7 @@ Puede configurar Adobe Commerce para que tenga varios sitios web o tiendas, como
 
 >[!WARNING]
 >
->Los datos de catálogo se amplían a medida que aumenta el número de sitios web y tiendas. Según la arquitectura del proyecto, las tiendas adicionales pueden provocar un proceso de indexación más largo y tiempos de respuesta más lentos para las páginas de catálogo no almacenadas en caché. El Adobe recomienda supervisar de cerca el rendimiento del sitio.
+>Los datos de catálogo se amplían a medida que aumenta el número de sitios web y tiendas. Según la arquitectura del proyecto, las tiendas adicionales pueden provocar un proceso de indexación más largo y tiempos de respuesta más lentos para las páginas de catálogo no almacenadas en caché. Adobe recomienda monitorizar atentamente el rendimiento del sitio.
 
 El proceso para configurar varios almacenes depende de si elige utilizar dominios únicos o compartidos.
 
@@ -35,7 +36,7 @@ https://store.com/second/
 
 >[!TIP]
 >
->Para agregar una vista de tienda a la dirección URL base del sitio, no es necesario crear varios directorios. Consulte [Agregar el código de almacén a la dirección URL base](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-admin.html?lang=es) en la _Guía de configuración_.
+>Para agregar una vista de tienda a la dirección URL base del sitio, no es necesario crear varios directorios. Consulte [Agregar el código de almacén a la dirección URL base](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-admin.html) en la _Guía de configuración_.
 
 ## Añadir dominios
 
@@ -45,11 +46,11 @@ El proceso para agregar un dominio depende del tipo de cuenta de Cloud:
 
 - Para ensayo y producción profesionales
 
-  Agregue el nuevo dominio a Fastly; consulte [Administrar dominios](../cdn/fastly-custom-cache-configuration.md#manage-domains) o abra un ticket de asistencia para solicitar ayuda. Además, debe [enviar un vale de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=es#submit-ticket) para solicitar que se agreguen nuevos dominios a un clúster.
+  Agregue el nuevo dominio a Fastly; consulte [Administrar dominios](../cdn/fastly-custom-cache-configuration.md#manage-domains) o abra un ticket de asistencia para solicitar ayuda. Además, debe [enviar un vale de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) para solicitar que se agreguen nuevos dominios a un clúster.
 
 - Solo para producción inicial
 
-  Agregue el nuevo dominio a Fastly; consulte [Administrar dominios](../cdn/fastly-custom-cache-configuration.md#manage-domains) o [Enviar un ticket de asistencia de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=es#submit-ticket) para solicitar ayuda. Además, debe agregar el nuevo dominio a la ficha **Dominios** en [!DNL Cloud Console]: `https://<zone>.magento.cloud/projects/<project-ID>/edit`
+  Agregue el nuevo dominio a Fastly; consulte [Administrar dominios](../cdn/fastly-custom-cache-configuration.md#manage-domains) o [Enviar un ticket de asistencia de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) para solicitar ayuda. Además, debe agregar el nuevo dominio a la ficha **Dominios** en [!DNL Cloud Console]: `https://<zone>.magento.cloud/projects/<project-ID>/edit`
 
 ## Configuración de la instalación local
 
@@ -68,7 +69,7 @@ Después de crear y probar correctamente la instalación local para utilizar var
 
 >[!TIP]
 >
->Puede utilizar un entorno local para configurar varios sitios web o tiendas. Consulte las instrucciones de Cloud Docker para [configurar varios sitios web o tiendas](https://developer.adobe.com/commerce/cloud-tools/docker/configure/multiple-sites/).
+>Puede utilizar un entorno local para configurar varios sitios web o tiendas. Consulte las instrucciones de Cloud Docker para [configurar varios sitios web o tiendas](https://developer.adobe.com/commerce/cloud-tools/docker/configure/multiple-sites).
 
 ### Actualizaciones de configuración para entornos Pro
 
@@ -212,7 +213,7 @@ Donde la configuración de rutas define cómo se procesan las direcciones URL, l
 
 ### Configuración de sitios web, tiendas y vistas de tiendas
 
-En la _IU de administración_, configure sus **sitios web**, **tiendas** y **vistas de tiendas** de Adobe Commerce. Consulte [Configurar varios sitios web, tiendas y vistas de tiendas en Admin](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-admin.html?lang=es) en la _Guía de configuración_.
+En la _IU de administración_, configure sus **sitios web**, **tiendas** y **vistas de tiendas** de Adobe Commerce. Consulte [Configurar varios sitios web, tiendas y vistas de tiendas en Admin](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-admin.html) en la _Guía de configuración_.
 
 Es importante utilizar el mismo nombre y código de sus sitios web, tiendas y vistas de tiendas del administrador al configurar la instalación local. Necesita estos valores cuando actualice el archivo `magento-vars.php`.
 
@@ -348,8 +349,8 @@ Inserte los cambios en su entorno de integración de Adobe Commerce en la infrae
 
 Siga el proceso de implementación de [implementación en Ensayo y producción](../deploy/staging-production.md). Para los entornos Starter y Pro, utiliza [!DNL Cloud Console] para insertar el código en todos los entornos.
 
-El Adobe recomienda realizar todas las pruebas en el entorno de ensayo antes de pasar al entorno de producción. Realice cambios en el código en el entorno de integración e inicie el proceso para implementar de nuevo en todos los entornos.
+Adobe recomienda realizar todas las pruebas en el entorno de ensayo antes de pasar al entorno de producción. Realice cambios en el código en el entorno de integración e inicie el proceso para implementar de nuevo en todos los entornos.
 
 <!-- link definitions -->
 
-[config-multiweb]: https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-overview.html?lang=es
+[config-multiweb]: https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/multi-sites/ms-overview.html
