@@ -2,7 +2,7 @@
 title: Commerce en infraestructura en la nube
 description: Obtenga información sobre la creación, implementación y administración de Commerce en la infraestructura en la nube.
 exl-id: a37d0403-df14-4bb9-8cc4-25436560ba0c
-source-git-commit: dc44fe34675c22bd4833bb8a55c333c4bb47b68b
+source-git-commit: 305df8acb8c41369b34e2c20d9c7df6824222931
 workflow-type: tm+mt
 source-wordcount: '297'
 ht-degree: 3%
@@ -23,7 +23,7 @@ Adobe Commerce en la nube proporciona una plataforma de alojamiento automatizada
 
 >[!NOTE]
 >
->Para obtener más información sobre seguridad, consulte la [lista de comprobación de inicio de seguridad](https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration).
+>Para obtener más información sobre seguridad, consulte la [lista de comprobación de inicio de seguridad](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration).
 
 Vea en detalle [la pila de tecnología](architecture/tech-stack.md) o aprenda más acerca de características específicas y productos compatibles en la [arquitectura de la nube para Commerce](architecture/cloud-architecture.md).
 
@@ -60,9 +60,9 @@ La guía de Commerce sobre la infraestructura en la nube supone que tiene alguno
 
 - [Documentación para desarrolladores de Adobe Commerce](https://developer.adobe.com/commerce/docs/) (sitio de Adobe Developer): desarrolle, personalice, integre, amplíe y utilice funciones avanzadas
 
-- [Documentación de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce.html?lang=es) (Adobe Experience League): Planifique, implemente, utilice, actualice y mantenga sus [!DNL Commerce] proyectos
+- [Documentación de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce.html) (Adobe Experience League): Planifique, implemente, utilice, actualice y mantenga sus [!DNL Commerce] proyectos
 
 {{$include /help/_includes/templated/whats-new.md}}
 
 
-<!-- Last updated from includes: 2025-11-21 21:32:53 -->
+<!-- Last updated from includes: 2025-12-12 21:32:21 -->
