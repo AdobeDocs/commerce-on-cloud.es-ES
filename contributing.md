@@ -19,7 +19,7 @@ se espera que respete este código. Informe de cualquier comportamiento inacepta
 
 ## Documentación de la guía del colaborador
 
-Consulte la [Guía del colaborador](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html).
+Consulte la [Guía del colaborador](https://experienceleague.adobe.com/docs/contributor/contributor-guide/introduction.html?lang=es).
 
 ## ¿Tiene alguna pregunta?
 
@@ -55,11 +55,11 @@ no dude en ponerse en contacto con los supervisores existentes para hablar sobre
 
 ## Problemas de seguridad
 
-Los problemas de seguridad no deben notificarse en este rastreador de problemas. En su lugar, [presente un problema a nuestros expertos en seguridad](https://helpx.adobe.com/security/alertus.html)
+Los problemas de seguridad no deben notificarse en este rastreador de problemas. En su lugar, [presente un problema a nuestros expertos en seguridad](https://helpx.adobe.com/es/security/alertus.html)
 
 ## Aspectos destacados de las novedades
 
-Si los cambios introducen nuevos temas, actualizaciones significativas o correcciones que es necesario resaltar, puede agregar una breve descripción a la [sección Novedades](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/overview#whats-new) directamente desde el cuerpo de la solicitud de extracción.
+Si los cambios introducen nuevos temas, actualizaciones significativas o correcciones que es necesario resaltar, puede agregar una breve descripción a la [sección Novedades](https://experienceleague.adobe.com/es/docs/commerce-cloud-service/user-guide/overview#whats-new) directamente desde el cuerpo de la solicitud de extracción.
 
 Para añadir un resaltado de Novedades:
 
@@ -103,4 +103,4 @@ Para añadir un resaltado de Novedades:
 1. La parte `whatsnew` debe comenzar desde la etiqueta `whatsnew` y estar al final del cuerpo de la solicitud de extracción.
 1. Las descripciones de los cambios deben incluir vínculos de trabajo. Asegúrese de que los vínculos sean correctos y lleven a los temas deseados. Si el tema es nuevo, compruebe que los vínculos funcionan después de combinar la solicitud de extracción y publicar el nuevo tema. Es aceptable corregir los vínculos después de combinar la solicitud de extracción.
 
-Por ejemplo, busque en solicitudes de extracción cerradas en el repositorio para ver el formato de los resaltados existentes y compárelos con la [sección Novedades](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/overview#whats-new) para ver cómo aparecen en la documentación.
+Por ejemplo, busque en solicitudes de extracción cerradas en el repositorio para ver el formato de los resaltados existentes y compárelos con la [sección Novedades](https://experienceleague.adobe.com/es/docs/commerce-cloud-service/user-guide/overview#whats-new) para ver cómo aparecen en la documentación.

@@ -23,7 +23,7 @@ Esta página contiene los cambios realizados en los últimos 60 días. Excluimos
   </thead>
   <tbody>
     <tr>
-      <td><p>Actualiza las <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches">notas de la versión de Cloud Patches 1.1.12</a> para incluir la corrección del error "La desprotección falla cuando la minificación y el agrupamiento de JS están habilitados: problema.</p>
+      <td><p>Actualiza las <a href="https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches">notas de la versión de Cloud Patches 1.1.12</a> para incluir la corrección del error "La desprotección falla cuando la minificación y el agrupamiento de JS están habilitados: problema.</p>
 </td>
       <td>
         Técnico
@@ -31,7 +31,7 @@ Esta página contiene los cambios realizados en los últimos 60 días. Excluimos
       <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/d07be1a20fa95e2a79534e364e7620a2f856fc0d">comprometer</a></td>
     </tr>
     <tr>
-      <td><p>Se ha actualizado <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">Referencia de CLI</a> después de la versión de ECE-Tools, v2002.2.9.</p>
+      <td><p>Se ha actualizado <a href="https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">Referencia de CLI</a> después de la versión de ECE-Tools, v2002.2.9.</p>
 </td>
       <td>
         Técnico
