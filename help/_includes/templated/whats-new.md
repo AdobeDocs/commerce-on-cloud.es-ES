@@ -1,8 +1,8 @@
 ---
-source-git-commit: 8cbda8ca194c5e5865073c9eb08e061cfecb5ace
+source-git-commit: c5e52c70c121aa3650acfba8a98b743834a95428
 workflow-type: tm+mt
-source-wordcount: '71'
-ht-degree: 4%
+source-wordcount: '47'
+ht-degree: 6%
 
 ---
 # Novedades de la plantilla
@@ -11,7 +11,7 @@ ht-degree: 4%
 
 Esta página contiene los cambios realizados en los últimos 60 días. Excluimos todas las actualizaciones menores, como la edición de copias, de esta lista.
 
-### 17 de noviembre de 2025
+### 13 de enero de 2026
 
 <table style="table-layout:auto;">
   <thead>
@@ -23,20 +23,12 @@ Esta página contiene los cambios realizados en los últimos 60 días. Excluimos
   </thead>
   <tbody>
     <tr>
-      <td><p>Actualiza las <a href="https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches">notas de la versión de Cloud Patches 1.1.12</a> para incluir la corrección del error "La desprotección falla cuando la minificación y el agrupamiento de JS están habilitados: problema.</p>
+      <td><p>Se ha actualizado la versión de los ejemplos de <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/opensearch">Configurar el servicio OpenSearch</a>.</p>
 </td>
       <td>
-        Técnico
+        Comentarios
       </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/d07be1a20fa95e2a79534e364e7620a2f856fc0d">comprometer</a></td>
-    </tr>
-    <tr>
-      <td><p>Se ha actualizado <a href="https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">Referencia de CLI</a> después de la versión de ECE-Tools, v2002.2.9.</p>
-</td>
-      <td>
-        Técnico
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/5f088df3e7bc35cc1d7fa93d06b5fa9968802572">comprometer</a></td>
+      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/f5d325dbb14e5e524c89b41c4d5b82383b5b1ac7">comprometer</a></td>
     </tr>
   </tbody>
 </table>
