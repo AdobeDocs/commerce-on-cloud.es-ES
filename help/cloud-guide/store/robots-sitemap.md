@@ -49,7 +49,7 @@ Esto requiere ECE-Tools versión 2002.0.12 y posterior con un archivo `.magento.
 
 >[!NOTE]
 >
->Si el archivo `<domain.your.project>/robots.txt` genera un `404 error`, [envíe un vale de soporte técnico de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) para quitar la redirección de `/robots.txt` a `/media/robots.txt`.
+>Si el archivo `<domain.your.project>/robots.txt` genera un `404 error`, [envíe un vale de soporte técnico de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=es#submit-ticket) para quitar la redirección de `/robots.txt` a `/media/robots.txt`.
 
 ## Reescribir utilizando el fragmento de VCL de Fastly
 
