@@ -3,9 +3,9 @@ title: Añadir robots de mapa del sitio y de motor de búsqueda
 description: Aprenda a añadir robots de mapa del sitio y de motores de búsqueda a Adobe Commerce en la infraestructura en la nube.
 feature: Cloud, Configuration, Search, Site Navigation
 exl-id: 060dc1f5-0e44-494e-9ade-00cd274e84bc
-source-git-commit: 1ecb820d55faa78e369d63996f11cd4d1d554e26
+source-git-commit: 1d52481fb6874f3a9ba14b0ff4fe39dc7d564938
 workflow-type: tm+mt
-source-wordcount: '570'
+source-wordcount: '574'
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ Esto requiere ECE-Tools versión 2002.0.12 y posterior con un archivo `.magento.
 
 >[!NOTE]
 >
->Si el archivo `<domain.your.project>/robots.txt` genera un `404 error`, [envíe un vale de soporte técnico de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=es#submit-ticket) para quitar la redirección de `/robots.txt` a `/media/robots.txt`.
+>Si el archivo `<domain.your.project>/robots.txt` genera un `404 error`, [envíe un vale de soporte técnico de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) para quitar la redirección de `/robots.txt` a `/media/robots.txt`.
 
 ## Reescribir utilizando el fragmento de VCL de Fastly
 
@@ -117,22 +117,23 @@ En la configuración de administración de `sitemap`, debe especificar la ubicac
 
 ### Configurar la indexación por motor de búsqueda
 
-Para activar las personalizaciones de `robots.txt` en Producción, habilite la indexación por motores de búsqueda para la opción `<environment-name>`** en la configuración del proyecto en Cloud Console:
+Para activar las personalizaciones de `robots.txt` en Producción, habilite la indexación por motores de búsqueda para la opción `<environment-name>` en la configuración del proyecto en Cloud Console:
 
 - Consola de nube heredada: la dirección URL sigue el patrón `https://<region-id>.magento.cloud/projects/<project_id>`
+
+  Cambie la configuración [!UICONTROL Indexing by search engines] (consola heredada) [!UICONTROL Hide from search engines] (consola Adobe) a **Activado**.
+
+  ![Use [!DNL Cloud Console] para administrar entornos](../../assets/robots-indexing-by-search-engine.png)
+
 - Consola de Adobe Cloud: la dirección URL sigue el patrón ``https://console.adobecommerce.com/<username>/<project_id>``
 
-1. Cambie el valor [!UICONTROL Indexing by search engines] a **Activado**.
+  Desmarque la configuración [!UICONTROL Hide from search engines].
 
-   ![Use [!DNL Cloud Console] para administrar entornos](../../assets/robots-indexing-by-search-engine.png)
+- También puede utilizar la CLI de Magento en la nube para actualizar esta configuración:
 
-1. Desmarque la configuración [!UICONTROL Hide from search engines].
-
-También puede utilizar la CLI de Magento en la nube para actualizar esta configuración:
-
-```bash
-magento-cloud environment:info -p <project_id> -e production restrict_robots false
-```
+  ```bash
+  magento-cloud environment:info -p <project_id> -e production restrict_robots false
+  ```
 
 >[!NOTE]
 >
