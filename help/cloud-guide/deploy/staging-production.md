@@ -2,9 +2,10 @@
 title: Implementar en ensayo y producción
 description: Aprenda a implementar su código de infraestructura de Adobe Commerce en la nube en los entornos de ensayo y producción para realizar pruebas adicionales.
 feature: Cloud, Console, Deploy, SCD, Storage
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 1cfeb472-c6ec-44ff-9b32-516ffa1b30d2
+source-git-commit: fe634412c6de8325faa36c07e9769cde0eb76c48
 workflow-type: tm+mt
-source-wordcount: '1310'
+source-wordcount: '1311'
 ht-degree: 0%
 
 ---
@@ -17,13 +18,13 @@ Cuando esté listo para implementar su tienda, debe completar la implementación
 
 >[!TIP]
 >
->El Adobe recomienda crear una [copia de seguridad](../storage/snapshots.md) del entorno antes de las implementaciones.
+>Adobe recomienda crear una [copia de seguridad](../storage/snapshots.md) del entorno antes de las implementaciones.
 
 Además, puede habilitar [Rastrear implementaciones con New Relic](../monitor/track-deployments.md) para supervisar eventos de implementación y ayudarle a analizar el rendimiento entre implementaciones.
 
 ## Flujo de implementación de inicio
 
-El Adobe recomienda crear una rama `staging` desde la rama `master` para admitir mejor el desarrollo y la implementación del plan de inicio. A continuación, tiene listos dos de los cuatro entornos activos: `master` para producción y `staging` para ensayo.
+Adobe recomienda crear una rama `staging` desde la rama `master` para admitir mejor el desarrollo y la implementación de su plan de inicio. A continuación, tiene listos dos de los cuatro entornos activos: `master` para producción y `staging` para ensayo.
 
 Para obtener información detallada del proceso, consulte [Iniciar desarrollo e implementación del flujo de trabajo](../architecture/starter-develop-deploy-workflow.md).
 
@@ -139,7 +140,7 @@ La CLI de la nube proporciona comandos para implementar código. Necesita SSH y 
 
 ## Migrar archivos estáticos
 
-[Los archivos estáticos](https://experienceleague.adobe.com/es/docs/commerce-operations/implementation-playbook/glossary) se almacenan en `mounts`. Existen dos métodos para migrar archivos desde una ubicación de montaje de origen, como el entorno local, a una ubicación de montaje de destino. Ambos métodos utilizan la utilidad `rsync`, pero el Adobe recomienda utilizar la CLI `magento-cloud` para mover archivos entre el entorno local y el remoto. Y el Adobe recomienda usar el método `rsync` al mover archivos desde un origen remoto a una ubicación remota diferente.
+[Los archivos estáticos](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary) se almacenan en `mounts`. Existen dos métodos para migrar archivos desde una ubicación de montaje de origen, como el entorno local, a una ubicación de montaje de destino. Ambos métodos utilizan la utilidad `rsync`, pero Adobe recomienda utilizar la CLI `magento-cloud` para mover archivos entre el entorno local y el remoto. Y Adobe recomienda usar el método `rsync` al mover archivos desde un origen remoto a una ubicación remota diferente.
 
 ### Migración de archivos mediante la CLI
 
@@ -245,11 +246,11 @@ Ver la ayuda de [rsync](https://linux.die.net/man/1/rsync).
 >
 >La base de datos del entorno de integración se utiliza estrictamente para pruebas de desarrollo y puede incluir datos que no desea migrar a Ensayo y Producción.
 
-Para implementaciones de integración continua, el Adobe **no recomienda** migrar datos de integración a ensayo y producción. Puede pasar datos de prueba o sobrescribir datos importantes. Las configuraciones esenciales se pasan mediante el comando [archivo de configuración](../store/store-settings.md) y `setup:upgrade` durante la generación e implementación.
+Para implementaciones de integración continua, Adobe **no recomienda** migrar datos de integración a ensayo y producción. Puede pasar datos de prueba o sobrescribir datos importantes. Las configuraciones esenciales se pasan mediante el comando [archivo de configuración](../store/store-settings.md) y `setup:upgrade` durante la generación e implementación.
 
 >[!ENDSHADEBOX]
 
-El Adobe **recomienda** migrar los datos de producción a ensayo para probar por completo el sitio y almacenarlos en un entorno casi de producción con todos los servicios y la configuración.
+Adobe **recomienda** migrar datos de producción a ensayo para probar por completo su sitio y almacenarlo en un entorno casi de producción con todos los servicios y la configuración.
 
 >[!NOTE]
 >
@@ -319,16 +320,10 @@ Al importar datos, debe soltar y crear una base de datos.
    drop database main;
    ```
 
-   Para la producción:
+   Para entornos de producción y ensayo:
 
    ```shell
-   drop database <cluster-id>;
-   ```
-
-   Para Ensayo:
-
-   ```shell
-   drop database <cluster-ID_stg>;
+   drop database <database_name>;
    ```
 
 1. Vuelva a crear la base de datos.
