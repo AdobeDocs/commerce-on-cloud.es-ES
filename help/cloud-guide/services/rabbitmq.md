@@ -12,7 +12,7 @@ ht-degree: 0%
 
 # Configurar el servicio [!DNL RabbitMQ]
 
-[Message Queue Framework (MQF)](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework.html) es un sistema de Adobe Commerce que permite que un [módulo](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/glossary#module) publique mensajes en colas. También define los consumidores que reciben los mensajes de forma asincrónica.
+[Message Queue Framework (MQF)](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/message-queues/message-queue-framework.html?lang=es) es un sistema de Adobe Commerce que permite que un [módulo](https://experienceleague.adobe.com/es/docs/commerce-operations/implementation-playbook/glossary#module) publique mensajes en colas. También define los consumidores que reciben los mensajes de forma asincrónica.
 
 El MQF usa [RabbitMQ](https://www.rabbitmq.com/) como agente de mensajería, que proporciona una plataforma escalable para enviar y recibir mensajes. También incluye un mecanismo para almacenar mensajes no enviados. [!DNL RabbitMQ] se basa en la especificación 0.9.1 del Protocolo avanzado de Message Queue Server (AMQP).
 
@@ -152,7 +152,7 @@ Para conectarse a RabbitMQ usando su aplicación PHP, agregue una biblioteca PHP
 
 ## Solucionando problemas del servicio [!DNL RabbitMQ]
 
-Ver [No se puede conectar con RabbitMQ en Adobe Commerce Cloud](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27688).
+Ver [No se puede conectar con RabbitMQ en Adobe Commerce Cloud](https://experienceleague.adobe.com/es/docs/experience-cloud-kcs/kbarticles/ka-27688).
 
 ## Actualizando el servicio [!DNL RabbitMQ]
 
@@ -160,4 +160,4 @@ Ver [No se puede conectar con RabbitMQ en Adobe Commerce Cloud](https://experien
 >
 >Al actualizar [!DNL RabbitMQ] en un entorno de integración, no omita versiones. Solo se admiten [actualizaciones secuenciales](https://www.rabbitmq.com/docs/upgrade#rabbitmq-version-upgradability) (por ejemplo, 3.8 → 3.9 → 3.10 → 3.11 → 3.12 → 3.13 → 4.0 → 4.1) y cada salto de versión debe corresponder a una implementación real y correcta de su entorno de nube.
 >
->Para obtener instrucciones generales de actualización de servicios, consulte [Cambiar la versión del servicio](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/services-yaml#change-service-version).
+>Para obtener instrucciones generales de actualización de servicios, consulte [Cambiar la versión del servicio](https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/configure/service/services-yaml#change-service-version).
