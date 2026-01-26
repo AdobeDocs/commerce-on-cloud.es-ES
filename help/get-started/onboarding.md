@@ -21,7 +21,7 @@ Para incorporarse rápidamente al proyecto y poder empezar a desarrollar el siti
 
 ## Regístrese para obtener una cuenta de Cloud
 
-Si no tiene una cuenta de Adobe Commerce en la infraestructura de la nube, comuníquese con [Ventas](https://business.adobe.com/products/magento/get-demo.html). Al registrarse, Adobe crea su cuenta y le envía un correo electrónico de bienvenida con instrucciones sobre cómo acceder a la interfaz del proyecto. El correo electrónico contiene un vínculo para que pueda iniciar sesión en su cuenta y completar la configuración inicial del proyecto.
+Si no tiene una cuenta de Adobe Commerce en la infraestructura de la nube, comuníquese con [Ventas](https://business.adobe.com/es/products/magento/get-demo.html). Al registrarse, Adobe crea su cuenta y le envía un correo electrónico de bienvenida con instrucciones sobre cómo acceder a la interfaz del proyecto. El correo electrónico contiene un vínculo para que pueda iniciar sesión en su cuenta y completar la configuración inicial del proyecto.
 
 ## Acceso al proyecto y adición de usuarios
 
@@ -33,7 +33,7 @@ Solo puede agregar usuarios registrados a su Adobe Commerce en proyectos y entor
 
 ### Acceso a cuenta compartida
 
-El propietario de la licencia puede configurar el acceso compartido para la cuenta. El acceso compartido permite a los empleados y proveedores de servicios de confianza utilizar el Centro de ayuda para enviar y rastrear vales de soporte relacionados con su Adobe Commerce en proyectos de infraestructura en la nube. Para obtener instrucciones de configuración, consulte el artículo [Acceso compartido](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#shared-access) en el Centro de ayuda.
+El propietario de la licencia puede configurar el acceso compartido para la cuenta. El acceso compartido permite a los empleados y proveedores de servicios de confianza utilizar el Centro de ayuda para enviar y rastrear vales de soporte relacionados con su Adobe Commerce en proyectos de infraestructura en la nube. Para obtener instrucciones de configuración, consulte el artículo [Acceso compartido](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=es#shared-access) en el Centro de ayuda.
 
 ### [!DNL Cloud Console]
 
