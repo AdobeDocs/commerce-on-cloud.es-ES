@@ -1,7 +1,7 @@
 ---
-source-git-commit: 8cbda8ca194c5e5865073c9eb08e061cfecb5ace
+source-git-commit: ee2ed3a78939af36572f0baa6672b2e9f9a2557f
 workflow-type: tm+mt
-source-wordcount: '411'
+source-wordcount: '417'
 ht-degree: 0%
 
 ---
@@ -11,7 +11,7 @@ Este directorio contiene enlaces previos a la confirmación que optimizan autom�
 
 ## Qué hacen los ganchos
 
-- **Detectar automáticamente** archivos de imagen clasificados (PNG, JPG, JPEG, GIF, SVG)
+- **Detectar automáticamente** archivos de imagen clasificados (PNG, JPG, JPEG, GIF)
 - **Ejecutar`image_optim`** para comprimir y optimizar imágenes
 - **Volver a almacenar en zona intermedia las imágenes optimizadas** automáticamente
 - **Asegúrese de que todas las imágenes confirmadas** estén optimizadas correctamente
@@ -85,11 +85,11 @@ Image optimization complete!
 ## Directrices de imagen
 
 - **PNG**: se usará para capturas de pantalla y elementos de la interfaz de usuario (se optimizará automáticamente)
-- **SVG**: se usa para iconos y gráficos simples (la optimización está deshabilitada de forma predeterminada)
 - **JPEG**: se usará para fotografías (se optimizará automáticamente)
 - **GIF**: úselo para animaciones (se optimizará automáticamente)
+- **SVG**: se usa para iconos y gráficos simples (no procesados por enlaces, confirmar tal cual)
 
-Los enlaces previos a la confirmación optimizarán automáticamente todas las imágenes en la confirmación.
+Los enlaces previos a la confirmación optimizan automáticamente las imágenes PNG, JPEG y GIF en la confirmación.
 
 ## Optimización manual
 
@@ -107,7 +107,7 @@ Los vínculos utilizan el archivo de configuración `_jekyll/.image_optim.yml` p
 - **PNG**: Utiliza `advpng`, `optipng` y `pngquant`
 - **JPEG**: Utiliza `jhead`, `jpegoptim` y `jpegtran`
 - **GIF**: Utiliza `gifsicle`
-- **SVG**: la optimización de SVG está deshabilitada de manera predeterminada (puede romper animaciones y gráficos vectoriales complejos)
+- **SVG**: no procesado (excluido de la detección para conservar gráficos vectoriales y animaciones)
 
 ## Resolución de problemas
 
@@ -141,7 +141,7 @@ Los vínculos utilizan el archivo de configuración `_jekyll/.image_optim.yml` p
 - **PNG** (`.png`): compresión sin pérdidas y con pérdidas
 - **JPEG** (`.jpg`, `.jpeg`): compresión con pérdidas con limpieza de metadatos
 - **GIF** (`.gif`): animación y optimización estática
-- **SVG** (`.svg`): optimización de vectores (deshabilitada de forma predeterminada)
+- **SVG** (`.svg`): no procesado por vínculos (confirmar tal cual para conservar la calidad)
 
 ## Prácticas recomendadas
 
