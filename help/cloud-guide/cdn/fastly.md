@@ -3,9 +3,9 @@ title: Resumen de servicios rápidos
 description: Descubra cómo los servicios de Fastly incluidos con Adobe Commerce en la infraestructura en la nube le ayudan a optimizar y asegurar las operaciones de entrega de contenido para sus sitios de Adobe Commerce.
 feature: Cloud, Configuration, Iaas, Paas, Cache, Security, Services
 exl-id: 429b6762-0b01-438b-a962-35376306895b
-source-git-commit: 3b9da7550484631790655ed7796e18be40a759df
+source-git-commit: 0300930577959631a2331997ebb104381136f240
 workflow-type: tm+mt
-source-wordcount: '1415'
+source-wordcount: '1535'
 ht-degree: 0%
 
 ---
@@ -42,13 +42,51 @@ Proporciona rápidamente los siguientes servicios para optimizar y asegurar las 
 
      Adobe Commerce proporciona un certificado Let&#39;s Encrypt SSL/TLS validado por el dominio para cada entorno de ensayo y producción. Adobe Commerce completa la validación del dominio y el aprovisionamiento de certificados durante el proceso de configuración rápida.
 
-- **Ocultación de origen**: evita que el tráfico omita Fastly WAF y oculta las direcciones IP de sus servidores de origen para protegerlos del acceso directo y los ataques DDoS.
-
-  El encubrimiento de origen está habilitado de forma predeterminada en los proyectos de Adobe Commerce en la infraestructura en la nube Pro Production. Para habilitar el encubrimiento de orígenes en Adobe Commerce en proyectos de producción de inicio de infraestructura en la nube, envíe un [ticket de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=es#submit-ticket). Si tiene tráfico que no requiere almacenamiento en caché, puede personalizar la configuración del servicio Fastly para permitir que las solicitudes [omitan la caché de Fastly](fastly-vcl-bypass-to-origin.md).
+- **Ocultación de origen**: característica de seguridad que garantiza todos los flujos de tráfico a través de Fastly y bloquea el acceso directo a los servidores de origen. Consulte la sección [Ocultación de origen](#origin-cloaking) a continuación.
 
 - **[Optimización de imágenes](fastly-image-optimization.md)**: descarga el procesamiento de imágenes y el cambio de tamaño de la carga en el servicio Fastly para que los servidores puedan procesar pedidos y conversiones de forma más eficaz.
 
 - **[Registros de Fastly en CDN y WAF](../monitor/new-relic-service.md#new-relic-log-management)**: para proyectos de Adobe Commerce en Cloud Infrastructure Pro, puede utilizar el servicio Registros de New Relic para revisar y analizar los datos de registro de Fastly en CDN y WAF.
+
+## Enmascaramiento de origen {#origin-cloaking}
+
+El encubrimiento de origen es una función de seguridad que evita que el tráfico que no es de Fastly llegue a Adobe Commerce en el origen de la infraestructura de la nube. Todas las solicitudes deben seguir esta ruta forzada:
+
+**Rápidamente > Equilibrador de carga > Instancias de aplicación de Adobe Commerce**
+
+El uso de esta ruta garantiza que todo el tráfico se inspeccione mediante el firewall de aplicaciones web de Fastly (WAF) y el WAF interno en el equilibrador de carga. El encubrimiento de origen protege sus sitios de intentos de acceso directo y reduce el riesgo de ataques DDoS.
+
+### Estado de habilitación
+
+El encubrimiento de origen está totalmente habilitado en todos los proyectos de infraestructura en la nube de Adobe Commerce desde 2021.\
+Los proyectos aprovisionados a partir de 2021 incluyen esta configuración de forma predeterminada.\
+**No se requiere ninguna acción** para solicitar la habilitación de la ocultación de origen.
+
+#### Qué bloqueos de encubrimiento de origen
+
+El encubrimiento de origen bloquea cualquier acceso directo a la infraestructura de origen, como:
+
+```
+mywebsite.com.c.abcdefghijkl.ent.magento.cloud
+mcstaging2.mywebsite.com.c.abcdefghijkl.dev.ent.magento.cloud
+mcstagingX.mywebsite.com.c.abcdefghijkl.X.dev.ent.magento.cloud
+```
+
+Las solicitudes a través de su dominio público siguen funcionando normalmente, incluido el tráfico de API de REST. Ejemplos:
+
+```
+mywebsite.com/rest/default/V1/integration/admin/token
+mywebsite.com/rest/default/V1/orders/
+mywebsite.com/rest/default/V1/products/
+mywebsite.com/rest/default/V1/inventory/source-items
+```
+
+#### Impacto en el comportamiento del servicio
+
+- **Las direcciones IP salientes no cambian.**
+- Las API de **REST no se ven afectadas.** Fastly no almacena en caché las llamadas a la API.
+- **Las implementaciones y el tiempo de inactividad no se ven afectados.**
+- Si un proyecto tiene varios entornos de ensayo, **el encubrimiento de origen se aplica a todos ellos**.
 
 ## Módulo de CDN de Fastly para Magento 2
 
@@ -66,13 +104,13 @@ Durante el aprovisionamiento del proyecto, Adobe agrega el proyecto a la cuenta 
 
 ### Cambiar el token de API de Fastly
 
-Envíe un ticket de asistencia de Adobe Commerce para emitir una nueva credencial de token de API de Fastly [si falla en la validación/ha caducado](https://experienceleague.adobe.com/es/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/error-when-validating-fastly-credentials) o si cree que se ha visto comprometida.
+Envíe un ticket de asistencia de Adobe Commerce para emitir una nueva credencial de token de API de Fastly [si falla en la validación/ha caducado](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/error-when-validating-fastly-credentials) o si cree que se ha visto comprometida.
 
 Cuando reciba el nuevo token, actualice el entorno de ensayo o producción para utilizar el nuevo token.
 
 **Para cambiar la credencial del token de la API de Fastly**:
 
-1. [Enviar un ticket de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=es#submit-ticket) solicitando nuevas credenciales de la API de Fastly.
+1. [Enviar un ticket de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) solicitando nuevas credenciales de la API de Fastly.
 
    Incluya el ID de proyecto de Adobe Commerce en la infraestructura de la nube y los entornos que requieren una nueva credencial.
 
@@ -120,18 +158,18 @@ La protección DDOS está integrada en el servicio Fastly CDN. Una vez que haya 
 
 >[!NOTE]
 >
->La protección contra los ataques de nivel 7 no está cubierta por el servicio Fastly CDN integrado con Adobe Commerce. Para obtener sugerencias sobre cómo protegerse contra ataques de nivel 7, consulte [Comprobación de ataques DDoS](https://experienceleague.adobe.com/es/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/checking-for-ddos-attack-from-cli) y [Cómo bloquear ataques malintencionados](https://experienceleague.adobe.com/es/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level) en *Adobe Commerce Knowledge Base*.
+>La protección contra los ataques de nivel 7 no está cubierta por el servicio Fastly CDN integrado con Adobe Commerce. Para obtener sugerencias sobre cómo protegerse contra ataques de nivel 7, consulte [Comprobación de ataques DDoS](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/checking-for-ddos-attack-from-cli) y [Cómo bloquear ataques malintencionados](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level) en *Adobe Commerce Knowledge Base*.
 
 <!--Link definitions-->
 
 [Caching with Fastly]: https://developer.adobe.com/commerce/webapi/graphql/usage/caching/#caching-with-fastly
 
-[Checking for DDoS attacks]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/checking-for-ddos-attack-from-cli.html?lang=es
+[Checking for DDoS attacks]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/checking-for-ddos-attack-from-cli.html
 
 [Módulo de CDN de Fastly para Magento 2]: https://github.com/fastly/fastly-magento2
 
 [ticket de asistencia rápida]: https://docs.fastly.com/products/support-description-and-sla#support-requests
 
-[How to block malicious traffic]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level.html?lang=es
+[How to block malicious traffic]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/block-malicious-traffic-for-magento-commerce-on-fastly-level.html
 
 [Uso de dominios]: https://docs.fastly.com/en/guides/working-with-domains
