@@ -23,7 +23,7 @@ Esta página contiene los cambios realizados en los últimos 60 días. Excluimos
   </thead>
   <tbody>
     <tr>
-      <td><p>Se ha agregado la siguiente información sobre el encubrimiento de orígenes a la <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/fastly">descripción general de los servicios de Fastly</a>.<br />- Definición y flujo de tráfico<br />- Estado de habilitación (habilitado en todos los proyectos de la nube desde 2021) Ejemplos de URL de origen bloqueadas<br />- Ejemplos de uso de API de REST</p>
+      <td><p>Se ha agregado la siguiente información sobre el encubrimiento de orígenes a la <a href="https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/cdn/fastly">descripción general de los servicios de Fastly</a>.<br />- Definición y flujo de tráfico<br />- Estado de habilitación (habilitado en todos los proyectos de la nube desde 2021) Ejemplos de URL de origen bloqueadas<br />- Ejemplos de uso de API de REST</p>
 </td>
       <td>
         Técnico
@@ -45,7 +45,7 @@ Esta página contiene los cambios realizados en los últimos 60 días. Excluimos
   </thead>
   <tbody>
     <tr>
-      <td><p>Se ha actualizado la versión de los ejemplos de <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/opensearch">Configurar el servicio OpenSearch</a>.</p>
+      <td><p>Se ha actualizado la versión de los ejemplos de <a href="https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/configure/service/opensearch">Configurar el servicio OpenSearch</a>.</p>
 </td>
       <td>
         Comentarios
