@@ -4,9 +4,9 @@ description: Vea una lista de las mejoras más recientes del paquete ECE-Tools.
 recommendations: noDisplay, catalog
 last-substantial-update: 2025-08-07T00:00:00Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
-source-git-commit: 16d5577da8841c2f65f9b5298beaa7fb84a1ab47
+source-git-commit: d31037e9afa4223165b208d5eb7714103a1d3e87
 workflow-type: tm+mt
-source-wordcount: '3314'
+source-wordcount: '3491'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,16 @@ Las notas de la versión incluyen:
 
 <!--Add release notes below-->
 
-## v2002.2.9 {#latest}
+## v2002.2.10 {#latest}
+
+Fecha de la versión: 5 de marzo de 2026
+
+- ![nuevo icono](../../assets/new.svg) **PHP 8.5**—Se agregó compatibilidad con PHP 8.5.<!-- MCLOUD-14179 -->
+- ![Icono de corrección](../../assets/fix.svg) **Prueba funcional actualizada**: se han actualizado las pruebas de Valkey 8.1, 8,2 y Redis 8.4<!-- MCLOUD-13983 -->
+- ![Icono de corrección](../../assets/fix.svg) **Se han actualizado los validadores MariaDB,PHP y Opensearch**-Se ha actualizado el script de validación.<!-- MCLOUD-14574/MCLOUD-14466 -->
+- ![icono de corrección](../../assets/fix.svg) **Validador de fin de vida útil**: fechas de servicio de fin de vida útil (EOL) actualizadas.<!-- MCLOUD-14272 -->
+
+## v2002.2.9
 
 Fecha de la versión: 13 de noviembre de 2025
 
@@ -144,7 +153,7 @@ Fecha de la versión: 16 de octubre de 2023
 Fecha de la versión: 31 de julio de 2023
 
 - ![icono de corrección](../../assets/fix.svg) **Códigos de error**: se ha actualizado el esquema de código de error y el generador de documentos de código de error.
-- ![Icono de corrección](../../assets/fix.svg) **Validador para el modelo Redis personalizado**: se ha actualizado el validador para los modelos backend Redis personalizados. [Vea el ejemplo de configuración de caché](../environment/variables-deploy.md#cache_configuration).
+- ![Icono de corrección](../../assets/fix.svg) **Validador para el modelo Redis personalizado**: se ha actualizado el validador para los modelos backend Redis personalizados. [Vea el ejemplo de la configuración de caché ](../environment/variables-deploy.md#cache_configuration).
 - ![Icono de corrección](../../assets/fix.svg) **Validador para RabbitMQ**: se ha agregado compatibilidad con RabbitMQ 3.11
 - ![Icono de corrección](../../assets/fix.svg) **Se corrigió el vínculo incorrecto**-Se corrigió el vínculo incorrecto a la documentación de incorporación en la plantilla de correo electrónico de bienvenida.
 
@@ -169,7 +178,7 @@ Fecha de la versión: 27 de octubre de 2022
 Fecha de la versión: 13 de septiembre de 2022
 
 - ![nuevo icono](../../assets/new.svg) **Habilitar`synchronous_replication`**—ECE-Tools establece `synchronous_replication=>true` en el archivo `app/etc/env.php` cuando `MYSQL_USE_SLAVE_CONNECTION` está habilitado. Esta configuración solo afecta a Commerce 2.4.6+. Vea la descripción de la variable `MYSQL_USE_SLAVE_CONNECTION` en [Implementar variables](../environment/variables-deploy.md#mysql_use_slave_connection).<!-- MCLOUD-9142 -->
-- ![nuevo icono](../../assets/new.svg) **OpenSearch**: funcionalidad añadida para configurar y establecer el motor `opensearch` para la próxima versión 2.4.6 de Adobe Commerce. Consulte [Configurar el servicio OpenSearch](../services/opensearch.md).<!-- MCLOUD-9236 -->
+- ![nuevo icono](../../assets/new.svg) **OpenSearch**: funcionalidad añadida para configurar y establecer el motor `opensearch` para la próxima versión 2.4.6 de Adobe Commerce. Ver [Configurar el servicio OpenSearch](../services/opensearch.md).<!-- MCLOUD-9236 -->
 
 ## v2002.1.11
 
@@ -177,7 +186,7 @@ Fecha de lanzamiento: 4 de agosto de 2022
 
 - ![Icono de corrección](../../assets/fix.svg) **ElasticSuite Validator y OpenSearch**: se ha corregido un problema con el validador de comprobación de integridad de ElasticSuite al instalar OpenSearch.<!-- MCLOUD-8767 -->
 - ![icono de corrección](../../assets/fix.svg) **Tipos de valor devuelto para los comandos de implementación**—Tipos de valor devuelto fijos para los comandos de implementación.<!-- AC-3208 -->
-- ![corregir el icono](../../assets/fix.svg) **[!DNL RabbitMQ]problema con la nueva instalación de Commerce 2.4.5**—Se ha corregido el [!DNL RabbitMQ] problema de bloqueo en la nueva instalación de Commerce 2.4.5.<!-- MCLOUD-9059 -->
+- ![corregir el icono](../../assets/fix.svg) **[!DNL RabbitMQ]problema con la nueva instalación de Commerce 2.4.5**—Se ha corregido el [!DNL RabbitMQ] problema de bloqueo en la nueva Commerce 2.4.5. instalación.<!-- MCLOUD-9059 -->
 
 ## v2002.1.10
 
@@ -361,7 +370,7 @@ Fecha de publicación: 25 de junio de 2020
 
    - ![nuevo icono](../../assets/new.svg) **comprobaciones de compatibilidad de Elasticsearch 7.x**: se ha actualizado la validación de Elasticsearch para las comprobaciones de compatibilidad del software Elasticsearch 7.x.<!--MCLOUD-5542-->
 
-   - ![nuevo icono](../../assets/new.svg) **Comprobaciones de validación de EOL y versión de servicio actualizada**: validación actualizada para comprobar las versiones de servicio instaladas con los requisitos de Adobe Commerce 2.4.<!--MCLOUD-6144-->
+   - ![nuevo icono](../../assets/new.svg) **Comprobaciones de validación de EOL y versión de servicio actualizada**: validación actualizada para comprobar las versiones de servicio instaladas con Adobe Commerce 2.4. requisitos.<!--MCLOUD-6144-->
 
    - ![icono de corrección](../../assets/fix.svg) Se ha corregido un problema de validación para que el siguiente mensaje de advertencia posterior a la implementación se muestre únicamente si falta la configuración del vínculo `post-deploy` en el archivo `.magento.app.yaml`:
 

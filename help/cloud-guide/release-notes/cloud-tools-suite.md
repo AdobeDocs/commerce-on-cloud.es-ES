@@ -3,10 +3,10 @@ title: Notas de la versión de Cloud Tools Suite
 description: Obtenga información sobre las últimas mejoras del conjunto de herramientas de la nube para Adobe Commerce.
 feature: Cloud, Release Notes
 exl-id: ee2bc2e9-bdf4-4f7b-9724-8f4dd1e61378
-source-git-commit: fdd3c4a8c33e5c44fa258d2ca87cd03911ca0b92
+source-git-commit: 2375b3a2a368f4db5157d3995cc48fd5f4418972
 workflow-type: tm+mt
-source-wordcount: '196'
-ht-degree: 1%
+source-wordcount: '220'
+ht-degree: 3%
 
 ---
 
@@ -16,9 +16,9 @@ Esta información de la versión detalla las mejoras más recientes de Cloud Too
 
 | Notas de la versión | Versión | Descripción | Source |
 | ----------------- |----------| ---------------------------------------- | --------------------------- |
-| [paquete ece-tools](ece-tools-package.md) | 2.2.9 | Un conjunto de scripts y herramientas diseñadas para administrar e implementar proyectos en la nube | [`magento/ece-tools`](https://github.com/magento/ece-tools/tree/2002.2.9) |
-| [Parches de nube para Commerce](cloud-patches.md) | 1.1.12 | Un conjunto de parches que mejoran la integración de todas las versiones de Adobe Commerce con los entornos en la nube. Este paquete incluye revisiones de Adobe Commerce y revisiones disponibles que se aplican cuando se usa `ece-tools` para implementar | [`magento/magento-cloud-patches`](https://github.com/magento/magento-cloud-patches/tree/1.1.12) |
-| [Cloud Docker para Commerce](cloud-docker.md) | 1.4.6 | Archivos de funcionalidad y configuración para imágenes de Docker para implementar Adobe Commerce en un entorno de nube local | [`magento/magento-cloud-docker`](https://github.com/magento/magento-cloud-docker/tree/1.4.6) |
-| [Componentes de nube de Commerce](cloud-components.md) | 1.1.3 | Funcionalidad principal extendida de Adobe Commerce para sitios implementados en la infraestructura en la nube | [`magento/magento-cloud-components`](https://github.com/magento/magento-cloud-components/tree/1.1.3) |
+| [paquete ece-tools](ece-tools-package.md) | 2002.2.10 | Un conjunto de scripts y herramientas diseñadas para administrar e implementar proyectos en la nube | [`magento/ece-tools`](https://github.com/magento/ece-tools/tree/2002.2.10) |
+| [Parches de nube para Commerce](cloud-patches.md) | 1.1.13 | Un conjunto de parches que mejoran la integración de todas las versiones de Adobe Commerce con los entornos en la nube. Este paquete incluye revisiones de Adobe Commerce y revisiones disponibles que se aplican cuando se usa `ece-tools` para implementar | [`magento/magento-cloud-patches`](https://github.com/magento/magento-cloud-patches/tree/1.1.13) |
+| [Cloud Docker para Commerce](cloud-docker.md) | 1.4.7 | Archivos de funcionalidad y configuración para imágenes de Docker para implementar Adobe Commerce en un entorno de nube local | [`magento/magento-cloud-docker`](https://github.com/magento/magento-cloud-docker/tree/1.4.7) |
+| [Componentes de nube de Commerce](cloud-components.md) | 1.1.4 | Funcionalidad principal extendida de Adobe Commerce para sitios implementados en la infraestructura en la nube | [`magento/magento-cloud-components`](https://github.com/magento/magento-cloud-components/tree/1.1.4) |
 
 Al actualizar a ECE-Tools 2002.1.0 o posterior, se actualiza automáticamente a las versiones más recientes de los otros paquetes, que son dependencias del paquete `ece-tools`. Consulte [Metapackage de nube](../development/overview.md#cloud-metapackage) para obtener una lista de dependencias.
