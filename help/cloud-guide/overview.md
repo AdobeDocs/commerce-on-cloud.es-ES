@@ -2,9 +2,9 @@
 title: Commerce en infraestructura en la nube
 description: Obtenga información sobre la creación, implementación y administración de Commerce en la infraestructura en la nube.
 exl-id: a37d0403-df14-4bb9-8cc4-25436560ba0c
-source-git-commit: 28db61188282957d55d96b77d02533b573aa7df6
+source-git-commit: 603e8365fb20c90e9d54cb8c809cc51b5cd0ce9a
 workflow-type: tm+mt
-source-wordcount: '297'
+source-wordcount: '323'
 ht-degree: 3%
 
 ---
@@ -23,7 +23,7 @@ Adobe Commerce en la nube proporciona una plataforma de alojamiento automatizada
 
 >[!NOTE]
 >
->Para obtener más información sobre seguridad, consulte la [lista de comprobación de inicio de seguridad](https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration).
+>Para obtener más información sobre seguridad, consulte la [lista de comprobación de inicio de seguridad](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration).
 
 Vea en detalle [la pila de tecnología](architecture/tech-stack.md) o aprenda más acerca de características específicas y productos compatibles en la [arquitectura de la nube para Commerce](architecture/cloud-architecture.md).
 
@@ -48,7 +48,7 @@ Las secciones siguientes proporcionan detalles sobre las diferentes regiones de 
 
 ## Regiones de Azure
 
-![Diagrama que muestra regiones de Azure](../assets/azure-regions.svg){zoomable="yes"}
+![Diagrama que muestra las regiones de Azure](../assets/azure-regions.svg){zoomable="yes"}
 
 >[!NOTE]
 >
@@ -60,9 +60,9 @@ La guía de Commerce sobre la infraestructura en la nube supone que tiene alguno
 
 - [Documentación para desarrolladores de Adobe Commerce](https://developer.adobe.com/commerce/docs/) (sitio de Adobe Developer): desarrolle, personalice, integre, amplíe y utilice funciones avanzadas
 
-- [Documentación de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce.html?lang=es) (Adobe Experience League): Planifique, implemente, utilice, actualice y mantenga sus [!DNL Commerce] proyectos
+- [Documentación de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce.html) (Adobe Experience League): Planifique, implemente, utilice, actualice y mantenga sus [!DNL Commerce] proyectos
 
 {{$include /help/_includes/templated/whats-new.md}}
 
 
-<!-- Last updated from includes: 2026-02-09 17:16:19 -->
+<!-- Last updated from includes: 2026-02-27 23:49:32 -->
