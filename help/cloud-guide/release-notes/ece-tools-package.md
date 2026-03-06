@@ -153,7 +153,7 @@ Fecha de la versión: 16 de octubre de 2023
 Fecha de la versión: 31 de julio de 2023
 
 - ![icono de corrección](../../assets/fix.svg) **Códigos de error**: se ha actualizado el esquema de código de error y el generador de documentos de código de error.
-- ![Icono de corrección](../../assets/fix.svg) **Validador para el modelo Redis personalizado**: se ha actualizado el validador para los modelos backend Redis personalizados. [Vea el ejemplo de la configuración de caché ](../environment/variables-deploy.md#cache_configuration).
+- ![Icono de corrección](../../assets/fix.svg) **Validador para el modelo Redis personalizado**: se ha actualizado el validador para los modelos backend Redis personalizados. [Vea el ejemplo de la configuración de caché &#x200B;](../environment/variables-deploy.md#cache_configuration).
 - ![Icono de corrección](../../assets/fix.svg) **Validador para RabbitMQ**: se ha agregado compatibilidad con RabbitMQ 3.11
 - ![Icono de corrección](../../assets/fix.svg) **Se corrigió el vínculo incorrecto**-Se corrigió el vínculo incorrecto a la documentación de incorporación en la plantilla de correo electrónico de bienvenida.
 
