@@ -1,7 +1,7 @@
 ---
-source-git-commit: d7d8be211f07363c31ec558382f7adc38f6a46c6
+source-git-commit: 8ee3ad7754340d3bc095abd2f744549a0d39b379
 workflow-type: tm+mt
-source-wordcount: '364'
+source-wordcount: '325'
 ht-degree: 2%
 
 ---
@@ -23,7 +23,7 @@ Esta página contiene los cambios realizados en los últimos 60 días. Excluimos
   </thead>
   <tbody>
     <tr>
-      <td><p>Versión <a href="https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">ECE-Tools</a>, v2002.2.10.</p>
+      <td><p>Versión <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">ECE-Tools</a>, v2002.2.10.</p>
 </td>
       <td>
         Técnico
@@ -45,7 +45,7 @@ Esta página contiene los cambios realizados en los últimos 60 días. Excluimos
   </thead>
   <tbody>
     <tr>
-      <td><p>Se agregó una aclaración sobre cómo <a href="https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-admin#change-the-admin-url">cambiar la URL de administración</a> en Adobe Commerce en la nube en lugar de hacerlo en línea.</p>
+      <td><p>Se agregó una aclaración sobre cómo <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-admin#change-the-admin-url">cambiar la URL de administración</a> en Adobe Commerce en la nube en lugar de hacerlo en línea.</p>
 </td>
       <td>
         Actualización principal, comentarios
@@ -67,7 +67,7 @@ Esta página contiene los cambios realizados en los últimos 60 días. Excluimos
   </thead>
   <tbody>
     <tr>
-      <td><p>Se ha agregado documentación para <a href="https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/develop/storage/check-disk-space-limit-on-cloud">comprobar el límite de espacio en disco para Adobe Commerce en proyectos en la nube</a> desde la consola en la nube.</p>
+      <td><p>Se ha agregado documentación para <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/storage/check-disk-space-limit-on-cloud">comprobar el límite de espacio en disco para Adobe Commerce en proyectos en la nube</a> desde la consola en la nube.</p>
 </td>
       <td>
         Tema nuevo, técnico
@@ -89,7 +89,7 @@ Esta página contiene los cambios realizados en los últimos 60 días. Excluimos
   </thead>
   <tbody>
     <tr>
-      <td><p>Se ha actualizado <a href="https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/launch/checklist">Iniciar lista de comprobación</a> para Commerce en proyectos en la nube para agregar registros Fastly AAAA a las instrucciones de configuración de DNS.</p>
+      <td><p>Se ha actualizado <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/launch/checklist">Iniciar lista de comprobación</a> para Commerce en proyectos en la nube para agregar registros Fastly AAAA a las instrucciones de configuración de DNS.</p>
 </td>
       <td>
         Comentarios
@@ -111,7 +111,7 @@ Esta página contiene los cambios realizados en los últimos 60 días. Excluimos
   </thead>
   <tbody>
     <tr>
-      <td><p>Se han agregado instrucciones para <a href="https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/monitor/new-relic/account-management">cambiar el propietario de la cuenta de New Relic</a> a la <em>Guía de Commerce en infraestructura de nube</em>.</p>
+      <td><p>Se han agregado instrucciones para <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/monitor/new-relic/account-management">cambiar el propietario de la cuenta de New Relic</a> a la <em>Guía de Commerce en infraestructura de nube</em>.</p>
 </td>
       <td>
         Técnico
@@ -133,34 +133,12 @@ Esta página contiene los cambios realizados en los últimos 60 días. Excluimos
   </thead>
   <tbody>
     <tr>
-      <td><p>Se ha agregado la siguiente información sobre el encubrimiento del origen a la <a href="https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/cdn/fastly">descripción general de los servicios de Fastly</a>.<br />- Definición y flujo de tráfico<br />- Estado de habilitación (habilitado en todos los proyectos de nube desde 2021) Ejemplos de URL de origen bloqueadas<br />- Ejemplos de uso de API de REST</p>
+      <td><p>Se ha agregado la siguiente información sobre el encubrimiento del origen a la <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/fastly">descripción general de los servicios de Fastly</a>.<br />- Definición y flujo de tráfico<br />- Estado de habilitación (habilitado en todos los proyectos de nube desde 2021) Ejemplos de URL de origen bloqueadas<br />- Ejemplos de uso de API de REST</p>
 </td>
       <td>
         Técnico
       </td>
       <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/e367fd9c565d4d6d2bbc15b0289768dc38dcf7a9">comprometer</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 13 de enero de 2026
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>Descripción</th>
-      <th>Tipo</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>Se ha actualizado la versión de los ejemplos de <a href="https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/configure/service/opensearch">Configurar el servicio OpenSearch</a>.</p>
-</td>
-      <td>
-        Comentarios
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/f5d325dbb14e5e524c89b41c4d5b82383b5b1ac7">comprometer</a></td>
     </tr>
   </tbody>
 </table>
