@@ -3,9 +3,10 @@ title: servicio de New Relic
 description: Obtenga información acerca del servicio New Relic disponible con su proyecto de Adobe Commerce en la nube.
 feature: Cloud, Observability
 last-substantial-update: 2023-09-06T00:00:00Z
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 10966241-311d-4b68-804d-4c9569bf933d
+source-git-commit: 3784e7b2ddc8f6ae20fd2c6fd557f2408d870cf2
 workflow-type: tm+mt
-source-wordcount: '369'
+source-wordcount: '456'
 ht-degree: 0%
 
 ---
@@ -23,6 +24,8 @@ Las siguientes funciones de New Relic están disponibles para su uso con los ent
 >[!INFO]
 >
 >Otras funciones de New Relic no están disponibles en proyectos de Adobe Commerce.
+>
+>Los clientes de Adobe Commerce en la nube no pueden integrar ni enviar datos desde servidores externos directamente a su cuenta de New Relic aprovisionada. El servicio New Relic se limita a monitorizar el entorno de la aplicación de Commerce Cloud. Solo los servicios de terceros que invoca la propia aplicación (por ejemplo, las API externas o los servicios llamados durante el tiempo de ejecución) se pueden rastrear y monitorizar dentro de New Relic.
 
 ## APM NEW RELIC
 
