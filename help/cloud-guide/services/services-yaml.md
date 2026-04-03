@@ -3,9 +3,9 @@ title: Configurar servicios
 description: Obtenga información sobre cómo configurar los servicios que utiliza Adobe Commerce en la infraestructura en la nube.
 feature: Cloud, Configuration, Services
 exl-id: ddf44b7c-e4ae-48f0-97a9-a219e6012492
-source-git-commit: 322f7af2c79dd4eeeabafa2ba7e5a32cbd8b1925
+source-git-commit: 4ea85b008e2ea9d1c9ab623c413ff9c3c3aaffd2
 workflow-type: tm+mt
-source-wordcount: '1070'
+source-wordcount: '1136'
 ht-degree: 0%
 
 ---
@@ -39,6 +39,7 @@ La infraestructura en la nube admite e implementa los siguientes servicios:
 - [OpenSearch](opensearch.md)
 
 >[!NOTE]
+>Debe [actualizar RabbitMQ secuencialmente entre las versiones disponibles](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/rabbitmq#upgrading-the-rabbitmq-service); por ejemplo, no puede actualizar de la versión 3.9 directamente a la 4.1
 >
 >Después de actualizar a una nueva versión de RabbitMQ, déclencheur una implementación completa para garantizar que las colas de mensajes personalizadas se vuelvan a crear en RabbitMQ.
 
@@ -180,7 +181,7 @@ Puede recuperar los datos de configuración de todas las relaciones de servicio 
 
 ## Versiones de servicio
 
-La compatibilidad y la versión del servicio para Adobe Commerce en la infraestructura en la nube están determinadas por las versiones implementadas y probadas en la infraestructura en la nube, y a veces difieren de las versiones admitidas por las implementaciones locales de Adobe Commerce. Consulte [Requisitos del sistema](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=es) en la guía _Instalación_ para obtener una lista de dependencias de software de terceros que Adobe ha probado con versiones específicas de Adobe Commerce y Magento Open Source.
+La compatibilidad y la versión del servicio para Adobe Commerce en la infraestructura en la nube están determinadas por las versiones implementadas y probadas en la infraestructura en la nube, y a veces difieren de las versiones admitidas por las implementaciones locales de Adobe Commerce. Consulte [Requisitos del sistema](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html) en la guía _Instalación_ para obtener una lista de dependencias de software de terceros que Adobe ha probado con versiones específicas de Adobe Commerce y Magento Open Source.
 
 ### Comprobaciones de EOL de software
 
@@ -189,7 +190,7 @@ Durante el proceso de implementación, el paquete `ece-tools` comprueba las vers
 - Si la versión de un servicio se encuentra en los tres meses siguientes a la fecha límite, se muestra una notificación en el registro de implementación.
 - Si la fecha límite se sitúa en el pasado, aparece una notificación de advertencia.
 
-Para mantener la seguridad de la tienda, actualice las versiones de software instaladas antes de que lleguen a EOL. Puede revisar las fechas límite en el archivo [&#x200B; de `eol.yaml`ece-tools](https://github.com/magento/ece-tools/blob/develop/config/eol.yaml).
+Para mantener la seguridad de la tienda, actualice las versiones de software instaladas antes de que lleguen a EOL. Puede revisar las fechas límite en el archivo `eol.yaml` de [ece-tools](https://github.com/magento/ece-tools/blob/develop/config/eol.yaml).
 
 ### Migrar a OpenSearch
 
