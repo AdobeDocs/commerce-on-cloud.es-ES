@@ -39,7 +39,7 @@ La infraestructura en la nube admite e implementa los siguientes servicios:
 - [OpenSearch](opensearch.md)
 
 >[!NOTE]
->Debe [actualizar RabbitMQ secuencialmente entre las versiones disponibles](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/rabbitmq#upgrading-the-rabbitmq-service); por ejemplo, no puede actualizar de la versión 3.9 directamente a la 4.1
+>Debe [actualizar RabbitMQ secuencialmente entre las versiones disponibles](https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/configure/service/rabbitmq#upgrading-the-rabbitmq-service); por ejemplo, no puede actualizar de la versión 3.9 directamente a la 4.1
 >
 >Después de actualizar a una nueva versión de RabbitMQ, déclencheur una implementación completa para garantizar que las colas de mensajes personalizadas se vuelvan a crear en RabbitMQ.
 
@@ -181,7 +181,7 @@ Puede recuperar los datos de configuración de todas las relaciones de servicio 
 
 ## Versiones de servicio
 
-La compatibilidad y la versión del servicio para Adobe Commerce en la infraestructura en la nube están determinadas por las versiones implementadas y probadas en la infraestructura en la nube, y a veces difieren de las versiones admitidas por las implementaciones locales de Adobe Commerce. Consulte [Requisitos del sistema](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html) en la guía _Instalación_ para obtener una lista de dependencias de software de terceros que Adobe ha probado con versiones específicas de Adobe Commerce y Magento Open Source.
+La compatibilidad y la versión del servicio para Adobe Commerce en la infraestructura en la nube están determinadas por las versiones implementadas y probadas en la infraestructura en la nube, y a veces difieren de las versiones admitidas por las implementaciones locales de Adobe Commerce. Consulte [Requisitos del sistema](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=es) en la guía _Instalación_ para obtener una lista de dependencias de software de terceros que Adobe ha probado con versiones específicas de Adobe Commerce y Magento Open Source.
 
 ### Comprobaciones de EOL de software
 
