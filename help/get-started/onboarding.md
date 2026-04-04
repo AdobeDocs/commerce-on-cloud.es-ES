@@ -41,7 +41,7 @@ Puede usar [[!DNL Cloud Console]](cloud-console.md) para administrar su proyecto
 
 ## Suscribirse al estado de Adobe
 
-Obtenga actualizaciones acerca de Adobe Commerce en entornos de plataformas de infraestructura en la nube y servicios relacionados en la [página de estado](https://status.adobe.com/products/503473).
+Obtenga actualizaciones acerca de Adobe Commerce en entornos de plataformas de infraestructura en la nube y servicios relacionados en la [página de estado](https://status.adobe.com/es/products/503473).
 
 La página proporciona un estado para los componentes y servicios de Adobe Commerce seguido de notificaciones sobre informes de incidentes, actualizaciones de servicios, interrupciones planificadas y mantenimiento programado. Cualquier persona que trabaje en el proyecto puede suscribirse al sitio de estado de Adobe Commerce para recibir notificaciones de eventos y actualizaciones por correo electrónico o Slack. Puede personalizar la suscripción de estado de Adobe para rastrear productos específicos por regiones y eventos.
 
