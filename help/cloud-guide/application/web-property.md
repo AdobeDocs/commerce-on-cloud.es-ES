@@ -2,9 +2,10 @@
 title: Propiedad web
 description: Vea ejemplos sobre cómo configurar la propiedad web en el archivo de configuración de la aplicación  [!DNL Commerce] .
 feature: Cloud, Configuration
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 6ecf6fb5-57a8-435c-8de3-f66dc56837fe
+source-git-commit: 94a7748348ba590bb4fed740df658c5bac4c31e9
 workflow-type: tm+mt
-source-wordcount: '410'
+source-wordcount: '462'
 ht-degree: 0%
 
 ---
@@ -31,14 +32,18 @@ Puede ajustar la configuración de `locations` con los siguientes valores clave 
 | `rules` | Especificar invalidaciones para una ubicación. Utilice una expresión regular para que coincida con una solicitud. Si una solicitud entrante coincide con la regla, las claves utilizadas en ella anulan la gestión regular de la solicitud. |
 | `passthru` | Configure la URL utilizada en caso de que no se encuentre un archivo estático o PHP. Normalmente, esta dirección URL es el controlador principal de las aplicaciones, como `/index.php` o `/app.php`. |
 | `root` | Establezca la ruta relativa a la raíz de la aplicación que se expone en la web. El directorio público (ubicación &quot;/&quot;) para un proyecto de Cloud está establecido en &quot;pub&quot; de forma predeterminada. |
-| `scripts` | Permitir la carga de scripts en esta ubicación. Establezca el valor en `true` para permitir scripts. |
+| `scripts` | Permitir la carga de scripts en esta ubicación. Establezca el valor en `true` para permitir scripts. Para los directorios `pub/media` y `pub/static`, la configuración predeterminada se establece en `scripts: false` para evitar la ejecución de los archivos cargados. |
+
+>[!IMPORTANT]
+>
+>**Nota de seguridad:** La configuración predeterminada de la propiedad `web` para Adobe Commerce en la nube establece `scripts: false` para las ubicaciones de medios para evitar la ejecución de los archivos cargados. No anule esta configuración a menos que comprenda completamente las implicaciones de seguridad para la implementación.
 
 La configuración predeterminada permite lo siguiente:
 
 - Desde la ruta de acceso raíz (`/`), solo se puede acceder a la web y a los medios
-- Se puede tener acceso a cualquier archivo desde las rutas de acceso `~/pub/static` y `~/pub/media`
+- Se puede tener acceso a cualquier archivo desde las rutas de acceso `~/pub/media` y `~/pub/static`
 
-El siguiente ejemplo muestra la configuración predeterminada en el archivo `.magento.app.yaml` para un conjunto de ubicaciones accesibles desde la web asociadas a una entrada en la propiedad [`mounts` &#x200B;](properties.md#mounts):
+El siguiente ejemplo muestra la configuración predeterminada en el archivo `.magento.app.yaml` para un conjunto de ubicaciones accesibles desde la web asociadas a una entrada en la propiedad [`mounts` ](properties.md#mounts):
 
 ```yaml
  # The configuration of app when it is exposed to the web.
