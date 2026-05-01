@@ -23,7 +23,7 @@ Esta página contiene los cambios realizados en los últimos 60 días. Excluimos
   </thead>
   <tbody>
     <tr>
-      <td><p>Se ha agregado una nota de seguridad a la referencia de la <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/web-property">configuración de la propiedad web</a> para Adobe Commerce en la infraestructura en la nube para aclarar que la configuración predeterminada de la propiedad web usa <code class="language-plaintext highlighter-rouge">scripts:false</code> para las ubicaciones de medios a fin de evitar la ejecución de los archivos cargados.</p>
+      <td><p>Se ha agregado una nota de seguridad a la referencia de la <a href="https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/configure/app/properties/web-property">configuración de la propiedad web</a> para Adobe Commerce en la infraestructura en la nube para aclarar que la configuración predeterminada de la propiedad web usa <code class="language-plaintext highlighter-rouge">scripts:false</code> para las ubicaciones de medios a fin de evitar la ejecución de los archivos cargados.</p>
 </td>
       <td>
         Técnico, comentarios
@@ -45,7 +45,7 @@ Esta página contiene los cambios realizados en los últimos 60 días. Excluimos
   </thead>
   <tbody>
     <tr>
-      <td><p>Versión <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">ECE-Tools</a>, v2002.2.10.</p>
+      <td><p>Versión <a href="https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">ECE-Tools</a>, v2002.2.10.</p>
 </td>
       <td>
         Técnico
@@ -67,7 +67,7 @@ Esta página contiene los cambios realizados en los últimos 60 días. Excluimos
   </thead>
   <tbody>
     <tr>
-      <td><p>Se agregó una aclaración sobre cómo <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-admin#change-the-admin-url">cambiar la URL de administración</a> en Adobe Commerce en la nube en lugar de hacerlo en línea.</p>
+      <td><p>Se agregó una aclaración sobre cómo <a href="https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-admin#change-the-admin-url">cambiar la URL de administración</a> en Adobe Commerce en la nube en lugar de hacerlo en línea.</p>
 </td>
       <td>
         Actualización principal, comentarios
