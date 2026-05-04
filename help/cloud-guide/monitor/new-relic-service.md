@@ -4,7 +4,7 @@ description: Obtenga información acerca del servicio New Relic disponible con s
 feature: Cloud, Observability
 last-substantial-update: 2023-09-06T00:00:00Z
 exl-id: 10966241-311d-4b68-804d-4c9569bf933d
-source-git-commit: 3784e7b2ddc8f6ae20fd2c6fd557f2408d870cf2
+source-git-commit: 1114b6001bd171bdb41423df697c7b168ae6fe19
 workflow-type: tm+mt
 source-wordcount: '456'
 ht-degree: 0%
@@ -35,7 +35,7 @@ Las siguientes funciones de New Relic están disponibles para su uso con los ent
 - **Supervisión de consultas de base de datos**: busque y supervise consultas de base de datos que afecten al rendimiento.
 - **Mapa de aplicaciones**: vea todas las dependencias de aplicaciones dentro del sitio, las extensiones y los servicios externos.
 - **[!DNL Apdex]puntuaciones**: evalúe el rendimiento y cree alertas que identifiquen problemas y le notifiquen cuando ocurran, como el rendimiento del sitio afectado por una venta flash o un evento web. Ver [Puntuación Apdex](https://docs.newrelic.com/docs/apm/new-relic-apm/apdex/apdex-measure-user-satisfaction/).
-- **Alertas administradas para Adobe Commerce**: utilice esta directiva de alertas de New Relic para supervisar el rendimiento de la infraestructura y la aplicación en función de las prácticas recomendadas del sector. Ver [Supervisar el rendimiento con las alertas administradas para la directiva de alertas de Adobe Commerce](investigate-performance.md/#monitor-performance-with-managed-alerts).
+- **Alertas administradas para Adobe Commerce**: utilice esta directiva de alertas de New Relic para supervisar el rendimiento de la infraestructura y la aplicación en función de las prácticas recomendadas del sector. Ver [Supervisar el rendimiento con las alertas administradas para la directiva de alertas de Adobe Commerce](investigate-performance.md#monitor-performance-with-managed-alerts).
 - **Seguimiento de implementaciones**: supervise los eventos de implementación y analice el impacto de la implementación en el rendimiento general. Consulte [Implementaciones de seguimiento](track-deployments.md).
 
 Su proyecto de infraestructura de Adobe Commerce en la nube incluye el software para el servicio APM de New Relic junto con una clave de licencia. No es necesario adquirir ni instalar ningún software adicional.

@@ -3,9 +3,9 @@ title: Administración de backup
 description: Obtenga información sobre cómo crear y restaurar manualmente una copia de seguridad para su proyecto de Adobe Commerce en la nube.
 feature: Cloud, Paas, Snapshots, Storage
 exl-id: e73a57e7-e56c-42b4-aa7b-2960673a7b68
-source-git-commit: 13cb5e3231c2173d5687aec3e4e64ecc154ee962
+source-git-commit: 1114b6001bd171bdb41423df697c7b168ae6fe19
 workflow-type: tm+mt
-source-wordcount: '819'
+source-wordcount: '865'
 ht-degree: 0%
 
 ---
@@ -37,7 +37,7 @@ Puede crear una copia de seguridad manual de cualquier entorno de inicio activo 
 
 **Para crear una copia de seguridad de la base de datos del entorno Pro**:
 
-Para crear un volcado de base de datos de cualquier entorno Pro, incluidos Ensayo y Producción, consulte el artículo de la base de conocimiento [Crear un volcado de base de datos](https://experienceleague.adobe.com/es/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud).
+Para crear un volcado de base de datos de cualquier entorno Pro, incluidos Ensayo y Producción, consulte el artículo de la base de conocimiento [Crear un volcado de base de datos](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud).
 
 **Para crear una copia de seguridad de cualquier entorno de inicio con el[!DNL Cloud Console]**:
 
@@ -150,7 +150,7 @@ Los tiempos de restauración varían según el tamaño de la base de datos:
 
 ## Restaurar una instantánea de recuperación ante desastres
 
-Para restaurar la instantánea de recuperación ante desastres en entornos de ensayo y producción de Pro, [Importe el volcado de la base de datos directamente desde el servidor](https://experienceleague.adobe.com/es/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3).
+Para restaurar la instantánea de recuperación ante desastres en entornos de ensayo y producción de Pro, [Importe el volcado de la base de datos directamente desde el servidor](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production#meth3).
 
 ## Revertir código
 

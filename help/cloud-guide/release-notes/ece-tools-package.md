@@ -4,7 +4,7 @@ description: Vea una lista de las mejoras más recientes del paquete ECE-Tools.
 recommendations: noDisplay, catalog
 last-substantial-update: 2025-08-07T00:00:00Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
-source-git-commit: b3d634838e562ceba4221a69e87eda377d8f9363
+source-git-commit: 1114b6001bd171bdb41423df697c7b168ae6fe19
 workflow-type: tm+mt
 source-wordcount: '3485'
 ht-degree: 0%
@@ -256,7 +256,9 @@ Fecha de publicación: 1 de febrero de 2021
 
 - ![nuevo icono](../../assets/new.svg) **Nueva variable de entorno SCD_NO_PARENT**—Se ha agregado la variable de entorno `SCD_NO_PARENT` (para Adobe Commerce >=2.4.2) para administrar la generación de contenido estático para las temáticas principales.<!--MCLOUD-7284-->
 
-- ![Icono de correcciones](../../assets/fix.svg) **Límites y comandos de memoria**—Se ha corregido un problema por el que los comandos de `php vendor/bin/ece-tools` no funcionaban si el tamaño del archivo de `cloud.log` superaba el límite de memoria PHP. En lugar de leer todo el archivo `cloud.log` en la memoria, ahora solo se lee un subconjunto más pequeño de datos del archivo de registro.<!--MCLOUD-7275--><!--MCLOUD-7400-->
+- ![Icono de correcciones](../../assets/fix.svg) **Límites y comandos de memoria**—Se ha corregido un problema por el que los comandos de `php vendor/bin/ece-tools` no funcionaban si el tamaño del archivo de `cloud.log` superaba el límite de memoria PHP. En lugar de leer todo el archivo `cloud.log` en la memoria, ahora solo se lee un subconjunto más pequeño de datos del archivo de registro.
+  <!--MCLOUD-7275-->
+  <!--MCLOUD-7400-->
 
 - ![icono de corrección](../../assets/fix.svg) **Conexiones de base de datos personalizadas**—Se ha corregido un problema de configuración de `.magento.env.yaml` en el que no se usaban las conexiones de base de datos personalizadas definidas para `DATABASE_CONFIGURATION`. No se agregaba la configuración de conexión a `app/etc/env.php`.<!--MCLOUD-7426-->
 
@@ -422,7 +424,7 @@ Fecha de publicación: 6 de febrero de 2020
 
 >[!NOTE]
 >
->Antes de actualizar a ECE-Tools versión 2002.1.0, revise [hacia atrás   cambios incompatibles](backward-incompatible-changes.md) para obtener información sobre los cambios que podrían requerir que   actualice la configuración o los procesos del proyecto de Adobe Commerce en la nube.
+>Antes de actualizar a ECE-Tools versión 2002.1.0, revise los [cambios incompatibles con versiones anteriores](backward-incompatible-changes.md) para obtener más información sobre los cambios que podrían requerir que actualice Adobe Commerce en la configuración o los procesos de proyectos de infraestructura en la nube.
 
 - ![nuevo icono](../../assets/new.svg) **Actualizaciones de servicio**—
 
