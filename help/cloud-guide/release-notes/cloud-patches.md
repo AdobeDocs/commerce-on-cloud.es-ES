@@ -35,7 +35,7 @@ Fecha de la versión: 6 de mayo de 2026
 
 - ![icono de corrección](../../assets/fix.svg) **Visibilidad de la versión de parche**-Visibilidad de la versión de parche de nube fija en entornos de nube.<!--MCLOUD-14221 -->
 - ![Icono de correcciones](../../assets/fix.svg) **Limpieza de PHPUnit**-Avisos de PHPUnit corregidos<!--MCLOUD-14717 -->
-- ![nuevo icono ](../../assets/new.svg)**Correcciones cosméticas**—Se han agregado mejoras cosméticas.<!--MCLOUD-14686 -->
+- ![nuevo icono &#x200B;](../../assets/new.svg)**Correcciones cosméticas**—Se han agregado mejoras cosméticas.<!--MCLOUD-14686 -->
 
 ## Versión 1.1.13
 
