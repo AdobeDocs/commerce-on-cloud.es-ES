@@ -2,11 +2,11 @@
 title: Notas de la versión de ECE-Tools
 description: Vea una lista de las mejoras más recientes del paquete ECE-Tools.
 recommendations: noDisplay, catalog
-last-substantial-update: 2025-08-07T00:00:00Z
+last-substantial-update: 2026-05-07T00:00:00Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
-source-git-commit: 1114b6001bd171bdb41423df697c7b168ae6fe19
+source-git-commit: 0781fdfe8b0dbc6312848572ff4b996e51270a3f
 workflow-type: tm+mt
-source-wordcount: '3485'
+source-wordcount: '3563'
 ht-degree: 0%
 
 ---
@@ -28,7 +28,18 @@ Las notas de la versión incluyen:
 
 <!--Add release notes below-->
 
-## v2002.2.10 {#latest}
+## v2002.2.11 {#latest}
+
+Fecha de la versión: 6 de mayo de 2026
+
+- ![nuevo icono](../../assets/new.svg) **RabbitMQ**—Se agregó compatibilidad con RabbitMQ 4.2.<!-- MCLOUD-14374 -->
+- ![nuevo icono](../../assets/new.svg) **Opensearch**—Se ha agregado compatibilidad con Opensearch 2.19 y 3.5 para varias versiones de Magento. <!-- MCLOUD-14682 -->
+- ![nuevo icono](../../assets/new.svg) **Valkey**—Se agregó compatibilidad con Valkey 8.1 y 9.<!-- MCLOUD-14784/MCLOUD-14625 -->
+- ![nuevo icono](../../assets/new.svg) **ActiveMQ**—Se ha agregado compatibilidad con ActiveMQ 2.5.1.<!-- MCLOUD-14683 -->
+- ![nuevo icono](../../assets/new.svg) **MariaDB**—Se agregó compatibilidad con MariaDB 11.8 y 12.2.<!-- MCLOUD-14628 -->
+- ![icono de corrección](../../assets/fix.svg) **Configuración e implementación**: se corrigieron advertencias de implementación en la nube, se actualizaron las obsolescencias de las pruebas de composición y se corrigió la visibilidad de la versión de las herramientas ECE en la implementación.<!-- MCLOUD-14822 -->
+
+## v2002.2.10
 
 Fecha de la versión: 5 de marzo de 2026
 
@@ -85,14 +96,18 @@ Fecha de la versión: 27 de mayo de 2025
 
 Fecha de publicación: 24 de abril de 2025
 
-- ![Icono de corrección](../../assets/fix.svg) **Opensearch2 para 2.4.4/2.4.5**—Se ha corregido un problema relacionado con la compatibilidad con `opensearch2` en las versiones de Adobe Commerce 2.4.4/2.4.5. <!-- MCLOUD-13607 -->
+- ![Icono de corrección](../../assets/fix.svg) **Opensearch2 para 2.4.4/2.4.5**—Se ha corregido un problema relacionado con la compatibilidad con `opensearch2` en las versiones de Adobe Commerce 2.4.4/2.4.5.<!-- MCLOUD-13607 -->
 
 ## v2002.2.3
 
 Fecha de publicación: 9 de abril de 2025
 
-- ![Icono de correcciones](../../assets/fix.svg) **Corrección de Valkey** Se ha corregido un problema con la configuración personalizada de Valkey. <!-- MCLOUD-13569 -->
-- ![Icono de correcciones](../../assets/fix.svg) **Validador de correcciones**: validador fijo para RabbitMQ 4.0. <!-- MCLOUD-13560 -->
+- ![Icono de correcciones](../../assets/fix.svg) **Corrección de Valkey** Se ha corregido un problema con la configuración personalizada de Valkey.<!-- MCLOUD-13569 -->
+- ![Icono de correcciones](../../assets/fix.svg) **Validador de correcciones**: validador fijo para RabbitMQ 4.0.<!-- MCLOUD-13560 -->
+
+## v2002.2.2
+
+Fecha de publicación: 7 de abril de 2025
 
 ## v2002.2.2
 
@@ -256,9 +271,7 @@ Fecha de publicación: 1 de febrero de 2021
 
 - ![nuevo icono](../../assets/new.svg) **Nueva variable de entorno SCD_NO_PARENT**—Se ha agregado la variable de entorno `SCD_NO_PARENT` (para Adobe Commerce >=2.4.2) para administrar la generación de contenido estático para las temáticas principales.<!--MCLOUD-7284-->
 
-- ![Icono de correcciones](../../assets/fix.svg) **Límites y comandos de memoria**—Se ha corregido un problema por el que los comandos de `php vendor/bin/ece-tools` no funcionaban si el tamaño del archivo de `cloud.log` superaba el límite de memoria PHP. En lugar de leer todo el archivo `cloud.log` en la memoria, ahora solo se lee un subconjunto más pequeño de datos del archivo de registro.
-  <!--MCLOUD-7275-->
-  <!--MCLOUD-7400-->
+- ![Icono de correcciones](../../assets/fix.svg) **Límites y comandos de memoria**—Se ha corregido un problema por el que los comandos de `php vendor/bin/ece-tools` no funcionaban si el tamaño del archivo de `cloud.log` superaba el límite de memoria PHP. En lugar de leer todo el archivo `cloud.log` en la memoria, ahora solo se lee un subconjunto más pequeño de datos del archivo de registro.<!--MCLOUD-7275--><!--MCLOUD-7400-->
 
 - ![icono de corrección](../../assets/fix.svg) **Conexiones de base de datos personalizadas**—Se ha corregido un problema de configuración de `.magento.env.yaml` en el que no se usaban las conexiones de base de datos personalizadas definidas para `DATABASE_CONFIGURATION`. No se agregaba la configuración de conexión a `app/etc/env.php`.<!--MCLOUD-7426-->
 

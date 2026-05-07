@@ -5,9 +5,9 @@ feature: Cloud, Docker, Release Notes
 recommendations: noDisplay, catalog
 last-substantial-update: 2025-08-07T00:00:00Z
 exl-id: 95cf4f30-6bce-4bac-8e11-cfe53cac2c70
-source-git-commit: c668b984ae4353757adfde23fd5c028c80b9d2a7
+source-git-commit: 819b3a70ce88eb40db1ac6521f0b38c9eb115e7b
 workflow-type: tm+mt
-source-wordcount: '4437'
+source-wordcount: '4496'
 ht-degree: 0%
 
 ---
@@ -25,7 +25,18 @@ Las notas de la versión incluyen:
 
 <!--Add release notes below-->
 
-## Versión 1.4.7 {#latest}
+## Versión 1.4.8 {#latest}
+
+Fecha de la versión: 6 de mayo de 2026
+
+- ![nuevo icono](../../assets/new.svg) **Pruebas de servicio actualizadas**—Pruebas actualizadas para MariaDB, RabbitMQ, ActiveMQ, Opensearch y Valkey.<!-- MCLOUD-14821 -->
+- ![nuevo icono](../../assets/new.svg) **Valkey**—Se agregó compatibilidad con Valkey 8.1.<!-- MCLOUD-14784 -->
+- ![nuevo icono](../../assets/new.svg) **imagen de Opensearch**—Se agregó Opensearch 2.19 y 3.5.<!-- MCLOUD-14790/MCLOUD-14785 -->
+- ![nuevo icono](../../assets/new.svg) **ActiveMQ**—Se ha agregado compatibilidad con ActiveMQ 2.51.<!-- MCLOUD-14683 -->
+- ![nuevo icono](../../assets/new.svg) **MariaDB**—Se agregó compatibilidad con MariaDB 11.8 y 12.2.<!-- MCLOUD-14635 -->
+- ![icono de corrección](../../assets/fix.svg) **MailHog**: se ha corregido la imagen de MailHog.<!-- MCLOUD-14663 -->
+
+## Versión 1.4.7
 
 Fecha de la versión: 5 de marzo de 2026
 
@@ -322,13 +333,13 @@ Fecha de publicación: 25 de junio de 2020
 
    - ![nuevo icono](../../assets/new.svg) **PHP-FPM**
 
-      - Se agregó compatibilidad con PHP 7.4. [Corrección enviada por Mohanela Murugan desde Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/198)<!--MCLOUD-198-->
+      - Se ha agregado compatibilidad con PHP 7.4. [Corrección enviada por Mohanela Murugan de Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/198)<!--MCLOUD-198-->
 
-      - Se ha agregado la capacidad de copiar un archivo de `php.ini` en el directorio raíz del proyecto al entorno de Cloud Docker y aplicar la configuración de PHP personalizada a los contenedores de PHP-FPM y CLI. Ver [Personalizar la configuración de PHP](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#customize-php-settings). [Corrección enviada por Mathew Beane desde Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/130).<!--MCLOUD-6012-->
+      - Se ha agregado la capacidad de copiar un archivo de `php.ini` en el directorio raíz del proyecto al entorno de Cloud Docker y aplicar la configuración de PHP personalizada a los contenedores de PHP-FPM y CLI. Ver [Personalizar la configuración de PHP](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#customize-php-settings). [Corrección enviada por Mathew Beane de Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/130).<!--MCLOUD-6012-->
 
       - Se ha añadido una comprobación de estado del contenedor. [Corrección enviada por Visanth Sampath desde Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/188).<!--MCLOUD-5752-->
 
-   - ![Icono de corrección](../../assets/fix.svg) **Node.js**: se ha actualizado la versión predeterminada de Node.js de la versión 8 a la versión 10 para mejorar la seguridad. La versión 8 de Node.js está obsoleta y ya no se actualiza con correcciones de errores ni parches de seguridad. [Corrección enviada por Mohan Elamurugan desde Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/183).<!--MCLOUD-5586-->
+   - ![Icono de corrección](../../assets/fix.svg) **Node.js**: se ha actualizado la versión predeterminada de Node.js de la versión 8 a la versión 10 para mejorar la seguridad. La versión 8 de Node.js está obsoleta y ya no se actualiza con correcciones de errores ni parches de seguridad. [Corrección enviada por Mohan Elamurugan de Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/183).<!--MCLOUD-5586-->
 
    - ![nuevo icono](../../assets/new.svg) **Elasticsearch**
 
@@ -350,7 +361,7 @@ Fecha de publicación: 25 de junio de 2020
 
    - Se ha mejorado la capacidad de gestionar respuestas de gran tamaño desde el contenedor PHP-FPM ascendente mediante el aumento del valor `fastcgi_buffers` para el servidor Nginx.<!--MCLOUD-5980-->
 
-   - Se mejoró el rendimiento de la sincronización de archivos mutagen al agregar una segunda sesión de sincronización para sincronizar archivos en el directorio `vendor`. Este cambio evita que el mutágeno se bloquee durante el proceso de sincronización de archivos. [Corrección enviada por Mathew Beane desde Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/127).<!--MCLOUD-6010-->
+   - Se mejoró el rendimiento de la sincronización de archivos mutagen al agregar una segunda sesión de sincronización para sincronizar archivos en el directorio `vendor`. Este cambio evita que el mutágeno se bloquee durante el proceso de sincronización de archivos. [Corrección enviada por Mathew Beane de Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/127).<!--MCLOUD-6010-->
 
    - ![nuevo icono](../../assets/new.svg) **actualizaciones del comando CLI**
 
@@ -365,15 +376,15 @@ Fecha de publicación: 25 de junio de 2020
 | Especificar una URL base personalizada | `./vendor/bin/ece-docker build:compose --host=<hostname> --port=<port-number>`<!--MCLOUD-3063--> |
 | [Agregar contenedor para la configuración de Xdebug](https://developer.adobe.com/commerce/cloud-tools/docker/test/configure-xdebug) | `.vendor/bin/ece-docker build:compose --mode developer --sync-engine native --with-xdebug`<!--MCLOUD-4098--> |
 
-- ![icono de corrección](../../assets/fix.svg) Se ha corregido la configuración de la sincronización de archivos mutagen para evitar que mutagen cree sesiones antiguas. [Corrección enviada por Mathew Beane desde Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/127).<!--MCLOUD-6010-->
+- ![icono de corrección](../../assets/fix.svg) Se ha corregido la configuración de la sincronización de archivos mutagen para evitar que mutagen cree sesiones antiguas. [Corrección enviada por Mathew Beane de Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/127).<!--MCLOUD-6010-->
 
-- ![Icono de corrección](../../assets/fix.svg) Se ha corregido un problema de configuración que causaba errores de sintaxis en el registro de composición de Docker al iniciar el contenedor de PHP-FPM. [Corrección enviada por Mathew Beane desde Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/129)<!--MCLOUD-3958-->
+- ![Icono de corrección](../../assets/fix.svg) Se ha corregido un problema de configuración que causaba errores de sintaxis en el registro de composición de Docker al iniciar el contenedor de PHP-FPM. [Corrección enviada por Mathew Beane de Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/129)<!--MCLOUD-3958-->
 
 - ![icono de corrección](../../assets/fix.svg) Se corrigieron errores de conflictos de volumen que a veces se producían al utilizar varios entornos Docker. [Corrección enviada por G Arvind desde Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/168).
 
 - ![icono de corrección](../../assets/fix.svg) Se ha corregido un problema que provocaba que fallara el comando `ece-docker build:compose` si la configuración incluía Blackfire.io. [Corrección enviada por G Arvind desde Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/199). <!--MCLOUD-5797-->
 
-- ![Icono de corrección](../../assets/fix.svg) Se ha actualizado la configuración de la imagen de la CLI de PHP para evitar errores de memoria insuficiente que se produjeron al instalar varios paquetes mediante Cloud Docker para Commerce. [Corrección enviada por Mohan Elamurugan desde Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/197).*<!--MCLOUD-5818-->
+- ![Icono de corrección](../../assets/fix.svg) Se ha actualizado la configuración de la imagen de la CLI de PHP para evitar errores de memoria insuficiente que se produjeron al instalar varios paquetes mediante Cloud Docker para Commerce. [Corrección enviada por Mohan Elamurugan de Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/197).*<!--MCLOUD-5818-->
 
 - ![Icono de corrección](../../assets/fix.svg) Se agregó compatibilidad con varios usuarios de MySQL en el entorno Cloud Docker. En versiones anteriores, la operación `build:compose` fallaba si el archivo `magento.app.yaml` especificaba varios usuarios de la base de datos. [Corrección enviada por G Arvind desde Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/181).<!--MCLOUD-5670-->
 
@@ -419,15 +430,15 @@ Fecha de la versión: 5 de febrero de 2020
 
          - **`RewriteLocation`**: determina si el proxy de libras reescribe la ubicación en la dirección URL de la solicitud de forma predeterminada. El valor predeterminado es `0` para evitar que la reescritura interrumpa las redirecciones a sitios web externos como un sitio de SSO externo. [Corrección enviada por Sorin Sugar](https://github.com/magento/magento-cloud-docker/pull/37)<!--MAGECLOUD-4061-->
 
-      - ![nuevo icono](../../assets/new.svg): se ha aumentado el valor de tiempo de espera en la configuración del contenedor TLS de 15 a 300 segundos. [Corrección enviada por Mathew Beane desde Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/78)<!--MAGECLOUD-4460-->
+      - ![nuevo icono](../../assets/new.svg): se ha aumentado el valor de tiempo de espera en la configuración del contenedor TLS de 15 a 300 segundos. [Corrección enviada por Mathew Beane de Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/78)<!--MAGECLOUD-4460-->
 
    - ![nuevo icono](../../assets/new.svg) **contenedor de barniz**—
 
       - ![nuevo icono](../../assets/new.svg) **Se ha actualizado la imagen base del contenedor para que utilice la imagen oficial**—El [contenedor de barniz de nube](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#varnish-container) se basa ahora en la imagen Docker `centos` oficial.<!--MAGECLOUD-4163-->
 
-      - ![nuevo icono](../../assets/new.svg) **Se mejoró la configuración de tiempo de espera predeterminada**- Se agregó la configuración `.first_byte_timeout` y `.between_bytes_timeout` al contenedor de Varnish. Ambos valores de tiempo de espera tienen un valor predeterminado de `300s` (5 minutos). [Corrección enviada por Mathew Beane desde Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/78)<!--MAGECLOUD-4460-->
+      - ![nuevo icono](../../assets/new.svg) **Se mejoró la configuración de tiempo de espera predeterminada**- Se agregó la configuración `.first_byte_timeout` y `.between_bytes_timeout` al contenedor de Varnish. Ambos valores de tiempo de espera tienen un valor predeterminado de `300s` (5 minutos). [Corrección enviada por Mathew Beane de Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/78)<!--MAGECLOUD-4460-->
 
-      - ![icono de corrección](../../assets/fix.svg) **Omitir barniz durante sesiones de Xdebug**—Se ha actualizado la configuración del contenedor de Varnish para que devuelva `pass` en las solicitudes recibidas cuando Xdebug está habilitado. En versiones anteriores, no se podía utilizar Xdebug si el entorno Docker incluía Varnish. [Corrección enviada por Mathew Beane desde Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/111).<!--MAGECLOUD-4873-->
+      - ![icono de corrección](../../assets/fix.svg) **Omitir barniz durante sesiones de Xdebug**—Se ha actualizado la configuración del contenedor de Varnish para que devuelva `pass` en las solicitudes recibidas cuando Xdebug está habilitado. En versiones anteriores, no se podía utilizar Xdebug si el entorno Docker incluía Varnish. [Corrección enviada por Mathew Beane de Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/111).<!--MAGECLOUD-4873-->
 
 - ![nuevo icono](../../assets/new.svg) **cambios en la configuración de Docker**—
 
@@ -453,7 +464,7 @@ Fecha de la versión: 5 de febrero de 2020
 
       - ![nuevo icono](../../assets/new.svg) agregó la opción `--sync-engine="native"` al comando `docker-build` para deshabilitar la sincronización de archivos cuando genere el archivo de configuración Docker Compose en modo de desarrollador. Utilice esta opción cuando desarrolle en sistemas Linux, que no requieren sincronización de archivos para el desarrollo local de Docker. Ver [Sincronización de datos en el entorno de Docker](https://developer.adobe.com/commerce/cloud-tools/docker/setup/synchronize-data).<!--MCLOUD-3231, MCLOUD-3890-->
 
-   - ![nuevo icono](../../assets/new.svg) cambió la configuración predeterminada de sincronización de archivos de `docker-sync` a `native`. [Corrección enviada por Mathew Beane desde Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/124).<!--MAGECLOUD-5066-->
+   - ![nuevo icono](../../assets/new.svg) cambió la configuración predeterminada de sincronización de archivos de `docker-sync` a `native`. [Corrección enviada por Mathew Beane de Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/124).<!--MAGECLOUD-5066-->
 
 - ![nuevo icono](../../assets/new.svg) **Mejoras de validación**—
 
