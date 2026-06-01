@@ -2,7 +2,7 @@
 title: Commerce en infraestructura en la nube
 description: Obtenga información sobre la creación, implementación y administración de Commerce en la infraestructura en la nube.
 exl-id: a37d0403-df14-4bb9-8cc4-25436560ba0c
-source-git-commit: 8abce85f5a2ed22e344e1489c592ac12415568d8
+source-git-commit: 37505db0488204c40ca37356c4d496bba73c537f
 workflow-type: tm+mt
 source-wordcount: '323'
 ht-degree: 3%
@@ -40,7 +40,7 @@ Las secciones siguientes proporcionan detalles sobre las diferentes regiones de 
 
 ## Regiones de AWS
 
-![Diagrama que muestra las regiones de AWS](../assets/aws-regions.svg){zoomable="yes"}
+![Diagrama que muestra las regiones de AWS](../assets/aws-regions.png){zoomable="yes"}
 
 >[!NOTE]
 >
@@ -48,7 +48,7 @@ Las secciones siguientes proporcionan detalles sobre las diferentes regiones de 
 
 ## Regiones de Azure
 
-![Diagrama que muestra las regiones de Azure](../assets/azure-regions.svg){zoomable="yes"}
+![Diagrama que muestra las regiones de Azure](../assets/azure-regions.png){zoomable="yes"}
 
 >[!NOTE]
 >
