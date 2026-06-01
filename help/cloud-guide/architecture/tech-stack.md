@@ -3,9 +3,9 @@ title: Pila de tecnología
 description: Consulte la pila de tecnología que forma la infraestructura de Commerce en la nube.
 feature: Cloud, Iaas, Paas
 exl-id: 3fac1ab7-6440-4bf9-8169-9fadf51d70dd
-source-git-commit: 5fc2082ca2aae8a1466821075c01ce756ba382cc
+source-git-commit: 77d316fd53e477a2b45277db503ea8e5ede78930
 workflow-type: tm+mt
-source-wordcount: '378'
+source-wordcount: '405'
 ht-degree: 0%
 
 ---
@@ -14,11 +14,11 @@ ht-degree: 0%
 
 Considere Adobe Commerce en la infraestructura en la nube como cinco capas funcionales, como se muestra a continuación:
 
-![Pila de nube](../../assets/CloudStack.svg)
+![Pila de nube](../../assets/CloudStack.png)
 
-1. [**Infraestructura en la nube**](pro-architecture.md): Elija Amazon Web Service (AWS) o Microsoft Azure como base de Infrastructure as a Service (IaaS) para sus proyectos Adobe Commerce on cloud Infrastructure Pro.
+1. [**Infraestructura en la nube**](pro-architecture.md): Elija Amazon Web Service (AWS) o Microsoft Azure como base de Infrastructure as a Service (IaaS) para sus proyectos de Adobe Commerce en la nube Pro.
 
-   Adobe analiza de forma rutinaria el uso de los recursos de computación virtual (vCPU) y asigna automáticamente recursos para optimizar el uso a largo plazo y mitigar el riesgo de superar la asignación máxima anual de días de vCPU. Si espera un aumento del tráfico del sitio durante períodos de tiempo específicos, debe seguir abriendo un ticket de soporte técnico para [solicitar un aumento temporal](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/how-to-request-temporary-magento-upsize.html?lang=es).
+   Adobe analiza de forma rutinaria el uso de los recursos de computación virtual (vCPU) y asigna automáticamente recursos para optimizar el uso a largo plazo y mitigar el riesgo de superar la asignación máxima anual de días de vCPU. Si espera un aumento del tráfico del sitio durante períodos de tiempo específicos, debe seguir abriendo un ticket de soporte técnico para [solicitar un aumento temporal](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/how-to-request-temporary-magento-upsize.html).
 
 1. [**Platform as a Service**](cloud-architecture.md): cada proyecto de infraestructura en la nube de Adobe Commerce proporciona un entorno de integración de Platform as a Service (PaaS) para desarrollar, probar e integrar servicios.
 1. [**Adobe Commerce**](../project/overview.md): Adobe Commerce en la infraestructura en la nube proporciona una infraestructura aprovisionada previamente que incluye PHP, MySQL (MariaDB), Redis, servicios de cola de mensajes ([!DNL RabbitMQ] o [!DNL ActiveMQ]) y tecnologías de motores de búsqueda compatibles.
