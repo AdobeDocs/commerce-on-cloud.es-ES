@@ -1,8 +1,8 @@
 ---
-source-git-commit: 8abce85f5a2ed22e344e1489c592ac12415568d8
+source-git-commit: 3a36ada0dd3bdb4952b71f9ff851af20766c91ed
 workflow-type: tm+mt
-source-wordcount: '301'
-ht-degree: 1%
+source-wordcount: '341'
+ht-degree: 2%
 
 ---
 # Novedades de la plantilla
@@ -10,6 +10,28 @@ ht-degree: 1%
 ## Novedades
 
 Esta página contiene los cambios realizados en los últimos 60 días. Excluimos todas las actualizaciones menores, como la edición de copias, de esta lista.
+
+### 1 de junio de 2026
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Descripción</th>
+      <th>Tipo</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>Se ha eliminado la declaración de compatibilidad de Elasticsearch con On-Prem en la <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/opensearch">advertencia de compatibilidad con Elasticsearch</a>.</p>
+</td>
+      <td>
+        Técnico
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/65898d2007d69d5bd3b8a9eabb9872ced98b8ffc">comprometer</a></td>
+    </tr>
+  </tbody>
+</table>
 
 ### 12 de mayo de 2026
 
@@ -23,7 +45,7 @@ Esta página contiene los cambios realizados en los últimos 60 días. Excluimos
   </thead>
   <tbody>
     <tr>
-      <td><p>Se ha agregado la oferta <a href="https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/cdn/advanced-security">Seguridad avanzada</a> para Adobe Commerce en la infraestructura de la nube.</p>
+      <td><p>Se ha agregado la oferta <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/advanced-security">Seguridad avanzada</a> para Adobe Commerce en la infraestructura de la nube.</p>
 </td>
       <td>
         Nuevo tema
@@ -45,7 +67,7 @@ Esta página contiene los cambios realizados en los últimos 60 días. Excluimos
   </thead>
   <tbody>
     <tr>
-      <td><p>Actualiza las notas de la versión de la documentación de Cloud Tools para reflejar las adiciones de versiones recientes, las actualizaciones de compatibilidad y las correcciones. Ver <a href="https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/release-notes/cloud-tools-suite">Notas de la versión de Commerce Cloud Tools Suite</a>.</p>
+      <td><p>Actualiza las notas de la versión de la documentación de Cloud Tools para reflejar las adiciones de versiones recientes, las actualizaciones de compatibilidad y las correcciones. Ver <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/release-notes/cloud-tools-suite">Notas de la versión de Commerce Cloud Tools Suite</a>.</p>
 </td>
       <td>
         Técnico
@@ -53,7 +75,7 @@ Esta página contiene los cambios realizados en los últimos 60 días. Excluimos
       <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/812482f88f6ab6400c77b6ec36db73956dd3f202">comprometer</a></td>
     </tr>
     <tr>
-      <td><p>Se ha actualizado <a href="https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">referencia de CLI</a> y <a href="https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/error-reference">mensajes de error</a> tras la versión de ECE-Tools, v2002.2.11.</p>
+      <td><p>Se ha actualizado <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">referencia de CLI</a> y <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/error-reference">mensajes de error</a> tras la versión de ECE-Tools, v2002.2.11.</p>
 </td>
       <td>
         Técnico
@@ -75,7 +97,7 @@ Esta página contiene los cambios realizados en los últimos 60 días. Excluimos
   </thead>
   <tbody>
     <tr>
-      <td><p>Se ha actualizado <a href="https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/configure/app/php-settings#enable-extensions">la configuración de PHP</a> para que incluya LDAP entre las extensiones de PHP opcionales y tenga en cuenta que LDAP y las extensiones similares son específicas del entorno (por ejemplo, no son de autoservicio en Ensayo/Producción de Pro).</p>
+      <td><p>Se ha actualizado <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/php-settings#enable-extensions">la configuración de PHP</a> para que incluya LDAP entre las extensiones de PHP opcionales y tenga en cuenta que LDAP y las extensiones similares son específicas del entorno (por ejemplo, no son de autoservicio en Ensayo/Producción de Pro).</p>
 </td>
       <td>
         Técnico
@@ -97,7 +119,7 @@ Esta página contiene los cambios realizados en los últimos 60 días. Excluimos
   </thead>
   <tbody>
     <tr>
-      <td><p>Se ha agregado una nota de seguridad a la referencia de la <a href="https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/configure/app/properties/web-property">configuración de la propiedad web</a> para Adobe Commerce en la infraestructura en la nube para aclarar que la configuración predeterminada de la propiedad web usa <code>scripts:false</code> para las ubicaciones de medios a fin de evitar la ejecución de los archivos cargados.</p>
+      <td><p>Se ha agregado una nota de seguridad a la referencia de la <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/properties/web-property">configuración de la propiedad web</a> para Adobe Commerce en la infraestructura en la nube para aclarar que la configuración predeterminada de la propiedad web usa <code>scripts:false</code> para las ubicaciones de medios a fin de evitar la ejecución de los archivos cargados.</p>
 </td>
       <td>
         Técnico, comentarios
