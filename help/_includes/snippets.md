@@ -1,7 +1,7 @@
 ---
-source-git-commit: c8effbdb82060e2a2cbcbdef577fed7249a76799
+source-git-commit: 3006f8f7b3eb54f44cf2bda06403441d304b4b81
 workflow-type: tm+mt
-source-wordcount: '1313'
+source-wordcount: '1305'
 ht-degree: 0%
 
 ---
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->Elasticsearch 7.11 y versiones posteriores no son compatibles con Adobe Commerce en infraestructuras en la nube. Las versiones de Adobe Commerce 2.3.7-p3, 2.4.3-p2 y 2.4.4 y posteriores admiten el servicio OpenSearch. Las instalaciones locales siguen siendo compatibles con Elasticsearch.
+>Elasticsearch 7 y versiones posteriores no son compatibles con Adobe Commerce en infraestructuras en la nube. Las versiones de Adobe Commerce 2.3.7-p3, 2.4.3-p2 y 2.4.4 y posteriores admiten el servicio OpenSearch.
 
 ## Integración mejorada {#enhanced-integration-envs}
 
