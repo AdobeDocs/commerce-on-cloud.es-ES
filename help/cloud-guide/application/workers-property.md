@@ -2,9 +2,14 @@
 title: Trabajadores
 description: Obtenga información acerca de cómo configurar la propiedad de trabajadores en el archivo de configuración de la aplicación  [!DNL Commerce] .
 feature: Cloud, Configuration
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 62d9dfaf-6265-4016-8d68-26362cf6a63a
+TQID: https://experienceleague.adobe.com/sLfoGU5aolWVm6p-jHMC6VkF-DgNGdt7Wk40oALTj0o
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '339'
+source-wordcount: 357
 ht-degree: 0%
 
 ---
@@ -17,7 +22,7 @@ Puede definir un trabajador para que se ejecute independientemente de la instanc
 
 Los trabajadores solo están disponibles para su uso con los entornos de ensayo y producción de Pro. Los entornos de integración profesional y de inicio pueden optar por usar la variable [CRON_CONSUMERS_RUNNER](../environment/variables-deploy.md#cron_consumers_runner).
 
-Para configurar un trabajador en Ensayo o Producción profesional, [envíe un vale de soporte técnico de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=es#submit-ticket) e incluya la siguiente información:
+Para configurar un trabajador en Ensayo o Producción profesional, [envíe un vale de soporte técnico de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) e incluya la siguiente información:
 
 - Identificador de proyecto
 - ID de entorno

@@ -4,9 +4,13 @@ description: Acceda a su cuenta de la nube y configure un proyecto de Adobe Comm
 role: Admin
 recommendations: noDisplay, catalog
 exl-id: 9b48212a-2560-4090-b483-a8b04471de95
-source-git-commit: db34528be490f92cc61c609ca143c01ef3284157
+TQID: https://experienceleague.adobe.com/y1WQfRLHOhgyZfCISQEsIRju7g79oq-ikJH1Tl7z420
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: bd989d82-1e15-4534-88db-f1f51dd77ffa
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '487'
+source-wordcount: 517
 ht-degree: 0%
 
 ---
@@ -21,7 +25,7 @@ Para incorporarse rápidamente al proyecto y poder empezar a desarrollar el siti
 
 ## Regístrese para obtener una cuenta de Cloud
 
-Si no tiene una cuenta de Adobe Commerce en la infraestructura de la nube, comuníquese con [Ventas](https://business.adobe.com/es/products/magento/get-demo.html). Al registrarse, Adobe crea su cuenta y le envía un correo electrónico de bienvenida con instrucciones sobre cómo acceder a la interfaz del proyecto. El correo electrónico contiene un vínculo para que pueda iniciar sesión en su cuenta y completar la configuración inicial del proyecto.
+Si no tiene una cuenta de Adobe Commerce en la infraestructura de la nube, comuníquese con [Ventas](https://business.adobe.com/products/magento/get-demo.html). Al registrarse, Adobe crea su cuenta y le envía un correo electrónico de bienvenida con instrucciones sobre cómo acceder a la interfaz del proyecto. El correo electrónico contiene un vínculo para que pueda iniciar sesión en su cuenta y completar la configuración inicial del proyecto.
 
 ## Acceso al proyecto y adición de usuarios
 
@@ -33,7 +37,7 @@ Solo puede agregar usuarios registrados a su Adobe Commerce en proyectos y entor
 
 ### Acceso a cuenta compartida
 
-El propietario de la licencia puede configurar el acceso compartido para la cuenta. El acceso compartido permite a los empleados y proveedores de servicios de confianza utilizar el Centro de ayuda para enviar y rastrear vales de soporte relacionados con su Adobe Commerce en proyectos de infraestructura en la nube. Para obtener instrucciones de configuración, consulte el artículo [Acceso compartido](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=es#shared-access) en el Centro de ayuda.
+El propietario de la licencia puede configurar el acceso compartido para la cuenta. El acceso compartido permite a los empleados y proveedores de servicios de confianza utilizar el Centro de ayuda para enviar y rastrear vales de soporte relacionados con su Adobe Commerce en proyectos de infraestructura en la nube. Para obtener instrucciones de configuración, consulte el artículo [Acceso compartido](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#shared-access) en el Centro de ayuda.
 
 ### [!DNL Cloud Console]
 
@@ -41,7 +45,7 @@ Puede usar [[!DNL Cloud Console]](cloud-console.md) para administrar su proyecto
 
 ## Suscribirse al estado de Adobe
 
-Obtenga actualizaciones acerca de Adobe Commerce en entornos de plataformas de infraestructura en la nube y servicios relacionados en la [página de estado](https://status.adobe.com/es/products/503473).
+Obtenga actualizaciones acerca de Adobe Commerce en entornos de plataformas de infraestructura en la nube y servicios relacionados en la [página de estado](https://status.adobe.com/products/503473).
 
 La página proporciona un estado para los componentes y servicios de Adobe Commerce seguido de notificaciones sobre informes de incidentes, actualizaciones de servicios, interrupciones planificadas y mantenimiento programado. Cualquier persona que trabaje en el proyecto puede suscribirse al sitio de estado de Adobe Commerce para recibir notificaciones de eventos y actualizaciones por correo electrónico o Slack. Puede personalizar la suscripción de estado de Adobe para rastrear productos específicos por regiones y eventos.
 
@@ -49,5 +53,5 @@ La página proporciona un estado para los componentes y servicios de Adobe Comme
 >
 > Abra el(la) nuevo(a) [!DNL Cloud Console] y vea las actividades de proyecto y entorno.
 >
->**Siguiente paso**: [Inicie sesión en la consola ClCloud](cloud-console.md)
+>**Siguiente paso**: [Inicie sesión en la consola Cl[!DNL ]Cloud](cloud-console.md)
 

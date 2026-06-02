@@ -1,9 +1,14 @@
 ---
 title: Configuración de correos electrónicos salientes
 description: Obtenga información sobre cómo habilitar los correos electrónicos salientes para Adobe Commerce en la infraestructura en la nube.
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 616e287b-960a-4933-916e-37896ee6b533
+TQID: https://experienceleague.adobe.com/qTZHcNU58ZVNRE9FgaIdcVsRg6--ae6dL-hKCjpUt3w
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '384'
+source-wordcount: 402
 ht-degree: 0%
 
 ---
@@ -26,7 +31,7 @@ Al actualizar el valor de la propiedad `enable_smtp` por [línea de comandos](#e
 
 Use la opción **[!UICONTROL Outgoing emails]** en la vista _Configurar entorno_ para habilitar o deshabilitar la compatibilidad con el correo electrónico.
 
-Si los correos electrónicos salientes deben deshabilitarse o volver a habilitarse en entornos de ensayo o producción profesional, puede enviar un [ticket de asistencia de Adobe Commerce](https://experienceleague.adobe.com/es/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide).
+Si los correos electrónicos salientes deben deshabilitarse o volver a habilitarse en entornos de ensayo o producción profesional, puede enviar un [ticket de asistencia de Adobe Commerce](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide).
 
 >[!TIP]
 >

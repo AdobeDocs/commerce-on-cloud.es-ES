@@ -3,9 +3,14 @@ title: Implementación de contenido estático
 description: Obtenga información acerca de las estrategias para implementar contenido estático, como imágenes, scripts y CSS, en Adobe Commerce en proyectos de infraestructura en la nube.
 feature: Cloud, Build, Deploy, SCD
 exl-id: 8f30cae7-a3a0-4ce4-9c73-d52649ef4d7a
-source-git-commit: 325b7584daa38ad788905a6124e6d037cf679332
+TQID: https://experienceleague.adobe.com/bl2z1YM8u-HNuBYuQH3uqoRwiU4lfHGOQyr8Vbwyef8
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '836'
+source-wordcount: 768
 ht-degree: 0%
 
 ---
@@ -41,9 +46,9 @@ La generación de contenido estático durante la fase de compilación con HTML m
 La generación de contenido estático requiere acceso a temáticas y configuraciones regionales. Adobe Commerce almacena las temáticas en el sistema de archivos, al que se puede acceder durante la fase de compilación; sin embargo, Adobe Commerce almacena las configuraciones regionales en la base de datos. La base de datos _no_ está disponible durante la fase de compilación. Para generar el contenido estático durante la fase de compilación, debe utilizar el comando `config:dump` en el paquete `ece-tools` para mover configuraciones regionales al sistema de archivos. Lee las configuraciones regionales y las guarda en el archivo `app/etc/config.php`.
 
 >[!NOTE]
->Después de ejecutar el comando `config:dump` en el paquete `ece-tools`, las configuraciones que se descargan en el archivo `config.php` [están bloqueadas (atenuadas) en el panel de administración](https://experienceleague.adobe.com/es/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/locked-fields-in-magento-admin). la única manera de actualizar esas configuraciones en el Administrador es eliminarlas del archivo localmente y volver a implementar el proyecto.
->&#x200B;>Además, cada vez que agregue un nuevo almacén/grupo de almacén/sitio web a la instancia, recuerde ejecutar el comando `config:dump` para asegurarse de que la base de datos esté sincronizada. También puede elegir [qué configuraciones se deben volcar](https://experienceleague.adobe.com/es/docs/commerce-operations/configuration-guide/cli/configuration-management/export-configuration?lang=en) en el archivo `config.php`.
->&#x200B;>Si elimina la configuración de tienda/grupo de tienda/sitio web del archivo `config.php` porque los campos están atenuados, pero no realiza este paso, las nuevas entidades que no se descargaron se eliminarán de la base de datos en la siguiente implementación.
+>Después de ejecutar el comando `config:dump` en el paquete `ece-tools`, las configuraciones que se descargan en el archivo `config.php` [están bloqueadas (atenuadas) en el panel de administración](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/locked-fields-in-magento-admin). La única manera de actualizar esas configuraciones en el administrador es eliminarlas del archivo localmente y volver a implementar el proyecto.
+>Además, cada vez que agregue un nuevo sitio web o grupo de almacenamiento o tienda a su instancia, recuerde ejecutar el comando `config:dump` para asegurarse de que la base de datos esté sincronizada. También puede elegir [qué configuraciones se deben volcar](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/configuration-management/export-configuration?lang=en) en el archivo `config.php`.
+>Si elimina la configuración de tienda/grupo de tienda/sitio web del archivo `config.php` porque los campos están atenuados pero no se presta atención a realizar este paso, las nuevas entidades que no se descargaron se eliminarán de la base de datos en la siguiente implementación.
 
 **Para configurar el proyecto de modo que genere un SCD en la compilación**:
 

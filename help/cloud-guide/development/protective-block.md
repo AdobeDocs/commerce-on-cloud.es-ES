@@ -3,9 +3,15 @@ title: Bloque protector
 description: Obtenga información acerca de la función de bloque protector de Adobe Commerce en la infraestructura en la nube y cómo funciona para proteger su sitio contra vulnerabilidades de seguridad conocidas.
 feature: Cloud, Configuration, Security
 topic: Security
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 4a470e75-0b42-4ab7-b3dc-9f50b63bea14
+TQID: https://experienceleague.adobe.com/E0lyCu6cFEaHR0KoauRFmQi9QThzoGDmNetnzYv3hVg
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '309'
+source-wordcount: 311
 ht-degree: 0%
 
 ---
@@ -29,7 +35,7 @@ Existen dos tipos de bloques que se ejecutan:
 
 1. **Bloque completo** para sitios web de desarrollo. El mensaje de error que acompaña a `git push` proporciona información detallada sobre la vulnerabilidad.
 
-1. **Bloqueo parcial** para sitios web de producción, lo que permite que el sitio permanezca en línea principalmente. Según la naturaleza de la vulnerabilidad, partes de una solicitud, como una cadena de consulta, cookies o cualquier encabezado adicional, podrían eliminarse de las solicitudes de GET. Todas las demás solicitudes pueden bloquearse por completo, como el inicio de sesión, el envío de formularios o el cierre de compra de productos.
+1. **Bloqueo parcial** para sitios web de producción, lo que permite que el sitio permanezca en línea principalmente. Según la naturaleza de la vulnerabilidad, partes de una solicitud, como una cadena de consulta, cookies o cualquier encabezado adicional, podrían eliminarse de las solicitudes GET. Todas las demás solicitudes pueden bloquearse por completo, como el inicio de sesión, el envío de formularios o el cierre de compra de productos.
 
 El desbloqueo se automatiza al resolver el riesgo de seguridad. El bloque se elimina poco después de aplicar una actualización de seguridad que elimina la vulnerabilidad.
 

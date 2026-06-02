@@ -3,9 +3,15 @@ title: Monitorización de New Relic
 description: Obtenga información sobre cómo acceder a su tablero de New Relic y analizar los datos de su proyecto de Adobe Commerce en la nube.
 feature: Cloud, Observability
 topic: Performance
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: b9d806c4-f659-4e10-8dcb-b320a61de5e1
+TQID: https://experienceleague.adobe.com/Ih9Y5JqsurZqdXK-vpPGxVe2erbexdQxAlLpDjCBTCg
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: d3cdead0-685a-4489-9250-4bb709942f66
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '833'
+source-wordcount: 901
 ht-degree: 0%
 
 ---
@@ -30,11 +36,11 @@ Todos los datos recopilados detallan el tiempo empleado en las acciones que tran
 
 >[!TIP]
 >
->Para obtener más información sobre cómo usar estos datos para solucionar problemas de rendimiento de aplicaciones, consulte [Solucionar problemas de rendimiento con New Relic](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/troubleshoot-performance-using-new-relic-on-magento-commerce.html?lang=es) en el _Centro de ayuda de Adobe Commerce_.
+>Para obtener más información sobre cómo usar estos datos para solucionar problemas de rendimiento de aplicaciones, consulte [Solucionar problemas de rendimiento con New Relic](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/troubleshoot-performance-using-new-relic-on-magento-commerce.html) en el _Centro de ayuda de Adobe Commerce_.
 
 ## Monitorización del rendimiento con alertas administradas
 
-El Adobe proporciona la directiva de alertas _Alertas administradas para Adobe Commerce_ para realizar un seguimiento de las métricas de rendimiento. La directiva incluye una colección de alertas que establecen umbrales y advertencias de déclencheur, así como notificaciones críticas cuando los problemas de infraestructura o de aplicaciones afectan al rendimiento del sitio. La directiva realiza el seguimiento de las siguientes métricas en los entornos de producción:
+Adobe proporciona la directiva de alertas _Alertas administradas para Adobe Commerce_ para realizar un seguimiento de las métricas de rendimiento. La directiva incluye una colección de alertas que establecen umbrales y advertencias de déclencheur, así como notificaciones críticas cuando los problemas de infraestructura o de aplicaciones afectan al rendimiento del sitio. La directiva realiza el seguimiento de las siguientes métricas en los entornos de producción:
 
 | Métrica | Recopilación de datos | Disponibilidad |
 |:-------------------|:----------------|:----------------|
@@ -46,7 +52,7 @@ El Adobe proporciona la directiva de alertas _Alertas administradas para Adobe C
 | Carga de consulta de MariaDB | NRI | Pro |
 | Memoria Redis | NRI | Pro |
 
-Cuando la infraestructura del sitio o las condiciones de la aplicación alcanzan un umbral de déclencheur, New Relic envía notificaciones de alerta para que pueda solucionar el problema de forma proactiva. Consulte [Alertas administradas para Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-for-magento-commerce.html?lang=es) en el _Centro de ayuda de Adobe Commerce_ para obtener más información acerca de los umbrales de alerta y los pasos para solucionar problemas que desencadenaron la alerta.
+Cuando la infraestructura del sitio o las condiciones de la aplicación alcanzan un umbral de déclencheur, New Relic envía notificaciones de alerta para que pueda solucionar el problema de forma proactiva. Consulte [Alertas administradas para Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-for-magento-commerce.html) en el _Centro de ayuda de Adobe Commerce_ para obtener más información acerca de los umbrales de alerta y los pasos para solucionar problemas que desencadenaron la alerta.
 
 >[!TIP]
 >
@@ -76,13 +82,13 @@ Cuando la infraestructura del sitio o las condiciones de la aplicación alcanzan
 
      >[!NOTE]
      >
-     >Si la directiva _Alertas administradas para Adobe Commerce_ no está disponible, consulte [Alertas administradas para Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-for-magento-commerce.html?lang=es) en el _Centro de ayuda de Adobe Commerce_.
+     >Si la directiva _Alertas administradas para Adobe Commerce_ no está disponible, consulte [Alertas administradas para Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-for-magento-commerce.html) en el _Centro de ayuda de Adobe Commerce_.
 
 1. Haga clic en la ficha **[!UICONTROL Alert conditions]** para revisar las condiciones de alerta definidas en la directiva.
 
 ## Crear directivas de alerta
 
-No modifique ninguna alerta incluida en la directiva Alertas administradas para Adobe Commerce. La Adobe actualiza y mejora las condiciones de alerta de esta directiva con el tiempo, lo que sobrescribe las personalizaciones que agregue a la directiva.
+No modifique ninguna alerta incluida en la directiva Alertas administradas para Adobe Commerce. Adobe actualiza y mejora las condiciones de alerta de esta directiva con el tiempo, lo que sobrescribe las personalizaciones que agregue a la directiva.
 
 En lugar de modificar una alerta existente, puede crear una directiva de alertas. A continuación, copie las condiciones de alerta en la nueva directiva.
 

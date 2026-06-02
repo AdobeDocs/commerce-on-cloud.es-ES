@@ -3,9 +3,13 @@ title: Almacenamiento en caché
 description: Obtenga información sobre cómo habilitar el almacenamiento en caché para su Adobe Commerce en entornos de infraestructura en la nube.
 feature: Cloud, Cache, Routes
 exl-id: e73c36d6-9a58-45c0-9220-86074c1f46f0
-source-git-commit: a1ed2818cbaf5adf8b673df0ee9b9218e6f700a2
+TQID: https://experienceleague.adobe.com/dCr0px-0XWXIznsg1w8tUnBaAeXvanY1h-mwiu6GfzU
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '400'
+source-wordcount: 430
 ht-degree: 0%
 
 ---
@@ -76,7 +80,7 @@ La duración de la caché está determinada por el valor del encabezado de respu
 
 ## Clave de caché
 
-Para decidir cómo almacenar en caché una respuesta, Adobe Commerce crea una clave de caché que depende de varios factores y almacena la respuesta asociada a esta clave. Cuando una solicitud viene con la misma clave de caché, la respuesta se reutiliza. Su propósito es similar al del encabezado [&#128279;](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.44) HTTP `Vary`.
+Para decidir cómo almacenar en caché una respuesta, Adobe Commerce crea una clave de caché que depende de varios factores y almacena la respuesta asociada a esta clave. Cuando una solicitud viene con la misma clave de caché, la respuesta se reutiliza. Su propósito es similar al del encabezado ](https://www.w3.org/Protocols/rfc2616/rfc2616-sec14.html#sec14.44) HTTP [`Vary`.
 
 Los parámetros `headers` y `cookies` claves permiten cambiar esta clave de caché.
 
@@ -131,7 +135,7 @@ Existe un caso especial si la clave `cookies` tiene el valor `["*"]`. Este valor
 
 Las cookies tienen las siguientes restricciones:
 
-- Hay un máximo establecido de **50 cookies** en el sistema. De lo contrario, la aplicación genera una excepción `Unable to send the cookie. Maximum number of cookies would be exceeded`. Para aumentar el número de cookies a 200, aplique el [parche MDVA-12304](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/release-notes.html?lang=es) con la [herramienta Parches de calidad](https://experienceleague.adobe.com/es/docs/commerce-learn/tutorials/tools/quality-patch-tool).
+- Hay un máximo establecido de **50 cookies** en el sistema. De lo contrario, la aplicación genera una excepción `Unable to send the cookie. Maximum number of cookies would be exceeded`. Para aumentar el número de cookies a 200, aplique el [parche MDVA-12304](https://experienceleague.adobe.com/docs/commerce-operations/tools/quality-patches-tool/release-notes.html) con la [herramienta Parches de calidad](https://experienceleague.adobe.com/en/docs/commerce-learn/tutorials/tools/quality-patch-tool).
 - Un tamaño máximo de cookie es de **4096 bytes**. De lo contrario, la aplicación genera una excepción `Unable to send the cookie. Size of '%name' is %size bytes`.
 
 ### `default_ttl`

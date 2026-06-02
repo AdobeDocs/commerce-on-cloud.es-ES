@@ -3,9 +3,13 @@ title: Actualizar proyecto para utilizar ECE-Tools
 description: Aprenda a actualizar su proyecto de infraestructura de Adobe Commerce en la nube para utilizar el paquete ECE-Tools y aprovechar las últimas correcciones y funciones.
 feature: Cloud, Install
 exl-id: 164c47e4-c871-41a3-b268-581d426e7a7f
-source-git-commit: 1cea1cdebf3aba2a1b43f305a61ca6b55e3b9d08
+TQID: https://experienceleague.adobe.com/CH-wgIk-5aM6qIO7tdHI2jHlx1YgaEbLvfp4cEpSqTc
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '365'
+source-wordcount: 376
 ht-degree: 0%
 
 ---
@@ -42,7 +46,7 @@ Cada versión de Adobe Commerce requiere una restricción diferente en función 
 
 Si desea instalar Adobe Commerce `2.3.5-p2`, establezca `current_version` en `2.3.5` y `next_version` en `2.3.6`. La restricción `">=2.3.5 <2.3.6"` instala el último paquete disponible para 2.3.5.
 
-Siempre puede encontrar la restricción de metapackage más reciente en la plantilla [`magento-cloud` &#x200B;](https://github.com/magento/magento-cloud/blob/master/composer.json).
+Siempre puede encontrar la restricción de metapackage más reciente en la plantilla [`magento-cloud` ](https://github.com/magento/magento-cloud/blob/master/composer.json).
 
 El siguiente ejemplo coloca una restricción para el metapaquete de infraestructura en la nube de Adobe Commerce en cualquier versión superior o igual a la versión actual 2.4.8 e inferior a la siguiente versión 2.4.9:
 

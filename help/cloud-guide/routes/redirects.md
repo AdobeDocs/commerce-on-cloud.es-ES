@@ -2,9 +2,15 @@
 title: Redirecciones
 description: Obtenga información sobre cómo administrar las reglas de redirección para su proyecto de Adobe Commerce en la nube.
 feature: Cloud, Routes
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: f70a9035-bbae-4d23-bb7c-c0de6a7ccf6c
+TQID: https://experienceleague.adobe.com/53acuGMa93oysIKX-agqJCttbxCdIFgyRpmeZh-G9gI
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '646'
+source-wordcount: 705
 ht-degree: 0%
 
 ---
@@ -23,7 +29,7 @@ A continuación se muestra cómo administrar las reglas de redirección en Adobe
 
 >[!WARNING]
 >
->Para Adobe Commerce en proyectos de infraestructura en la nube, configurar numerosas redirecciones y reescrituras que no son de regex en el archivo `routes.yaml` puede causar problemas de rendimiento. Si el archivo de `routes.yaml` tiene 32 KB o más, descargue las redirecciones que no sean de regex y vuelva a escribir en Fastly. Ver [Descarga de redirecciones no regex a Fastly en lugar de a Nginx (rutas)](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/offload-non-regex-redirects-to-fastly-instead-of-nginx-routes.html?lang=es) en el _Centro de ayuda de Adobe Commerce_.
+>Para Adobe Commerce en proyectos de infraestructura en la nube, configurar numerosas redirecciones y reescrituras que no son de regex en el archivo `routes.yaml` puede causar problemas de rendimiento. Si el archivo de `routes.yaml` tiene 32 KB o más, descargue las redirecciones que no sean de regex y vuelva a escribir en Fastly. Ver [Descarga de redirecciones no regex a Fastly en lugar de a Nginx (rutas)](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/offload-non-regex-redirects-to-fastly-instead-of-nginx-routes.html) en el _Centro de ayuda de Adobe Commerce_.
 
 ## Redirecciones de ruta completa
 

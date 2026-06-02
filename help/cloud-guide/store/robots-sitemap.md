@@ -3,9 +3,13 @@ title: Añadir robots de mapa del sitio y de motor de búsqueda
 description: Aprenda a añadir robots de mapa del sitio y de motores de búsqueda a Adobe Commerce en la infraestructura en la nube.
 feature: Cloud, Configuration, Search, Site Navigation
 exl-id: 060dc1f5-0e44-494e-9ade-00cd274e84bc
-source-git-commit: 1d52481fb6874f3a9ba14b0ff4fe39dc7d564938
+TQID: https://experienceleague.adobe.com/Nve-76Ow3rv0PrGEUVTSfr3eyJcw8IFj9bbpS10HnNY
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '574'
+source-wordcount: 612
 ht-degree: 0%
 
 ---
@@ -49,7 +53,7 @@ Esto requiere ECE-Tools versión 2002.0.12 y posterior con un archivo `.magento.
 
 >[!NOTE]
 >
->Si el archivo `<domain.your.project>/robots.txt` genera un `404 error`, [envíe un vale de soporte técnico de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=es#submit-ticket) para quitar la redirección de `/robots.txt` a `/media/robots.txt`.
+>Si el archivo `<domain.your.project>/robots.txt` genera un `404 error`, [envíe un vale de soporte técnico de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) para quitar la redirección de `/robots.txt` a `/media/robots.txt`.
 
 ## Reescribir utilizando el fragmento de VCL de Fastly
 

@@ -1,11 +1,16 @@
 ---
 title: Visualización y administración de registros
 description: Comprenda los tipos de archivos de registro disponibles en la infraestructura de la nube y dónde encontrarlos.
-last-substantial-update: 2023-05-23T00:00:00Z
+last-substantial-update: 2023-05-23T00:00:00.000Z
 exl-id: f0bb8830-8010-4764-ac23-d63d62dc0117
-source-git-commit: 445c5162f9d3436d9e5fe3df41af47189e344cfd
+TQID: https://experienceleague.adobe.com/VAsmOv6sBa37A2IAubUnWd4UAMRIuKTNt8JGKNJlrCI
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '1313'
+source-wordcount: 1287
 ht-degree: 0%
 
 ---
@@ -108,8 +113,8 @@ ssh 1.ent-project-environment-id@ssh.region.magento.cloud "cat var/log/cron.log"
 >[!TIP]
 >
 >En los entornos Pro Staging y Pro Production, la rotación, compresión y eliminación automáticas de registros están habilitadas para los archivos de registro con un nombre de archivo fijo. Cada tipo de archivo de registro tiene un patrón giratorio y una duración.
->Se pueden encontrar todos los detalles sobre la rotación del registro del entorno y la duración de los registros comprimidos en: `/etc/logrotate.conf` y `/etc/logrotate.d/<various>`.
->Para los entornos Pro Staging y Pro Production, debe [enviar un vale de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=es#submit-ticket) para solicitar cambios en la configuración de rotación del registro.
+>Se pueden encontrar todos los detalles de la rotación de registros del entorno y la duración de los registros comprimidos en: `/etc/logrotate.conf` y `/etc/logrotate.d/<various>`.
+>Para los entornos Pro Staging y Pro Production, debe [enviar un vale de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) para solicitar cambios en la configuración de rotación del registro.
 
 >[!TIP]
 >
@@ -220,7 +225,7 @@ title: The configured state is not ideal
 type: warning
 ```
 
-La mayoría de los mensajes de error contienen una descripción y una acción sugerida. Use la referencia de mensaje de error [para ECE-Tools](../dev-tools/error-reference.md) para buscar el código de error y obtener más instrucciones. Para obtener más información, use el [solucionador de problemas de implementación de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html?lang=es).
+La mayoría de los mensajes de error contienen una descripción y una acción sugerida. Use la referencia de mensaje de error [para ECE-Tools](../dev-tools/error-reference.md) para buscar el código de error y obtener más instrucciones. Para obtener más información, use el [solucionador de problemas de implementación de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html).
 
 ## Registros de aplicaciones
 
@@ -258,7 +263,7 @@ Los registros de la aplicación se comprimen y archivan una vez al día y se con
 
 Los archivos de registro archivados siempre se almacenan en el directorio en el que se encontraba el archivo original antes de la compresión.
 
-Puede [enviar un ticket de asistencia](https://experienceleague.adobe.com/home?lang=es&support-tab=home#support) para solicitar cambios en el período de retención de registros o en la configuración de logrotate. Puede aumentar el período de retención hasta un máximo de 365 días, reducirlo para conservar la cuota de almacenamiento o agregar rutas de registro adicionales a la configuración de logrotate. Estos cambios están disponibles para los clústeres de ensayo y producción de Pro.
+Puede [enviar un ticket de asistencia](https://experienceleague.adobe.com/home?support-tab=home#support) para solicitar cambios en el período de retención de registros o en la configuración de logrotate. Puede aumentar el período de retención hasta un máximo de 365 días, reducirlo para conservar la cuota de almacenamiento o agregar rutas de registro adicionales a la configuración de logrotate. Estos cambios están disponibles para los clústeres de ensayo y producción de Pro.
 
 Por ejemplo, si crea una ruta de acceso personalizada para almacenar registros en el directorio `var/log/mymodule`, puede solicitar la rotación del registro para esta ruta de acceso. Sin embargo, la infraestructura actual requiere nombres de archivo coherentes para que Adobe configure correctamente la rotación del registro. Adobe recomienda mantener la coherencia de los nombres de registro para evitar problemas de configuración.
 

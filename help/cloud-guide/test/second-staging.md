@@ -1,16 +1,21 @@
 ---
 title: Segundo entorno de ensayo
 description: Conozca las ventajas y los usos de tener un segundo entorno de ensayo para pruebas paralelas, aislamiento de problemas, control de versiones y más.
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 300019bd-07cb-4efb-8740-a49a5a3cf01b
+TQID: https://experienceleague.adobe.com/GFIisldCx779874WoAb0gmXHlE52dN-3COiIsfYDYCU
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '716'
+source-wordcount: 719
 ht-degree: 0%
 
 ---
 
 # Segundo entorno de ensayo
 
-En las infraestructuras de Adobe Commerce Cloud, el entorno de ensayo garantiza pruebas y validaciones completas en un entorno que puede reflejar el entorno de producción. Este entorno le permite identificar y resolver errores de forma segura, a la vez que se asegura de que las nuevas funciones o cambios se integren sin problemas antes de que afecten a su sitio activo.
+En la infraestructura de Adobe Commerce Cloud, el entorno de ensayo garantiza pruebas y validación completas en una configuración que puede reflejar el entorno de producción. Este entorno le permite identificar y resolver errores de forma segura, a la vez que se asegura de que las nuevas funciones o cambios se integren sin problemas antes de que afecten a su sitio activo.
 
 Algunos proyectos requieren un flujo de trabajo de desarrollo más sofisticado. Para satisfacer esta necesidad, Adobe ofrece un entorno de ensayo adicional como opción complementaria a su infraestructura en la nube. Contar con dos entornos de ensayo resulta ventajoso para proyectos complejos y para la colaboración simultánea entre equipos.
 
@@ -40,7 +45,7 @@ Tener dos entornos de ensayo puede mejorar considerablemente la eficacia del flu
 
 Si el proyecto ya tiene un entorno de ensayo adicional o está considerando actualizar el proyecto actual, considere las siguientes responsabilidades y plazos de aprovisionamiento:
 
-- El proceso de aprovisionamiento puede tardar hasta dos semanas después de confirmar la solicitud con el representante de ventas de Adobe.
+- El proceso de aprovisionamiento puede tardar hasta dos semanas después de confirmar la solicitud con su representante de ventas de Adobe.
 
 - Los nuevos entornos de ensayo solo están disponibles en la misma región que los entornos de ensayo y producción actuales.
 
@@ -58,7 +63,7 @@ Para facilitar la solicitud, siga los pasos:
 
 1. Póngase en contacto con su representante de ventas.
 
-   Póngase en contacto con el representante de ventas de Adobe y proporcióneles la rama específica que desee utilizar como base para el nuevo entorno de ensayo (integración o principal).
+   Póngase en contacto con su representante de ventas de Adobe y proporcióneles la rama específica que desee utilizar como base para su nuevo entorno de ensayo (integración o principal).
 
 1. Confirme los detalles.
 

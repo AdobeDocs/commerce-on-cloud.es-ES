@@ -4,9 +4,13 @@ description: Obtenga información acerca de la compatibilidad con versiones ante
 feature: Cloud, Release Notes
 recommendations: noDisplay, catalog
 exl-id: 3f3c1036-bfd0-4c70-8309-6c5e442134cd
-source-git-commit: de50fda78c28a57d76e5c0a4d5dac0f8d4d844a0
+TQID: https://experienceleague.adobe.com/ekS7f5swOsG2xgXP6ybN6hzwYm2xBbPWvl5oabv7Crc
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '791'
+source-wordcount: 822
 ht-degree: 0%
 
 ---
@@ -58,7 +62,7 @@ En versiones anteriores de ECE-Tools, se podían utilizar los comandos `m2-ece-b
 
 ## Cambios en Parches de nube
 
-- **Quitar parches descargados**-El paquete `magento/magento-cloud-patches` agrupa todos los parches disponibles en la página [descargas de software](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/commerce.html?lang=es) y los aplica automáticamente al implementarlo en la nube. Para evitar conflictos de parches después de actualizar a ECE-Tools 2002.1.0 o posterior, elimine los parches suministrados por Adobe que haya descargado y agregado al proyecto manualmente.
+- **Quitar parches descargados**-El paquete `magento/magento-cloud-patches` agrupa todos los parches disponibles en la página [descargas de software](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/commerce.html) y los aplica automáticamente al implementarlo en la nube. Para evitar conflictos de parches después de actualizar a ECE-Tools 2002.1.0 o posterior, elimine los parches suministrados por Adobe que haya descargado y agregado al proyecto manualmente.
 
 - **Actualizando el comando para aplicar parches**- Hemos movido el comando para aplicar parches del directorio `vendor/bin/ece-tools` al directorio `vendor/bin/ece-patches`. Si utiliza este comando para aplicar parches manualmente, utilice la nueva ruta.
 

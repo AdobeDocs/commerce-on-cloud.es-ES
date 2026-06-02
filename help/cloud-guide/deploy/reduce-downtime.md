@@ -3,16 +3,20 @@ title: Implementación sin tiempo de inactividad
 description: Aprenda a reducir el tiempo de inactividad general al implementar Adobe Commerce en proyectos de infraestructura en la nube.
 feature: Cloud, Deploy, SCD, Themes
 exl-id: c216c5e9-d787-4428-b67a-b6aee814ded5
-source-git-commit: b831bc5bce0f76ec8972b3578c500508dd4d7d41
+TQID: https://experienceleague.adobe.com/wYFZNd42AoVZxdlWWG6Jr-K6FV2XhTdWp-9HFoof4rE
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '486'
+source-wordcount: 502
 ht-degree: 0%
 
 ---
 
 # Implementación sin tiempo de inactividad
 
-Adobe Commerce en la infraestructura en la nube ejecuta la aplicación en [_mantenimiento_ modo](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/setup/application-modes.html?lang=es#production-mode) durante la fase de implementación, lo que desconecta el sitio hasta que se complete la implementación. El tiempo que el sitio de producción esté en modo de mantenimiento depende del tamaño del sitio, el número de cambios aplicados durante la implementación y la configuración para la implementación de contenido estático. Es posible configurar el proyecto de modo que se implemente con un efecto de tiempo de inactividad de **zero**.
+Adobe Commerce en la infraestructura en la nube ejecuta la aplicación en [_mantenimiento_ modo](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/setup/application-modes.html#production-mode) durante la fase de implementación, lo que desconecta el sitio hasta que se complete la implementación. El tiempo que el sitio de producción esté en modo de mantenimiento depende del tamaño del sitio, el número de cambios aplicados durante la implementación y la configuración para la implementación de contenido estático. Es posible configurar el proyecto de modo que se implemente con un efecto de tiempo de inactividad de **zero**.
 
 Durante el proceso de implementación, todas las conexiones se ponen en cola durante un máximo de 5 minutos y conservan las sesiones activas y las acciones pendientes, como agregar al carro de compras o cerrar la compra. Después de la implementación, la cola se libera y las conexiones continúan sin interrupción. Para aprovechar esta _conexión_ y reducir el tiempo de inactividad de la implementación a _cero_, debe configurar el proyecto para que utilice la estrategia de implementación más eficiente.
 
