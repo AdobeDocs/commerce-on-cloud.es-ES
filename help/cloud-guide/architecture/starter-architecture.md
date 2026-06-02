@@ -3,9 +3,22 @@ title: Arquitectura de inicio
 description: Obtenga información acerca de los entornos admitidos por la arquitectura de inicio.
 feature: Cloud, Paas
 exl-id: 2f16cc60-b5f7-4331-b80e-43042a3f9b8f
-source-git-commit: 2236d0b853e2f2b8d1bafcbefaa7c23ebd5d26b3
+TQID: https://experienceleague.adobe.com/NZ2ea2-D3coPcwXTEHL7viNlgpIBSVA0zO2-iVUIhB0
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '1017'
+source-wordcount: 1011
 ht-degree: 0%
 
 ---
@@ -134,7 +147,7 @@ Utilice los siguientes archivos para configurar las versiones de software que de
 
 - [`routes.yaml`](../routes/routes-yaml.md)
 
-- [&quot;services.yaml&quot;](../services/services-yaml.md)
+- [`services.yaml`](../services/services-yaml.md)
 
 ### Backup y recuperación ante desastres
 

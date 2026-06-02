@@ -3,9 +3,24 @@ title: Arquitectura profesional
 description: Obtenga información acerca de los entornos admitidos por la arquitectura Pro.
 feature: Cloud, Auto Scaling, Iaas, Paas, Storage
 topic: Architecture
-source-git-commit: 0d9d3d64cd0ad4792824992af354653f61e4388d
+exl-id: a6eb562b-1b97-4285-a271-989d9fddc4f9
+TQID: https://experienceleague.adobe.com/Es-cmVlUrzd4xMf9unOJD-Z-h0OvL-ycoullKVO-yRA
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+subfeature_v2:
+  - id: db6b6496-d1b5-4ad4-9e18-dea78dae3aa8
+  - id: df5e974b-6742-4873-a687-a6bedaafdaa2
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '1554'
+source-wordcount: 1587
 ht-degree: 0%
 
 ---
@@ -184,11 +199,11 @@ Puede crear una **copia de seguridad manual** de la base de datos para los entor
 
 ### Objetivo de punto de recuperación
 
-Póngase en contacto con el administrador de éxito del cliente de Adobe para obtener más información sobre el objetivo de punto de recuperación tiempo hasta la última copia de seguridad. La frecuencia de las copias de seguridad depende de la programación de copias de seguridad del plan y del volumen de cambios para escribir en el servicio de almacenamiento.
+Póngase en contacto con el administrador de satisfacción del cliente de Adobe para obtener más información sobre el objetivo de punto de recuperación tiempo hasta la última copia de seguridad. La frecuencia de las copias de seguridad depende de la programación de copias de seguridad del plan y del volumen de cambios para escribir en el servicio de almacenamiento.
 
 ### Política de retención
 
-El Adobe retiene las copias de seguridad automáticas según la siguiente política de retención de datos:
+Adobe conserva las copias de seguridad automáticas según la siguiente política de retención de datos:
 
 | Período de tiempo | Política de retención de copia de seguridad |
 | ------------------ | ----------------------- |
@@ -206,7 +221,7 @@ RTO depende del tamaño del almacenamiento. Los volúmenes grandes de EBS tardan
 
 ## Escalado de clúster Pro
 
-El tamaño del clúster Pro y las configuraciones de _compute_ varían según el proveedor de nube elegido (AWS, Azure), la región y las dependencias del servicio. Las infraestructuras de nube de Adobe pueden escalar los clústeres Pro para adaptarse a las expectativas de tráfico y los requisitos de servicio a medida que cambian las demandas.
+El tamaño del clúster Pro y las configuraciones de _compute_ varían según el proveedor de nube elegido (AWS, Azure), la región y las dependencias del servicio. La infraestructura en la nube de Adobe puede escalar los clústeres Pro para adaptarse a las expectativas de tráfico y los requisitos de servicio a medida que cambian las demandas.
 
 La arquitectura redundante permite que la infraestructura de nube de Adobe se amplíe sin tiempo de inactividad. Al ampliar, cada una de las tres instancias gira para actualizar la capacidad sin afectar al funcionamiento del sitio. Por ejemplo, puede agregar servidores web adicionales a un clúster existente si la constricción se encuentra en el nivel PHP en lugar de en el nivel de base de datos. Esto proporciona _escalado horizontal_ para complementar el escalado vertical proporcionado por las CPU adicionales en el nivel de base de datos. Consulte [Arquitectura a escala](scaled-architecture.md).
 

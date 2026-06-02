@@ -4,9 +4,21 @@ description: Consulte la lista de variables de entorno que controlan las accione
 feature: Cloud, Configuration, Build, Deploy, Eventing, Logs, SCD
 recommendations: noDisplay, catalog
 role: Developer
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 1f1ef6db-6836-4f71-b1e4-3629352d7e74
+TQID: https://experienceleague.adobe.com/2aBPh7We4-KqoUVDfd4B-ZNWoaUVO-3mWVbqErdgyoQ
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '752'
+source-wordcount: 774
 ht-degree: 0%
 
 ---
@@ -33,7 +45,7 @@ Para obtener más información sobre cómo personalizar el proceso de generació
 
 Cuando se establece en `true`, permite a cron ejecutar consumidores de cola de mensajes. Adobe I/O Events para Adobe Commerce utiliza colas de mensajes para acelerar la entrega de eventos críticos.
 
-El Adobe recomienda que también agregue la variable [`CRON_CONSUMERS_RUNNER`](./variables-deploy.md#cron_consumers_runner) a la fase `deploy` del archivo `.magento.env.yaml` con `cron_run` establecido en `true`.
+Adobe recomienda que también agregue la variable [`CRON_CONSUMERS_RUNNER`](./variables-deploy.md#cron_consumers_runner) a la fase `deploy` del archivo `.magento.env.yaml` con `cron_run` establecido en `true`.
 
 El ejemplo siguiente muestra una variable `ENABLE_EVENTING` completamente configurada.
 
@@ -159,10 +171,10 @@ stage:
    - `false`: para versiones anteriores de `ece-tools`
 - **Versión**: Adobe Commerce 2.1.4 y posterior
 
-Habilita o deshabilita la copia de archivos de vista estática en el directorio `<magento_root>/init/` al final de la fase de compilación. Si se establece en `true`, los archivos no se copian y la minificación del HTML está disponible bajo solicitud. Establezca este valor en `true` para reducir el tiempo de inactividad al implementar en los entornos de ensayo y producción.
+Habilita o deshabilita la copia de archivos de vista estática en el directorio `<magento_root>/init/` al final de la fase de compilación. Si se establece en `true`, los archivos no se copian y la minificación de HTML está disponible bajo solicitud. Establezca este valor en `true` para reducir el tiempo de inactividad al implementar en los entornos de ensayo y producción.
 
 - **`false`**: copia el directorio `view_preprocessed` en el directorio `<magento_root>/init/` al final de la fase de compilación y restaura el directorio en el directorio `<magento_root>/var` al principio de la fase de implementación.
-- **`true`**: habilita la minificación de HTML bajo demanda; hace _no_ copia `<magento_root>var/view_preprocessed` en el directorio `<magento_root>/init/` al final de la fase de compilación.
+- **`true`**: habilita la minificación de HTML bajo demanda; _no_ copia `<magento_root>var/view_preprocessed` en el directorio `<magento_root>/init/` al final de la fase de compilación.
 
 Agregar la variable de entorno `SKIP_HTML_MINIFICATION` al escenario `global` en el archivo `.magento.env.yaml`:
 

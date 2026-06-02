@@ -1,11 +1,22 @@
 ---
 title: Aprovisionar Commerce en la nube
-description: Aprenda a preparar un asesor técnico del cliente de Adobe para aprovisionar su Adobe Commerce en proyectos de infraestructura en la nube.
+description: Aprenda a preparar un asesor técnico del cliente de Adobe para aprovisionar su Adobe Commerce en un proyecto de infraestructura en la nube.
 recommendations: noDisplay, catalog
 role: Admin
-source-git-commit: 0d9d3d64cd0ad4792824992af354653f61e4388d
+exl-id: 77e8c9fb-8c4a-4c98-adbc-e57871c5bdbc
+TQID: https://experienceleague.adobe.com/GzCPqYxn0-ACS34UfvHypqv6BveTRpbLJNN2jNmCL-E
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: cc72dcf1-72e1-48cc-b434-e7c27d62d67c
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '751'
+source-wordcount: 774
 ht-degree: 0%
 
 ---
@@ -75,7 +86,7 @@ Es importante tener en cuenta la estrategia del servicio en la nube (AWS o Azure
 
 **Pregunta 6**: _¿Cuál es la fecha prevista para el lanzamiento?_
 
-El lanzamiento de un sitio requiere una configuración y pruebas iterativas para garantizar que el lanzamiento del sitio se realice correctamente. La configuración de una fecha objetivo le ayuda a usted y al equipo de la cuenta de Adobe a prepararse para las actividades finales previas al lanzamiento, que incluyen una llamada para coordinar los pasos finales.
+El lanzamiento de un sitio requiere una configuración y pruebas iterativas para garantizar que el lanzamiento del sitio se realice correctamente. La configuración de una fecha objetivo le ayuda a usted y a su equipo de cuenta de Adobe a prepararse para las actividades finales previas al lanzamiento, que incluyen una llamada para coordinar los pasos finales.
 
 Consulte la [descripción general del sitio de Launch](../cloud-guide/launch/overview.md) en la guía de _Commerce en infraestructura en la nube_ para revisar el proceso completo y descargar una copia de la lista de comprobación de Launch.
 

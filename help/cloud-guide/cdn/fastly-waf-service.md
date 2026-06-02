@@ -3,9 +3,27 @@ title: Firewall de aplicaciones web (WAF)
 description: Descubra cómo el servicio Fastly WAF detecta, registra y bloquea el tráfico de solicitudes maliciosas antes de que pueda dañar la red o los sitios de Adobe Commerce.
 feature: Cloud, Configuration, Security
 exl-id: f00e35f2-9800-4e24-a4d0-d36fde59a003
-source-git-commit: 7e61673b343fb954b53bf7cbae88efaf7bbfab4c
+TQID: https://experienceleague.adobe.com/GhpLOxZbJMYhBTmj8W4a90wfmFYq-8h2bvrKQWj6ZWk
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: b5f00040-57a0-4a6d-a39e-383b1936c2c9
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
+  - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+subfeature_v2:
+  - id: f2261633-201d-46c5-8a66-999e70527a83
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '930'
+source-wordcount: 987
 ht-degree: 0%
 
 ---
@@ -44,7 +62,7 @@ El servicio WAF inspecciona el tráfico HTTP y HTTPS (solicitudes GET y POST) co
 
 ## Solución de problemas de solicitudes bloqueadas
 
-Cuando el servicio de WAF está habilitado, inspecciona todo el tráfico web y de administración en relación con las reglas de WAF déclencheur y bloquea cualquier solicitud web que infrinja una regla. Cuando se bloquea una solicitud, el solicitante ve una página de error predeterminada `403 Forbidden` que incluye un ID de referencia para el evento de bloqueo.
+Cuando el servicio de WAF está habilitado, inspecciona todo el tráfico web y de administración en relación con las reglas de WAF y bloquea cualquier solicitud web que infrinja una regla. Cuando se bloquea una solicitud, el solicitante ve una página de error predeterminada `403 Forbidden` que incluye un ID de referencia para el evento de bloqueo.
 
 ![Página de error de WAF](../../assets/cdn/fastly-waf-403-error.png)
 

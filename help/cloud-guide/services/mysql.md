@@ -2,9 +2,21 @@
 title: Configurar el servicio MySQL
 description: Aprenda a administrar el servicio MySQL para el almacenamiento de datos persistentes con Adobe Commerce en la infraestructura en la nube.
 feature: Cloud, Services, Storage
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 37b893ef-43cf-466b-9d18-ee3b80fdf2d8
+TQID: https://experienceleague.adobe.com/xPikS7qhOEhhWDRuUYBJEqL7EUPObzPDxJEZ4xjKkuE
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '773'
+source-wordcount: 921
 ht-degree: 1%
 
 ---
@@ -95,7 +107,7 @@ Utilice una matriz anidada para definir los puntos finales para el acceso espec�
 Los niveles de permiso válidos son:
 
 - `ro`: solo se permiten consultas SELECT.
-- `rw`: se permiten las consultas SELECT y las consultas INSERT, UPDATE y DELETE.
+- `rw`: se permiten consultas SELECT y consultas INSERT, UPDATE y DELETE.
 - `admin`: se permiten todas las consultas, incluidas las consultas DDL (CREATE TABLE, DROP TABLE, etc.).
 
 Por ejemplo:
@@ -127,7 +139,7 @@ En el ejemplo anterior, el extremo `admin` proporciona acceso de nivel de admini
 
 - El usuario `admin` tiene control total de la base de datos.
 - El usuario `reporter` solo tiene privilegios SELECT.
-- El usuario `importer` tiene privilegios de DELETE, SELECT, INSERT, UPDATE y.
+- El usuario `importer` tiene privilegios SELECT, INSERT, UPDATE y DELETE.
 
 Agregue los extremos definidos en el ejemplo anterior a la propiedad `relationships` del archivo `.magento.app.yaml`. Por ejemplo:
 
@@ -218,7 +230,7 @@ A veces, debe conectarse a la base de datos secundaria para mejorar el rendimien
 
 Consulte los siguientes artículos de soporte de Adobe Commerce para obtener ayuda con la resolución de problemas de MySQL:
 
-- [Comprobando consultas y procesos lentos en MySQL](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/database/checking-slow-queries-and-processes-mysql.html?lang=es)
+- [Comprobación de consultas y procesos lentos en MySQL](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/database/checking-slow-queries-and-processes-mysql.html?lang=es)
 - [Crear volcado de base de datos en la nube](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud.html?lang=es)
-- [Solución de problemas de la herramienta de migración de datos](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html?lang=es)
-- [actualización de Adobe Commerce: compacta a tablas dinámicas 2.2.x, 2.3.x a 2.4.x](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/commerce-235-upgrade-prerequisites-mariadb.html?lang=es)
+- [Herramienta de migración de datos](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html?lang=es)
+- [Actualización de Adobe Commerce: tablas compactas a dinámicas 2.2.x, 2.3.x a 2.4.x](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/commerce-235-upgrade-prerequisites-mariadb.html?lang=es)

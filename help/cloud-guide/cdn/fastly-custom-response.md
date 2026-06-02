@@ -2,9 +2,21 @@
 title: Personalización de páginas de error y mantenimiento
 description: Aprenda a personalizar la página de error predeterminada que se muestra cuando fallan las solicitudes al servidor de origen de Fastly.
 feature: Cloud, Configuration, Security
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 960195c7-5ee9-4134-8b0a-a251c5e6adf9
+TQID: https://experienceleague.adobe.com/EhK04rgGdkT3Tvd6wbefYjY9Yqozkzra4-ELdkH8sMo
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '797'
+source-wordcount: 803
 ht-degree: 0%
 
 ---
@@ -26,11 +38,11 @@ Actualmente, puede personalizar las siguientes páginas de respuesta rápida par
 
 **Requisitos de codificación de HTML:**
 
-El código de HTML de la página personalizada debe cumplir los siguientes requisitos:
+El código HTML de la página personalizada debe cumplir los siguientes requisitos:
 
 - El contenido puede contener hasta 65.535 caracteres.
-- Especifique todos los CSS en línea en el origen del HTML.
-- Agrupe imágenes en la página del HTML utilizando base64 para que se muestren aunque Fastly esté sin conexión. Ver [URI de datos en el sitio de css-tricks](https://css-tricks.com/data-uris/).
+- Especifique todos los CSS en línea en el origen de HTML.
+- Agrupe imágenes en la página de HTML utilizando base64 para que se muestren aunque Fastly esté sin conexión. Ver [URI de datos en el sitio de css-tricks](https://css-tricks.com/data-uris/).
 
 ## Personalización de la página de error 503
 
@@ -39,7 +51,7 @@ Los clientes ven la página de error 503 predeterminada en los siguientes casos:
 - Cuando una solicitud al origen Fastly devuelve un estado de respuesta mayor que 500
 - Cuando el origen de Fastly está inactivo, como un tiempo de espera, una actividad de mantenimiento o problemas de estado
 
-Puede personalizar la página predeterminada adaptando el siguiente código de HTML para incluir el estilo que coincida con la temática de la tienda Adobe Commerce y modificando el título y los mensajes según sea necesario.
+Puede personalizar la página predeterminada adaptando el siguiente código HTML para incluir el estilo que coincida con el tema de la tienda Adobe Commerce y modificando el título y los mensajes según sea necesario.
 
 ```html
 <!DOCTYPE html>
@@ -53,7 +65,7 @@ Puede personalizar la página predeterminada adaptando el siguiente código de H
    </body></html>
 ```
 
-Compruebe que el origen modificado se muestra correctamente en el explorador. A continuación, añada el código de HTML personalizado a la configuración de Fastly.
+Compruebe que el origen modificado se muestra correctamente en el explorador. A continuación, añada el código personalizado de HTML a la configuración de Fastly.
 
 Para agregar la página de respuesta personalizada a la configuración de Fastly:
 
@@ -71,7 +83,7 @@ Para agregar la página de respuesta personalizada a la configuración de Fastly
 
    ![Página de error de actualización 503](../../assets/cdn/fastly-customize-503-response.png)
 
-1. Seleccione **Cargar** en la parte superior de la página para cargar el origen del HTML personalizado en el servidor de Fastly.
+1. Seleccione **Cargar** en la parte superior de la página para cargar el origen personalizado de HTML en el servidor de Fastly.
 
 1. Seleccione **Guardar configuración** en la parte superior de la página para guardar el archivo de configuración actualizado.
 
@@ -79,7 +91,7 @@ Para agregar la página de respuesta personalizada a la configuración de Fastly
 
    - En la notificación que aparece en la parte superior de la página, seleccione el vínculo *Administración de caché*.
 
-   - En la página Administración de caché, seleccione **Vaciar caché del Magento**.
+   - En la página Administración de caché, seleccione **Vaciar caché de Magento**.
 
 ## Personalizar la página de errores de WAF
 
@@ -87,7 +99,7 @@ Los clientes ven la siguiente página de error predeterminada de WAF cuando una 
 
 ![Página de error de WAF](../../assets/cdn/fastly-waf-403-error.png)
 
-El siguiente ejemplo de código muestra el origen del HTML para la página predeterminada:
+El siguiente ejemplo de código muestra el origen de HTML para la página predeterminada:
 
 ```html
 <html>
@@ -125,15 +137,15 @@ Puede usar la opción **Páginas sintéticas personalizadas** > **Editar página
 
 1. Seleccione **Editar página de WAF**.
 
-1. Rellene los campos para actualizar el HTML.
+1. Rellene los campos para actualizar HTML.
 
    ![Actualizar página de error de WAF](../../assets/cdn/fastly-edit-waf-html.png)
 
    - **Estado**: seleccione el estado `403 Forbidden`.
    - **Tipo MIME** — Tipo `text/html`.
-   - **Contenido**: edite la respuesta predeterminada del HTML para agregar CSS personalizado y actualizar el título y los mensajes según sea necesario.
+   - **Contenido**: edite la respuesta predeterminada de HTML para agregar CSS personalizado y actualizar el título y los mensajes según sea necesario.
 
-1. Seleccione **Cargar** en la parte superior de la página para cargar el origen del HTML personalizado en el servidor de Fastly.
+1. Seleccione **Cargar** en la parte superior de la página para cargar el origen personalizado de HTML en el servidor de Fastly.
 
 1. Seleccione **Guardar configuración** en la parte superior de la página para guardar el archivo de configuración actualizado.
 
@@ -141,7 +153,7 @@ Puede usar la opción **Páginas sintéticas personalizadas** > **Editar página
 
    - En la notificación que aparece en la parte superior de la página, seleccione el vínculo **Administración de caché**.
 
-   - En la página Administración de caché, seleccione **Vaciar caché del Magento**.
+   - En la página Administración de caché, seleccione **Vaciar caché de Magento**.
 
 ## Mostrar número de informe de error
 

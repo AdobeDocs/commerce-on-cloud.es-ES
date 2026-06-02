@@ -3,12 +3,24 @@ title: Administrar el acceso de usuario
 description: Obtenga información sobre cómo administrar el acceso de los usuarios a Adobe Commerce en proyectos y entornos de infraestructura en la nube.
 role: Admin
 feature: Cloud, Roles/Permissions
-last-substantial-update: 2023-06-27T00:00:00Z
+last-substantial-update: 2023-06-27T00:00:00.000Z
 topic: Security
 exl-id: 953593de-f675-49fd-988f-f11306f67fbd
-source-git-commit: c972d9f2029499cf53edc334c1d9a40b155a991d
+TQID: https://experienceleague.adobe.com/hoRda1DXcWU5ZfsEnOf0JSe-JbCQy0GkXQ4Tw3HIU0g
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: b5f00040-57a0-4a6d-a39e-383b1936c2c9
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+topic_v2:
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '1463'
+source-wordcount: 1518
 ht-degree: 0%
 
 ---
@@ -192,7 +204,7 @@ Adobe Commerce en la infraestructura en la nube es compatible con TFA mediante c
 - [Autenticador de Google (Android/iPhone)](https://support.google.com/accounts/answer/1066447?hl=en)
 - [Autoridad (Android/iPhone)](https://authy.com/features/)
 - [FreeOTP (Android)](https://play.google.com/store/apps/details?id=org.fedorahosted.freeotp)
-- [Autenticador de GAuth (Firefox OS, escritorio, otros)](https://github.com/gbraad-apps/gauth)
+- [GAuth Authenticator (Firefox OS, escritorio, otros)](https://github.com/gbraad-apps/gauth)
 
 Las instrucciones para instalar la aplicación autenticadora y habilitar TFA están disponibles en la página _Configuración de la cuenta_ en [!DNL Cloud Console].
 

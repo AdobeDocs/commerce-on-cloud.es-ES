@@ -2,9 +2,20 @@
 title: Propiedad Crons
 description: Vea ejemplos sobre cómo configurar la propiedad crons en el archivo de configuración de la aplicación  [!DNL Commerce] .
 feature: Cloud, Configuration
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: ff176cb1-5b6c-48a0-ad3c-56cc1d606c97
+TQID: https://experienceleague.adobe.com/E7qXe1VmZezG9AqJ2rchTUmbTibU0pNaGdqb00MkcXo
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '1069'
+source-wordcount: 1172
 ht-degree: 0%
 
 ---
@@ -13,7 +24,7 @@ ht-degree: 0%
 
 Adobe Commerce usa la propiedad `crons` para programar actividades repetitivas. Es ideal para programar una tarea específica para que se ejecute a determinadas horas del día. Solo se puede ejecutar un trabajo cron a la vez en la instancia web para Adobe Commerce en proyectos de infraestructura en la nube debido a la naturaleza de los entornos de solo lectura. Se recomienda desglosar las tareas de larga duración en tareas más pequeñas en cola. También puede crear una [instancia de trabajador](workers-property.md).
 
-El Adobe recomienda ejecutar `crons` como [propietario del sistema de archivos](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html?lang=es). _no_ ejecuta `crons` como `root` o como usuario del servidor web.
+Adobe recomienda ejecutar `crons` como [propietario del sistema de archivos](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html?lang=es). _no_ ejecuta `crons` como `root` o como usuario del servidor web.
 
 Esta configuración es diferente de las implementaciones locales de Adobe Commerce, que tienen varios trabajos cron predeterminados. Consulte [Configurar trabajos cron](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/configure-cron-jobs.html?lang=es) en la _guía de configuración_.
 
@@ -197,6 +208,6 @@ Puede revisar la información de procesamiento de cron en los archivos de regist
 
 Consulte los siguientes artículos de soporte de Adobe Commerce para obtener ayuda con la resolución de problemas relacionados con cron:
 
-- [Las tareas cron bloquean tareas de otros grupos](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/cron-tasks-lock-tasks-from-other-groups.html?lang=es)
+- [Las tareas cron bloquean las tareas de otros grupos](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/cron-tasks-lock-tasks-from-other-groups.html?lang=es)
 
-- [Restablecer los trabajos cron bloqueados manualmente en la nube](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/reset-stuck-magento-cron-jobs-manually-on-cloud.html?lang=es)
+- [Restablecer los trabajos cron atascados manualmente en la nube](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/reset-stuck-magento-cron-jobs-manually-on-cloud.html?lang=es)

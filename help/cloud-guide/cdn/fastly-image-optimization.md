@@ -2,9 +2,20 @@
 title: Optimización rápida de imágenes
 description: Aprenda a optimizar la entrega de imágenes y a simplificar la administración de imágenes para el sitio de Adobe Commerce habilitando y configurando la Optimización rápida de imágenes.
 feature: Cloud, Configuration, Media
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 3457ebb0-dbb4-4cb0-b6ab-837b15dce03e
+TQID: https://experienceleague.adobe.com/n3BJ-fU6SwFrRJGvqpF07cZ1XVTDkXqLRIRv46MQotI
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '1275'
+source-wordcount: 1211
 ht-degree: 0%
 
 ---
@@ -50,7 +61,7 @@ Habilite la Optimización rápida de imágenes (Fastly IO) desde el panel de adm
 
 ## Configuración de Fastly IO
 
-Revise y actualice los ajustes de configuración de E/S predeterminados para la optimización de imágenes según sea necesario. Por ejemplo, quizás desee cambiar los niveles de calidad de WebP y JPEG para los formatos con pérdida, o cambiar el formato para mostrar imágenes JPEG a _Progresivas_ o _Línea de base_. Además, puede utilizar Fastly IO para funciones de optimización de imágenes más granulares, como:
+Revise y actualice los ajustes de configuración de E/S predeterminados para la optimización de imágenes según sea necesario. Por ejemplo, puede que desee cambiar los niveles de calidad de WebP y JPEG para los formatos con pérdida, o cambiar el formato para servir imágenes de JPEG a _Progresivo_ o _Línea de base_. Además, puede utilizar Fastly IO para funciones de optimización de imágenes más granulares, como:
 
 - Forzar conversión con pérdidas
 - Optimización de imagen profunda
@@ -66,15 +77,15 @@ Revise y actualice los ajustes de configuración de E/S predeterminados para la 
 
    ![Revisar la configuración de Fastly IO](../../assets/cdn/fastly-io-config-options.png)
 
-   - **WebP automático?**: deje la configuración predeterminada (`Yes`) para convertir imágenes al formato WebP en los exploradores que lo admitan. Si cambia la configuración a **No**, Fastly utiliza el tipo de archivo de imagen en lugar de convertir la imagen al formato WebP.
+   - **Auto WebP?**: deje la configuración predeterminada (`Yes`) para convertir las imágenes al formato WebP en los exploradores compatibles. Si cambia la configuración a **No**, Fastly utiliza el tipo de archivo de imagen en lugar de convertir la imagen al formato WebP.
 
    - **Calidad WebP (con pérdida) predeterminada**: deje la configuración predeterminada (`85`) o escriba el nivel de compresión para las imágenes con formato de archivo con pérdida. Puede especificar cualquier número entero entre 1 y 100.
 
-   - **Controles de formato de JPEG predeterminado**: deje la configuración predeterminada (`Auto`) o seleccione el tipo de JPEG que se utilizará al mostrar una imagen. Si el valor se establece en _Auto_, envía rápidamente imágenes con el tipo de salida que coincida con el tipo de entrada. Seleccione _Línea de base_ para mostrar las imágenes línea a línea empezando desde arriba a la izquierda y yendo hacia abajo a la derecha. Seleccione _Progresivo_ para mostrar una imagen borrosa que se volverá clara a medida que se cargue.
+   - **Controles de formato JPEG predeterminados**: deje la configuración predeterminada (`Auto`) o seleccione el tipo de JPEG que se utilizará para mostrar una imagen. Si el valor se establece en _Auto_, envía rápidamente imágenes con el tipo de salida que coincida con el tipo de entrada. Seleccione _Línea de base_ para mostrar las imágenes línea a línea empezando desde arriba a la izquierda y yendo hacia abajo a la derecha. Seleccione _Progresivo_ para mostrar una imagen borrosa que se volverá clara a medida que se cargue.
 
-   - **Calidad de JPEG predeterminada**: deje la configuración predeterminada (`85`) o escriba el nivel de compresión de la calidad de los formatos de archivo con pérdida. Especifique cualquier número entero entre 1 y 100.
+   - **Calidad predeterminada de JPEG**: deje la configuración predeterminada (`85`) o escriba el nivel de compresión de la calidad de los formatos de archivo con pérdida. Especifique cualquier número entero entre 1 y 100.
 
-   - **¿Permitir ampliación?**: deje la configuración predeterminada (`No`) o seleccione `Yes` para devolver imágenes de mayor tamaño que el archivo de origen original y así poder ajustar las dimensiones solicitadas.
+   - **Permitir la actualización?**—deje la configuración predeterminada (`No`) o seleccione `Yes` para que devuelva imágenes más grandes que el archivo de origen original para que se ajusten a las dimensiones solicitadas.
 
    - **Cambiar el tamaño del filtro**: deje la configuración predeterminada (`Lancsoz3`) o seleccione una alternativa. Esta configuración especifica el filtro utilizado para enviar una imagen cuyo tamaño se ha cambiado. Según el filtro seleccionado, la imagen cuyo tamaño se haya cambiado puede tener un número de píxeles mayor o menor.
 
@@ -108,9 +119,9 @@ De forma predeterminada, el servicio Fastly IO fuerza la conversión de formatos
 La ventaja de forzar la conversión con pérdida es que se proporcionan imágenes más pequeñas.
 Por ejemplo, si utiliza el formato JPEG o WEBp en lugar de PNG, el tamaño se puede reducir de un 60 a un 70 por ciento en función del nivel de calidad especificado en la configuración de Fastly IO.
 
-Según el nivel de calidad seleccionado para la optimización de imágenes, es posible que perciba diferencias visuales en las imágenes. Por ejemplo, las transparencias o el canal del Alpha se eliminan y se sustituyen por un fondo blanco, a menos que utilice la optimización de imágenes profundas, que utiliza el color de fondo de la temática.
+Según el nivel de calidad seleccionado para la optimización de imágenes, es posible que perciba diferencias visuales en las imágenes. Por ejemplo, las transparencias/canales de Alpha se eliminan y se sustituyen por un fondo blanco, a menos que utilice la optimización de imágenes profundas, que utiliza el color de fondo de la temática.
 
-Si desactiva la conversión con pérdida (`WebP Auto? = No`), Fastly IO solo cambia las imágenes del JPEG al formato WEBP para los exploradores compatibles. No se cambian otros tipos de imagen. Por ejemplo, si la imagen original es PNG, la salida del servicio Fastly IO es PNG.
+Si desactiva la conversión con pérdida (`WebP Auto? = No`), Fastly IO solo cambia las imágenes de JPEG al formato WEBP para los exploradores compatibles. No se cambian otros tipos de imagen. Por ejemplo, si la imagen original es PNG, la salida del servicio Fastly IO es PNG.
 
 ### Optimización de imagen profunda
 

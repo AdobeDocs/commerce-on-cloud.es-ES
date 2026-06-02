@@ -2,9 +2,22 @@
 title: Acceso a su panel de administración de Commerce
 description: Obtenga información sobre cómo acceder a su Panel de administración de Commerce.
 recommendations: noDisplay, catalog
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 827417b0-9048-44d8-8c82-07befba476c7
+TQID: https://experienceleague.adobe.com/V3BXuCc9aqT5YuyIS8WAZgUdPAYNhQunAgg2i2FCaOs
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '310'
+source-wordcount: 361
 ht-degree: 0%
 
 ---
@@ -19,7 +32,7 @@ Puede enviar una solicitud de cambio de contraseña utilizando cualquiera de los
 
 - Busque el correo electrónico de bienvenida enviado a la dirección de correo electrónico del propietario de la licencia, siga el vínculo y cambie la contraseña.
 
-- Copie la dirección URL del almacén de [[!DNL Cloud Console]](../cloud-guide/project/overview.md) en un explorador. A continuación, anexe `/admin` al final de la dirección URL para abrir la página de inicio de sesión. Haga clic en la contraseña **¿Olvidó la contraseña?** vínculo para enviar una solicitud de cambio de contraseña a la dirección de correo electrónico del propietario de la licencia.
+- Copie la dirección URL del almacén de [[!DNL Cloud Console]](../cloud-guide/project/overview.md) en un explorador. A continuación, anexe `/admin` al final de la dirección URL para abrir la página de inicio de sesión. Haga clic en **Olvidó la contraseña?** para enviar una solicitud de cambio de contraseña a la dirección de correo electrónico del propietario de la licencia.
 
 Después de enviar la solicitud de cambio de contraseña, compruebe en su correo electrónico la notificación de restablecimiento de contraseña. Si no recibe el correo electrónico, compruebe su carpeta de correo no deseado.
 

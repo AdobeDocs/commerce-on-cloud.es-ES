@@ -2,9 +2,22 @@
 title: Iniciar lista de comprobación
 description: Revise los elementos de la lista de comprobación para el lanzamiento del sitio.
 exl-id: efc97d4a-a9f3-49fa-b977-061282765e90
-source-git-commit: ca2d94364787695398b2b8af559733fe52ec2949
+TQID: https://experienceleague.adobe.com/-27J2-qKGpa71AJliIomIC7heTbTelOnFf960NODt0E
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '1195'
+source-wordcount: 1155
 ht-degree: 0%
 
 ---
@@ -72,8 +85,7 @@ Cuando esté listo para iniciar el sitio, debe actualizar la configuración DNS 
 
 >[!IMPORTANT]
 >
->Las instrucciones DNS de [RFC1034](https://www.rfc-editor.org/rfc/rfc1912) (**sección 2.4**) indican que:
->_No se permite que un registro CNAME coexista con otros datos. En otras palabras, si suzy.podunk.xx es un alias de sue.podunk.xx, no puede tener también un registro MX para suzy.podunk.edu, un registro A o incluso un registro TXT._
+>Las instrucciones DNS de [RFC1034](https://www.rfc-editor.org/rfc/rfc1912) (**sección 2.4**) indican que:>_No se permite que un registro CNAME coexista con ningún otro dato. En otras palabras, si suzy.podunk.xx es un alias de sue.podunk.xx, no puede tener también un registro MX para suzy.podunk.edu, un registro A o incluso un registro TXT._
 >
 >Por este motivo, los registros DNS deben ser del tipo `CNAME` para subdominios y del tipo `A` para dominios Apex (dominios raíz). Descartar esta regla puede provocar interrupciones en el servicio de correo o en la propagación de DNS, ya que se pierde la capacidad de agregar otros registros, como MX o NS. Algunos proveedores DNS pueden evitar esto utilizando personalizaciones internas, pero seguir el estándar garantiza estabilidad y flexibilidad (como el cambio del proveedor DNS).
 

@@ -3,9 +3,23 @@ title: Servicio PrivateLink
 description: Aprenda a utilizar el servicio PrivateLink para establecer una conexión segura entre una nube privada y la plataforma de nube de Adobe Commerce en la misma región.
 feature: Cloud, Iaas, Security
 exl-id: 13a7899f-9eb5-4c84-b4c9-993c39d611cc
-source-git-commit: 0e7f268de078bd9840358b66606a60b2a2225764
+TQID: https://experienceleague.adobe.com/AxpzTY-Nb7UoKhW-wzAOuWLm5O7XS4OFxjSaIfFUR-I
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+  - id: eddd9b14-83bd-4ff4-9072-54a4a484abb7
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '1616'
+source-wordcount: 1798
 ht-degree: 0%
 
 ---
@@ -111,10 +125,10 @@ El siguiente flujo de trabajo describe el proceso de activación de la integraci
 
 1. **Adobe** habilita el acceso de la cuenta del cliente al servicio de extremo en Adobe VPC.
 
-   - Actualice la configuración del servicio de extremo de Adobe para aceptar solicitudes iniciadas desde la cuenta del cliente de AWS o Azure.
+   - Actualice la configuración del servicio de punto de conexión de Adobe para aceptar solicitudes iniciadas desde la cuenta del cliente de AWS o Azure.
    - Actualice el vale Soporte técnico para proporcionar el nombre de servicio del extremo de Adobe VPC al que se va a conectar, por ejemplo `com.amazonaws.vpce.<cloud-region>.vpce-svc-<service-id>`.
 
-1. **Cliente** agrega el servicio de punto de conexión de Adobe a su cuenta de Cloud (AWS o Azure), que almacena en déclencheur una solicitud de conexión a Adobe. Consulte la documentación de la plataforma en la nube para obtener instrucciones:
+1. **El cliente** agrega el servicio de extremo de Adobe a su cuenta de Cloud (AWS o Azure), que almacena en déclencheur una solicitud de conexión a Adobe. Consulte la documentación de la plataforma en la nube para obtener instrucciones:
 
    - Para AWS, consulte [Aceptar y rechazar solicitudes de conexión de extremo de interfaz].
    - Para Azure, consulte [Administrar solicitudes de conexión].
@@ -125,7 +139,7 @@ El siguiente flujo de trabajo describe el proceso de activación de la integraci
 
 1. Pasos adicionales para habilitar conexiones bidireccionales:
 
-   - **Adobe** proporciona la entidad de seguridad de la cuenta de Adobe (usuario raíz de la cuenta de AWS o Azure) y solicita acceso al servicio de extremo de VPC del cliente.
+   - **Adobe** proporciona la entidad de seguridad de la cuenta de Adobe (usuario raíz para la cuenta de AWS o Azure) y solicita acceso al servicio de extremo de VPC del cliente.
    - **Cliente** habilita el acceso de Adobe al servicio de extremo en el VPC del cliente. Esto supone que la entidad de seguridad de la cuenta de Adobe tiene acceso a `arn:aws:iam::402592597372:root`, como se describió anteriormente en el requisito previo de **acceso al servicio de extremo concedido**.
 
       - Actualice la configuración del servicio de extremo de cliente para aceptar solicitudes iniciadas desde la cuenta de Adobe. Consulte la documentación de la plataforma en la nube para obtener instrucciones:
@@ -135,7 +149,7 @@ El siguiente flujo de trabajo describe el proceso de activación de la integraci
 
       - Proporcione a Adobe el nombre del servicio de extremo para el VPC del cliente.
 
-   - **Adobe** agrega el servicio de extremo de cliente a la cuenta de Adobe platform (AWS o Azure), que almacena en déclencheur una solicitud de conexión para el cliente VPC.
+   - **Adobe** agrega el servicio de extremo de cliente a la cuenta de Adobe platform (AWS o Azure), que envía una solicitud de conexión al cliente VPC.
    - **Cliente** aprueba la solicitud de conexión de Adobe para completar la configuración.
    - **El cliente** [verifica la conexión](#test-vpc-endpoint-service-connection) desde Adobe VPC.
 
@@ -199,7 +213,7 @@ Puede utilizar la aplicación Telnet para probar la conexión con el servicio ex
    Consulte los siguientes artículos para obtener ayuda sobre la resolución de problemas de conexión:
 
    - [AWS: solucionando problemas en las conexiones del servicio de extremo]
-   - [Amazon: solucionando problemas de conectividad de Azure Private Link]
+   - [Amazon: Solucionando problemas de conectividad de Azure Private Link]
 
    Si no puede resolver los errores, actualice el ticket de asistencia de Adobe Commerce para solicitar ayuda para establecer la conexión.
 
@@ -222,7 +236,7 @@ El VPC del cliente debe tener los siguientes recursos disponibles para admitir c
 Si estos recursos no están disponibles en el VPC del cliente, debe iniciar sesión en su cuenta de Cloud Platform para agregar la configuración.
 
 - Consola de Amazon VPC: `https://console.aws.amazon.com/vpc/`
-- Portal de Azure- `https://portal.azure.com`
+- Portal de Azure: `https://portal.azure.com`
 
 Consulte la documentación de la plataforma de Cloud para ver las instrucciones de configuración de PrivateLink:
 
@@ -242,7 +256,7 @@ Consulte la documentación de la plataforma de Cloud para ver las instrucciones 
 [Agregar y quitar permisos para el servicio de punto de conexión]: https://docs.aws.amazon.com/vpc/latest/userguide/add-endpoint-service-permissions.html
 [Amazon: Solución de problemas de conectividad de Azure Private Link]: https://docs.microsoft.com/en-us/azure/private-link/troubleshoot-private-link-connectivity
 [AWS: resolución de problemas de conexiones de servicio de extremos]: https://aws.amazon.com/premiumsupport/knowledge-center/connect-endpoint-service-vpc/
-[Flujo de trabajo de vínculo privado de Azure]: https://docs.microsoft.com/en-us/azure/private-link/private-link-service-overview#workflow
+[Flujo de trabajo de Azure Private Link]: https://docs.microsoft.com/en-us/azure/private-link/private-link-service-overview#workflow
 [Crear un equilibrador de carga]: https://docs.microsoft.com/en-us/azure/load-balancer/quickstart-load-balancer-standard-public-portal
 [Crear un equilibrador de carga de red]: https://docs.aws.amazon.com/elasticloadbalancing/latest/network/create-network-load-balancer.html
 [Crear una configuración de servicio de extremo]: https://docs.aws.amazon.com/vpc/latest/userguide/create-endpoint-service.html

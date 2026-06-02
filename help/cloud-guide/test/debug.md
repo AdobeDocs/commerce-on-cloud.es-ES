@@ -2,9 +2,19 @@
 title: Configurar  [!DNL Xdebug]
 description: Obtenga información sobre cómo configurar la extensión Xdebug para depurar Adobe Commerce en el desarrollo de proyectos de infraestructura en la nube.
 exl-id: 32857c9c-4a49-4337-9c15-a6e46c328df7
-source-git-commit: d48b1844305e72b7b4a37568f2358f3aa4cf2e24
+TQID: https://experienceleague.adobe.com/DGrQ8tHkdWCLbWQ6Mt-RvED2SCATyzyqZznZB8dUjGM
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '1920'
+source-wordcount: 1955
 ht-degree: 0%
 
 ---
@@ -143,7 +153,7 @@ Esto permite que la aplicación tenga la configuración de depuración correcta 
 
 Asigne la conexión `XDEBUG` del servidor al sistema local. Para realizar cualquier tipo de depuración, debe reenviar el puerto 9000 desde el servidor de Adobe Commerce en la nube a su equipo local. Consulte una de las siguientes secciones:
 
-- [Reenvío de puertos en Mac o UNIX](#port-forwarding-on-mac-or-unix)
+- [Reenvío de puertos en Mac o UNIX®](#port-forwarding-on-mac-or-unix)
 - [Reenvío de puertos en Windows](#port-forwarding-on-windows)
 
 #### Reenvío de puertos en Mac o UNIX®

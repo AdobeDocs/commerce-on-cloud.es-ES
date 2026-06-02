@@ -3,9 +3,23 @@ title: Habilitar la autenticación multifactor para el acceso SSH
 description: Obtenga información sobre cómo administrar los requisitos de autenticación para el acceso SSH a Adobe Commerce en entornos de infraestructura en la nube.
 feature: Cloud, Security
 topic: Security
-source-git-commit: 1e789247c12009908eabb6039d951acbdfcc9263
+exl-id: 90458fa8-42b0-4825-948e-56ef7884eb82
+TQID: https://experienceleague.adobe.com/KWGl-ZyF5aKZ-XxOOmL85ip8arBeH-G1pN5ckUdAqNw
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: c1579802-ddd4-4214-8a91-97b2066abe11
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
 workflow-type: tm+mt
-source-wordcount: '1051'
+source-wordcount: 1080
 ht-degree: 0%
 
 ---
@@ -22,7 +36,7 @@ Cuando MFA está habilitado en un proyecto, todas las cuentas de usuario con acc
 
 ## Certificados para acceso SSH
 
-El MFA permite a los usuarios intercambiar un token de acceso de OAUTH con un certificado SSH de corta duración generado por la API de certificador de Adobe Cloud. Si el usuario tiene la función Administrador o Colaborador, una clave SSH válida y un código TFA o token de API válido, Adobe Commerce en la infraestructura en la nube utiliza estas credenciales para generar el certificado SSH temporal. La caducidad del certificado se establece en una hora, pero se actualiza automáticamente durante la sesión actual.
+El MFA permite a los usuarios intercambiar un token de acceso de OAUTH con un certificado SSH de corta duración generado por la API de Adobe Cloud Certificate. Si el usuario tiene la función Administrador o Colaborador, una clave SSH válida y un código TFA o token de API válido, Adobe Commerce en la infraestructura en la nube utiliza estas credenciales para generar el certificado SSH temporal. La caducidad del certificado se establece en una hora, pero se actualiza automáticamente durante la sesión actual.
 
 Después de iniciar sesión en un proyecto con MFA, los usuarios deben usar la CLI `magento-cloud` para generar el certificado SSH:
 
