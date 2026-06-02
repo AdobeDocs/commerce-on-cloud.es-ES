@@ -16,9 +16,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: ab64bb5a3cc159844015072738404274fdea97cd
 workflow-type: tm+mt
-source-wordcount: 2551
+source-wordcount: 2575
 ht-degree: 0%
 
 ---
@@ -357,18 +357,18 @@ stage:
 
 ## `LOCK_PROVIDER`
 
-- **Predeterminado**—`file`
+- **Predeterminado**— En los entornos de Producción y Ensayo, el valor predeterminado es `file`. Para la integración de Pro y los entornos de inicio, el valor predeterminado es `db`.
 - **Versión**: Adobe Commerce 2.2.5 y posterior
 
-El proveedor de bloqueo evita el inicio de trabajos cron y grupos cron duplicados. Usar el proveedor de bloqueos `file` en el entorno de producción. Los entornos iniciales y el entorno de integración Pro no usan la variable [MAGENTO_CLOUD_LOCKS_DIR](variables-cloud.md), por lo que `ece-tools` aplica el proveedor de bloqueo `db` automáticamente.
+El proveedor de bloqueo evita el inicio de trabajos cron y grupos cron duplicados. Commerce en la nube solo admite `file` y `db` proveedores de bloqueos.
+
+Para los entornos de Producción y Ensayo, el valor predeterminado `file` está establecido por [MAGENTO_CLOUD_LOCKS_DIR](variables-cloud.md) y no se puede anular. Para entornos Starter y el entorno de integración Pro, `ece-tools` establece automáticamente el proveedor de bloqueo `db`. En estos entornos, puede cambiar el valor predeterminado a `file` para optimizar el rendimiento local y la arquitectura de producción espejo.
 
 ```yaml
 stage:
   deploy:
     LOCK_PROVIDER: "db"
 ```
-
-Consulte [Configurar el bloqueo](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/lock-provider.html?lang=es) en la _Guía de instalación_.
 
 ## `MYSQL_USE_SLAVE_CONNECTION`
 
