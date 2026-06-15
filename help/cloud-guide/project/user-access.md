@@ -1,26 +1,16 @@
 ---
-title: Administrar el acceso de usuario
-description: Obtenga información sobre cómo administrar el acceso de los usuarios a Adobe Commerce en proyectos y entornos de infraestructura en la nube.
+title: Administrar acceso de usuario
+description: Aprenda a añadir usuarios y asignar funciones en Adobe Commerce en proyectos y entornos de infraestructura en la nube mediante la CLI de magento en la nube o la consola en la nube.
 role: Admin
 feature: Cloud, Roles/Permissions
-last-substantial-update: 2023-06-27T00:00:00.000Z
+level: Beginner
+short-description: Agregue usuarios y asigne funciones de proyecto y entorno en la consola en la nube o CLI.
+last-substantial-update: 2026-06-11T00:00:00Z
 topic: Security
 exl-id: 953593de-f675-49fd-988f-f11306f67fbd
-TQID: https://experienceleague.adobe.com/hoRda1DXcWU5ZfsEnOf0JSe-JbCQy0GkXQ4Tw3HIU0g
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: b5f00040-57a0-4a6d-a39e-383b1936c2c9
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-topic_v2:
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: de324897e87232393f20d95b2867d8a95605fa23
 workflow-type: tm+mt
-source-wordcount: 1518
+source-wordcount: '1690'
 ht-degree: 0%
 
 ---
@@ -37,7 +27,7 @@ Los visualizadores de proyectos no pueden realizar tareas en ningún entorno; si
 El acceso a nivel de entorno se basa en el tipo de entorno: producción, ensayo y desarrollo. Conceder permiso al usuario _viewer_ para _desarrollar_ entornos significa que pueden ver **todos los** entornos de desarrollo en el proyecto. La siguiente tabla aclara las capacidades concedidas a cada nivel de permiso:
 
 | Nivel de permisos | Acceso | Acceso SSH |
-| ------------------ | ----------- | :----------: |
+| ---------------- | ------ | :--------: |
 | **Administrador** | Realizar tareas de administrador, como cambiar la configuración, insertar código, realizar tareas y administrar ramas, incluida la combinación con el entorno principal | Sí |
 | **Colaborador** | Código push y bifurcación del entorno; no se puede cambiar la configuración ni ejecutar acciones | Sí |
 | **Visor** | Acceso de solo vista al tipo de entorno | No |
@@ -47,14 +37,10 @@ El acceso a nivel de entorno se basa en el tipo de entorno: producción, ensayo 
 
 Puede agregar usuarios y asignar funciones mediante la CLI `magento-cloud` o [!DNL Cloud Console].
 
->[!BEGINSHADEBOX]
-
-**Requisitos previos:**
-
-- Un usuario registrado con una Adobe ID. Un usuario debe [registrarse para obtener una cuenta de Adobe](https://account.adobe.com) e inicializar su [cuenta de Cloud](https://console.adobecommerce.com) visitando [https://console.adobecommerce.com](https://console.adobecommerce.com) para poder agregarla a un proyecto de Cloud.
-- Un usuario asignado al rol **Admin** no puede administrar usuarios con la CLI `magento-cloud`. Solo los usuarios a los que se les haya concedido el rol **Propietario de la cuenta** pueden administrar usuarios.
-
->[!ENDSHADEBOX]
+>[!PREREQUISITES]
+>
+>- Un usuario registrado con una Adobe ID. Un usuario debe [registrarse para obtener una cuenta de Adobe](https://account.adobe.com) e inicializar su [cuenta de Cloud](https://console.adobecommerce.com) para poder agregarla a un proyecto de Cloud.
+>- Un usuario asignado al rol **Admin** no puede administrar usuarios con la CLI `magento-cloud`. Solo los usuarios a los que se les haya concedido el rol **Propietario de la cuenta** pueden administrar usuarios.
 
 ## Administrar usuarios con la CLI
 
@@ -78,13 +64,13 @@ Los siguientes ejemplos utilizan la CLI `magento-cloud` para agregar un usuario,
 
    >[!IMPORTANT]
    >
-   >El usuario debe tener un Adobe ID; consulte los [requisitos previos](#add-users-and-manage-access).
+   >El usuario debe tener un Adobe ID. Consulte los requisitos previos.
 
 1. Siga las indicaciones: especifique la dirección de correo electrónico del usuario, defina las funciones de tipo de entorno y proyecto, y añada el usuario.
 
    > Ejemplos de peticiones de datos
 
-   ```
+   ```text
    Enter the user's email address: alice@example.com
    
    Email address: alice@example.com
@@ -118,7 +104,7 @@ magento-cloud user:get alice@example.com
 
 >Respuesta de ejemplo:
 
-```
+```text
 Current role(s) of User (alice@example.com) on Production (project_id):
   Project role: admin
 ```
@@ -145,7 +131,7 @@ Puede usar [[!DNL Cloud Console]](../../get-started/cloud-console.md) para agreg
 
 >[!IMPORTANT]
 >
->El usuario debe tener un Adobe ID; consulte los [requisitos previos](#add-users-and-manage-access).
+>El usuario debe tener un Adobe ID. Consulte los requisitos previos.
 
 ### Agregar un usuario al proyecto
 
@@ -177,9 +163,25 @@ Puede usar [[!DNL Cloud Console]](../../get-started/cloud-console.md) para agreg
    >
    >Añadir un usuario no almacena en déclencheur una implementación automáticamente.
 
-1. Después de agregar usuarios, vuelva a implementar todos los entornos para aplicar los cambios. Añadir un usuario no almacena en déclencheur una implementación automáticamente. La reimplementación es un paso importante para garantizar que el usuario puede acceder a un entorno mediante SSH o realizar tareas de administrador.
+1. Después de agregar usuarios, vuelva a implementar todos los entornos para aplicar los cambios.
+
+   La reimplementación garantiza que el usuario pueda acceder a los entornos mediante SSH o realizar tareas de administrador.
 
 Después de agregar el usuario, Adobe envía un correo electrónico a la dirección especificada con instrucciones para acceder al proyecto de infraestructura de Adobe Commerce en la nube.
+
+### Estados de invitación
+
+En [!DNL Cloud Console], un administrador puede enviar una invitación antes de que se complete la inicialización de la cuenta. En ese caso, la lista de acceso mostrará al usuario con un estado como [!UICONTROL Invite pending]. El acceso no está completamente activo hasta que se completa la incorporación.
+
+Según la consola y el estado de la cuenta del usuario, este puede aparecer en uno de estos estados:
+
+- **[!UICONTROL Not invited]**: no existe ningún registro de acceso al proyecto.
+- **[!UICONTROL Invite pending]**: se envió una invitación, pero la inicialización o aceptación de la cuenta está incompleta.
+- **[!UICONTROL Active]**: el usuario completó la incorporación y tiene acceso activo al proyecto.
+
+>[!NOTE]
+>
+>[!DNL Cloud Console] muestra los estados de invitación de forma más explícita que [!DNL Legacy Cloud Console] (`https://<region-id>.magento.cloud/projects/<project_id>`). Una entrada visible de usuario o invitación no siempre significa que el usuario pueda acceder inmediatamente a todos los entornos. Es posible que aún sea necesario configurar la clave SSH u otros pasos de propagación. Consulte [Requisitos de autenticación de usuario](#user-authentication-requirements).
 
 ## Requisitos de autenticación de usuario
 
@@ -222,7 +224,7 @@ Las instrucciones para instalar la aplicación autenticadora y habilitar TFA est
 
    - En el dispositivo móvil, abra la aplicación autenticadora. A continuación, añada el código de configuración a la aplicación.
 
-   - En la página [!UICONTROL **[!UICONTROL TFA set up - Application]**], escriba el código TFA de su dispositivo móvil en el campo **[!UICONTROL Application verification code]**.
+   - En la página **[!UICONTROL TFA set up - Application]**, escriba el código TFA de su dispositivo móvil en el campo **[!UICONTROL Application verification code]**.
 
    - Haga clic en **[!UICONTROL Verify and save]**.
 
@@ -244,7 +246,7 @@ Las instrucciones para instalar la aplicación autenticadora y habilitar TFA est
 
      >[!WARNING]
      >
-     >Si pierde el acceso a una cuenta con TFA y no tiene la lista de códigos de recuperación, debe ponerse en contacto con el administrador del proyecto o [enviar un vale de soporte técnico de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=es#submit-ticket) para restablecer la aplicación TFA.
+     >Si pierde el acceso a una cuenta con TFA y no tiene la lista de códigos de recuperación, debe ponerse en contacto con el administrador del proyecto o [enviar un vale de soporte técnico de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) para restablecer la aplicación TFA.
 
 1. Después de completar la configuración de TFA, haz clic en **Guardar** para actualizar tu cuenta.
 
@@ -291,6 +293,10 @@ En los proyectos que tengan habilitada la aplicación MFA, debe tener un token d
 
 1. Haga clic en **[!UICONTROL Create API token]** e introduzca un nombre, por ejemplo, especifique un nombre que coincida con el usuario del equipo o el proceso automatizado que utiliza el token de API.
 
-   ![tokens de API](../../assets/api-token-name.png)
+   ![Pestaña tokens de API de Cloud Console con el campo Crear nombre de token de API](../../assets/api-token-name.png)
 
 1. Haga clic en **[!UICONTROL Create API token]**.
+
+## Más ayuda sobre este tema
+
+- [No se puede agregar un usuario al proyecto de nube de Adobe Commerce](https://experienceleague.adobe.com/es/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/unable-add-user-adobe-commerce-cloud-project). Se solucionará el problema cuando se produzca un error al agregar un usuario.
