@@ -299,4 +299,4 @@ En los proyectos que tengan habilitada la aplicación MFA, debe tener un token d
 
 ## Más ayuda sobre este tema
 
-- [No se puede agregar un usuario al proyecto de nube de Adobe Commerce](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/unable-add-user-adobe-commerce-cloud-project). Se solucionará el problema cuando se produzca un error al agregar un usuario.
+- [No se puede agregar un usuario al proyecto de nube de Adobe Commerce](https://experienceleague.adobe.com/es/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/unable-add-user-adobe-commerce-cloud-project). Se solucionará el problema cuando se produzca un error al agregar un usuario.
