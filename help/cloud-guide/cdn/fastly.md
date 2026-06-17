@@ -21,9 +21,9 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: e0e1d3994a6b9ceef9e45b55cc9946bc62203ddb
 workflow-type: tm+mt
-source-wordcount: 1637
+source-wordcount: 1667
 ht-degree: 0%
 
 ---
@@ -114,7 +114,7 @@ Al aprovisionar o actualizar por primera vez su proyecto de Adobe Commerce, Adob
 
 ## Cuenta de servicio y credenciales de Fastly
 
-Adobe Commerce en proyectos de infraestructura en la nube no recibe una cuenta específica de Fastly. El servicio Fastly se administra en una cuenta centralizada registrada en Adobe y el panel de administración solo es accesible para el equipo de asistencia en la nube.
+Adobe Commerce en proyectos de infraestructura en la nube no recibe una cuenta específica de Fastly. El servicio Fastly se administra en una cuenta centralizada registrada en Adobe y el acceso al panel está limitado al equipo de asistencia en la nube. Por este motivo, el servicio de asistencia no puede proporcionar acceso rápido al panel en respuesta a las solicitudes de los clientes. Utilice el administrador de Adobe Commerce y las credenciales de Fastly específicas del entorno para las tareas de configuración y administración de Fastly admitidas.
 
 En su lugar, cada entorno de ensayo y producción tiene credenciales de Fastly únicas (token de API e ID de servicio) para configurar y administrar los servicios de Fastly desde el administrador de Commerce. La API de Fastly está disponible para realizar la administración avanzada del servicio de Fastly, que requerirá las credenciales para enviar esas solicitudes.
 
@@ -182,7 +182,7 @@ La protección DDOS está integrada en el servicio Fastly CDN. Una vez que haya 
 
 [Caching with Fastly]: https://developer.adobe.com/commerce/webapi/graphql/usage/caching/#caching-with-fastly
 
-[Checking for DDoS attacks]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/checking-for-ddos-attack-from-cli.html?lang=es
+[Checking for DDoS attacks]: https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/checking-for-ddos-attack-from-cli.html
 
 [Módulo de CDN de Fastly para Magento 2]: https://github.com/fastly/fastly-magento2
 
