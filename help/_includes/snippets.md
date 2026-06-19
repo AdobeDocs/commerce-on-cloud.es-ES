@@ -1,7 +1,7 @@
 ---
-source-git-commit: 3006f8f7b3eb54f44cf2bda06403441d304b4b81
+source-git-commit: 020a2699befa042a37170a638ded9657a72933e8
 workflow-type: tm+mt
-source-wordcount: '1305'
+source-wordcount: '1382'
 ht-degree: 0%
 
 ---
@@ -17,7 +17,7 @@ ht-degree: 0%
 
 >[!NOTE]
 >
->Los proyectos aprovisionados antes del 5 de junio de 2020 tenían varios entornos de integración más pequeños. Si necesita un entorno de integración más grande para pruebas y desarrollo, solicite una actualización a entornos de integración mejorados. Consulte el artículo [Solicitud de entorno de integración](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/integration-environment-enhancement-request-pro-and-starter.html?lang=es) en el _Centro de ayuda de Adobe Commerce_ para obtener más información.
+>Los proyectos aprovisionados antes del 5 de junio de 2020 tenían varios entornos de integración más pequeños. Si necesita un entorno de integración más grande para pruebas y desarrollo, solicite una actualización a entornos de integración mejorados. Consulte el artículo [Solicitud de entorno de integración](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/announcements/commerce-announcements/integration-environment-enhancement-request-pro-and-starter.html) en el _Centro de ayuda de Adobe Commerce_ para obtener más información.
 
 ## Opciones de combinación {#merge-options}
 
@@ -41,15 +41,15 @@ Establezca la opción `_merge` en una de las siguientes opciones:
 >Algunos **proyectos Pro** requieren asistencia del soporte técnico de Adobe para actualizar las configuraciones de ruta en el archivo `routes.yaml` y las configuraciones cron en el archivo `.magento.app.yaml`. Adobe recomienda realizar y validar primero todos los cambios de configuración de YAML en un entorno de integración y luego implementarlos en el entorno de ensayo.
 >
 >
->Si los cambios no se reflejan en los sitios de ensayo después de la reimplementación y no hay mensajes de error relacionados en el registro, **debe** [enviar un ticket de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=es#submit-ticket). En el ticket, describa claramente los cambios de configuración que ha intentado y adjunte cualquier archivo de configuración YAML actualizado en el ticket.
+>Si los cambios no se reflejan en los sitios de ensayo después de la reimplementación y no hay mensajes de error relacionados en el registro, **debe** [enviar un ticket de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket). En el ticket, describa claramente los cambios de configuración que ha intentado y adjunte cualquier archivo de configuración YAML actualizado en el ticket.
 
 ## Asistencia de servicios Pro {#pro-update-service}
 
 >[!BEGINSHADEBOX]
 
-- Para los proyectos Pro, debe [enviar un ticket de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=es#submit-ticket) para instalar o actualizar [servicios](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/service/services-yaml.html?lang=es) solo en `Staging` y `Production` entornos.
+- Para los proyectos Pro, debe [enviar un ticket de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) para instalar o actualizar [servicios](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/service/services-yaml.html) solo en `Staging` y `Production` entornos.
 
-- Indique los cambios de servicio necesarios, incluya los `.magento.app.yaml` y `services.yaml` archivos actualizados y especifique la versión de PHP en el ticket. Para ver los cambios de autoservicio en la versión, las extensiones o la configuración del entorno de PHP, consulte [Configuración de PHP](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/app/php-settings.html?lang=es) en _Configuración de la aplicación_.
+- Indique los cambios de servicio necesarios, incluya los `.magento.app.yaml` y `services.yaml` archivos actualizados y especifique la versión de PHP en el ticket. Para ver los cambios de autoservicio en la versión, las extensiones o la configuración del entorno de PHP, consulte [Configuración de PHP](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/app/php-settings.html) en _Configuración de la aplicación_.
 
   >[!IMPORTANT]
   >
@@ -78,9 +78,9 @@ La actualización no se considera programada hasta que el equipo de infraestruct
 
 >[!TIP]
 >
->En los entornos de ensayo y producción de Pro, debe [enviar un ticket de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=es#submit-ticket) para recuperar una copia de seguridad específica que indique la fecha, la hora y la zona horaria del ticket.
+>En los entornos de ensayo y producción de Pro, debe [enviar un ticket de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) para recuperar una copia de seguridad específica que indique la fecha, la hora y la zona horaria del ticket.
 >
->Adobe **no** restaura ningún entorno desde una copia de seguridad automática. Consulte [Restaurar una instantánea de base de datos desde Ensayo o Producción](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production.html?lang=es) para obtener ayuda sobre cómo elegir un método para restaurar una instantánea de ensayo o producción.
+>Adobe **no** restaura ningún entorno desde una copia de seguridad automática. Consulte [Restaurar una instantánea de base de datos desde Ensayo o Producción](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production.html) para obtener ayuda sobre cómo elegir un método para restaurar una instantánea de ensayo o producción.
 
 ## Advertencia de reimplementación {#redeploy-warning}
 
@@ -118,7 +118,7 @@ Siga estas instrucciones para la configuración del servicio en entornos de inte
 
 >[!NOTE]
 >
->[Envíe un ticket de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=es#submit-ticket) para cambiar la configuración del servicio en los entornos de ensayo y producción de Pro.
+>[Envíe un ticket de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) para cambiar la configuración del servicio en los entornos de ensayo y producción de Pro.
 
 ## Cambio de servicio {#service-change-tip}
 
@@ -130,7 +130,7 @@ Siga estas instrucciones para la configuración del servicio en entornos de inte
 
 >[!TIP]
 >
->Para obtener ayuda con implementaciones bloqueadas, use el [solucionador de problemas de implementación de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html?lang=es) en el _Centro de ayuda de Commerce_.
+>Para obtener ayuda con implementaciones bloqueadas, use el [solucionador de problemas de implementación de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/deployment/magento-deployment-troubleshooter.html) en el _Centro de ayuda de Commerce_.
 
 ## Actualización a ECE-Tools {#ece-tools-package}
 
@@ -143,6 +143,16 @@ Siga estas instrucciones para la configuración del servicio en entornos de inte
 >[!TIP]
 >
 >Antes de comenzar una actualización o un proceso de aplicación de parches, cree una rama activa desde el entorno de integración y extraiga la nueva rama a su estación de trabajo local. La dedicación de una rama al proceso de actualización o de revisión ayuda a evitar interferencias con el trabajo en curso.
+
+## Valkey en New Relic {#valkey-newrelic}
+
+>[!NOTE]
+>
+>New Relic puede mostrar Redis incluso después de la migración a Valkey
+>
+>Se espera que New Relic continúe refiriéndose al servicio de caché como Redis incluso después de que el entorno se haya migrado a Valkey.
+>
+>Valkey es una ramificación de código abierto de Redis, y algunas herramientas e integraciones siguen identificando el servicio mediante el uso de nombres de Redis en lugar de una etiqueta de Valkey distinta. Esto no indica necesariamente que Redis siga instalado.
 
 <!-- Fastly-related snippets begin -->
 
