@@ -1,7 +1,7 @@
 ---
-source-git-commit: 3006f8f7b3eb54f44cf2bda06403441d304b4b81
+source-git-commit: 020a2699befa042a37170a638ded9657a72933e8
 workflow-type: tm+mt
-source-wordcount: '1305'
+source-wordcount: '1382'
 ht-degree: 0%
 
 ---
@@ -143,6 +143,16 @@ Siga estas instrucciones para la configuración del servicio en entornos de inte
 >[!TIP]
 >
 >Antes de comenzar una actualización o un proceso de aplicación de parches, cree una rama activa desde el entorno de integración y extraiga la nueva rama a su estación de trabajo local. La dedicación de una rama al proceso de actualización o de revisión ayuda a evitar interferencias con el trabajo en curso.
+
+## Valkey en New Relic {#valkey-newrelic}
+
+>[!NOTE]
+>
+>New Relic puede mostrar Redis incluso después de la migración a Valkey
+>
+>Se espera que New Relic continúe refiriéndose al servicio de caché como Redis incluso después de que el entorno se haya migrado a Valkey.
+>
+>Valkey es una ramificación de código abierto de Redis, y algunas herramientas e integraciones siguen identificando el servicio mediante el uso de nombres de Redis en lugar de una etiqueta de Valkey distinta. Esto no indica necesariamente que Redis siga instalado.
 
 <!-- Fastly-related snippets begin -->
 
