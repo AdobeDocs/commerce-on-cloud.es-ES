@@ -1,7 +1,7 @@
 ---
-source-git-commit: e0e4b21e76a5c1fa9e146695a183a29ec79e6cc1
+source-git-commit: 0d5ff7b5e81c76961900560d917dd97cdfac72ee
 workflow-type: tm+mt
-source-wordcount: '376'
+source-wordcount: '420'
 ht-degree: 2%
 
 ---
@@ -10,6 +10,28 @@ ht-degree: 2%
 ## Novedades
 
 Esta página contiene los cambios realizados en los últimos 60 días. Excluimos todas las actualizaciones menores, como la edición de copias, de esta lista.
+
+### 15 de junio de 2026
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Descripción</th>
+      <th>Tipo</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>Se ha actualizado <a href="https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/project/user-access">Administrar el acceso de los usuarios</a> con requisitos previos más claros, estados de invitación de la consola de Cloud, instrucciones de reimplementación y otros problemas relacionados.</p>
+</td>
+      <td>
+        Comentarios
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/747367a8808b0b22f810f4e26b94a06ee995281d">comprometer</a></td>
+    </tr>
+  </tbody>
+</table>
 
 ### 4 de junio de 2026
 
