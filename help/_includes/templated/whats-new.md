@@ -1,7 +1,7 @@
 ---
-source-git-commit: e0e4b21e76a5c1fa9e146695a183a29ec79e6cc1
+source-git-commit: 0d5ff7b5e81c76961900560d917dd97cdfac72ee
 workflow-type: tm+mt
-source-wordcount: '376'
+source-wordcount: '420'
 ht-degree: 2%
 
 ---
@@ -10,6 +10,28 @@ ht-degree: 2%
 ## Novedades
 
 Esta página contiene los cambios realizados en los últimos 60 días. Excluimos todas las actualizaciones menores, como la edición de copias, de esta lista.
+
+### 15 de junio de 2026
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Descripción</th>
+      <th>Tipo</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>Se ha actualizado <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/project/user-access">Administrar el acceso de los usuarios</a> con requisitos previos más claros, estados de invitación de la consola de Cloud, instrucciones de reimplementación y otros problemas relacionados.</p>
+</td>
+      <td>
+        Comentarios
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/747367a8808b0b22f810f4e26b94a06ee995281d">comprometer</a></td>
+    </tr>
+  </tbody>
+</table>
 
 ### 4 de junio de 2026
 
@@ -23,7 +45,7 @@ Esta página contiene los cambios realizados en los últimos 60 días. Excluimos
   </thead>
   <tbody>
     <tr>
-      <td><p>Se ha actualizado el tema <a href="https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/cdn/advanced-security">Seguridad avanzada</a> con información sobre las limitaciones y la observabilidad.</p>
+      <td><p>Se ha actualizado el tema <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/advanced-security">Seguridad avanzada</a> con información sobre las limitaciones y la observabilidad.</p>
 </td>
       <td>
         Actualización importante
@@ -45,7 +67,7 @@ Esta página contiene los cambios realizados en los últimos 60 días. Excluimos
   </thead>
   <tbody>
     <tr>
-      <td><p>Se ha aclarado la configuración de bloqueo predeterminada y cómo las variables de entorno <a href="https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-cloud"><code>MAGENTO_CLOUD_LOCKS_DIR</code></a> y <a href="https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#lock_provider"><code>LOCK_PROVIDER</code></a> afectan a los entornos Pro y Starter.</p>
+      <td><p>Se ha aclarado la configuración de bloqueo predeterminada y cómo las variables de entorno <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-cloud"><code>MAGENTO_CLOUD_LOCKS_DIR</code></a> y <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#lock_provider"><code>LOCK_PROVIDER</code></a> afectan a los entornos Pro y Starter.</p>
 </td>
       <td>
         Técnico
@@ -67,7 +89,7 @@ Esta página contiene los cambios realizados en los últimos 60 días. Excluimos
   </thead>
   <tbody>
     <tr>
-      <td><p>Se ha eliminado la declaración de compatibilidad de Elasticsearch con On-Prem en la <a href="https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/configure/service/opensearch">advertencia de compatibilidad con Elasticsearch</a>.</p>
+      <td><p>Se ha eliminado la declaración de compatibilidad de Elasticsearch con On-Prem en la <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/opensearch">advertencia de compatibilidad con Elasticsearch</a>.</p>
 </td>
       <td>
         Técnico
@@ -89,7 +111,7 @@ Esta página contiene los cambios realizados en los últimos 60 días. Excluimos
   </thead>
   <tbody>
     <tr>
-      <td><p>Se ha agregado la oferta <a href="https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/cdn/advanced-security">Seguridad avanzada</a> para Adobe Commerce en la infraestructura de la nube.</p>
+      <td><p>Se ha agregado la oferta <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/advanced-security">Seguridad avanzada</a> para Adobe Commerce en la infraestructura de la nube.</p>
 </td>
       <td>
         Nuevo tema
@@ -111,7 +133,7 @@ Esta página contiene los cambios realizados en los últimos 60 días. Excluimos
   </thead>
   <tbody>
     <tr>
-      <td><p>Actualiza las notas de la versión de la documentación de Cloud Tools para reflejar las adiciones de versiones recientes, las actualizaciones de compatibilidad y las correcciones. Ver <a href="https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/release-notes/cloud-tools-suite">Notas de la versión de Commerce Cloud Tools Suite</a>.</p>
+      <td><p>Actualiza las notas de la versión de la documentación de Cloud Tools para reflejar las adiciones de versiones recientes, las actualizaciones de compatibilidad y las correcciones. Ver <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/release-notes/cloud-tools-suite">Notas de la versión de Commerce Cloud Tools Suite</a>.</p>
 </td>
       <td>
         Técnico
@@ -119,7 +141,7 @@ Esta página contiene los cambios realizados en los últimos 60 días. Excluimos
       <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/812482f88f6ab6400c77b6ec36db73956dd3f202">comprometer</a></td>
     </tr>
     <tr>
-      <td><p>Se ha actualizado <a href="https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">referencia de CLI</a> y <a href="https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/error-reference">mensajes de error</a> tras la versión de ECE-Tools, v2002.2.11.</p>
+      <td><p>Se ha actualizado <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">referencia de CLI</a> y <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/error-reference">mensajes de error</a> tras la versión de ECE-Tools, v2002.2.11.</p>
 </td>
       <td>
         Técnico
@@ -141,7 +163,7 @@ Esta página contiene los cambios realizados en los últimos 60 días. Excluimos
   </thead>
   <tbody>
     <tr>
-      <td><p>Se ha actualizado <a href="https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/configure/app/php-settings#enable-extensions">la configuración de PHP</a> para que incluya LDAP entre las extensiones de PHP opcionales y tenga en cuenta que LDAP y las extensiones similares son específicas del entorno (por ejemplo, no son de autoservicio en Ensayo/Producción de Pro).</p>
+      <td><p>Se ha actualizado <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/app/php-settings#enable-extensions">la configuración de PHP</a> para que incluya LDAP entre las extensiones de PHP opcionales y tenga en cuenta que LDAP y las extensiones similares son específicas del entorno (por ejemplo, no son de autoservicio en Ensayo/Producción de Pro).</p>
 </td>
       <td>
         Técnico
