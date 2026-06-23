@@ -5,11 +5,18 @@ role: Developer
 feature: Cloud, Install
 exl-id: 2c254586-b670-4dd7-8f82-edcc139e9800
 TQID: https://experienceleague.adobe.com/-9EfBaTgSBPQa6HspiaqngBtwURAeUGlNP9hREcXrQQ
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-subfeature_v2: id: f8ddfd3b-6194-46e8-a176-0e918039be56
-role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+subfeature_v2:
+  - id: f8ddfd3b-6194-46e8-a176-0e918039be56
+role_v2:
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
 source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 1638
@@ -94,7 +101,7 @@ Antes de poder eliminar un entorno, debe desactivarlo. Una vez que un entorno es
 
 1. Haga clic en el icono de configuración en la parte derecha de la barra de navegación superior, que abre la configuración del entorno.
 
-1. En la ficha _[!UICONTROL General]_, desplácese hacia abajo hasta la sección_[!UICONTROL Deactivate environment]_, haga clic en **[!UICONTROL Deactivate environment and delete data]** y siga las instrucciones.
+1. En la ficha _[!UICONTROL General]_, desplácese hacia abajo hasta la sección&#x200B;_[!UICONTROL Deactivate environment]_, haga clic en **[!UICONTROL Deactivate environment and delete data]** y siga las instrucciones.
 
 ## Sincronizar un entorno
 
