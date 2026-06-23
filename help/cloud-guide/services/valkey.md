@@ -11,9 +11,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 7828287703ea93d9b84f7991e316bd2286964b90
 workflow-type: tm+mt
-source-wordcount: 212
+source-wordcount: 229
 ht-degree: 0%
 
 ---
@@ -22,13 +22,13 @@ ht-degree: 0%
 
 [Valkey](https://valkey.io) es una solución de caché back-end opcional que reemplaza a `Zend Framework Zend_Cache_Backend_File`, que Adobe Commerce usa de forma predeterminada.
 
-Consulte [Configurar Valkey](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cache/valkey/config-valkey.html?lang=es){target="_blank"} en la _guía de configuración_.
+Consulte [Configurar Valkey](https://experienceleague.adobe.com/es/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration){target="_blank"} en la _Guía de prácticas recomendadas de implementación del manual_.
 
 {{service-instruction}}
 
 **Para reemplazar Redis por Valkey, actualice la configuración en los tres archivos siguientes**:
 
-1. Agregue el nombre y el tipo necesarios al archivo `.magento/services.yaml`.
+1. Reemplace la configuración de Redis con el nombre de Valkey necesario y escriba en el archivo `.magento/services.yaml`.
 
    ```yaml
    cache:
@@ -49,7 +49,7 @@ Consulte [Configurar Valkey](https://experienceleague.adobe.com/docs/commerce-op
        valkey: "cache:valkey"
    ```
 
-1. Configure `.magento.env.yaml` de la siguiente manera:.
+1. Configure `.magento.env.yaml` para reemplazar la configuración de Redis de la siguiente manera:.
 
    ```yaml
     stage:
