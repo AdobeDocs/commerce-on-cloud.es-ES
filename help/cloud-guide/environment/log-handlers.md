@@ -11,7 +11,7 @@ feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 235
 ht-degree: 0%
@@ -73,3 +73,4 @@ Los niveles de registro determinan el nivel de detalle de los mensajes de notifi
 - **crítico**: condiciones críticas, como un componente de aplicación no disponible o una excepción inesperada
 - **alerta** (se requiere una acción inmediata, como un sitio web inactivo o una base de datos no disponible) que déclencheur una alerta SMS
 - **emergencia**—el sistema no se puede utilizar
+

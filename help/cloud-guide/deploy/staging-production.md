@@ -18,7 +18,7 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 1374
 ht-degree: 0%
@@ -364,3 +364,4 @@ Al importar datos, debe soltar y crear una base de datos.
    ```
 
    Estos comandos descomprimen el archivo de volcado de la base de datos, quitan las instrucciones `DEFINER` e importan la base de datos con las credenciales especificadas.
+

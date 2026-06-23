@@ -14,7 +14,7 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 768
 ht-degree: 0%
@@ -94,3 +94,4 @@ Al utilizar la estrategia bajo demanda de SCD, ayuda precargar la caché con pá
 ### Omitiendo SCD
 
 A veces puede optar por omitir la generación de contenido estático por completo. Puede establecer la variable de entorno [SKIP_SCD](../environment/variables-build.md#skipscd) en la fase global para que ignore otras configuraciones relacionadas con SCD. Esto no afecta al contenido existente en el directorio `~/pub/static`.
+

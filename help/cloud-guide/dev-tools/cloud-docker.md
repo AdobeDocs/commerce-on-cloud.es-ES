@@ -9,7 +9,7 @@ product_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 159
 ht-degree: 0%
@@ -32,3 +32,4 @@ El entorno Docker emula el entorno de Adobe Commerce en la infraestructura en la
 1. [Paquete ECE-Tools](install-package.md)
 
 Para empezar a trabajar con el entorno de desarrollo de Docker, consulte [Desarrollo local](https://developer.adobe.com/commerce/cloud-tools/docker/setup/) en la guía de _Cloud Docker para Commerce_ para conocer los requisitos previos y la instalación.
+

@@ -18,7 +18,7 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 1979
 ht-degree: 0%
@@ -207,3 +207,4 @@ Una implementación correcta quita el modo de mantenimiento para permitir el acc
 Habilite la generación de contenido estático mediante la variable `SCD_ON_DEMAND` y configure el vínculo [`post_deploy`](../application/hooks-property.md) para que borre la caché y precargue (caliente) la caché _después de_ de que el contenedor empiece a aceptar conexiones y _durante_ tráfico entrante normal.
 
 Para revisar los registros de compilación e implementación, consulte [Ver registros](../test/log-locations.md#view-and-manage-logs).
+

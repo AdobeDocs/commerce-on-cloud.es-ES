@@ -14,7 +14,7 @@ subfeature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 605
 ht-degree: 0%
@@ -91,3 +91,4 @@ Por ejemplo:
 - Si la lista de permitidos contiene las direcciones IP de los nodos de servicio (1, 2 y 3), no se requiere ninguna acción.
 - Si la lista de permitidos contiene las direcciones IP de los nodos de servicio (1, 2 y 3) y los nodos web (4, 5 y 6), en este caso los seis nodos, no se requiere ninguna acción.
 - Si la lista de permitidos contiene las direcciones IP _solamente_ para los nodos web (4, 5 y 6), debe actualizar la lista de permitidos para incluir las direcciones IP para los nodos de servicio.
+

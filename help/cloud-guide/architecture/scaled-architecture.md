@@ -15,7 +15,7 @@ subfeature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 828
 ht-degree: 0%
@@ -117,3 +117,4 @@ project-id@server-id:~$
 Las ubicaciones de registro varían ligeramente según el nodo. Por ejemplo, un registro de base de datos, como el **registro de errores MySQL**, está disponible en un nodo de servicio (`/var/log/mysql/mysql-error.log`), pero no está disponible en un nodo web.
 
 Cada cuenta Pro incluye el [servicio New Relic Logs](../monitor/new-relic-service.md), que se conecta automáticamente con los datos de registro de la aplicación para proporcionar administración dinámica de registros. Los datos de registro agregados de todos los nodos se muestran en la aplicación New Relic Logs para que pueda solucionar problemas de rendimiento en nodos específicos desde un solo panel.
+
