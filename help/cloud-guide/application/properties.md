@@ -4,14 +4,10 @@ description: Utilice la lista de propiedades como referencia al configurar la ap
 feature: Cloud, Configuration, Build, Deploy, Roles/Permissions, Storage
 exl-id: 32bd1f64-43d6-48a3-84b7-bea22f125bb0
 TQID: https://experienceleague.adobe.com/5HoI8DnJqL6pyBZRt3u-jVlQvhP1UGqN70B9fq2c9-Y
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 855
 ht-degree: 0%
@@ -148,7 +144,7 @@ El tamaño mínimo de disco recomendado es de 256 MB. Si ve el error `UserError:
 
 >[!NOTE]
 >
->Para los entornos de ensayo y producción de Pro, debe [enviar un vale de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=es#submit-ticket) para actualizar la configuración de `mounts` y `disk` de su aplicación. Cuando envíe el ticket, indique los cambios de configuración necesarios e incluya una versión actualizada del archivo `.magento.app.yaml`.
+>Para los entornos de ensayo y producción de Pro, debe [enviar un vale de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) para actualizar la configuración de `mounts` y `disk` de su aplicación. Cuando envíe el ticket, indique los cambios de configuración necesarios e incluya una versión actualizada del archivo `.magento.app.yaml`.
 >
 >No es posible aumentar temporalmente el almacenamiento en disco en Ensayo o Producción; este proceso no es reversible.
 
@@ -199,7 +195,7 @@ El formato para agregar el montaje a esta lista es el siguiente:
 
 >[!NOTE]
 >
->Para los entornos de ensayo y producción de Pro, debe [enviar un vale de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=es#submit-ticket) para actualizar la configuración de `mounts` y `disk` de su aplicación. Cuando envíe el ticket, indique los cambios de configuración necesarios e incluya una versión actualizada del archivo `.magento.app.yaml`.
+>Para los entornos de ensayo y producción de Pro, debe [enviar un vale de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html#submit-ticket) para actualizar la configuración de `mounts` y `disk` de su aplicación. Cuando envíe el ticket, indique los cambios de configuración necesarios e incluya una versión actualizada del archivo `.magento.app.yaml`.
 
 Puede hacer accesible el Web de montaje agregándolo al bloque de ubicaciones [`web`](web-property.md).
 
@@ -221,3 +217,4 @@ La función de usuario predeterminada es `contributor`, que restringe el acceso 
 access:
     ssh: viewer
 ```
+

@@ -4,16 +4,11 @@ description: Aprenda a optimizar la entrega de imágenes y a simplificar la admi
 feature: Cloud, Configuration, Media
 exl-id: 3457ebb0-dbb4-4cb0-b6ab-837b15dce03e
 TQID: https://experienceleague.adobe.com/n3BJ-fU6SwFrRJGvqpF07cZ1XVTDkXqLRIRv46MQotI
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 1211
 ht-degree: 0%
@@ -89,7 +84,7 @@ Revise y actualice los ajustes de configuración de E/S predeterminados para la 
 
    - **Cambiar el tamaño del filtro**: deje la configuración predeterminada (`Lancsoz3`) o seleccione una alternativa. Esta configuración especifica el filtro utilizado para enviar una imagen cuyo tamaño se ha cambiado. Según el filtro seleccionado, la imagen cuyo tamaño se haya cambiado puede tener un número de píxeles mayor o menor.
 
-      - `Lanczos3` (predeterminado): ofrece la mejor calidad de imagen. Aumenta la capacidad de detectar bordes y características lineales dentro de una imagen y utiliza el remuestreo de _[!DNL sinc]_&#x200B;para proporcionar la mejor reconstrucción posible.
+      - `Lanczos3` (predeterminado): ofrece la mejor calidad de imagen. Aumenta la capacidad de detectar bordes y características lineales dentro de una imagen y utiliza el remuestreo de _[!DNL sinc]_para proporcionar la mejor reconstrucción posible.
       - `Lanczos2`: utiliza el mismo filtro que `Lancsoz3`, pero con una aproximación menos precisa de la función de remuestreo _[!DNL sinc]_.
       - `Bicubic`: tiene un efecto de enfoque natural al reducir el tamaño de una imagen.
       - `Bilinear`: tiene un efecto de suavizado natural al aumentar el tamaño de una imagen.
@@ -172,3 +167,4 @@ Ver `srcset` [compatibilidad con exploradores](https://caniuse.com/#feat=srcset)
 ## Validar Fastly IO
 
 Después de habilitar y configurar Fastly IO, valide la configuración realizando pruebas de velocidad de página web con y sin Fastly IO habilitado. Además, revise las imágenes de su tienda para comprobar el tamaño y la apariencia de las imágenes en busca de problemas.
+

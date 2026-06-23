@@ -4,14 +4,10 @@ description: Vea ejemplos sobre cómo configurar la propiedad web en el archivo 
 feature: Cloud, Configuration
 exl-id: 6ecf6fb5-57a8-435c-8de3-f66dc56837fe
 TQID: https://experienceleague.adobe.com/IFmzGyuOpqIc9Fq4vLp1JEgrfSWORDtERWdisL4dyT8
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 462
 ht-degree: 0%
@@ -51,7 +47,7 @@ La configuración predeterminada permite lo siguiente:
 - Desde la ruta de acceso raíz (`/`), solo se puede acceder a la web y a los medios
 - Se puede tener acceso a cualquier archivo desde las rutas de acceso `~/pub/media` y `~/pub/static`
 
-El siguiente ejemplo muestra la configuración predeterminada en el archivo `.magento.app.yaml` para un conjunto de ubicaciones accesibles desde la web asociadas a una entrada en la propiedad [`mounts` &#x200B;](properties.md#mounts):
+El siguiente ejemplo muestra la configuración predeterminada en el archivo `.magento.app.yaml` para un conjunto de ubicaciones accesibles desde la web asociadas a una entrada en la propiedad [`mounts` ](properties.md#mounts):
 
 ```yaml
  # The configuration of app when it is exposed to the web.
@@ -92,3 +88,4 @@ web:
 >[!NOTE]
 >
 >Este ejemplo muestra la configuración web predeterminada de un proyecto en la nube configurado para admitir un solo dominio. Para un proyecto que requiere compatibilidad con varios sitios web o tiendas, la configuración de `web` debe estar configurada para admitir dominios compartidos. Consulte [Configurar ubicaciones para dominios compartidos](../store/multiple-sites.md#configure-locations-for-shared-domains).
+

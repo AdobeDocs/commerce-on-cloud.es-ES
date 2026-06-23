@@ -4,26 +4,12 @@ description: Obtenga información sobre cómo Adobe mantiene segura la infraestr
 feature: Cloud, Security
 exl-id: ae934401-2c32-427a-8162-98df9a047cd4
 TQID: https://experienceleague.adobe.com/3qXIdZWVJ-jxSodN8YGSzE2TOvMzlMKXHgRizgLVoHk
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: b5f00040-57a0-4a6d-a39e-383b1936c2c9
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: c32adafa-ed01-4b31-997e-2413013911b0
-  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-  - id: f42e0a1a-0d79-488d-a83f-f2c30672b137
-subfeature_v2:
-  - id: bcbf87e7-9b75-4596-bffe-0f376b4c73a7
-  - id: f2261633-201d-46c5-8a66-999e70527a83
-  - id: f8ddfd3b-6194-46e8-a176-0e918039be56
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: b5f00040-57a0-4a6d-a39e-383b1936c2c9id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: c32adafa-ed01-4b31-997e-2413013911b0id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75id: f42e0a1a-0d79-488d-a83f-f2c30672b137
+subfeature_v2: id: bcbf87e7-9b75-4596-bffe-0f376b4c73a7id: f2261633-201d-46c5-8a66-999e70527a83id: f8ddfd3b-6194-46e8-a176-0e918039be56
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: d095671a-1355-40aa-8b5f-06c33c68080bid: f4e6943a-c91a-4134-a2c7-f4f20cfff2f0
+source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
 workflow-type: tm+mt
 source-wordcount: 1724
 ht-degree: 0%
@@ -87,9 +73,9 @@ Adobe prueba regularmente el código de la aplicación principal para detectar v
 - OWASPZAP
 - andSqlMap
 
-La base de código completa se analiza con estas herramientas cada dos semanas. Los parches de seguridad se notifican a los clientes por correo electrónico directo, en la aplicación y en el [Centro de seguridad](https://helpx.adobe.com/es/security.html).
+La base de código completa se analiza con estas herramientas cada dos semanas. Los parches de seguridad se notifican a los clientes por correo electrónico directo, en la aplicación y en el [Centro de seguridad](https://helpx.adobe.com/security.html).
 
-Los clientes deben asegurarse de que estos parches se aplican a su aplicación personalizada dentro de los 30 días posteriores al lanzamiento, según las directrices de PCI. Adobe también proporciona [Security Scan Tool](https://experienceleague.adobe.com/es/docs/commerce-admin/systems/security/security-scan) que permite a los comerciantes supervisar sus sitios con regularidad y recibir actualizaciones sobre riesgos de seguridad conocidos, malware y acceso no autorizado. Security Scan Tool es un servicio gratuito que se puede ejecutar en cualquier versión de Adobe Commerce.
+Los clientes deben asegurarse de que estos parches se aplican a su aplicación personalizada dentro de los 30 días posteriores al lanzamiento, según las directrices de PCI. Adobe también proporciona [Security Scan Tool](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/security/security-scan) que permite a los comerciantes supervisar sus sitios con regularidad y recibir actualizaciones sobre riesgos de seguridad conocidos, malware y acceso no autorizado. Security Scan Tool es un servicio gratuito que se puede ejecutar en cualquier versión de Adobe Commerce.
 
 Para animar a los investigadores de seguridad a identificar y notificar vulnerabilidades, Adobe Commerce tiene un [programa de devolución de errores](https://hackerone.com/magento), además de pruebas internas. Además, se proporciona al cliente el código fuente completo de la aplicación para su propia revisión si lo desea.
 
@@ -129,7 +115,7 @@ El RGPD requiere que toda información de identificación personal (como nombres
 
 >[!NOTE]
 >
->Esta página proporciona una visión general de lo que hay que tener en cuenta para el RGPD. Consulte la _[Guía de seguridad y cumplimiento](https://experienceleague.adobe.com/es/docs/commerce-operations/security-and-compliance/overview)_ para obtener detalles sobre cómo Adobe Commerce almacena información personal. Para determinar cómo su empresa debe cumplir con las obligaciones legales, consulte con su asesor legal o consulte el [texto oficial](https://eur-lex.europa.eu/eli/reg/2016/679/oj).
+>Esta página proporciona una visión general de lo que hay que tener en cuenta para el RGPD. Consulte la _[Guía de seguridad y cumplimiento](https://experienceleague.adobe.com/en/docs/commerce-operations/security-and-compliance/overview)_ para obtener detalles sobre cómo Adobe Commerce almacena información personal. Para determinar cómo su empresa debe cumplir con las obligaciones legales, consulte con su asesor legal o consulte el [texto oficial](https://eur-lex.europa.eu/eli/reg/2016/679/oj).
 
 ## Copias de seguridad
 
@@ -140,3 +126,4 @@ El servicio crea una copia de seguridad independiente en el almacenamiento redun
 Su enfoque de backup y recuperación de Managed Services utiliza una arquitectura de alta disponibilidad combinada con backups de todo el sistema. Cada proyecto se duplica (todos los datos, el código y los recursos) en tres zonas de disponibilidad de AWS independientes; cada zona tiene un centro de datos independiente.
 
 Consulte [Administración de instantáneas y copias de seguridad](../storage/snapshots.md).
+
