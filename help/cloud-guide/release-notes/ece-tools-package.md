@@ -5,20 +5,13 @@ recommendations: noDisplay, catalog
 last-substantial-update: 2026-05-07T00:00:00.000Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
 TQID: https://experienceleague.adobe.com/pa4D-RsauRtCBS7puKWVBQtA37-Mcv9IZG4lah41l1U
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-  - id: f42e0a1a-0d79-488d-a83f-f2c30672b137
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: f42e0a1a-0d79-488d-a83f-f2c30672b137
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+source-git-commit: e7db7e06142322898d7d9a28ae0dd06458fdcf6d
 workflow-type: tm+mt
-source-wordcount: 3542
+source-wordcount: 3580
 ht-degree: 0%
 
 ---
@@ -40,7 +33,15 @@ Las notas de la versión incluyen:
 
 <!--Add release notes below-->
 
-## v2002.2.11 {#latest}
+## v2002.2.12 {#latest}
+
+Fecha de la versión: 20 de julio de 2026
+
+- ![nuevo icono](../../assets/new.svg) **RabbitMQ**—Se agregó compatibilidad con RabbitMQ 4.3.<!-- MCLOUD-15088 -->
+- ![icono de corrección](../../assets/fix.svg) **Configuración de Redis Lua** - Se ha agregado compatibilidad con `USE_LUA_ON_GC` y se ha dejado de utilizar `LUA_KEY`.<!-- MCLOUD-15048 -->
+- ![icono de corrección](../../assets/fix.svg) **Compatibilidad de Symfony L2 cache**-Se ha corregido la compatibilidad de ece-tools con la configuración de caché de Adobe Commerce 2.4.9<!-- MCLOUD-15114 -->
+
+## v2002.2.11
 
 Fecha de la versión: 6 de mayo de 2026
 
@@ -347,11 +348,11 @@ Fecha de lanzamiento: 5 de agosto de 2020
 
 - ![nuevo icono](../../assets/new.svg) agregó comprobaciones de errores adicionales para generar, implementar y posimplementar el procesamiento, y mejoró las comprobaciones existentes:
 
-   - Código de error 2026: error al restaurar algunos datos generados durante la fase de compilación en los directorios montados
+  - Código de error 2026: error al restaurar algunos datos generados durante la fase de compilación en los directorios montados
 
-   - Código de error 3004: no se pueden crear archivos de copia de seguridad
+  - Código de error 3004: no se pueden crear archivos de copia de seguridad
 
-   - Código de error 102: se agregaron comprobaciones adicionales para detectar problemas que se producen cuando el archivo `env.php` no se puede escribir en <!--MCLOUD-6221-->
+  - Código de error 102: se agregaron comprobaciones adicionales para detectar problemas que se producen cuando el archivo `env.php` no se puede escribir en <!--MCLOUD-6221-->
 
 - ![nuevo icono](../../assets/new.svg) agregó la variable de entorno **QUALITY_PATCHES** para especificar uno o más parches de calidad para aplicar durante el proceso de implementación. Ver [variables de compilación](../environment/variables-build.md#quality_patches).<!--MCLOUD-6375-->
 
@@ -361,75 +362,75 @@ Fecha de publicación: 25 de junio de 2020
 
 - ![nuevo icono](../../assets/new.svg) **actualizaciones de infraestructura**—
 
-   - ![nuevo icono](../../assets/new.svg) **Mejoras en el registro**: se ha mejorado la capacidad de seguimiento de registros al asignar códigos de salida a errores de implementación críticos y al exponer los códigos de salida en las notificaciones de mensajes de error y los eventos de registro. Consulte [Referencia de mensaje de error para ece-tools](../dev-tools/error-reference.md).<!-- MCLOUD-5637, 5531-->
+  - ![nuevo icono](../../assets/new.svg) **Mejoras en el registro**: se ha mejorado la capacidad de seguimiento de registros al asignar códigos de salida a errores de implementación críticos y al exponer los códigos de salida en las notificaciones de mensajes de error y los eventos de registro. Consulte [Referencia de mensaje de error para ece-tools](../dev-tools/error-reference.md).<!-- MCLOUD-5637, 5531-->
 
-   - ![nuevo icono](../../assets/new.svg) mejoró el proceso de volcados de base de datos (`vendor/bin/ece-tools db-dump`) y actualizó los mensajes de registro para aclarar que la operación de volcado de base de datos cambia la aplicación al modo de mantenimiento, detiene los procesos de cola de consumidores y deshabilita los trabajos cron antes de que comience el volcado.<!--MCLOUD-5324, MCLOUD-2062-->
+  - ![nuevo icono](../../assets/new.svg) mejoró el proceso de volcados de base de datos (`vendor/bin/ece-tools db-dump`) y actualizó los mensajes de registro para aclarar que la operación de volcado de base de datos cambia la aplicación al modo de mantenimiento, detiene los procesos de cola de consumidores y deshabilita los trabajos cron antes de que comience el volcado.<!--MCLOUD-5324, MCLOUD-2062-->
 
-   - ![icono de corrección](../../assets/fix.svg) Se ha corregido un problema para garantizar que la dirección URL del proyecto se actualice correctamente al implementarla en los entornos de ensayo y producción. Ahora, `ece-tools` usa la dirección URL de la ruta con el atributo `primary:true` establecido en la configuración de ruta del proyecto. Ver [Implementar variables](../environment/variables-deploy.md#update_urls).<!--MCLOUD-5883-->
+  - ![icono de corrección](../../assets/fix.svg) Se ha corregido un problema para garantizar que la dirección URL del proyecto se actualice correctamente al implementarla en los entornos de ensayo y producción. Ahora, `ece-tools` usa la dirección URL de la ruta con el atributo `primary:true` establecido en la configuración de ruta del proyecto. Ver [Implementar variables](../environment/variables-deploy.md#update_urls).<!--MCLOUD-5883-->
 
-   - ![icono de corrección](../../assets/fix.svg) Actualizó el flujo de trabajo del escenario de compilación `generate.xml` para aplicar parches. Los parches se deben aplicar antes para actualizar Adobe Commerce y solucionar los problemas que puedan provocar errores en los pasos de `di:compile` y `module:refresh`.<!--MCLOUD-5941-->
+  - ![icono de corrección](../../assets/fix.svg) Actualizó el flujo de trabajo del escenario de compilación `generate.xml` para aplicar parches. Los parches se deben aplicar antes para actualizar Adobe Commerce y solucionar los problemas que puedan provocar errores en los pasos de `di:compile` y `module:refresh`.<!--MCLOUD-5941-->
 
-   - ![icono de corrección](../../assets/fix.svg) Se ha corregido un problema en el proceso de instalación que devolvía incorrectamente el error `Crypt key missing`. El valor `crypt/key` se genera automáticamente durante la instalación.<!--MCLOUD-6120-->
+  - ![icono de corrección](../../assets/fix.svg) Se ha corregido un problema en el proceso de instalación que devolvía incorrectamente el error `Crypt key missing`. El valor `crypt/key` se genera automáticamente durante la instalación.<!--MCLOUD-6120-->
 
 - ![nuevo icono](../../assets/new.svg) **Actualizaciones de servicio**—
 
-   - ![nuevo icono](../../assets/new.svg) agregó compatibilidad con PHP 7.4 y MariaDB 10.4.<!--MAGECLOUD-2957, MCLOUD-4144-->
+  - ![nuevo icono](../../assets/new.svg) agregó compatibilidad con PHP 7.4 y MariaDB 10.4.<!--MAGECLOUD-2957, MCLOUD-4144-->
 
 - ![nuevo icono](../../assets/new.svg) **Actualizaciones de variables de entorno**—
 
-   - ![nuevo icono](../../assets/new.svg) agregó la variable **SCD_USE_BALER** para habilitar el módulo Baler para el agrupamiento de JavaScript durante el proceso de compilación de Adobe Commerce en la nube. Ver la descripción de la variable en [variables de compilación](../environment/variables-build.md#scd_use_baler).<!-- MCLOUD-3456, MCLOUD-3457-->
+  - ![nuevo icono](../../assets/new.svg) agregó la variable **SCD_USE_BALER** para habilitar el módulo Baler para el agrupamiento de JavaScript durante el proceso de compilación de Adobe Commerce en la nube. Ver la descripción de la variable en [variables de compilación](../environment/variables-build.md#scd_use_baler).<!-- MCLOUD-3456, MCLOUD-3457-->
 
-   - ![nuevo icono](../../assets/new.svg) agregó la variable de entorno **REDIS_BACKEND** para configurar el modelo de back-end Redis para la caché Redis para Adobe Commerce 2.3.5 o posterior. Consulte la descripción de la variable en [implementar variables](../environment/variables-deploy.md#redis_backend).<!--MCLOUD-5721, MCLOUD-5865-->
+  - ![nuevo icono](../../assets/new.svg) agregó la variable de entorno **REDIS_BACKEND** para configurar el modelo de back-end Redis para la caché Redis para Adobe Commerce 2.3.5 o posterior. Consulte la descripción de la variable en [implementar variables](../environment/variables-deploy.md#redis_backend).<!--MCLOUD-5721, MCLOUD-5865-->
 
 - ![nuevo icono](../../assets/new.svg) **actualizaciones de comandos CLI**—
 
-   - ![nuevo icono](../../assets/new.svg) Se han actualizado los siguientes comandos de CLI con una opción para un registro más detallado:
+  - ![nuevo icono](../../assets/new.svg) Se han actualizado los siguientes comandos de CLI con una opción para un registro más detallado:
 
-      - `app:config:dump`
-      - `app:config:import`
-      - `module:enable`
+    - `app:config:dump`
+    - `app:config:import`
+    - `module:enable`
 
-     El nivel de registro de cada llamada está determinado por la configuración de la variable [`VERBOSE_COMMANDS`](../environment/variables-build.md#verbose_commands) en el archivo `.magento.env.yaml`.<!--MCLOUD-3503-->
+    El nivel de registro de cada llamada está determinado por la configuración de la variable [`VERBOSE_COMMANDS`](../environment/variables-build.md#verbose_commands) en el archivo `.magento.env.yaml`.<!--MCLOUD-3503-->
 
 - ![nuevo icono](../../assets/new.svg) **Mejoras de validación**—
 
-   - ![nuevo icono](../../assets/new.svg) **comprobaciones de compatibilidad de Elasticsearch 7.x**: se ha actualizado la validación de Elasticsearch para las comprobaciones de compatibilidad del software Elasticsearch 7.x.<!--MCLOUD-5542-->
+  - ![nuevo icono](../../assets/new.svg) **comprobaciones de compatibilidad de Elasticsearch 7.x**: se ha actualizado la validación de Elasticsearch para las comprobaciones de compatibilidad del software Elasticsearch 7.x.<!--MCLOUD-5542-->
 
-   - ![nuevo icono](../../assets/new.svg) **Comprobaciones de validación de EOL y versión de servicio actualizada**: validación actualizada para comprobar las versiones de servicio instaladas con Adobe Commerce 2.4. requisitos.<!--MCLOUD-6144-->
+  - ![nuevo icono](../../assets/new.svg) **Comprobaciones de validación de EOL y versión de servicio actualizada**: validación actualizada para comprobar las versiones de servicio instaladas con Adobe Commerce 2.4. requisitos.<!--MCLOUD-6144-->
 
-   - ![icono de corrección](../../assets/fix.svg) Se ha corregido un problema de validación para que el siguiente mensaje de advertencia posterior a la implementación se muestre únicamente si falta la configuración del vínculo `post-deploy` en el archivo `.magento.app.yaml`:
+  - ![icono de corrección](../../assets/fix.svg) Se ha corregido un problema de validación para que el siguiente mensaje de advertencia posterior a la implementación se muestre únicamente si falta la configuración del vínculo `post-deploy` en el archivo `.magento.app.yaml`:
 
-     ```text
-     Your application does not have the "post_deploy" hook enabled.
-     ```
+    ```text
+    Your application does not have the "post_deploy" hook enabled.
+    ```
 
-     <!--MCLOUD-4077-->
+    <!--MCLOUD-4077-->
 
-   - ![nuevo icono](../../assets/new.svg) **Validación agregada para las dependencias de Zend Framework**—Validación de dependencia del compositor agregada para Zend Framework que ha migrado al proyecto Laminas. Si faltan las dependencias necesarias, aparece el siguiente mensaje de error durante el proceso de generación.
+  - ![nuevo icono](../../assets/new.svg) **Validación agregada para las dependencias de Zend Framework**—Validación de dependencia del compositor agregada para Zend Framework que ha migrado al proyecto Laminas. Si faltan las dependencias necesarias, aparece el siguiente mensaje de error durante el proceso de generación.
 
-     ```text
-     Required configuration is missing from the autoload section of the composer.json file.
-     Add ("Laminas\Mvc\Controller\Zend\": "setupsrc/ Zend/Mvc/Controller/") to
-     the `autoload -> psr-4` section. Then, re-run the "composer update" command locally, and
-     commit the updated composer.json and composer.lock files.
-     ```
+    ```text
+    Required configuration is missing from the autoload section of the composer.json file.
+    Add ("Laminas\Mvc\Controller\Zend\": "setupsrc/ Zend/Mvc/Controller/") to
+    the `autoload -> psr-4` section. Then, re-run the "composer update" command locally, and
+    commit the updated composer.json and composer.lock files.
+    ```
 
-     Ver [Verificar dependencias de Zend Framework](../development/commerce-version.md#verify-zend-framework-composer-dependencies).<!--MCLOUD-4094-->
+    Ver [Verificar dependencias de Zend Framework](../development/commerce-version.md#verify-zend-framework-composer-dependencies).<!--MCLOUD-4094-->
 
-   - ![nuevo icono](../../assets/new.svg) **Validación agregada para `env.php` archivo y datos**—Comprobaciones agregadas para el archivo y los datos `env.php` durante el proceso de instalación y actualización.<!--MCLOUD-5991-->
+  - ![nuevo icono](../../assets/new.svg) **Validación agregada para `env.php` archivo y datos**—Comprobaciones agregadas para el archivo y los datos `env.php` durante el proceso de instalación y actualización.<!--MCLOUD-5991-->
 
-      - Si falta el archivo `env.php` en la instalación y el valor `crypt/key` no se especifica en el archivo `.magento.app.yaml`, la implementación falla con la siguiente notificación:
+    - Si falta el archivo `env.php` en la instalación y el valor `crypt/key` no se especifica en el archivo `.magento.app.yaml`, la implementación falla con la siguiente notificación:
 
-        ```text
-        The crypt/key key value does not exist in the ./app/etc/env.php file or the CRYPT_KEY cloud environment variable``Missing crypt key for upgrading Magento`.
-        ```
+      ```text
+      The crypt/key key value does not exist in the ./app/etc/env.php file or the CRYPT_KEY cloud environment variable``Missing crypt key for upgrading Magento`.
+      ```
 
-      - Si la instalación no incluye el archivo `env.php`, o si la configuración contiene sólo un tipo de caché, el comando `cron:enable` se ejecuta durante el proceso de actualización para restaurar el archivo con todos los `cache_types`. Se agrega la siguiente notificación al registro:
+    - Si la instalación no incluye el archivo `env.php`, o si la configuración contiene sólo un tipo de caché, el comando `cron:enable` se ejecuta durante el proceso de actualización para restaurar el archivo con todos los `cache_types`. Se agrega la siguiente notificación al registro:
 
-        ```text
-        Magento state indicated as installed but configuration file app/etc/env.php was empty or did not exist.
-        Required data will be restored from environment configurations and from the .magento.env.yaml file.
-        ```
+      ```text
+      Magento state indicated as installed but configuration file app/etc/env.php was empty or did not exist.
+      Required data will be restored from environment configurations and from the .magento.env.yaml file.
+      ```
 
 ## v2002.1.0
 
@@ -437,17 +438,17 @@ Fecha de publicación: 6 de febrero de 2020
 
 - ![nuevo icono](../../assets/new.svg) **actualizaciones de infraestructura**—
 
-   - ![nuevo icono](../../assets/new.svg) **Se agregó un paquete independiente para Cloud Docker para Commerce**—Se desacopló el paquete Docker del paquete `ece-tools` para mantener la calidad del código y proporcionar versiones independientes. Las actualizaciones y correcciones relacionadas con `ece-tools` se administran desde el repositorio de [magento-cloud-docker](https://github.com/magento/magento-cloud-docker) de GitHub.<!--MAGECLOUD-2927-->
+  - ![nuevo icono](../../assets/new.svg) **Se agregó un paquete independiente para Cloud Docker para Commerce**—Se desacopló el paquete Docker del paquete `ece-tools` para mantener la calidad del código y proporcionar versiones independientes. Las actualizaciones y correcciones relacionadas con `ece-tools` se administran desde el repositorio de [magento-cloud-docker](https://github.com/magento/magento-cloud-docker) de GitHub.<!--MAGECLOUD-2927-->
 
-   - ![nuevo icono](../../assets/new.svg) **Funciones de parches actualizadas**—Se ha movido la funcionalidad de parches del paquete ECE-Tools a un paquete [magento-cloud-patch](https://github.com/magento/magento-cloud-patches) independiente. Durante la implementación, `ece-tools` usa el nuevo paquete para aplicar parches. Ver [Notas de la versión de parches de nube](cloud-patches.md).<!--MAGECLOUD-4567-->
+  - ![nuevo icono](../../assets/new.svg) **Funciones de parches actualizadas**—Se ha movido la funcionalidad de parches del paquete ECE-Tools a un paquete [magento-cloud-patch](https://github.com/magento/magento-cloud-patches) independiente. Durante la implementación, `ece-tools` usa el nuevo paquete para aplicar parches. Ver [Notas de la versión de parches de nube](cloud-patches.md).<!--MAGECLOUD-4567-->
 
-   - ![nuevo icono](../../assets/new.svg) **Dependencias actualizadas del compositor**—Se ha actualizado el archivo `composer.json` para Adobe Commerce en la infraestructura en la nube con una dependencia para el paquete `magento/magento-cloud-docker`. Ahora, `ece-tools` incluye dependencias para todos los paquetes en [`Cloud Tools Suite for Commerce`](cloud-tools-suite.md). Estos paquetes se instalan y actualizan automáticamente al instalar o actualizar `ece-tools`.
+  - ![nuevo icono](../../assets/new.svg) **Dependencias actualizadas del compositor**—Se ha actualizado el archivo `composer.json` para Adobe Commerce en la infraestructura en la nube con una dependencia para el paquete `magento/magento-cloud-docker`. Ahora, `ece-tools` incluye dependencias para todos los paquetes en [`Cloud Tools Suite for Commerce`](cloud-tools-suite.md). Estos paquetes se instalan y actualizan automáticamente al instalar o actualizar `ece-tools`.
 
 - ![nuevo icono](../../assets/new.svg) **Compatibilidad con implementaciones basadas en escenarios**—<!--MAGECLOUD-4101-->
 
-   - ![nuevo icono](../../assets/new.svg) Ahora puede personalizar los procesos de generación, implementación y posterior implementación mediante archivos de configuración XML para anular o personalizar la configuración predeterminada.
+  - ![nuevo icono](../../assets/new.svg) Ahora puede personalizar los procesos de generación, implementación y posterior implementación mediante archivos de configuración XML para anular o personalizar la configuración predeterminada.
 
-   - ![nuevo icono](../../assets/new.svg) **Se ha cambiado la configuración de `hooks` en`.magento.app.yaml`**. Hemos actualizado el formato de configuración de `hooks` para admitir implementaciones basadas en escenarios. El formato heredado de versiones anteriores de ECE-Tools 2002.0.x todavía es compatible. Sin embargo, debe actualizar al nuevo formato para utilizar la función de implementación basada en escenarios. Consulte [Implementaciones basadas en escenarios](../deploy/scenario-based.md#add-scenarios-using-build-and-deploy-hooks).
+  - ![nuevo icono](../../assets/new.svg) **Se ha cambiado la configuración de `hooks` en`.magento.app.yaml`**. Hemos actualizado el formato de configuración de `hooks` para admitir implementaciones basadas en escenarios. El formato heredado de versiones anteriores de ECE-Tools 2002.0.x todavía es compatible. Sin embargo, debe actualizar al nuevo formato para utilizar la función de implementación basada en escenarios. Consulte [Implementaciones basadas en escenarios](../deploy/scenario-based.md#add-scenarios-using-build-and-deploy-hooks).
 
 >[!NOTE]
 >
@@ -455,13 +456,13 @@ Fecha de publicación: 6 de febrero de 2020
 
 - ![nuevo icono](../../assets/new.svg) **Actualizaciones de servicio**—
 
-   - ![nuevo icono](../../assets/new.svg) agregó compatibilidad con PHP 7.3.<!--MAGECLOUD-4022-->
+  - ![nuevo icono](../../assets/new.svg) agregó compatibilidad con PHP 7.3.<!--MAGECLOUD-4022-->
 
-   - ![nuevo icono](../../assets/new.svg) agregó compatibilidad con RabbitMQ 3.8.<!--MAGECLOUD-4674-->
+  - ![nuevo icono](../../assets/new.svg) agregó compatibilidad con RabbitMQ 3.8.<!--MAGECLOUD-4674-->
 
-   - ![nuevo icono](../../assets/new.svg) Se agregó la validación para comprobar las versiones del servicio instalado respecto a la fecha límite para cada servicio. Ahora, los clientes recibirán una notificación si la versión de un servicio se encuentra dentro de los tres meses posteriores a la fecha límite y una advertencia si la fecha límite se encuentra en el pasado.<!--MAGECLOUD-4076-->
+  - ![nuevo icono](../../assets/new.svg) Se agregó la validación para comprobar las versiones del servicio instalado respecto a la fecha límite para cada servicio. Ahora, los clientes recibirán una notificación si la versión de un servicio se encuentra dentro de los tres meses posteriores a la fecha límite y una advertencia si la fecha límite se encuentra en el pasado.<!--MAGECLOUD-4076-->
 
-   - ![icono de corrección](../../assets/fix.svg) Se ha corregido un problema de configuración de Elasticsearch para garantizar que la configuración correcta de Elasticsearch esté establecida en todos los entornos.<!--MAGECLOUD-4474-->
+  - ![icono de corrección](../../assets/fix.svg) Se ha corregido un problema de configuración de Elasticsearch para garantizar que la configuración correcta de Elasticsearch esté establecida en todos los entornos.<!--MAGECLOUD-4474-->
 
 >[!NOTE]
 >
@@ -469,21 +470,21 @@ Fecha de publicación: 6 de febrero de 2020
 
 - ![nuevo icono](../../assets/new.svg) **Actualizaciones de variables de entorno**—
 
-   - ![nuevo icono](../../assets/new.svg) ha ampliado la funcionalidad de la variable de entorno `WARM_UP_PAGES` para admitir la precarga de caché en páginas de producto específicas. Vea la definición expandida en el tema [variables posteriores a la implementación](../environment/variables-post-deploy.md#warm_up_pages).<!--MAGECLOUD-4444-->
+  - ![nuevo icono](../../assets/new.svg) ha ampliado la funcionalidad de la variable de entorno `WARM_UP_PAGES` para admitir la precarga de caché en páginas de producto específicas. Vea la definición expandida en el tema [variables posteriores a la implementación](../environment/variables-post-deploy.md#warm_up_pages).<!--MAGECLOUD-4444-->
 
-   - ![nuevo icono](../../assets/new.svg) agregó la variable de entorno `ERROR_REPORT_DIR_NESTING_LEVEL` para simplificar la administración de datos del informe de errores en el directorio `<magento_root>/var/report/`. Consulte la descripción de la variable en el tema [variables de compilación](../environment/variables-build.md#error_report_dir_nesting_level).
+  - ![nuevo icono](../../assets/new.svg) agregó la variable de entorno `ERROR_REPORT_DIR_NESTING_LEVEL` para simplificar la administración de datos del informe de errores en el directorio `<magento_root>/var/report/`. Consulte la descripción de la variable en el tema [variables de compilación](../environment/variables-build.md#error_report_dir_nesting_level).
 
-   - ![icono de corrección](../../assets/fix.svg) eliminó las variables de entorno `SCD_EXCLUDE_THEMES`, `STATIC_CONTENT_THREADS`, `DO_DEPLOY_STATIC_CONTENT` y `STATIC_CONTENT_SYMLINK`. Ver [cambios incompatibles con versiones anteriores](backward-incompatible-changes.md#environment-configuration-changes).<!--MAGECLOUD-4407, MAGECLOUD-3873-->
+  - ![icono de corrección](../../assets/fix.svg) eliminó las variables de entorno `SCD_EXCLUDE_THEMES`, `STATIC_CONTENT_THREADS`, `DO_DEPLOY_STATIC_CONTENT` y `STATIC_CONTENT_SYMLINK`. Ver [cambios incompatibles con versiones anteriores](backward-incompatible-changes.md#environment-configuration-changes).<!--MAGECLOUD-4407, MAGECLOUD-3873-->
 
-   - ![Icono de corrección](../../assets/fix.svg) Se ha corregido un problema en el proceso de configuración de Elastic Suite para que la configuración predeterminada se sobrescriba como se esperaba al configurar la variable de implementación `ELASTICSUITE_CONFIGURATION` sin la opción `_merge`.<!--MAGECLOUD-4388-->
+  - ![Icono de corrección](../../assets/fix.svg) Se ha corregido un problema en el proceso de configuración de Elastic Suite para que la configuración predeterminada se sobrescriba como se esperaba al configurar la variable de implementación `ELASTICSUITE_CONFIGURATION` sin la opción `_merge`.<!--MAGECLOUD-4388-->
 
 - ![nuevo icono](../../assets/new.svg) **actualizaciones de comandos CLI**—
 
-   - ![nuevo icono](../../assets/new.svg) **Nuevo comando cron**: ahora puede administrar manualmente el procesamiento cron en su entorno de Adobe Commerce en la nube mediante los comandos `cron:disable` y `cron:enable`. Utilice el comando disable para todos los procesos cron activos y deshabilitar todos los trabajos cron. Utilice el comando enable para volver a habilitar los trabajos cron cuando esté listo. Consulte [Deshabilitar trabajos cron](../application/crons-property.md#disable-cron-jobs).
+  - ![nuevo icono](../../assets/new.svg) **Nuevo comando cron**: ahora puede administrar manualmente el procesamiento cron en su entorno de Adobe Commerce en la nube mediante los comandos `cron:disable` y `cron:enable`. Utilice el comando disable para todos los procesos cron activos y deshabilitar todos los trabajos cron. Utilice el comando enable para volver a habilitar los trabajos cron cuando esté listo. Consulte [Deshabilitar trabajos cron](../application/crons-property.md#disable-cron-jobs).
 
-   - ![nuevo icono](../../assets/new.svg) **Informes de errores mejorados**—Se ha agregado un mejor registro para los errores de comandos de CLI que se producen durante el procesamiento de ECE-Tools.<!--MAGECLOUD-4849-->
+  - ![nuevo icono](../../assets/new.svg) **Informes de errores mejorados**—Se ha agregado un mejor registro para los errores de comandos de CLI que se producen durante el procesamiento de ECE-Tools.<!--MAGECLOUD-4849-->
 
-   - ![nuevo icono](../../assets/new.svg) **Quitar comandos de compilación obsoletos**— Se eliminaron los siguientes comandos de compilación: `m2-ece-build`, `m2-ece-deploy`, `m2-ece-scd-dump` y se cambió el nombre de `ece-tools docker` comandos a `ece-docker`. Ver [cambios incompatibles con versiones anteriores](backward-incompatible-changes.md)<!--MAGECLOUD-4392-->
+  - ![nuevo icono](../../assets/new.svg) **Quitar comandos de compilación obsoletos**— Se eliminaron los siguientes comandos de compilación: `m2-ece-build`, `m2-ece-deploy`, `m2-ece-scd-dump` y se cambió el nombre de `ece-tools docker` comandos a `ece-docker`. Ver [cambios incompatibles con versiones anteriores](backward-incompatible-changes.md)<!--MAGECLOUD-4392-->
 
 - ![nuevo icono](../../assets/new.svg) eliminó el archivo `build_options.ini` obsoleto y agregó validación para fallar en la compilación si el archivo existe. Utilice el archivo [.magento.env.yaml](../environment/configure-env-yaml.md) para configurar las opciones de generación.
 
