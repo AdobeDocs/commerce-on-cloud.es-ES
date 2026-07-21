@@ -4,30 +4,24 @@ description: Aprenda a configurar y optimizar Redis como solución de caché bac
 feature: Cloud, Cache, Services
 exl-id: be6f2462-0878-47e3-b906-ebdd4aa319f2
 TQID: https://experienceleague.adobe.com/Q3w1Y1sRuQSwqmbxGfEBavrvHe0ecI9qWJjsfVc2yPU
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 5951c3001d665423634f06cd7cc277cd0fd80bbd
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11
+source-git-commit: 9e1fd3699623816ea3368816820daf799a43284f
 workflow-type: tm+mt
-source-wordcount: 391
+source-wordcount: 388
 ht-degree: 0%
 
 ---
 
 # Configurar el servicio Redis
 
-[Redis](https://redis.io) es una solución de caché back-end opcional que reemplaza a Zend Framework Zend_Cache_Backend_File, que Adobe Commerce usa de forma predeterminada.
+[Redis](https://redis.io) es una solución de caché back-end opcional que reemplaza a `Zend Framework Zend_Cache_Backend_File`, que Adobe Commerce usa de forma predeterminada.
 
 >[!IMPORTANT]
 >
->La caché de Redis no es compatible con Adobe Commerce 2.4.9 o con versiones de parches posteriores a las 2.4.5-p16, 2.4.6-p14, 2.4.7-p9 y 2.4.8-p5. Utilice Valkey para la configuración de caché donde no se admita Redis. Consulte [Requisitos del sistema](https://experienceleague.adobe.com/es/docs/commerce-operations/installation-guide/system-requirements) para ver los servicios de caché admitidos por versión.
+>La caché de Redis no es compatible con Adobe Commerce 2.4.9 o con versiones de parches posteriores a las 2.4.5-p16, 2.4.6-p14, 2.4.7-p9 y 2.4.8-p4. Utilice Valkey para la configuración de caché donde no se admita Redis. Consulte [Requisitos del sistema](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements) para ver los servicios de caché admitidos por versión.
 
 {{service-instruction}}
 
@@ -70,7 +64,7 @@ ht-degree: 0%
 
 ## Personalizar la configuración de Redis
 
-Para obtener más información sobre cómo personalizar la configuración de Redis, consulte [Configurar Redis](https://experienceleague.adobe.com/es/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration) en la _Guía de prácticas recomendadas de implementación del manual_.
+Para obtener más información sobre cómo personalizar la configuración de Redis, consulte [Configurar Redis](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration) en la _Guía de prácticas recomendadas de implementación del manual_.
 
 ## Uso de la CLI de Redis
 
@@ -147,6 +141,6 @@ Respuesta de ejemplo:
 Consulte los siguientes artículos de soporte de Adobe Commerce para obtener ayuda sobre la resolución de problemas de Redis:
 
 - [Retrasar el retraso del inicio de sesión o cierre de compra del administrador](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/redis-issue-delay-magento-admin-login-or-checkout.html)
-- [Implementación de caché de Redis extendida en Adobe Commerce 2.3.5+](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-service-configuration.html?lang=es)
-- [Alertas administradas en Adobe Commerce: alerta de advertencia de memoria Redis](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-on-magento-commerce-redis-memory-warning-alert.html?lang=es)
-- [Alertas administradas en Adobe Commerce: leer alerta crítica de memoria](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-on-magento-commerce-redis-memory-critical-alert.html?lang=es)
+- [Implementación de caché de Redis extendida en Adobe Commerce 2.3.5+](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-service-configuration.html)
+- [Alertas administradas en Adobe Commerce: alerta de advertencia de memoria Redis](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-on-magento-commerce-redis-memory-warning-alert.html)
+- [Alertas administradas en Adobe Commerce: leer alerta crítica de memoria](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-on-magento-commerce-redis-memory-critical-alert.html)
