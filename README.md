@@ -1,7 +1,7 @@
 ---
-source-git-commit: 55206749cd121ef6d6139a71af6ff905d4109859
+source-git-commit: 7c3f2965f89503cc94a31aabca3d317a9330a4f6
 workflow-type: tm+mt
-source-wordcount: '916'
+source-wordcount: '938'
 ht-degree: 0%
 
 ---
@@ -9,8 +9,8 @@ ht-degree: 0%
 
 Este sitio contiene la documentación para desarrolladores más reciente de Commerce en la infraestructura en la nube.
 
-- [Guía de Commerce sobre infraestructura en la nube](https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/overview)
-- [Introducción a Commerce](https://experienceleague.adobe.com/es/docs/commerce-on-cloud/start/overview) en la infraestructura en la nube
+- [Guía de Commerce sobre infraestructura en la nube](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/overview)
+- [Introducción a Commerce](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/start/overview) en la infraestructura en la nube
 
 ## Código de conducta de Adobe Open Source
 
@@ -18,7 +18,7 @@ Este proyecto ha adoptado el [Código de conducta de Adobe Open Source](code-of-
 
 ## Acerca de sus contribuciones al contenido de Adobe
 
-Consulte la [Guía del colaborador de Adobe Docs](https://experienceleague.adobe.com/es/docs/contributor/contributor-guide/introduction).
+Consulte la [Guía del colaborador de Adobe Docs](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction).
 
 La forma en que contribuya depende de quién sea y del tipo de cambios con los que desee contribuir:
 
@@ -34,13 +34,13 @@ Si forma parte de la comunidad de Adobe y desea crear un nuevo artículo o envia
 
 ### Cambios importantes de los empleados de Adobe
 
-Si es redactor técnico, administrador de programa o desarrollador del equipo de producto para una solución de Adobe Experience Cloud y debe contribuir o crear artículos técnicos, debe utilizar el repositorio privado en `https://github.com/Adobe-Enterprise-Docs/commerce-on-cloud.es-ES`.
+Si es redactor técnico, administrador de programa o desarrollador del equipo de producto para una solución de Adobe Experience Cloud y debe contribuir a artículos técnicos o crearlos, debe utilizar el repositorio privado en `https://github.com/Adobe-Enterprise-Docs/commerce-on-cloud.en`.
 
 ## Herramientas y configuración
 
 Los colaboradores de la comunidad pueden utilizar la interfaz de usuario de GitHub para la edición básica o bifurcar el repositorio para realizar contribuciones importantes.
 
-Consulte la [Guía para colaboradores de Adobe Docs](https://experienceleague.adobe.com/es/docs/contributor/contributor-guide/introduction) para obtener más información.
+Consulte la [Guía para colaboradores de Adobe Docs](https://experienceleague.adobe.com/en/docs/contributor/contributor-guide/introduction) para obtener más información.
 
 ## Utilizar Markdown para dar formato al tema
 
@@ -70,7 +70,7 @@ En general, la mayoría de los redactores solo necesitan añadir una versión de
 >**NOTA:**
 >
 >- La generación de contenido con plantillas requiere trabajar en la línea de comandos de un terminal.
->- Debe tener instalado Ruby para ejecutar el script de procesamiento. Consulte [_jekyll/.ruby-version] (_jekyll/.ruby-version) para obtener la versión requerida.
+>- Debe tener instalado Ruby para ejecutar el script de procesamiento. Consulte [_jekyll/.ruby-version](_jekyll/.ruby-version) para obtener la versión requerida.
 
 Consulte lo siguiente para obtener una descripción de la estructura de archivos del contenido con plantillas:
 
@@ -134,7 +134,9 @@ Consulte la documentación de Jekyll para obtener más información sobre [Archi
 
 ## Tareas de rastrillo disponibles
 
-Este repositorio usa las tareas de rastrillado proporcionadas por la joya `adobe-comdox-exl-rake-tasks`. Para ver todas las tareas disponibles, ejecute:
+Este repositorio utiliza las tareas de rastreo proporcionadas por el
+[`adobe-comdox-exl-rake-tasks`](https://github.com/commerce-docs/adobe-comdox-exl-rake-tasks)
+joya. Para ver todas las tareas disponibles, ejecute:
 
 ```bash
 cd _jekyll
@@ -155,10 +157,11 @@ Después de clonar el repositorio, ejecute:
 
 ### Qué hacen los ganchos
 
-- Detectar automáticamente archivos de imagen clasificados (PNG, JPG, JPEG, GIF, SVG)
-- Ejecutar `image_optim` para comprimir y optimizar imágenes
+- Detectar automáticamente archivos de imagen clasificados (PNG, JPEG, GIF, SVG)
+- Ejecute `image_optim` para comprimir y optimizar imágenes rasterizadas (PNG, JPEG, GIF)
 - Volver a almacenar automáticamente las imágenes optimizadas
-- Asegúrese de que todas las imágenes confirmadas estén optimizadas correctamente
+- Asegúrese de que todas las imágenes rasterizadas confirmadas estén optimizadas correctamente
+- Compruebe los SVG clasificados con un límite de tamaño y anule la confirmación si algún SVG lo supera
 
 ### Ventajas
 
