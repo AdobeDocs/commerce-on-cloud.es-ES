@@ -11,7 +11,7 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: f1e6c9da5dacb144dc3e1a09885c1a9b11ce54ee
+source-git-commit: 988a098ec800616898a4ad0ab460a09ec64c4fc3
 workflow-type: tm+mt
 source-wordcount: 259
 ht-degree: 0%
@@ -20,7 +20,7 @@ ht-degree: 0%
 
 # Configuración del servicio Valkey
 
-[Valkey](https://valkey.io) es una solución de caché back-end opcional que reemplaza a `Zend Framework Zend_Cache_Backend_File`, que Adobe Commerce usa de forma predeterminada. Si reemplaza el valor predeterminado en las versiones de Commerce 2.4.9+ o versiones de parches posteriores a las líneas de versión 2.4.5-p16, 2.4.6-p14, 2.4.7-p9 y 2.4.8-p5, debe utilizar Valkey.
+[Valkey](https://valkey.io) es una solución de caché back-end opcional que reemplaza a `Zend Framework Zend_Cache_Backend_File`, que Adobe Commerce usa de forma predeterminada. Si reemplaza el valor predeterminado en las versiones de Commerce 2.4.9+ o versiones de parches posteriores a las líneas de versión 2.4.5-p16, 2.4.6-p14, 2.4.7-p9 y 2.4.8-p4, debe utilizar Valkey.
 
 Consulte [Configurar Valkey](https://experienceleague.adobe.com/es/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration){target="_blank"} en la _Guía de prácticas recomendadas de implementación del manual_.
 
