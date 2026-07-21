@@ -70,7 +70,7 @@ En general, la mayoría de los redactores solo necesitan añadir una versión de
 >**NOTA:**
 >
 >- La generación de contenido con plantillas requiere trabajar en la línea de comandos de un terminal.
->- Debe tener instalado Ruby para ejecutar el script de procesamiento. Consulte [_jekyll/.ruby-version](_jekyll/.ruby-version) para obtener la versión requerida.
+>- Debe tener instalado Ruby para ejecutar el script de procesamiento. Consulte [_jekyll/.ruby-version] (_jekyll/.ruby-version) para obtener la versión requerida.
 
 Consulte lo siguiente para obtener una descripción de la estructura de archivos del contenido con plantillas:
 
