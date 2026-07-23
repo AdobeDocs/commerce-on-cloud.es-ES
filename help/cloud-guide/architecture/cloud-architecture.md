@@ -6,27 +6,14 @@ topic: Architecture
 recommendations: noDisplay
 exl-id: 7c1e895d-0f88-4f11-919a-b3b5748ca5f0
 TQID: https://experienceleague.adobe.com/01S8Fhs8J-qy3nc0lXGg3u17h66rF2Qgs2bRG135tVE
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-  - id: f42e0a1a-0d79-488d-a83f-f2c30672b137
-subfeature_v2:
-  - id: df5e974b-6742-4873-a687-a6bedaafdaa2
-  - id: f8ddfd3b-6194-46e8-a176-0e918039be56
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75id: f42e0a1a-0d79-488d-a83f-f2c30672b137
+subfeature_v2: id: df5e974b-6742-4873-a687-a6bedaafdaa2id: f8ddfd3b-6194-46e8-a176-0e918039be56
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: fb61610380b7b60e274ce8c89f7dda41674f1107
 workflow-type: tm+mt
-source-wordcount: 807
+source-wordcount: 803
 ht-degree: 0%
 
 ---
@@ -39,13 +26,13 @@ Para comparar, cada plan incluye las siguientes funciones de infraestructura y p
 
 |          | Starter | Pro |
 | -------- | --------------------| ------------------ |
-| Funciones principales | <ul><li>[Todas las características de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-operations/release/features.html?lang=es)</li><li>Herramienta de incorporación de PayPal</li><li>[Informes de Commerce](https://business.adobe.com/es/products/magento/business-intelligence.html?_ga=2.85288604.442698376.1665067470-1322106587.1655147209)</li></ul> | <ul><li>[Todas las características de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-operations/release/features.html?lang=es)</li><li>Herramienta de incorporación de PayPal</li><li>[Informes de Commerce](https://business.adobe.com/es/products/magento/business-intelligence.html?_ga=2.85288604.442698376.1665067470-1322106587.1655147209)</li><li>[Módulo B2B](https://business.adobe.com/es/products/magento/b2b-ecommerce.html?_ga=2.105948422.442698376.1665067470-1322106587.1655147209)</li></ul> |
-| Infraestructura e implementación | <ul><li>Herramientas de integración continua en la nube con usuarios ilimitados</li><li>Rápidamente, la red de distribución de contenido (CDN), la optimización de imágenes (IO) y la seguridad añadida con generosas asignaciones de ancho de banda. El servicio Web Application Firewall (WAF) solo está disponible en entornos de producción.</li><li>[New Relic](../monitor/new-relic-service.md) APM (supervisión del rendimiento) en 3 ramas: `master` y 2 de su elección<br>Entornos de producción, ensayo y desarrollo de Platform as a service (PaaS) optimizados para Adobe Commerce</li><li>Filtrado de salidas (cortafuegos de salida)</li></ul> | <ul><li>Herramientas de integración continua en la nube con usuarios ilimitados</li><li>Rápidamente, la red de distribución de contenido (CDN), la optimización de imágenes (IO) y la seguridad añadida con generosas asignaciones de ancho de banda. El servicio Web Application Firewall (WAF) solo está disponible en entornos de producción.</li><li>Infraestructura de [New Relic](../monitor/new-relic-service.md) en producción + APM (supervisión del rendimiento) en ensayo y producción. La directiva [Alertas administradas](../monitor/investigate-performance.md#monitor-performance-with-managed-alerts) para Adobe Commerce implementa prácticas recomendadas de supervisión para notificarle de forma proactiva los problemas de infraestructura y aplicaciones que afectan el rendimiento del sitio.</li><li>Entornos [desarrollo de integración](pro-architecture.md#integration-environment) basados en la plataforma como servicio (PaaS) (2 entornos activos totales) optimizados para Adobe Commerce</li><li>Infraestructura como servicio (IaaS): infraestructura virtual dedicada para entornos de ensayo y producción</li></ul> |
+| Funciones principales | <ul><li>[Todas las características de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-operations/release/features.html)</li><li>Herramienta de incorporación de PayPal</li><li>[Informes de Commerce](https://business.adobe.com/products/magento/business-intelligence.html?_ga=2.85288604.442698376.1665067470-1322106587.1655147209)</li></ul> | <ul><li>[Todas las características de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-operations/release/features.html)</li><li>Herramienta de incorporación de PayPal</li><li>[Informes de Commerce](https://business.adobe.com/products/magento/business-intelligence.html?_ga=2.85288604.442698376.1665067470-1322106587.1655147209)</li><li>[Módulo B2B](https://business.adobe.com/products/magento/b2b-ecommerce.html?_ga=2.105948422.442698376.1665067470-1322106587.1655147209)</li></ul> |
+| Infraestructura e implementación | <ul><li>Herramientas de integración continua en la nube con usuarios ilimitados</li><li>Rápidamente, la red de distribución de contenido (CDN), la optimización de imágenes (IO) y la seguridad añadida con generosas asignaciones de ancho de banda. El servicio Web Application Firewall (WAF) solo está disponible en entornos de producción.</li><li>[New Relic](../monitor/new-relic-service.md) APM (supervisión del rendimiento) en 3 ramas: `master` y 2 de su elección<br>Entornos de producción, ensayo y desarrollo de Platform as a service (PaaS) optimizados para Adobe Commerce</li></ul> | <ul><li>Herramientas de integración continua en la nube con usuarios ilimitados</li><li>Rápidamente, la red de distribución de contenido (CDN), la optimización de imágenes (IO) y la seguridad añadida con generosas asignaciones de ancho de banda. El servicio Web Application Firewall (WAF) solo está disponible en entornos de producción.</li><li>Infraestructura de [New Relic](../monitor/new-relic-service.md) en producción + APM (supervisión del rendimiento) en ensayo y producción. La directiva [Alertas administradas](../monitor/investigate-performance.md#monitor-performance-with-managed-alerts) para Adobe Commerce implementa prácticas recomendadas de supervisión para notificarle de forma proactiva los problemas de infraestructura y aplicaciones que afectan el rendimiento del sitio.</li><li>Entornos [desarrollo de integración](pro-architecture.md#integration-environment) basados en la plataforma como servicio (PaaS) (2 entornos activos totales) optimizados para Adobe Commerce</li><li>Infraestructura como servicio (IaaS): infraestructura virtual dedicada para entornos de ensayo y producción</li></ul> |
 | Infraestructura de alta disponibilidad | | [Arquitectura de alta disponibilidad](pro-architecture.md#redundant-hardware) con una configuración de tres servidores en la infraestructura como servicio (IaaS) subyacente para proporcionar confiabilidad y disponibilidad de nivel empresarial |
 | Hardware dedicado | | Hardware aislado y dedicado en la infraestructura como servicio (IaaS) subyacente para proporcionar niveles aún más altos de fiabilidad y disponibilidad |
 | asistencia por correo electrónico ininterrumpida | Monitorización y asistencia por correo electrónico ininterrumpidas para la aplicación principal y la infraestructura en la nube | Monitorización y asistencia por correo electrónico ininterrumpidas para la aplicación principal y la infraestructura en la nube |
 | Un asesor técnico para clientes (CTA) | | Administración de cuentas técnicas dedicadas para el período de inicio, empezando por la suscripción hasta el inicio del sitio |
-| Complementos\* | <ul><li>[Módulo B2B](https://business.adobe.com/es/products/magento/b2b-ecommerce.html)</li></ul> | |
+| Complementos\* | <ul><li>[Módulo B2B](https://business.adobe.com/products/magento/b2b-ecommerce.html)</li></ul> | |
 
 \* _Disponible por una tarifa adicional_
 
@@ -67,7 +54,7 @@ La [arquitectura de plan profesional](pro-architecture.md) tiene un `master` glo
 
 - **Integración**: el entorno de integración proporciona un entorno de prueba que incluye una base de datos, un servidor web, almacenamiento en caché, algunos servicios, variables de entorno y configuraciones. Puede desarrollar, implementar y probar el código antes de combinarlo con el entorno de ensayo.
 
-   - _Inactiva_: puede tener un número ilimitado de ramas inactivas basadas en el entorno `integration`, pero solo una rama activa (sin incluir `integration` ).
+  - _Inactiva_: puede tener un número ilimitado de ramas inactivas basadas en el entorno `integration`, pero solo una rama activa (sin incluir `integration` ).
 
 - **Ensayo**: el entorno de ensayo es para pruebas previas a la producción e incluye una base de datos, un servidor web, almacenamiento en caché, servicios de terceros, variables de entorno, configuraciones y servicios, como Fastly.
 
@@ -96,7 +83,7 @@ Puede configurar los siguientes servicios:
 
 >[!NOTE]
 >
->Consulte [Requisitos del sistema](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=es) en la _Guía de instalación_ para ver las versiones recomendadas.
+>Consulte [Requisitos del sistema](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html) en la _Guía de instalación_ para ver las versiones recomendadas.
 
 El módulo Fastly CDN se utiliza para los servicios de CDN y almacenamiento en caché en entornos de ensayo y producción. Consulte [Configurar servicios de Fastly](../cdn/fastly.md).
 
