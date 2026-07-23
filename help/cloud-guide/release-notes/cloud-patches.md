@@ -5,23 +5,13 @@ recommendations: noDisplay, catalog
 last-substantial-update: 2025-08-07T00:00:00.000Z
 exl-id: a4454ebc-72a4-42c1-b591-6237c97fe913
 TQID: https://experienceleague.adobe.com/ZN1TwgU2EFiIezQcZZT-CglLQGY1xZcXoi-BslV3sGQ
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: c1256247-af4b-46d8-9dca-0c654ecfa157
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-  - id: c1579802-ddd4-4214-8a91-97b2066abe11
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: a7cd55b31bf909047e449e5f984fcb082706c2b9
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: c1256247-af4b-46d8-9dca-0c654ecfa157id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87cid: c1579802-ddd4-4214-8a91-97b2066abe11id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 9f2b598b52d26b3d9239c54c778f07a5b10f9a60
 workflow-type: tm+mt
-source-wordcount: 2904
+source-wordcount: 2965
 ht-degree: 0%
 
 ---
@@ -44,7 +34,13 @@ El paquete `magento/magento-cloud-patches` usa la siguiente secuencia de version
 
 <!--Add release notes below-->
 
-## Versión 1.1.15 {#latest}
+## Versión 1.1.16 {#latest}
+
+Fecha de la versión: 23 de julio de 2026
+
+- ![Icono de correcciones](../../assets/fix.svg) **Rendimiento y fiabilidad mejorados de la caché de Symfony L2**: almacenamiento optimizado de etiquetas de caché para symfony_l2, invalidación mejorada de la caché con bloqueos de regeneración basados en TTL y limpieza adecuada de etiquetas L1 para eliminar entradas de caché antiguas, y compresión Redis/Valkey habilitada (compress_data) de forma predeterminada para reducir el consumo de memoria y el tráfico de red al alinearse con la implementación de caché heredada.<!-- ACP2E-5132 -->
+
+## Versión 1.1.15
 
 Fecha de la versión: 14 de julio de 2026
 
@@ -56,7 +52,7 @@ Fecha de la versión: 6 de mayo de 2026
 
 - ![icono de corrección](../../assets/fix.svg) **Visibilidad de la versión de parche**-Visibilidad de la versión de parche de nube fija en entornos de nube.<!--MCLOUD-14221 -->
 - ![Icono de correcciones](../../assets/fix.svg) **Limpieza de PHPUnit**-Avisos de PHPUnit corregidos<!--MCLOUD-14717 -->
-- ![nuevo icono &#x200B;](../../assets/new.svg)**Correcciones cosméticas**—Se han agregado mejoras cosméticas.<!--MCLOUD-14686 -->
+- ![nuevo icono ](../../assets/new.svg)**Correcciones cosméticas**—Se han agregado mejoras cosméticas.<!--MCLOUD-14686 -->
 
 ## Versión 1.1.13
 
@@ -70,7 +66,7 @@ Fecha de la versión: 5 de marzo de 2026
 Fecha de la versión: 13 de noviembre de 2025
 
 - ![Icono de corrección](../../assets/fix.svg) **Paquete Symfony** agregó compatibilidad con los últimos paquetes Symfony YAML.<!-- MCLOUD-14020 -->
-- ![Icono de corrección](../../assets/fix.svg) **Parche**: la corrección de [Cierre de compra falla cuando la minificación y el agrupamiento de JS están habilitados](https://experienceleague.adobe.com/es/docs/experience-cloud-kcs/kbarticles/ka-27997) problema descrito en la *base de conocimiento de Commerce*.
+- ![Icono de corrección](../../assets/fix.svg) **Parche**: la corrección de [Cierre de compra falla cuando la minificación y el agrupamiento de JS están habilitados](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-27997) problema descrito en la *base de conocimiento de Commerce*.
 - ![Icono de corrección](../../assets/fix.svg) **Vista de categoría mejorada** - MCLOUD-13752: Mejore la vista de categoría.<!-- MCLOUD-13752 | MCLOUD-14139  -->
 
 ## v1.1.11
@@ -102,13 +98,13 @@ Fecha de publicación: 3 de junio de 2025
 
 Fecha de la versión: 5 de mayo de 2025
 
-- ![nuevo icono](../../assets/new.svg) **parche actualizado para Commerce 2.4.4 a 2.4.8**—Se trata de un parche actualizado para [CVE-2025-24434](https://experienceleague.adobe.com/es/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/increased-execution-time-for-bulk-asynchronous-web-endpoints-post-apsb25-08-security-patch), que se publicó en 1.1.7<!-- MCLOUD-13619 -->
+- ![nuevo icono](../../assets/new.svg) **parche actualizado para Commerce 2.4.4 a 2.4.8**—Se trata de un parche actualizado para [CVE-2025-24434](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/increased-execution-time-for-bulk-asynchronous-web-endpoints-post-apsb25-08-security-patch), que se publicó en 1.1.7<!-- MCLOUD-13619 -->
 
 ## Versión 1.1.6
 
 Fecha de publicación: 24 de abril de 2025
 
-- ![nuevo icono](../../assets/new.svg) **parche actualizado para Commerce 2.4.4 a 2.4.7**—Se trata de un parche actualizado para [CVE-2025-24434](https://experienceleague.adobe.com/es/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-08), que se publicó en 1.1.4<!-- MCLOUD-13240 -->
+- ![nuevo icono](../../assets/new.svg) **parche actualizado para Commerce 2.4.4 a 2.4.7**—Se trata de un parche actualizado para [CVE-2025-24434](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-08), que se publicó en 1.1.4<!-- MCLOUD-13240 -->
 
 ## Versión 1.1.5
 
@@ -120,7 +116,7 @@ Fecha de publicación: 15 de abril de 2025
 
 Fecha de publicación: 13 de febrero de 2025
 
-- ![nuevo icono](../../assets/new.svg) **Se ha agregado un parche para Commerce 2.4.4 a 2.4.7**—Esta actualización revisa [CVE-2025-24434](https://experienceleague.adobe.com/es/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-08).<!-- MCLOUD-13240	 - -->
+- ![nuevo icono](../../assets/new.svg) **Se ha agregado un parche para Commerce 2.4.4 a 2.4.7**—Esta actualización revisa [CVE-2025-24434](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb25-08).<!-- MCLOUD-13240	 - -->
 
 ## Versión 1.1.3
 
@@ -132,13 +128,13 @@ Fecha de publicación: 6 de febrero de 2025
 
 Fecha de la versión: 5 de noviembre de 2024
 
-- ![Icono de corrección](../../assets/fix.svg) **Se agregó un parche para Commerce 2.4.4 a 2.4.7**—Esta actualización corrige una vulnerabilidad crítica de [CVE-2024-45115](https://experienceleague.adobe.com/es/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb24-73) para Adobe Commerce al usar el módulo B2B.<!-- MCLOUD-12980 - -->
+- ![Icono de corrección](../../assets/fix.svg) **Se agregó un parche para Commerce 2.4.4 a 2.4.7**—Esta actualización corrige una vulnerabilidad crítica de [CVE-2024-45115](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb24-73) para Adobe Commerce al usar el módulo B2B.<!-- MCLOUD-12980 - -->
 
 ## Versión 1.1.1
 
 Fecha de la versión: 5 de noviembre de 2024
 
-- ![Icono de corrección](../../assets/fix.svg) **Se ha agregado un parche para Commerce 2.4.4 a 2.4.7**—Esta actualización corrige una vulnerabilidad crítica de [CVE-2024-34102](https://experienceleague.adobe.com/es/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb24-40-revised-to-include-isolated-patch-for-cve-2024-34102?lang=en) CosmicString.<!-- MCLOUD-12980 - -->
+- ![Icono de corrección](../../assets/fix.svg) **Se ha agregado un parche para Commerce 2.4.4 a 2.4.7**—Esta actualización corrige una vulnerabilidad crítica de [CVE-2024-34102](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/security-update-available-for-adobe-commerce-apsb24-40-revised-to-include-isolated-patch-for-cve-2024-34102?lang=en) CosmicString.<!-- MCLOUD-12980 - -->
 
 ## Versión 1.1.0
 
@@ -185,8 +181,8 @@ Fecha de publicación: 19 de junio de 2023
 
 - **Asistente/salida de CLI de QPT mejorada**: se ha agregado una advertencia al asistente/salida de CLI de QPT que le recuerda que debe comprobar los detalles y requisitos de la revisión si hay dependencias.<!-- ACP2E-1963 -->
 - **Se agregaron parches para Commerce 2.4.6:**
-   - Se corrigió la validación `regexp cache tag`.<!-- MCLOUD-10226 -->
-   - Se mejoró el rendimiento al reducir el número de veces que se cargan las mismas configuraciones de implementación.<!-- MCLOUD-10604 -->
+  - Se corrigió la validación `regexp cache tag`.<!-- MCLOUD-10226 -->
+  - Se mejoró el rendimiento al reducir el número de veces que se cargan las mismas configuraciones de implementación.<!-- MCLOUD-10604 -->
 - **Se agregaron parches para Commerce 2.3.7 a 2.4.6**—Se corrigió un problema que causaba un incremento por un valor aleatorio en lugar de un incremento por 1 para las tablas `catalog_product_entity_*`.<!-- MCLOUD-10032 -->
 - **Se agregaron parches para Commerce 2.4.0 a 2.4.6**—Se corrigió un error que indica que `The file can't be deleted. Warning!unlink: No such file or directory`, que se produjo al vaciar la caché JS/CSS del administrador.<!-- MCLOUD-10279 -->
 
@@ -216,7 +212,7 @@ Parche crítico para Adobe Commerce 2.4.5:
 
 - **Problema con pedidos que utilizan Braintree payments**: este parche resuelve un problema crítico que impide a los administradores realizar nuevos pedidos o repedidos.<!-- MCLOUD-9137 -->
 
-Ver [El administrador no puede crear un pedido/repedido cuando el pago de Braintree está habilitado](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/admin-cant-create-order-reorder-when-braintree-payment-enabled.html?lang=es).
+Ver [El administrador no puede crear un pedido/repedido cuando el pago de Braintree está habilitado](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/known-issues-patches-attached/admin-cant-create-order-reorder-when-braintree-payment-enabled.html).
 
 ## Versión 1.0.17
 
@@ -232,7 +228,7 @@ Parche crítico para Adobe Commerce 2.3.3-p1 y versiones posteriores:
 
 Se han actualizado los parches para resolver una vulnerabilidad **critical** que provoca la ejecución de código remoto no autenticado.<!-- MCLOUD-8479 -->
 
-Consulte [Boletín de seguridad de Adobe APSB22-12](https://helpx.adobe.com/es/security/products/magento/apsb22-12.html).
+Consulte [Boletín de seguridad de Adobe APSB22-12](https://helpx.adobe.com/security/products/magento/apsb22-12.html).
 
 ## Versión 1.0.15
 
@@ -249,7 +245,7 @@ Parche crítico para Adobe Commerce 2.3.3-p1 y versiones posteriores:
 
 Se ha agregado un parche para resolver una vulnerabilidad **critical** que da como resultado la ejecución de código remoto no autenticado.<!-- MCLOUD-8461 -->
 
-Consulte [Boletín de seguridad de Adobe APSB22-12](https://helpx.adobe.com/es/security/products/magento/apsb22-12.html).
+Consulte [Boletín de seguridad de Adobe APSB22-12](https://helpx.adobe.com/security/products/magento/apsb22-12.html).
 
 ## Versión 1.0.13
 
@@ -265,7 +261,7 @@ Fecha de lanzamiento: 12 de agosto de 2021
 
 Parche crítico para Adobe Commerce 2.4.3 y 2.3.7-p1:
 
-- **Problema con limitación de velocidad de API**: este parche corrige un límite de velocidad predeterminado que impedía que las API web procesaran solicitudes con más de 20 elementos en una matriz. Este parche aumenta el valor predeterminado del límite de velocidad. Ver las notas de la versión de Adobe Commerce [2.4.3](https://experienceleague.adobe.com/es/docs/commerce-operations/release/notes/adobe-commerce/2-4-3#apply-mc-43048__set_rate_limits__243patch-to-address-issue-with-api-rate-limiting).<!-- MC-43048 -->
+- **Problema con limitación de velocidad de API**: este parche corrige un límite de velocidad predeterminado que impedía que las API web procesaran solicitudes con más de 20 elementos en una matriz. Este parche aumenta el valor predeterminado del límite de velocidad. Ver las notas de la versión de Adobe Commerce [2.4.3](https://experienceleague.adobe.com/en/docs/commerce-operations/release/notes/adobe-commerce/2-4-3#apply-mc-43048__set_rate_limits__243patch-to-address-issue-with-api-rate-limiting).<!-- MC-43048 -->
 
 ## Versión 1.0.11
 
@@ -315,17 +311,17 @@ Fecha de la versión: 14 de octubre de 2020
 Fecha de lanzamiento:
 
 - **Redis parches para Adobe Commerce 2.3.0 - 2.3.4**: optimice la comunicación y mejore el rendimiento
-   - Reducción del tamaño de las transferencias de red entre Redis y Adobe Commerce
-   - Corrección de condiciones de carrera en operaciones de carga y escritura de Redis
-   - Reescribir el adaptador de caché base para controlar los errores al guardar
-   - Reducir consumo de CPU de Redis<!--MCLOUD-6139-->
+  - Reducción del tamaño de las transferencias de red entre Redis y Adobe Commerce
+  - Corrección de condiciones de carrera en operaciones de carga y escritura de Redis
+  - Reescribir el adaptador de caché base para controlar los errores al guardar
+  - Reducir consumo de CPU de Redis<!--MCLOUD-6139-->
 
 - **Redis parches para Adobe Commerce 2.3.0 - 2.3.5**: mejore el rendimiento y corrija los errores
-   - Corregir la implementación de bloqueo de caché para evitar bloqueos infinitos
-   - Mejora del mecanismo de bloqueo actual
-   - Implementar bloqueos firmados para evitar el desbloqueo de solicitudes en paralelo
-   - Corrija el siguiente error que se produce en la operación de escritura de Redis: `OOM command not allowed when used memory > maxmemory`
-   - Corrija el procesamiento de la caché limpia mediante la etiqueta `cat_p` que se ejecuta durante las actualizaciones del producto<!--MCLOUD-6110-->
+  - Corregir la implementación de bloqueo de caché para evitar bloqueos infinitos
+  - Mejora del mecanismo de bloqueo actual
+  - Implementar bloqueos firmados para evitar el desbloqueo de solicitudes en paralelo
+  - Corrija el siguiente error que se produce en la operación de escritura de Redis: `OOM command not allowed when used memory > maxmemory`
+  - Corrija el procesamiento de la caché limpia mediante la etiqueta `cat_p` que se ejecuta durante las actualizaciones del producto<!--MCLOUD-6110-->
 
 - Se ha corregido un problema que provocaba un error al aplicar el parche `amzn/amazon-pay-module` necesario a Adobe Commerce en proyectos de infraestructura en la nube con Adobe Commerce v2.2.6 o 2.3.5, que no incluyen este módulo. Ahora, el proceso de aplicación de parches omite la revisión `amzn/amazon-pay-module` si el módulo no está instalado.<!--MCLOUD-6588-->
 
@@ -369,9 +365,9 @@ Esta versión de incluye las siguientes revisiones y correcciones críticas:
 
 - **Actualizaciones de compatibilidad para parches en la nube de Magento/Magento**
 
-   - Se han actualizado las restricciones de versión `symfony` y `semver` en el archivo `composer.json` por compatibilidad con Adobe Commerce 2.4 y versiones posteriores.<!--MAGECLOUD-5127-->
+  - Se han actualizado las restricciones de versión `symfony` y `semver` en el archivo `composer.json` por compatibilidad con Adobe Commerce 2.4 y versiones posteriores.<!--MAGECLOUD-5127-->
 
-   - Se han actualizado las restricciones de `composer.json` por compatibilidad con `ece-tools` versiones 2002.0.22 y posteriores de 2002.0.x.
+  - Se han actualizado las restricciones de `composer.json` por compatibilidad con `ece-tools` versiones 2002.0.22 y posteriores de 2002.0.x.
 
 - **Pago y envío de PayPal Express**: publicado el 12 de febrero de 2020, este parche resuelve un problema que afecta a los pedidos realizados con Pago y envío de PayPal Express, en los que la dirección de envío del pedido especifica una región de país que se ha introducido manualmente en el campo de texto en lugar de seleccionarla en el menú desplegable de la página Envío. Consulte la descripción completa del parche en la página de descarga del parche.
 
@@ -389,9 +385,9 @@ Esta versión de incluye las siguientes revisiones y correcciones críticas:
 
 - **Corregir interbloqueos cron y mejorar el bloqueo cron**—
 
-   - Corrige un problema con algunos trabajos cron que no se ejecutaban debido a un valor de estado incorrecto en la tabla `cron_schedule`. Ahora, utilizamos el marco de bloqueo de Adobe Commerce para comprobar y actualizar el estado del trabajo cron en lugar de utilizar la tabla `cron_schedule`. Los trabajos cron que han finalizado con un estado de error se vuelven a intentar durante la siguiente ejecución cron en lugar de esperar 24 horas.
+  - Corrige un problema con algunos trabajos cron que no se ejecutaban debido a un valor de estado incorrecto en la tabla `cron_schedule`. Ahora, utilizamos el marco de bloqueo de Adobe Commerce para comprobar y actualizar el estado del trabajo cron en lugar de utilizar la tabla `cron_schedule`. Los trabajos cron que han finalizado con un estado de error se vuelven a intentar durante la siguiente ejecución cron en lugar de esperar 24 horas.
 
-   - Agrega una operación _retry_ para evitar interbloqueos durante las actualizaciones de los datos en la tabla `cron_schedule`.
+  - Agrega una operación _retry_ para evitar interbloqueos durante las actualizaciones de los datos en la tabla `cron_schedule`.
 
 - **Se ha actualizado `magento/magento-cloud-patches` para incluir todos los parches disponibles para Magento Open Source 2.x**—Se ha actualizado el paquete magento/magento-cloud-patches para incluir todos los parches de Magento Open Source 2.x disponibles en la página de descargas de software. Si anteriormente copió parches de Magento Open Source en su proyecto de Adobe Commerce en la nube, quítelos para evitar conflictos.<!--MAGECLOUD-4606-->
 
