@@ -11,9 +11,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+source-git-commit: de2e5072775d032d46f91394ed870768271fa9a1
 workflow-type: tm+mt
-source-wordcount: 855
+source-wordcount: 849
 ht-degree: 0%
 
 ---
@@ -28,7 +28,6 @@ El archivo `.magento.app.yaml` utiliza propiedades para administrar la compatibi
 | [`crons`](crons-property.md) | Actualizar especificaciones y programar trabajos cron | — | No |
 | [`dependencies`](#dependencies) | Habilitar dependencias adicionales | `php:composer/composer: '2.2.4'` | No |
 | [`disk`](#disk) | Definir el tamaño del disco persistente | `5120` | Sí |
-| [`firewall`](firewall-property.md) | (Solo Starter) Controlar el tráfico saliente | — | No |
 | [`hooks`](hooks-property.md) | Personalice los comandos del shell para las fases de compilación, implementación y posterior a la implementación | — | No |
 | [`mounts`](#mounts) | Definir rutas | Rutas:<ul><li>`"var": "shared:files/var"`</li><li>`"app/etc": "shared:files/etc"`</li><li>`"pub/media": "shared:files/media"`</li><li>`"pub/static": "shared:files/static"`</li></ul> | No |
 | [`name`](#name) | Definición del nombre de la aplicación | `mymagento` | Sí |
