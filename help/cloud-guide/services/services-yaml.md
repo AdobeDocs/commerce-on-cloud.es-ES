@@ -4,19 +4,13 @@ description: Obtenga información sobre cómo configurar los servicios que utili
 feature: Cloud, Configuration, Services
 exl-id: ddf44b7c-e4ae-48f0-97a9-a219e6012492
 TQID: https://experienceleague.adobe.com/qvCjqNc8E9QGme-zM42vMg-kb1WjwTlWUqjbm-NI2bg
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: ce1afe358fc8596fa6eba1c2cf76a721060164c6
 workflow-type: tm+mt
-source-wordcount: 1136
+source-wordcount: 1186
 ht-degree: 0%
 
 ---
@@ -27,9 +21,13 @@ El archivo `services.yaml` define los servicios admitidos y utilizados por Adobe
 
 >[!NOTE]
 >
->El archivo `.magento/services.yaml` se administra localmente en el directorio `.magento` del proyecto. Se accede a la configuración durante el proceso de compilación para definir las versiones de servicio necesarias solo en el entorno de integración y se elimina una vez completada la implementación, por lo que no se encontrarán en el servidor.
+>El archivo `.magento/services.yaml` se administra localmente en el directorio `.magento` del proyecto. Durante la implementación, Adobe Commerce en la infraestructura de la nube utiliza esta configuración para proporcionar servicios compatibles con el entorno de destino. El directorio `.magento` se quitó del servidor remoto después de la implementación, por lo que no encontrará `services.yaml` en el entorno implementado.
 
 El script de implementación utiliza los archivos de configuración del directorio `.magento` para aprovisionar el entorno con los servicios configurados. Hay un servicio disponible para su aplicación si está incluido en la propiedad [`relationships`](../application/properties.md#relationships) del archivo `.magento.app.yaml`. El archivo `services.yaml` contiene los valores _type_ y _disk_. El tipo de servicio define el servicio _name_ y _version_.
+
+La configuración del servicio en `.magento/services.yaml` es independiente de las dependencias del paquete PHP y Composer definidas en `composer.json` y bloqueadas en `composer.lock`.
+
+## Dónde se aplican los cambios del servicio
 
 Al cambiar una configuración de servicio, una implementación aprovisiona el entorno con los servicios actualizados, lo que afecta a los siguientes entornos:
 
@@ -40,36 +38,41 @@ Al cambiar una configuración de servicio, una implementación aprovisiona el en
 
 ## Servicios predeterminados y admitidos
 
-La infraestructura en la nube admite e implementa los siguientes servicios:
+Adobe Commerce en la infraestructura en la nube admite los siguientes servicios, que se pueden configurar para su proyecto:
 
 - [ActiveMQ](activemq.md)
 - [MySQL](mysql.md)
+- [Valkey](valkey.md)
 - [Redis](redis.md)
 - [RabbitMQ](rabbitmq.md)
 - [Elasticsearch](elasticsearch.md)
 - [OpenSearch](opensearch.md)
 
 >[!NOTE]
->Debe [actualizar RabbitMQ secuencialmente entre las versiones disponibles](https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/configure/service/rabbitmq#upgrading-the-rabbitmq-service); por ejemplo, no puede actualizar de la versión 3.9 directamente a la 4.1
+>Debe [actualizar RabbitMQ secuencialmente entre las versiones disponibles](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/rabbitmq#upgrading-the-rabbitmq-service); por ejemplo, no puede actualizar de la versión 3.9 directamente a la 4.1
 >
 >Después de actualizar a una nueva versión de RabbitMQ, déclencheur una implementación completa para garantizar que las colas de mensajes personalizadas se vuelvan a crear en RabbitMQ.
 
-Puede ver las versiones y los valores de disco predeterminados en el archivo [default `services.yaml`](https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml) actual. El siguiente ejemplo muestra los servicios `mysql`, `redis`, `opensearch` o `elasticsearch`, `rabbitmq` y `activemq-artemis` definidos en el archivo de configuración `services.yaml`:
+## Ver servicios y versiones configurados
+
+Puede ver ejemplos de definiciones de servicios y valores de disco en el archivo de plantilla actual [`services.yaml` ](https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml). Las versiones reales del servicio predeterminado y admitido dependen de la versión de Adobe Commerce y de la plantilla de nube actual.
+
+El ejemplo siguiente muestra definiciones de servicio en el archivo de configuración `services.yaml`:
 
 ```yaml
 mysql:
-    type: mysql:10.4
+    type: mysql:11.8
     disk: 5120
 
-redis:
-    type: redis:6.2
+cache:
+    type: valkey:9.0
 
 opensearch:
-    type: opensearch:2  # minor version not required; uses latest
+    type: opensearch:3  # minor version not required; uses latest
     disk: 1024
 
 rabbitmq:
-    type: rabbitmq:3.9
+    type: rabbitmq:4.3
     disk: 1024
 
 activemq-artemis:
@@ -142,9 +145,9 @@ En Adobe Commerce en proyectos de infraestructura en la nube, las [relaciones](.
 
 Puede recuperar los datos de configuración de todas las relaciones de servicio desde la variable de entorno [`$MAGENTO_CLOUD_RELATIONSHIPS`](../environment/variables-cloud.md). Los datos de configuración incluyen el nombre, el tipo y la versión del servicio junto con los detalles de conexión necesarios, como el número de puerto y las credenciales de inicio de sesión.
 
-**Para comprobar las relaciones en el entorno local**:
+**Para comprobar relaciones desde su entorno de desarrollo local**:
 
-1. En el entorno local, muestre las relaciones del entorno activo.
+1. En el entorno de desarrollo local, muestre las relaciones del entorno activo.
 
    ```bash
    magento-cloud relationships
@@ -160,7 +163,7 @@ Puede recuperar los datos de configuración de todas las relaciones de servicio 
    ...
            type: 'redis:7.0'
            port: 6379
-   elasticsearch:
+   opensearch:
        -
    ...
            type: 'opensearch:2'
@@ -168,7 +171,7 @@ Puede recuperar los datos de configuración de todas las relaciones de servicio 
    database:
        -
    ...
-           type: 'mysql:10.6'
+           type: 'mysql:11.8'
            port: 3306
    ```
 
@@ -192,7 +195,7 @@ Puede recuperar los datos de configuración de todas las relaciones de servicio 
 
 ## Versiones de servicio
 
-La compatibilidad y la versión del servicio para Adobe Commerce en la infraestructura en la nube están determinadas por las versiones implementadas y probadas en la infraestructura en la nube, y a veces difieren de las versiones admitidas por las implementaciones locales de Adobe Commerce. Consulte [Requisitos del sistema](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=es) en la guía _Instalación_ para obtener una lista de dependencias de software de terceros que Adobe ha probado con versiones específicas de Adobe Commerce y Magento Open Source.
+La compatibilidad y la versión del servicio para Adobe Commerce en la infraestructura en la nube están determinadas por las versiones implementadas y probadas en la infraestructura en la nube, y a veces difieren de las versiones admitidas por las implementaciones locales de Adobe Commerce. Consulte [Requisitos del sistema](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html) en la guía _Instalación_ para obtener una lista de dependencias de software de terceros que Adobe ha probado con versiones específicas de Adobe Commerce y Magento Open Source.
 
 ### Comprobaciones de EOL de software
 
@@ -225,7 +228,7 @@ Puede actualizar la versión del servicio instalado actualizando la configuraci�
 
    ```yaml
    mysql:
-       type: mysql:10.3
+       type: mysql:11.8
        disk: 2048
    ```
 
@@ -233,7 +236,7 @@ Puede actualizar la versión del servicio instalado actualizando la configuraci�
 
    ```yaml
    mysql:
-       type: mysql:10.4
+       type: mysql:12.3
        disk: 5120
    ```
 
@@ -244,7 +247,7 @@ Puede actualizar la versión del servicio instalado actualizando la configuraci�
    ```
 
    ```bash
-   git commit -m "Upgrade MySQL from MariaDB 10.3 to 10.4."
+   git commit -m "Upgrade MySQL from MariaDB 11.8 to 12.3."
    ```
 
    ```bash
