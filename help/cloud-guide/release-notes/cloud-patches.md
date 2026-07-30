@@ -19,9 +19,9 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 9f2b598b52d26b3d9239c54c778f07a5b10f9a60
+source-git-commit: 898bbc1b96478de6693d7634d4f0cff359ccc12f
 workflow-type: tm+mt
-source-wordcount: 2965
+source-wordcount: 3019
 ht-degree: 0%
 
 ---
@@ -44,7 +44,14 @@ El paquete `magento/magento-cloud-patches` usa la siguiente secuencia de version
 
 <!--Add release notes below-->
 
-## Versión 1.1.16 {#latest}
+## Versión 1.1.17 {#latest}
+
+Fecha de la versión: 29 de julio de 2026
+
+- ![Icono de corrección](../../assets/fix.svg) **Rendimiento, confiabilidad y administración de etiquetas optimizados de la caché de Symfony L2**: escalabilidad de caché mejorada, E/S del sistema de archivos reducida innecesaria, coherencia de caché mejorada y suscripciones de etiquetas antiguas resueltas, escrituras remotas redundantes y limpieza de desalojos de caché L1.<!-- ACP2E-5132 -->
+- ![icono de corrección](../../assets/fix.svg) **Mejoras de seguridad**: compatibilidad mejorada para la revisión de seguridad aislada de julio de 2026.<!-- AC-17674 -->
+
+## Versión 1.1.16
 
 Fecha de la versión: 23 de julio de 2026
 
