@@ -4,7 +4,7 @@ description: Consulte un ejemplo de cómo administrar y sincronizar las opciones
 hidefromtoc: true
 source-git-commit: 0df07e865c3c4fc4ac14483972643eafa8814726
 workflow-type: tm+mt
-source-wordcount: '864'
+source-wordcount: '888'
 ht-degree: 0%
 
 ---
