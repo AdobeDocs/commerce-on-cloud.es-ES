@@ -1,7 +1,7 @@
 ---
-source-git-commit: cb26cb9e3bf8b7d7c75509d8e3c3c02be439a3f4
+source-git-commit: d552a3e05d9cc81ceb546815c12aa52e7a9b1b40
 workflow-type: tm+mt
-source-wordcount: '263'
+source-wordcount: '223'
 ht-degree: 2%
 
 ---
@@ -23,7 +23,7 @@ Esta página contiene los cambios realizados en los últimos 60 días. Excluimos
   </thead>
   <tbody>
     <tr>
-      <td><p>Se ha actualizado <a href="https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">Referencia de CLI</a> después de la versión de ECE-Tools, v2002.2.12. No se han realizado otros cambios aparte del número de versión.</p>
+      <td><p>Se ha actualizado <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">Referencia de CLI</a> después de la versión de ECE-Tools, v2002.2.12. No se han realizado otros cambios aparte del número de versión.</p>
 </td>
       <td>
         Técnico
@@ -45,7 +45,7 @@ Esta página contiene los cambios realizados en los últimos 60 días. Excluimos
   </thead>
   <tbody>
     <tr>
-      <td><p>Se ha actualizado <a href="https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/project/user-access">Administrar el acceso de los usuarios</a> con requisitos previos más claros, estados de invitación de la consola de Cloud, instrucciones de reimplementación y otros problemas relacionados.</p>
+      <td><p>Se ha actualizado <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/project/user-access">Administrar el acceso de los usuarios</a> con requisitos previos más claros, estados de invitación de la consola de Cloud, instrucciones de reimplementación y otros problemas relacionados.</p>
 </td>
       <td>
         Comentarios
@@ -67,7 +67,7 @@ Esta página contiene los cambios realizados en los últimos 60 días. Excluimos
   </thead>
   <tbody>
     <tr>
-      <td><p>Se ha actualizado el tema <a href="https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/cdn/advanced-security">Seguridad avanzada</a> con información sobre las limitaciones y la observabilidad.</p>
+      <td><p>Se ha actualizado el tema <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/advanced-security">Seguridad avanzada</a> con información sobre las limitaciones y la observabilidad.</p>
 </td>
       <td>
         Actualización importante
@@ -89,34 +89,12 @@ Esta página contiene los cambios realizados en los últimos 60 días. Excluimos
   </thead>
   <tbody>
     <tr>
-      <td><p>Se ha aclarado la configuración de bloqueo predeterminada y cómo las variables de entorno <a href="https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-cloud"><code>MAGENTO_CLOUD_LOCKS_DIR</code></a> y <a href="https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#lock_provider"><code>LOCK_PROVIDER</code></a> afectan a los entornos Pro y Starter.</p>
+      <td><p>Se ha aclarado la configuración de bloqueo predeterminada y cómo las variables de entorno <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-cloud"><code>MAGENTO_CLOUD_LOCKS_DIR</code></a> y <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/env/stage/variables-deploy#lock_provider"><code>LOCK_PROVIDER</code></a> afectan a los entornos Pro y Starter.</p>
 </td>
       <td>
         Técnico
       </td>
       <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/17ecf47f8cad5dcb53ef92b32377a7074e16bb52">comprometer</a></td>
-    </tr>
-  </tbody>
-</table>
-
-### 1 de junio de 2026
-
-<table style="table-layout:auto;">
-  <thead>
-    <tr>
-      <th>Descripción</th>
-      <th>Tipo</th>
-      <th>Source</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td><p>Se ha eliminado la declaración de compatibilidad de Elasticsearch con On-Prem en la <a href="https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/configure/service/opensearch">advertencia de compatibilidad con Elasticsearch</a>.</p>
-</td>
-      <td>
-        Técnico
-      </td>
-      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/65898d2007d69d5bd3b8a9eabb9872ced98b8ffc">comprometer</a></td>
     </tr>
   </tbody>
 </table>
