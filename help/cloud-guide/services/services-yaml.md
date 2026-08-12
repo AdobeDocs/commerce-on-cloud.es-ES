@@ -4,10 +4,16 @@ description: Obtenga información sobre cómo configurar los servicios que utili
 feature: Cloud, Configuration, Services
 exl-id: ddf44b7c-e4ae-48f0-97a9-a219e6012492
 TQID: https://experienceleague.adobe.com/qvCjqNc8E9QGme-zM42vMg-kb1WjwTlWUqjbm-NI2bg
-product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+product_v2:
+  - id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2:
+  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2:
+  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2:
+  - id: d095671a-1355-40aa-8b5f-06c33c68080b
 source-git-commit: 90e23f5f38ceeb0e1c48a83e43f942a30aa743b8
 workflow-type: tm+mt
 source-wordcount: 1186
@@ -55,7 +61,7 @@ Adobe Commerce en la infraestructura en la nube admite los siguientes servicios,
 
 ## Ver servicios y versiones configurados
 
-Puede ver ejemplos de definiciones de servicios y valores de disco en el archivo de plantilla actual [`services.yaml` ](https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml). Las versiones reales del servicio predeterminado y admitido dependen de la versión de Adobe Commerce y de la plantilla de nube actual.
+Puede ver ejemplos de definiciones de servicios y valores de disco en el archivo de plantilla actual [`services.yaml` &#x200B;](https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml). Las versiones reales del servicio predeterminado y admitido dependen de la versión de Adobe Commerce y de la plantilla de nube actual.
 
 El ejemplo siguiente muestra definiciones de servicio en el archivo de configuración `services.yaml`:
 
