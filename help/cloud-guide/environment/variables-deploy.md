@@ -16,9 +16,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: 1aaf04500648a72b061db67af39a732871f4e886
+source-git-commit: f09934f41676922dc4b4001f24ee94062a5e9c0a
 workflow-type: tm+mt
-source-wordcount: 3031
+source-wordcount: 3035
 ht-degree: 0%
 
 ---
@@ -357,7 +357,7 @@ stage:
 
 ## `LOCK_PROVIDER`
 
-- **Predeterminado**— En los entornos de Producción y Ensayo, el valor predeterminado es `file`. Para la integración de Pro y los entornos de inicio, el valor predeterminado es `db`.
+- **Predeterminado**— En los entornos de Producción y Ensayo, el valor predeterminado es `file` y no se puede cambiar. Para la integración de Pro y los entornos de inicio, el valor predeterminado es `db`.
 - **Versión**: Adobe Commerce 2.2.5 y posterior
 
 El proveedor de bloqueo evita el inicio de trabajos cron y grupos cron duplicados. Commerce en la nube solo admite `file` y `db` proveedores de bloqueos.
@@ -367,7 +367,7 @@ Para los entornos de Producción y Ensayo, el valor predeterminado `file` está 
 ```yaml
 stage:
   deploy:
-    LOCK_PROVIDER: "db"
+    LOCK_PROVIDER: "file"
 ```
 
 ## `MYSQL_USE_SLAVE_CONNECTION`
