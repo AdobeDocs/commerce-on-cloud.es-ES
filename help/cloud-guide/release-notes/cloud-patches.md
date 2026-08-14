@@ -19,9 +19,9 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 643134d5bf2ab03b0c9cace884e9a020a2aebdb7
+source-git-commit: 1a0261c2c7ca9c058e18af5cbc86319501d75e57
 workflow-type: tm+mt
-source-wordcount: 3054
+source-wordcount: 3086
 ht-degree: 0%
 
 ---
@@ -49,7 +49,7 @@ El paquete `magento/magento-cloud-patches` usa la siguiente secuencia de version
 Fecha de lanzamiento: 11 de agosto de 2026
 
 - ![icono de corrección](../../assets/fix.svg) **Administración mejorada de parches**—Los parches ahora omiten los módulos de direccionamiento de bloques eliminados a través de `composer.json` `replace` y continúan aplicando las partes instaladas restantes.<!-- MCLOUD-15325 -->
-- ![icono de corrección](../../assets/fix.svg) **Mejoras de seguridad**: se han aplicado los parches de seguridad más recientes.<!--MCLOUD-15035 -->
+- ![Icono de correcciones](../../assets/fix.svg) **Mejoras de seguridad**: se han aplicado las correcciones de seguridad a las que se hace referencia en la [Actualización de seguridad de Adobe Commerce APSB26-92](https://helpx.adobe.com/es/security/products/magento/apsb26-92.html).<!--MCLOUD-15035 -->
 
 ## Versión 1.1.17
 
@@ -68,7 +68,7 @@ Fecha de la versión: 23 de julio de 2026
 
 Fecha de la versión: 14 de julio de 2026
 
-- ![icono de corrección](../../assets/fix.svg) **Mejoras de seguridad**: se han aplicado los parches de seguridad más recientes.<!--MCLOUD-15066 -->
+- ![Icono de correcciones](../../assets/fix.svg) **Mejoras de seguridad**: se han aplicado las correcciones de seguridad a las que se hace referencia en la [Actualización de seguridad de Adobe Commerce APSB26-73](https://experienceleague.adobe.com/es/docs/experience-cloud-kcs/kbarticles/ka-37421).<!--MCLOUD-15066 -->
 
 ## Versión 1.1.14
 
