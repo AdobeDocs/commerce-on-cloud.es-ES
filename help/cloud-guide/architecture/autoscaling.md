@@ -31,14 +31,14 @@ El escalado automático añade o elimina automáticamente los recursos a la infr
 
 ## Habilitar escalado automático
 
-Para habilitar o deshabilitar el escalado automático horizontal o vertical para su proyecto [!DNL Adobe Commerce on cloud infrastructure], [Envíe un ticket de soporte de Adobe Commerce](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket). Elija las siguientes razones en el ticket:
+Para habilitar o deshabilitar el escalado automático horizontal o vertical para su proyecto [!DNL Adobe Commerce on cloud infrastructure], [Envíe un ticket de soporte de Adobe Commerce](https://experienceleague.adobe.com/es/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket). Elija las siguientes razones en el ticket:
 
 - **Razón de contacto**: Solicitud de cambio de infraestructura
 - **Motivo de contacto de infraestructura de Adobe Commerce**: otra solicitud de cambio de infraestructura
 
 >[!IMPORTANT]
 >
->La función de escalado automático captura eventos no anticipados. Aunque tenga habilitada la escala automática, Adobe recomienda que continúe [enviando un ticket de soporte de Adobe Commerce](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) si espera un evento próximo.
+>La función de escalado automático captura eventos no anticipados. Aunque tenga habilitada la escala automática, Adobe recomienda que continúe [enviando un ticket de soporte de Adobe Commerce](https://experienceleague.adobe.com/es/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) si espera un evento próximo.
 
 ### Prueba de carga
 
