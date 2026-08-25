@@ -1,23 +1,16 @@
 ---
 title: Acceso a su panel de administración de Commerce
-description: Obtenga información sobre cómo acceder a su Panel de administración de Commerce.
+description: Obtenga información sobre cómo proteger el acceso de los administradores a su proyecto de infraestructura de nube de Adobe Commerce, restablecer la contraseña del propietario de la licencia e iniciar sesión en el panel de administración.
 recommendations: noDisplay, catalog
 exl-id: 827417b0-9048-44d8-8c82-07befba476c7
 TQID: https://experienceleague.adobe.com/V3BXuCc9aqT5YuyIS8WAZgUdPAYNhQunAgg2i2FCaOs
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-  - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: 745b243d165ba3a7695dea2827ddff37573ba8d0
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080bid: e1e0219c-f879-479f-8427-888ed2a6e9c2
+source-git-commit: 285a91916015e03b506195f3cb027c779976fdf0
 workflow-type: tm+mt
-source-wordcount: 362
+source-wordcount: 379
 ht-degree: 0%
 
 ---
@@ -38,8 +31,8 @@ Después de enviar la solicitud de cambio de contraseña, compruebe en su correo
 
 >[!TIP]
 >
->Si el restablecimiento de la contraseña falla o no puede iniciar sesión en el Panel de administración, un usuario con acceso de administrador puede conectarse al proyecto mediante SSH y agregar un usuario administrador mediante el comando CLI `admin:user:create`. Consulte [Crear, editar o desbloquear una cuenta de administrador](https://experienceleague.adobe.com/es/docs/commerce-operations/installation-guide/tutorials/admin) en la _Guía de instalación_.
+>Si el restablecimiento de la contraseña falla o no puede iniciar sesión en el Panel de administración, un usuario con acceso de administrador puede conectarse al proyecto mediante SSH y agregar un usuario administrador mediante el comando CLI `admin:user:create`. Consulte [Crear, editar o desbloquear una cuenta de administrador](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/tutorials/admin) en la _Guía de instalación_.
 
 ## Monitorización del estado del sitio
 
-[Site-Wide Analysis Tool](https://experienceleague.adobe.com/es/docs/commerce-operations/tools/site-wide-analysis-tool/intro) es una herramienta proactiva de autoservicio y un repositorio central que incluye información detallada del sistema y recomendaciones para garantizar la seguridad y la operabilidad de la instalación de Adobe Commerce. Proporciona monitorización del rendimiento, informes y consejos en tiempo real las 24 horas del día, los 7 días de la semana para identificar posibles problemas y una mejor visibilidad de las configuraciones de salud, seguridad y aplicaciones del sitio. Ayuda a reducir el tiempo de resolución y a mejorar la estabilidad y el rendimiento del sitio. Puede acceder a la herramienta de análisis de todo el sitio directamente desde el [panel de administración](https://experienceleague.adobe.com/es/docs/commerce-operations/tools/site-wide-analysis-tool/access#option-2-logging-in-to-your-site-wide-analysis-tool-dashboard-from-your-stores-admin-panel).
+[Site-Wide Analysis Tool](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/site-wide-analysis-tool/intro) es una herramienta proactiva de autoservicio y un repositorio central que incluye información detallada del sistema y recomendaciones para garantizar la seguridad y la operabilidad de la instalación de Adobe Commerce. Proporciona monitorización del rendimiento, informes y consejos en tiempo real las 24 horas del día, los 7 días de la semana para identificar posibles problemas y una mejor visibilidad de las configuraciones de salud, seguridad y aplicaciones del sitio. Ayuda a reducir el tiempo de resolución y a mejorar la estabilidad y el rendimiento del sitio. Puede acceder a la herramienta de análisis de todo el sitio directamente desde el [panel de administración](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/site-wide-analysis-tool/access#option-2-logging-in-to-your-site-wide-analysis-tool-dashboard-from-your-stores-admin-panel).
