@@ -193,7 +193,7 @@ stage:
 - **Predeterminado**—`quick`
 - **Versión**—Adobe Commerce 2.2.0 y posterior
 
-Personalice la [estrategia de implementación](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy) para el contenido estático. Consulte [Implementar archivos de vista estática](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment).
+Personalice la [estrategia de implementación](https://experienceleague.adobe.com/es/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-strategy) para el contenido estático. Consulte [Implementar archivos de vista estática](https://experienceleague.adobe.com/es/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment).
 
 Utilice estas opciones _solamente_ si tiene más de una configuración regional:
 

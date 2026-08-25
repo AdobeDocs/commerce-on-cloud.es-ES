@@ -47,7 +47,7 @@ La estrategia de ramificación utiliza un flujo de trabajo Git común en el que 
 
 Su cuenta admite un número limitado de ![ramas activas](../../assets/icon-active.png){width="32"} (activas) y un número ilimitado de ![ramas de desarrollo inactivas](../../assets/icon-inactive.png){width="32"} (inactivas). Administre ramas activas e inactivas agregando o eliminando una rama usando solamente la [!DNL Cloud Console] o la CLI de nube. Antes de eliminar una rama, debe desactivarla, que permanece en la lista _Entornos_ como _inactiva_. Puede reactivar la rama más tarde o [eliminar la rama](../dev-tools/cloud-cli-overview.md#) en la configuración del entorno o mediante la CLI de nube.
 
-Si necesita entornos activos adicionales para el desarrollo, envíe un [ticket de asistencia](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket).
+Si necesita entornos activos adicionales para el desarrollo, envíe un [ticket de asistencia](https://experienceleague.adobe.com/es/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket).
 
 **Para agregar una rama**:
 

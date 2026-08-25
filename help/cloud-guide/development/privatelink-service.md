@@ -51,7 +51,7 @@ La integración del servicio PrivateLink para Adobe Commerce en proyectos de inf
 - La compatibilidad con Adobe Commerce no cubre la resolución de problemas de AWS PrivateLink más allá de la activación inicial.
 - Los clientes son responsables de los costes asociados con la administración de su propio VPC.
 - Compatibilidad con el protocolo **HTTPS (puerto 443) por plataforma:**
-  - **Vínculo privado de Azure**: no puede usar el protocolo HTTPS (puerto 443) para conectarse a Adobe Commerce en la infraestructura de la nube debido a [encubrimiento de origen rápido](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/cdn/fastly).
+  - **Vínculo privado de Azure**: no puede usar el protocolo HTTPS (puerto 443) para conectarse a Adobe Commerce en la infraestructura de la nube debido a [encubrimiento de origen rápido](https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/cdn/fastly).
   - **AWS PrivateLink**: se admiten conexiones de protocolo HTTPS (puerto 443).
 - PrivateDNS no está disponible.
 
@@ -219,7 +219,7 @@ Puede utilizar la aplicación Telnet para probar la conexión con el servicio ex
 
 ## Cambiar la configuración de PrivateLink
 
-[Envíe un ticket de asistencia de Adobe Commerce](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) para cambiar una configuración de PrivateLink existente. Por ejemplo, puede solicitar cambios como los siguientes:
+[Envíe un ticket de asistencia de Adobe Commerce](https://experienceleague.adobe.com/es/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) para cambiar una configuración de PrivateLink existente. Por ejemplo, puede solicitar cambios como los siguientes:
 
 - Elimine la conexión PrivateLink del entorno de ensayo o producción de Adobe Commerce en la infraestructura en la nube Pro.
 - Cambie el número de cuenta de la plataforma de customer Cloud para acceder al servicio de extremo de Adobe.
