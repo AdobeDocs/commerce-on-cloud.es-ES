@@ -5,18 +5,11 @@ recommendations: noDisplay, catalog
 last-substantial-update: 2026-05-07T00:00:00.000Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
 TQID: https://experienceleague.adobe.com/pa4D-RsauRtCBS7puKWVBQtA37-Mcv9IZG4lah41l1U
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-  - id: f42e0a1a-0d79-488d-a83f-f2c30672b137
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
-source-git-commit: 58dbe1e1135c77d7061deec91246f1657b6e91c6
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: f42e0a1a-0d79-488d-a83f-f2c30672b137
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
 source-wordcount: 3631
 ht-degree: 0%
@@ -206,7 +199,7 @@ Fecha de la versión: 10 de marzo de 2023
 
 Fecha de la versión: 27 de octubre de 2022
 
-- ![nuevo icono](../../assets/new.svg) **Se agregó compatibilidad con Adobe I/O Events para Adobe Commerce**. Los desarrolladores de extensiones ahora pueden usar el marco de trabajo [Adobe I/O Events](https://developer.adobe.com/events/docs/) para enviar información de evento de Commerce desde instancias de nube a sus aplicaciones escritas para [Adobe App Builder](https://developer.adobe.com/app-builder/docs/overview/). Adobe I/O Events para Adobe Commerce se encuentra en Vista previa de socio.<!-- CEXT-932 -->
+- ![nuevo icono](../../assets/new.svg) **Se agregó compatibilidad con Adobe I/O Events para Adobe Commerce**. Los desarrolladores de extensiones ahora pueden usar el marco de trabajo [Adobe I/O Events](https://developer.adobe.com/events/docs/) para enviar información de evento de Commerce desde instancias de nube a sus aplicaciones escritas para [Adobe App Builder](https://developer.adobe.com/app-builder/docs/intro_and_overview/). Adobe I/O Events para Adobe Commerce se encuentra en Vista previa de socio.<!-- CEXT-932 -->
 - ![nuevo icono](../../assets/new.svg) **Validador para la configuración de OPcache**—Se agregó un validador para comprobar la configuración de OPcache en busca de rutas excluidas.<!-- MCLOUD-9485 -->
 - ![Icono de corrección](../../assets/fix.svg) **Se ha corregido un problema con la configuración de la caché de GraphQL**. Ahora, ECE-Tools mantiene el valor de GraphQL `id_salt` en la configuración de `cache` en el archivo `app/etc/env.php`.<!-- MCLOUD-9486 -->
 

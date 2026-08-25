@@ -2,7 +2,8 @@
 title: Comprobar el límite de espacio en disco para Adobe Commerce en la infraestructura en la nube
 description: Obtenga información sobre cómo comprobar el espacio disponible en disco para su proyecto de infraestructura de Adobe Commerce en la nube mediante Cloud Console.
 feature: REST
-source-git-commit: f8fafa7a3660b9c3661a54ef76a4e013a50d71e9
+exl-id: 2c83f469-ca45-4ba8-a2c3-5ca1e633c16d
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
 source-wordcount: '106'
 ht-degree: 0%
@@ -20,5 +21,4 @@ Para comprobar cuánto espacio tiene para cada Adobe Commerce en el entorno de l
 
 ## Lectura relacionada
 
-[Administrar espacio en disco](https://experienceleague.adobe.com/es/docs/commerce-cloud-service/user-guide/develop/storage/manage-disk-space?lang=en) en nuestra documentación para desarrolladores.
-
+[Administrar espacio en disco](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/storage/manage-disk-space?lang=en) en nuestra documentación para desarrolladores.

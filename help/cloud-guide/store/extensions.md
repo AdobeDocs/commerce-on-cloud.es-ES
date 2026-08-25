@@ -4,19 +4,13 @@ description: Obtenga información sobre cómo instalar y administrar extensiones
 feature: Cloud, Extensions, Upgrade
 exl-id: 88c5ea06-fe79-4105-8b67-f16e9ef06210
 TQID: https://experienceleague.adobe.com/7ZNXOai-hYkUS4ff3bNW32Ny63DfJLMBG2Zti5OVxRM
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: d1e21356-0064-4f48-9089-16e3f0dbd2a6id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 672
+source-wordcount: 675
 ht-degree: 0%
 
 ---
@@ -61,7 +55,7 @@ Aunque en esta sección se explica cómo obtener el nombre y la versión del Com
 
 ## Instalación de una extensión
 
-Adobe recomienda trabajar en una rama de desarrollo al añadir una extensión a la implementación. Al instalar una extensión, el nombre de la extensión (`<VendorName>_<ComponentName>`) se inserta automáticamente en el archivo [`app/etc/config.php`](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/files/deployment-files.html?lang=es). No es necesario editar el archivo directamente.
+Adobe recomienda trabajar en una rama de desarrollo al añadir una extensión a la implementación. Al instalar una extensión, el nombre de la extensión (`<VendorName>_<ComponentName>`) se inserta automáticamente en el archivo [`app/etc/config.php`](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/files/deployment-files). No es necesario editar el archivo directamente.
 
 **Para instalar una extensión**:
 
@@ -167,7 +161,7 @@ Nunca habilite ni deshabilite una extensión mientras esté conectado a entornos
 
 ## Actualización de una extensión
 
-Antes de continuar, necesita el nombre y la versión del compositor para la extensión de. Además, confirme que la extensión es compatible con el proyecto y la versión de Adobe Commerce. En particular, [compruebe la versión de PHP necesaria](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=es) antes de comenzar.
+Antes de continuar, necesita el nombre y la versión del compositor para la extensión de. Además, confirme que la extensión es compatible con el proyecto y la versión de Adobe Commerce. En particular, [compruebe la versión de PHP necesaria](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements) antes de comenzar.
 
 **Para actualizar una extensión**:
 
@@ -201,4 +195,4 @@ Antes de continuar, necesita el nombre y la versión del compositor para la exte
    git push origin <branch-names>
    ```
 
-Si encuentra errores, consulte [Error al recuperar del componente](../deploy/recover-failed-deployment.md). Para obtener más información acerca del uso de extensiones con Adobe Commerce, consulte [Extensiones](https://experienceleague.adobe.com/docs/commerce-admin/start/resources/extensions.html?lang=es) en la _Guía de administración_.
+Si encuentra errores, consulte [Error al recuperar del componente](../deploy/recover-failed-deployment.md). Para obtener más información acerca del uso de extensiones con Adobe Commerce, consulte [Extensiones](https://experienceleague.adobe.com/en/docs/commerce-admin/start/resources/extensions) en la _Guía de administración_.

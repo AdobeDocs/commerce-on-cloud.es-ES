@@ -6,17 +6,13 @@ feature: Cloud, Security
 topic: Security
 exl-id: 73af13d8-7085-4ac8-9cfe-9772bc6bc112
 TQID: https://experienceleague.adobe.com/-4Ag5M7x3edpbquUy6Rr--rcghGk7r745jKV883IFFA
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1071
+source-wordcount: 1079
 ht-degree: 0%
 
 ---
@@ -38,7 +34,7 @@ Cree un par de claves SSH en cada equipo y espacio de trabajo que requiera acces
 
 ## Añada una clave pública SSH a su cuenta
 
-Después de agregar o actualizar la clave pública SSH a su cuenta de Adobe Commerce en la nube, [vuelva a implementar todos los entornos activos](https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-reference#environmentredeploy) en su cuenta para instalar la clave.
+Después de agregar o actualizar la clave pública SSH a su cuenta de Adobe Commerce en la nube, [vuelva a implementar todos los entornos activos](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/cloud-cli/cloud-cli-reference#environmentredeploy) en su cuenta para instalar la clave.
 
 Puede agregar claves SSH a su cuenta mediante uno de los siguientes métodos: CLI de nube o [!DNL Cloud Console].
 
@@ -164,10 +160,10 @@ Según el cliente, es posible que se requieran opciones adicionales para complet
 
 Para **entornos Starter y entornos de integración Pro**, quizá también quiera considerar [agregar un `mount`](../application/properties.md#mounts) para tener acceso a un directorio específico. Agregaría el montaje a su archivo `.magento.app.yaml`. Para obtener una lista de directorios editables, vea [Estructura del proyecto](../project/file-structure.md). Este punto de montaje solo funciona en esos entornos.
 
-Para **entornos de ensayo y producción Pro**, si no tiene acceso SSH al entorno, debe [enviar un vale de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=es#submit-ticket) para solicitar acceso a sFTP y un punto de montaje para acceder a la carpeta específica, por ejemplo, `pub/media`.
+Para **entornos de ensayo y producción Pro**, si no tiene acceso SSH al entorno, debe [enviar un vale de soporte de Adobe Commerce](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) para solicitar acceso a sFTP y un punto de montaje para acceder a la carpeta específica, por ejemplo, `pub/media`.
 
 >[!NOTE]
->Para Ensayo y producción profesionales, si la conexión sFTP es para un usuario de _generic_ que no necesita **not** para ser [agregado al proyecto en la nube](../project/user-access.md), debe [enviar un ticket de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=es#submit-ticket) con su clave **public** adjunta. **Nunca proporcione su clave SSH privada.**
+>Para Ensayo y producción profesionales, si la conexión sFTP es para un usuario de _generic_ que no necesita **not** para ser [agregado al proyecto en la nube](../project/user-access.md), debe [enviar un ticket de soporte de Adobe Commerce](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) con su clave **public** adjunta. **Nunca proporcione su clave SSH privada.**
 
 ## Túnel SSH
 

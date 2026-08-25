@@ -4,37 +4,30 @@ description: Conozca las prácticas recomendadas para configurar su tienda en Ad
 feature: Cloud, Best Practices
 exl-id: ae7da73b-f874-4623-bf29-821ee0a00eb9
 TQID: https://experienceleague.adobe.com/dhZ3IlMZ-8xCdbEQzjDNWoFALPxUIaIFN1ch0w6O6R0
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: c1256247-af4b-46d8-9dca-0c654ecfa157
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: c1256247-af4b-46d8-9dca-0c654ecfa157id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1178
+source-wordcount: 1185
 ht-degree: 0%
 
 ---
 
 # Prácticas recomendadas para la configuración de tiendas
 
-Para obtener información detallada sobre cómo configurar tu tienda, sitios y sitios web, revisa la [Guía del usuario de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-admin/user-guides/home.html?lang=es). Esta página proporciona prácticas recomendadas, información útil y directrices para configurar tiendas, sitios y mucho más con contenido adicional que se publicará a lo largo del tiempo y en todas las versiones.
+Para obtener información detallada sobre cómo configurar tu tienda, sitios y sitios web, revisa la [Guía del usuario de Adobe Commerce](https://experienceleague.adobe.com/en/docs/commerce-admin/user-guides/home). Esta página proporciona prácticas recomendadas, información útil y directrices para configurar tiendas, sitios y mucho más con contenido adicional que se publicará a lo largo del tiempo y en todas las versiones.
 
 ## Campañas y promociones de marketing
 
 Esta información es útil para Adobe Commerce en la infraestructura en la nube 2.1.X y 2.2.X.
 
-Para crear campañas y promociones, crea las opciones y la configuración en [Ensayo de contenido](https://experienceleague.adobe.com/docs/commerce-admin/content-design/staging/content-staging.html?lang=es). Esta función le permite crear y previsualizar sus campañas antes de hacerlas públicas para las ventas de clientes. La siguiente información proporciona información útil. Para obtener instrucciones exactas, consulte el contenido de la Guía del usuario de Adobe Commerce vinculada.
+Para crear campañas y promociones, crea las opciones y la configuración en [Ensayo de contenido](https://experienceleague.adobe.com/en/docs/commerce-admin/content-design/staging/content-staging). Esta función le permite crear y previsualizar sus campañas antes de hacerlas públicas para las ventas de clientes. La siguiente información proporciona información útil. Para obtener instrucciones exactas, consulte el contenido de la Guía del usuario de Adobe Commerce vinculada.
 
 _Campañas_ son eventos de marketing para ventas de temporada, nuevas líneas de productos y mucho más. Cada campaña puede incluir temáticas personalizadas, bloques de contenido, widgets para controlar y mostrar contenido y promociones asociadas con reglas de precios. Debido a la amplia naturaleza de una campaña, las crea con una fecha de inicio y de finalización a través del Ensayo de contenido.
 
-_Promociones_ ofrecen descuentos, ofertas únicas, cupones, incentivos para compradores nuevos y mucho más. Estas promociones se crean como _reglas de precios_ que establecen los términos, descuentos y opciones para animar a los clientes a comprar. Puede crear reglas de precios en el [carro de compras](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/cart-rules/price-rules-cart.html?lang=es) o el [catálogo](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/catalog-rules/price-rules-catalog.html?lang=es), con opciones adicionales para banners, puntos de recompensa y mucho más. Puede programar campañas para sus promociones y aplicar reglas de precios para eventos importantes como una nueva línea de productos o ventas estacionales.
+_Promociones_ ofrecen descuentos, ofertas únicas, cupones, incentivos para compradores nuevos y mucho más. Estas promociones se crean como _reglas de precios_ que establecen los términos, descuentos y opciones para animar a los clientes a comprar. Puede crear reglas de precios en el [carro de compras](https://experienceleague.adobe.com/en/docs/commerce-admin/marketing/promotions/cart-rules/price-rules-cart) o el [catálogo](https://experienceleague.adobe.com/en/docs/commerce-admin/marketing/promotions/catalog-rules/price-rules-catalog), con opciones adicionales para banners, puntos de recompensa y mucho más. Puede programar campañas para sus promociones y aplicar reglas de precios para eventos importantes como una nueva línea de productos o ventas estacionales.
 
 A continuación se ofrecen sugerencias para crear, actualizar y administrar promociones y campañas:
 
@@ -47,7 +40,7 @@ A continuación se ofrecen sugerencias para crear, actualizar y administrar prom
 
 Esta información es útil para Adobe Commerce en la infraestructura en la nube 2.1.X y 2.2.X.
 
-Normalmente, puede establecer [Precios avanzados](https://experienceleague.adobe.com/docs/commerce-admin/catalog/products/pricing/pricing-advanced.html?lang=es) para los productos a través del área de **Productos** > **Catálogos** del administrador. Con Contenido en prueba, complete algunos pasos adicionales para añadir el precio a una promoción y campaña.
+Normalmente, puede establecer [Precios avanzados](https://experienceleague.adobe.com/en/docs/commerce-admin/catalog/products/pricing/pricing-advanced) para los productos a través del área de **Productos** > **Catálogos** del administrador. Con Contenido en prueba, complete algunos pasos adicionales para añadir el precio a una promoción y campaña.
 
 Para editar Asignación de Precios Avanzada y actualizar Ensayo de Contenido:
 
@@ -60,17 +53,17 @@ Para editar Asignación de Precios Avanzada y actualizar Ensayo de Contenido:
 1. Guarde la promoción. Se crea una campaña inicial inactiva.
 1. Puede Previsualizar para revisar el precio especial, el nombre de la promoción, el precio normal y el intervalo de fechas programadas para la campaña.
 
-Para ver los pasos adicionales, puede continuar con las instrucciones con [Cambios de horario para las reglas de precios de catálogo](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/catalog-rules/price-rule-catalog-scheduled-changes.html?lang=es). Haga clic en **Siguiente** para recorrer los pasos.
+Para ver los pasos adicionales, puede continuar con las instrucciones con [Cambios de horario para las reglas de precios de catálogo](https://experienceleague.adobe.com/en/docs/commerce-admin/marketing/promotions/catalog-rules/price-rule-catalog-scheduled-changes). Haga clic en **Siguiente** para recorrer los pasos.
 
 ## Reglas de precios
 
 Las reglas de precios pueden incluir lógica y condiciones tan ilimitadas como su imaginación de marketing. Algunos ejemplos populares incluyen Buy One Get One Free, Buy One Get One con un 50% de descuento, un descuento de 25 dólares en pedidos de más de 100 dólares y más.
 
-Para crear una regla de precio, consulte [Guía del usuario de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-admin/marketing/promotions/catalog-rules/price-rules-catalog-create.html?lang=es).
+Para crear una regla de precio, consulte [Guía del usuario de Adobe Commerce](https://experienceleague.adobe.com/en/docs/commerce-admin/marketing/promotions/catalog-rules/price-rules-catalog-create).
 
 A continuación se proporciona un ejemplo de creación de una regla de precio para un descuento de sólo primer pedido. Para este descuento, le interesa:
 
-* Crear una regla de precio con un [segmento de cliente](https://experienceleague.adobe.com/es/docs/commerce-admin/customers/segments/customer-segment-price-rule) con una condición: Cantidad total de pedidos inferior a 1
+* Crear una regla de precio con un [segmento de cliente](https://experienceleague.adobe.com/en/docs/commerce-admin/customers/segments/customer-segment-price-rule) con una condición: Cantidad total de pedidos inferior a 1
 * Añadir este segmento de cliente como condición a la regla de carro de compras
 * Opcional: Añada condiciones y reglas para aplicar los descuentos a SKU específicas o categorías de productos para compras específicas
 
