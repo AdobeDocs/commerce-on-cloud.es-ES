@@ -18,9 +18,9 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1979
+source-wordcount: 1982
 ht-degree: 0%
 
 ---
@@ -77,7 +77,7 @@ Revise estas prácticas recomendadas y consideraciones para el proceso de implem
 
 - **Verificar las versiones y relaciones del servicio y la capacidad de conexión**
 
-  Compruebe los servicios disponibles para su aplicación y asegúrese de que está utilizando la versión más actual y compatible. Consulte [Relaciones de servicio](../services/services-yaml.md#service-relationships) y [Requisitos del sistema](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=es) en la _Guía de instalación_ para ver las versiones recomendadas.
+  Compruebe los servicios disponibles para su aplicación y asegúrese de que está utilizando la versión más actual y compatible. Consulte [Relaciones de servicio](../services/services-yaml.md#service-relationships) y [Requisitos del sistema](https://experienceleague.adobe.com/es/docs/commerce-operations/installation-guide/system-requirements) en la _Guía de instalación_ para ver las versiones recomendadas.
 
 - **Realice pruebas localmente y en el entorno de integración antes de implementar en Ensayo y producción**
 
@@ -95,11 +95,11 @@ Revise estas prácticas recomendadas y consideraciones para el proceso de implem
 
   Antes de implementar en Producción, complete las siguientes tareas:
 
-   - Asegúrese de que puede conectarse a los tres nodos del entorno de producción usando [SSH](../development/secure-connections.md).
+  - Asegúrese de que puede conectarse a los tres nodos del entorno de producción usando [SSH](../development/secure-connections.md).
 
-   - Compruebe que los indizadores están configurados en _Actualizar según lo programado_. Consulte [Modos de indexación](https://developer.adobe.com/commerce/php/development/components/indexing/) en la _Guía para desarrolladores de extensiones_.
+  - Compruebe que los indizadores están configurados en _Actualizar según lo programado_. Consulte [Modos de indexación](https://developer.adobe.com/commerce/php/development/components/indexing/) en la _Guía para desarrolladores de extensiones_.
 
-   - Prepare el entorno actualizando cualquier variable específica del entorno en el código de producción, comprobando la disponibilidad y compatibilidad del servicio y realizando cualquier otro cambio de configuración necesario.
+  - Prepare el entorno actualizando cualquier variable específica del entorno en el código de producción, comprobando la disponibilidad y compatibilidad del servicio y realizando cualquier otro cambio de configuración necesario.
 
 - **Supervisar el proceso de implementación**
 
@@ -186,13 +186,13 @@ Si el archivo `app/etc/config.php` no existe en la base de código, los archivos
 
 Hay dos vínculos de implementación. El vínculo `pre-deploy.php` completa la limpieza y recuperación necesarias de los recursos y el código generados en el vínculo de generación. El vínculo `php ./vendor/bin/ece-tools deploy` ejecuta una serie de comandos y scripts:
 
-- Si Adobe Commerce **no está instalado**, se instala con `bin/magento setup:install`, actualiza la configuración de implementación, `app/etc/env.php` y la base de datos para el entorno especificado, como Redis y las direcciones URL del sitio web. **Importante:** Cuando completó la [implementación por primera vez](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/launch/overview.html?lang=es) durante la instalación, Adobe Commerce se instaló e implementó en todos los entornos.
+- Si Adobe Commerce **no está instalado**, se instala con `bin/magento setup:install`, actualiza la configuración de implementación, `app/etc/env.php` y la base de datos para el entorno especificado, como Redis y las direcciones URL del sitio web. **Importante:** Cuando completó la [implementación por primera vez](https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/launch/overview) durante la instalación, Adobe Commerce se instaló e implementó en todos los entornos.
 
 - Si Adobe Commerce **está instalado**, realice las actualizaciones necesarias. El script de implementación ejecuta `bin/magento setup:upgrade` para actualizar el esquema y los datos de la base de datos (lo que es necesario después de actualizar la extensión o el código principal) y también actualiza la configuración de implementación, `app/etc/env.php`, y la base de datos de su entorno. Finalmente, la secuencia de comandos de implementación borra la caché de Adobe Commerce.
 
 - El script genera opcionalmente contenido web estático mediante el comando `magento setup:static-content:deploy`.
 
-- Utiliza ámbitos (`-s` indicador en scripts de compilación) con una configuración predeterminada de `quick` para la estrategia de implementación de contenido estático. Puede personalizar la estrategia mediante la variable de entorno [`SCD_STRATEGY`](../environment/variables-deploy.md#scd_strategy). Para obtener detalles sobre estas opciones y características, consulte [Estrategias de implementación de archivos estáticos](../deploy/static-content.md) y el indicador `-s` para [Implementar archivos de vista estática](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment.html?lang=es).
+- Utiliza ámbitos (`-s` indicador en scripts de compilación) con una configuración predeterminada de `quick` para la estrategia de implementación de contenido estático. Puede personalizar la estrategia mediante la variable de entorno [`SCD_STRATEGY`](../environment/variables-deploy.md#scd_strategy). Para obtener detalles sobre estas opciones y características, consulte [Estrategias de implementación de archivos estáticos](../deploy/static-content.md) y el indicador `-s` para [Implementar archivos de vista estática](https://experienceleague.adobe.com/es/docs/commerce-operations/configuration-guide/cli/static-view/static-view-file-deployment).
 
 >[!NOTE]
 >

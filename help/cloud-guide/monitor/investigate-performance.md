@@ -15,9 +15,9 @@ role_v2:
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 901
+source-wordcount: 896
 ht-degree: 0%
 
 ---
@@ -42,7 +42,7 @@ Todos los datos recopilados detallan el tiempo empleado en las acciones que tran
 
 >[!TIP]
 >
->Para obtener más información sobre cómo usar estos datos para solucionar problemas de rendimiento de aplicaciones, consulte [Solucionar problemas de rendimiento con New Relic](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/troubleshoot-performance-using-new-relic-on-magento-commerce.html?lang=es) en el _Centro de ayuda de Adobe Commerce_.
+>Para obtener más información sobre cómo usar estos datos para solucionar problemas de rendimiento de aplicaciones, consulte [Solucionar problemas de rendimiento con New Relic](https://experienceleague.adobe.com/es/docs/experience-cloud-kcs/kbarticles/ka-40830) en el _Centro de ayuda de Adobe Commerce_.
 
 ## Monitorización del rendimiento con alertas administradas
 
@@ -58,7 +58,7 @@ Adobe proporciona la directiva de alertas _Alertas administradas para Adobe Comm
 | Carga de consulta de MariaDB | NRI | Pro |
 | Memoria Redis | NRI | Pro |
 
-Cuando la infraestructura del sitio o las condiciones de la aplicación alcanzan un umbral de déclencheur, New Relic envía notificaciones de alerta para que pueda solucionar el problema de forma proactiva. Consulte [Alertas administradas para Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-for-magento-commerce.html?lang=es) en el _Centro de ayuda de Adobe Commerce_ para obtener más información acerca de los umbrales de alerta y los pasos para solucionar problemas que desencadenaron la alerta.
+Cuando la infraestructura del sitio o las condiciones de la aplicación alcanzan un umbral de déclencheur, New Relic envía notificaciones de alerta para que pueda solucionar el problema de forma proactiva. Consulte [Alertas administradas para Adobe Commerce](https://experienceleague.adobe.com/es/docs/commerce-operations/tools/managed-alerts-for-adobe-commerce/managed-alerts-for-magento-commerce) en el _Centro de ayuda de Adobe Commerce_ para obtener más información acerca de los umbrales de alerta y los pasos para solucionar problemas que desencadenaron la alerta.
 
 >[!TIP]
 >
@@ -88,7 +88,7 @@ Cuando la infraestructura del sitio o las condiciones de la aplicación alcanzan
 
      >[!NOTE]
      >
-     >Si la directiva _Alertas administradas para Adobe Commerce_ no está disponible, consulte [Alertas administradas para Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/support-tools/managed-alerts/managed-alerts-for-magento-commerce.html?lang=es) en el _Centro de ayuda de Adobe Commerce_.
+     >Si la directiva _Alertas administradas para Adobe Commerce_ no está disponible, consulte [Alertas administradas para Adobe Commerce](https://experienceleague.adobe.com/es/docs/commerce-operations/tools/managed-alerts-for-adobe-commerce/managed-alerts-for-magento-commerce) en el _Centro de ayuda de Adobe Commerce_.
 
 1. Haga clic en la ficha **[!UICONTROL Alert conditions]** para revisar las condiciones de alerta definidas en la directiva.
 

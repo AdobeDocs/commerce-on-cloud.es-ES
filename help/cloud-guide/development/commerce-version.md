@@ -15,24 +15,24 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1020
+source-wordcount: 1024
 ht-degree: 0%
 
 ---
 
 # Actualizar la versión de Commerce
 
-Puede actualizar el código base de Adobe Commerce a una versión más reciente. Antes de actualizar el entorno, revise los [requisitos del sistema](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=es) en la guía de _Instalación_ para conocer los requisitos de la última versión de software.
+Puede actualizar el código base de Adobe Commerce a una versión más reciente. Antes de actualizar el entorno, revise los [requisitos del sistema](https://experienceleague.adobe.com/es/docs/commerce-operations/installation-guide/system-requirements) en la guía de _Instalación_ para conocer los requisitos de la última versión de software.
 
 Según el tipo de entorno (desarrollo, ensayo o producción), las tareas de actualización pueden incluir las siguientes:
 
 - Actualice las extensiones de terceros a la última versión compatible.
 - Para los proyectos Pro, debe enviar un ticket de asistencia de Adobe Commerce para instalar o actualizar servicios en entornos de ensayo y producción.
 - Para las ramas de desarrollo/integración/PR:
-   - Actualice el archivo `.magento/services.yaml` con nuevas versiones para MariaDB (MySQL), OpenSearch, RabbitMQ y Redis para comprobar la compatibilidad con las nuevas versiones de Adobe Commerce.
-   - Actualice el archivo `.magento.app.yaml` con la nueva configuración para los vínculos y las variables de entorno.
+  - Actualice el archivo `.magento/services.yaml` con nuevas versiones para MariaDB (MySQL), OpenSearch, RabbitMQ y Redis para comprobar la compatibilidad con las nuevas versiones de Adobe Commerce.
+  - Actualice el archivo `.magento.app.yaml` con la nueva configuración para los vínculos y las variables de entorno.
 
 {{upgrade-tip}}
 
@@ -156,7 +156,7 @@ Revise la información de [versiones de servicio](../services/services-yaml.md#s
 
 1. Revise los parches que se aplican actualmente:
 
-   - Si hay parches instalados en el directorio `m2-hotfixes`, [envíe un ticket de soporte de Adobe Commerce](https://experienceleague.adobe.com/es/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case) y trabaje con el soporte técnico de Adobe Commerce para comprobar qué parches se pueden seguir aplicando a la nueva versión. Quite los parches no aplicables del directorio `m2-hotfixes`.
+   - Si hay parches instalados en el directorio `m2-hotfixes`, [envíe un ticket de soporte de Adobe Commerce](https://experienceleague.adobe.com/es/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#support-case) y trabaje con el soporte técnico de Adobe Commerce para comprobar qué parches se pueden seguir aplicando a la nueva versión. Quite los parches no aplicables del directorio `m2-hotfixes`.
 
    - Si hay [Parches de calidad] aplicados en el archivo `.magento.env.yaml`, compruebe si aún se pueden aplicar a la nueva versión. Quite los parches no aplicables de la sección `QUALITY_PATCHES` del archivo `.magento.env.yaml`.
 

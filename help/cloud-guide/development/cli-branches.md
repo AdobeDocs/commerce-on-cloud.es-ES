@@ -12,9 +12,9 @@ feature_v2:
   - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 688
+source-wordcount: 689
 ht-degree: 0%
 
 ---
@@ -39,7 +39,7 @@ Las siguientes instrucciones utilizan una combinación de `magento-cloud` comand
 
 **Para clonar un entorno de proyecto `master`**:
 
-1. Inicie sesión en la estación de trabajo local con una cuenta de [propietario del sistema de archivos](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions.html?lang=es).
+1. Inicie sesión en la estación de trabajo local con una cuenta de [propietario del sistema de archivos](https://experienceleague.adobe.com/es/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions).
 
 1. Cambie al directorio _docroot_ del servidor web o del host virtual.
 

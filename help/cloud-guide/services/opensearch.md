@@ -11,9 +11,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 90e23f5f38ceeb0e1c48a83e43f942a30aa743b8
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 788
+source-wordcount: 799
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ OpenSearch le permite tomar datos de cualquier fuente, cualquier formato, y busc
        disk: 1024
    ```
 
-   Para los proyectos Pro, debe [enviar un ticket de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=es#submit-ticket) para cambiar la versión de OpenSearch en los entornos de ensayo y producción.
+   Para los proyectos Pro, debe [enviar un ticket de soporte de Adobe Commerce](https://experienceleague.adobe.com/es/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) para cambiar la versión de OpenSearch en los entornos de ensayo y producción.
 
 1. Establezca o compruebe la propiedad `relationships` en el archivo `.magento.app.yaml`.
 
@@ -100,7 +100,7 @@ Cuando instale o actualice su proyecto de infraestructura en la nube de Adobe Co
 
 - **Actualización del proyecto**-Compruebe que el cliente OpenSearch de PHP en la nueva versión de la aplicación es compatible con la versión del servicio OpenSearch instalada en la infraestructura en la nube.
 
-La compatibilidad y la versión del servicio están determinadas por las versiones probadas e implementadas en la infraestructura en la nube, y a veces difieren de las versiones admitidas por las implementaciones locales de Adobe Commerce. Consulte [Requisitos del sistema](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/system-requirements.html?lang=es) en la _Guía de instalación_ para obtener una lista de las versiones compatibles.
+La compatibilidad y la versión del servicio están determinadas por las versiones probadas e implementadas en la infraestructura en la nube, y a veces difieren de las versiones admitidas por las implementaciones locales de Adobe Commerce. Consulte [Requisitos del sistema](https://experienceleague.adobe.com/es/docs/commerce-operations/installation-guide/system-requirements) en la _Guía de instalación_ para obtener una lista de las versiones compatibles.
 
 **Para comprobar la compatibilidad del software OpenSearch**:
 
@@ -192,7 +192,7 @@ Opcionalmente, puede agregar complementos para OpenSearch agregando la sección 
 
 >[!NOTE]
 >
->Esto solo se aplica a los entornos Integration y Starter. Para instalar los complementos en un clúster de ensayo o producción de Pro, [envíe una solicitud de soporte técnico](https://experienceleague.adobe.com/es/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case).
+>Esto solo se aplica a los entornos Integration y Starter. Para instalar los complementos en un clúster de ensayo o producción de Pro, [envíe una solicitud de soporte técnico](https://experienceleague.adobe.com/es/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#support-case).
 
 
 ```yaml
@@ -216,7 +216,7 @@ Al quitar las entradas del complemento de la sección `opensearch:` del archivo 
 
 >[!NOTE]
 >
->Este cambio solo se aplica a los entornos Integration y Starter. Tendrá que [enviar un vale de soporte técnico](https://experienceleague.adobe.com/es/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide#support-case) para quitar el complemento en un clúster de ensayo o producción profesional.
+>Este cambio solo se aplica a los entornos Integration y Starter. Tendrá que [enviar un vale de soporte técnico](https://experienceleague.adobe.com/es/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#support-case) para quitar el complemento en un clúster de ensayo o producción profesional.
 
 1. Quite las entradas del complemento OpenSearch del archivo `.magento/services.yaml`.
 1. Agregue, confirme e inserte los cambios de código.

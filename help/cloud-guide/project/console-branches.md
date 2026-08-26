@@ -17,9 +17,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 1638
+source-wordcount: 1642
 ht-degree: 0%
 
 ---
@@ -47,7 +47,7 @@ La estrategia de ramificación utiliza un flujo de trabajo Git común en el que 
 
 Su cuenta admite un número limitado de ![ramas activas](../../assets/icon-active.png){width="32"} (activas) y un número ilimitado de ![ramas de desarrollo inactivas](../../assets/icon-inactive.png){width="32"} (inactivas). Administre ramas activas e inactivas agregando o eliminando una rama usando solamente la [!DNL Cloud Console] o la CLI de nube. Antes de eliminar una rama, debe desactivarla, que permanece en la lista _Entornos_ como _inactiva_. Puede reactivar la rama más tarde o [eliminar la rama](../dev-tools/cloud-cli-overview.md#) en la configuración del entorno o mediante la CLI de nube.
 
-Si necesita entornos activos adicionales para el desarrollo, envíe un [ticket de asistencia](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=es#submit-ticket).
+Si necesita entornos activos adicionales para el desarrollo, envíe un [ticket de asistencia](https://experienceleague.adobe.com/es/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket).
 
 **Para agregar una rama**:
 

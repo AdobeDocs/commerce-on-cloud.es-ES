@@ -1,6 +1,6 @@
 ---
 title: Lanzamiento del sitio
-description: Obtenga información sobre cómo comenzar la preparación del lanzamiento del sitio.
+description: Obtenga información sobre cómo prepararse para el lanzamiento del sitio en la infraestructura de la nube de Adobe Commerce, incluidas listas de comprobación, prácticas recomendadas y pruebas de ensayo y producción.
 exl-id: 95abc7aa-ed4d-44f7-96aa-517c646bc00d
 TQID: https://experienceleague.adobe.com/-aWGtM8yXIMPfKihDMD6LS1r2-UIuceyf9X4TTIFTf0
 product_v2:
@@ -17,9 +17,9 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 285a91916015e03b506195f3cb027c779976fdf0
 workflow-type: tm+mt
-source-wordcount: 966
+source-wordcount: 984
 ht-degree: 0%
 
 ---
@@ -58,7 +58,7 @@ Como parte de la suscripción a la infraestructura en la nube de Adobe Commerce,
 
 >[!NOTE]
 >
->Si desea implementar su propio certificado SSL de validación extendida para su compañía en lugar de usar el certificado Let&#39;s Encrypt, póngase en contacto con su CTA o [Envíe un ticket de asistencia de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=es#submit-ticket).
+>Si desea implementar su propio certificado SSL de validación extendida para su compañía en lugar de usar el certificado Let&#39;s Encrypt, póngase en contacto con su CTA o [Envíe un ticket de asistencia de Adobe Commerce](https://experienceleague.adobe.com/es/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket).
 
 ## Configurar el escáner de seguridad
 

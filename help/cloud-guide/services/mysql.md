@@ -14,9 +14,9 @@ role_v2:
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 921
+source-wordcount: 928
 ht-degree: 1%
 
 ---
@@ -25,7 +25,7 @@ ht-degree: 1%
 
 El servicio `mysql` proporciona almacenamiento de datos persistente basado en [MariaDB](https://mariadb.com/) versiones 10.2 a 10.4, compatible con el motor de almacenamiento [XtraDB](https://docs.percona.com/percona-xtradb-cluster/8.0/index.html) y funciones reimplementadas de MySQL 5.6 y 5.7.
 
-La reindexación en MariaDB 10.4 tarda más tiempo en comparación con otras versiones de MariaDB o MySQL. Consulte [Indexadores](https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/configuration.html?lang=es#indexers) en la guía de _Prácticas recomendadas de rendimiento_.
+La reindexación en MariaDB 10.4 tarda más tiempo en comparación con otras versiones de MariaDB o MySQL. Consulte [Indexadores](https://experienceleague.adobe.com/es/docs/commerce-operations/performance-best-practices/configuration#indexers) en la guía de _Prácticas recomendadas de rendimiento_.
 
 >[!WARNING]
 >
@@ -84,7 +84,7 @@ mysql:
             optimizer_use_condition_selectivity: 1
 ```
 
-El `properties` del ejemplo anterior modifica la configuración predeterminada de `optimizer` como se recomienda en la guía de prácticas recomendadas de rendimiento[&#128279;](https://experienceleague.adobe.com/docs/commerce-operations/performance-best-practices/configuration.html?lang=es#indexers).
+El `properties` del ejemplo anterior modifica la configuración predeterminada de `optimizer` como se recomienda en la guía de prácticas recomendadas de rendimiento[&#128279;](https://experienceleague.adobe.com/es/docs/commerce-operations/performance-best-practices/configuration#indexers).
 
 **Opciones de configuración de MariaDB**:
 
@@ -100,7 +100,7 @@ El `properties` del ejemplo anterior modifica la configuración predeterminada d
 
 Opcionalmente, puede configurar varios usuarios con permisos diferentes para tener acceso a la base de datos `main`.
 
-De manera predeterminada, hay un extremo denominado `mysql` que tiene acceso de administrador a la base de datos. Para configurar varios usuarios de base de datos, debe definir varios extremos en el archivo `services.yaml` y declarar las relaciones en el archivo `.magento.app.yaml`. Para los entornos de ensayo y producción de Pro, [envíe un vale de soporte de Adobe Commerce](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/help-center-guide/magento-help-center-user-guide.html?lang=es#submit-ticket) para solicitar al usuario adicional.
+De manera predeterminada, hay un extremo denominado `mysql` que tiene acceso de administrador a la base de datos. Para configurar varios usuarios de base de datos, debe definir varios extremos en el archivo `services.yaml` y declarar las relaciones en el archivo `.magento.app.yaml`. Para los entornos de ensayo y producción de Pro, [envíe un vale de soporte de Adobe Commerce](https://experienceleague.adobe.com/es/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) para solicitar al usuario adicional.
 
 Utilice una matriz anidada para definir los puntos finales para el acceso específico del usuario. Cada extremo puede designar el acceso a uno o más esquemas (bases de datos) y diferentes niveles de permisos en cada uno.
 
@@ -224,13 +224,13 @@ El acceso a la base de datos MariaDB requiere directamente que utilice un SSH pa
 >
 >Esta función solo está disponible en los clústeres de ensayo y producción profesional.
 
-A veces, debe conectarse a la base de datos secundaria para mejorar el rendimiento de la base de datos o resolver los problemas de bloqueo de la base de datos. Si se requiere esta configuración, use `"port" : 3304` para establecer la conexión. Consulte el tema [Práctica recomendada para configurar la conexión esclava MySQL](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/planning/mysql-configuration.html?lang=es) en la guía _Prácticas recomendadas de implementación_.
+A veces, debe conectarse a la base de datos secundaria para mejorar el rendimiento de la base de datos o resolver los problemas de bloqueo de la base de datos. Si se requiere esta configuración, use `"port" : 3304` para establecer la conexión. Consulte el tema [Práctica recomendada para configurar la conexión esclava MySQL](https://experienceleague.adobe.com/es/docs/commerce-operations/implementation-playbook/best-practices/planning/mysql-configuration) en la guía _Prácticas recomendadas de implementación_.
 
 ## Resolución de problemas
 
 Consulte los siguientes artículos de soporte de Adobe Commerce para obtener ayuda con la resolución de problemas de MySQL:
 
-- [Comprobación de consultas y procesos lentos en MySQL](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/database/checking-slow-queries-and-processes-mysql.html?lang=es)
-- [Crear volcado de base de datos en la nube](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud.html?lang=es)
-- [Herramienta de migración de datos](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html?lang=es)
-- [Actualización de Adobe Commerce: tablas compactas a dinámicas 2.2.x, 2.3.x a 2.4.x](https://experienceleague.adobe.com/docs/commerce-operations/implementation-playbook/best-practices/maintenance/commerce-235-upgrade-prerequisites-mariadb.html?lang=es)
+- [Comprobación de consultas y procesos lentos en MySQL](https://experienceleague.adobe.com/es/docs/commerce-knowledge-base/kb/troubleshooting/database/checking-slow-queries-and-processes-mysql)
+- [Crear volcado de base de datos en la nube](https://experienceleague.adobe.com/es/docs/commerce-knowledge-base/kb/how-to/create-database-dump-on-cloud)
+- [Herramienta de migración de datos](https://experienceleague.adobe.com/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/data-migration-tool-troubleshooting.html)
+- [Actualización de Adobe Commerce: tablas compactas a dinámicas 2.2.x, 2.3.x a 2.4.x](https://experienceleague.adobe.com/es/docs/commerce-operations/implementation-playbook/best-practices/maintenance/mariadb-upgrade)

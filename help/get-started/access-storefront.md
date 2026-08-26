@@ -1,6 +1,6 @@
 ---
 title: Acceso a su panel de administración de Commerce
-description: Obtenga información sobre cómo acceder a su Panel de administración de Commerce.
+description: Obtenga información sobre cómo proteger el acceso de los administradores a su proyecto de infraestructura de nube de Adobe Commerce, restablecer la contraseña del propietario de la licencia e iniciar sesión en el panel de administración.
 recommendations: noDisplay, catalog
 exl-id: 827417b0-9048-44d8-8c82-07befba476c7
 TQID: https://experienceleague.adobe.com/V3BXuCc9aqT5YuyIS8WAZgUdPAYNhQunAgg2i2FCaOs
@@ -15,9 +15,9 @@ role_v2:
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
   - id: e1e0219c-f879-479f-8427-888ed2a6e9c2
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 285a91916015e03b506195f3cb027c779976fdf0
 workflow-type: tm+mt
-source-wordcount: 361
+source-wordcount: 379
 ht-degree: 0%
 
 ---
@@ -38,7 +38,7 @@ Después de enviar la solicitud de cambio de contraseña, compruebe en su correo
 
 >[!TIP]
 >
->Si el restablecimiento de la contraseña falla o no puede iniciar sesión en el Panel de administración, un usuario con acceso de administrador puede conectarse al proyecto mediante SSH y agregar un usuario administrador mediante el comando CLI `admin:user:create`. Consulte [Crear, editar o desbloquear una cuenta de administrador](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/tutorials/admin.html?lang=es) en la _Guía de instalación_.
+>Si el restablecimiento de la contraseña falla o no puede iniciar sesión en el Panel de administración, un usuario con acceso de administrador puede conectarse al proyecto mediante SSH y agregar un usuario administrador mediante el comando CLI `admin:user:create`. Consulte [Crear, editar o desbloquear una cuenta de administrador](https://experienceleague.adobe.com/es/docs/commerce-operations/installation-guide/tutorials/admin) en la _Guía de instalación_.
 
 ## Monitorización del estado del sitio
 

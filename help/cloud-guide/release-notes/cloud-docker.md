@@ -18,7 +18,7 @@ role_v2:
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 5169e0e93bf44d18ebdce9e0680f80c7cc8be6dc
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
 source-wordcount: 4509
 ht-degree: 0%
@@ -475,7 +475,7 @@ Fecha de la versión: 5 de febrero de 2020
 
   - ![nuevo icono](../../assets/new.svg) **Se agregó una opción de configuración de servicio para exponer el puerto de base de datos al host**—Utilice la opción `--expose-db-port= [Fix submitted by Adarsh Manickam from Zilker Technology](https://github.com/magento/magento-cloud-docker/pull/101).<PORT>` para exponer el puerto de base de datos al host al generar el archivo `docker-compose.yml`: `bin/ece-docker build:compose --expose-db-port=<PORT>`<!--MAGECLOUD-4454-->
 
-  - ![nuevo icono](../../assets/new.svg) **Nuevo comando posterior a la implementación**—Anteriormente, los vínculos posteriores a la implementación definidos en el archivo `.magento.app.yaml` se ejecutaban automáticamente después de implementar Adobe Commerce en un contenedor de Cloud Docker mediante el comando `cloud-deploy`. Ahora debe emitir un comando `cloud-post-deploy` independiente para ejecutar los vínculos posteriores a la implementación después de implementar. Vea las instrucciones de inicio actualizadas para el modo [desarrollador](https://developer.adobe.com/commerce/cloud-tools/docker/deploy) y [producción](https://developer.adobe.com/commerce/cloud-tools/docker/deploy/production-mode).<!--MAGECLOUD-3996-->
+  - ![nuevo icono](../../assets/new.svg) **Nuevo comando posterior a la implementación**—Anteriormente, los vínculos posteriores a la implementación definidos en el archivo `.magento.app.yaml` se ejecutaban automáticamente después de implementar Adobe Commerce en un contenedor de Cloud Docker mediante el comando `cloud-deploy`. Ahora debe emitir un comando `cloud-post-deploy` independiente para ejecutar los vínculos posteriores a la implementación después de implementar. Vea las instrucciones de inicio actualizadas para el modo [desarrollador](https://developer.adobe.com/commerce/cloud-tools/docker/deploy/) y [producción](https://developer.adobe.com/commerce/cloud-tools/docker/deploy/production-mode).<!--MAGECLOUD-3996-->
 
   - ![nuevo icono](../../assets/new.svg) agregó la opción `--rm` a `./bin/magento-docker` comandos para generar e implementar contenedores. Quita el contenedor una vez completada la tarea.<!--MAGECLOUD-4205-->
 

@@ -13,9 +13,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 822
+source-wordcount: 823
 ht-degree: 0%
 
 ---
@@ -67,7 +67,7 @@ En versiones anteriores de ECE-Tools, se podían utilizar los comandos `m2-ece-b
 
 ## Cambios en Parches de nube
 
-- **Quitar parches descargados**-El paquete `magento/magento-cloud-patches` agrupa todos los parches disponibles en la página [descargas de software](https://experienceleague.adobe.com/docs/commerce-operations/installation-guide/prerequisites/commerce.html?lang=es) y los aplica automáticamente al implementarlo en la nube. Para evitar conflictos de parches después de actualizar a ECE-Tools 2002.1.0 o posterior, elimine los parches suministrados por Adobe que haya descargado y agregado al proyecto manualmente.
+- **Quitar parches descargados**-El paquete `magento/magento-cloud-patches` agrupa todos los parches disponibles en la página [descargas de software](https://experienceleague.adobe.com/es/docs/commerce-operations/installation-guide/prerequisites/commerce) y los aplica automáticamente al implementarlo en la nube. Para evitar conflictos de parches después de actualizar a ECE-Tools 2002.1.0 o posterior, elimine los parches suministrados por Adobe que haya descargado y agregado al proyecto manualmente.
 
 - **Actualizando el comando para aplicar parches**- Hemos movido el comando para aplicar parches del directorio `vendor/bin/ece-tools` al directorio `vendor/bin/ece-patches`. Si utiliza este comando para aplicar parches manualmente, utilice la nueva ruta.
 
@@ -83,45 +83,45 @@ En versiones anteriores de ECE-Tools, se podían utilizar los comandos `m2-ece-b
 
 - **Cambios en el comando de Cloud Docker para Commerce**-
 
-   - **Actualización de los comandos de Cloud Docker para Commerce para las operaciones de generación de Docker**- Hemos movido los comandos de Cloud Docker para Commerce del directorio `vendor/bin/ece-tools` al directorio `vendor/bin/ece-docker`. Actualice los scripts y comandos para utilizar la nueva ruta.
+  - **Actualización de los comandos de Cloud Docker para Commerce para las operaciones de generación de Docker**- Hemos movido los comandos de Cloud Docker para Commerce del directorio `vendor/bin/ece-tools` al directorio `vendor/bin/ece-docker`. Actualice los scripts y comandos para utilizar la nueva ruta.
 
-     Después de actualizar a `ece-tools` 2002.1.0, use el comando siguiente para ver los comandos de `ece-docker` disponibles.
+    Después de actualizar a `ece-tools` 2002.1.0, use el comando siguiente para ver los comandos de `ece-docker` disponibles.
 
-     ```bash
-     php ./vendor/bin/ece-docker list
-     ```
+    ```bash
+    php ./vendor/bin/ece-docker list
+    ```
 
-   - **Actualizando los comandos de Cloud Docker-Compose**- Cambiamos el nombre de la ruta de acceso al archivo de comandos de `./bin/docker` a `./bin/magento-docker`. Actualice los scripts y comandos para utilizar la nueva ruta.
+  - **Actualizando los comandos de Cloud Docker-Compose**- Cambiamos el nombre de la ruta de acceso al archivo de comandos de `./bin/docker` a `./bin/magento-docker`. Actualice los scripts y comandos para utilizar la nueva ruta.
 
-   - **El contenedor Cron ya no se incluye en la configuración Docker predeterminada**-Ahora debe agregar la opción `--with-cron` al comando `ece-docker build:compose` para incluir el contenedor Cron en la configuración del entorno Docker. Consulte [Administrar trabajos cron](https://developer.adobe.com/commerce/cloud-tools/docker/configure/manage-cron-jobs) en la guía de _Cloud Docker para Commerce_.
+  - **El contenedor Cron ya no se incluye en la configuración Docker predeterminada**-Ahora debe agregar la opción `--with-cron` al comando `ece-docker build:compose` para incluir el contenedor Cron en la configuración del entorno Docker. Consulte [Administrar trabajos cron](https://developer.adobe.com/commerce/cloud-tools/docker/configure/manage-cron-jobs) en la guía de _Cloud Docker para Commerce_.
 
-     Los scripts que anteriormente generaban contenedores con trabajos cron ahora no tienen el contenedor cron.
+    Los scripts que anteriormente generaban contenedores con trabajos cron ahora no tienen el contenedor cron.
 
-   - **Al usar contenedores temporales**-En versiones anteriores, los contenedores creados por `bin/magento-docker` operaciones de comando no se quitaban, por lo que se podían usar para otras operaciones. Ahora, los comandos `magento-docker` quitan los contenedores que hayan creado una vez finalizado el comando.
+  - **Al usar contenedores temporales**-En versiones anteriores, los contenedores creados por `bin/magento-docker` operaciones de comando no se quitaban, por lo que se podían usar para otras operaciones. Ahora, los comandos `magento-docker` quitan los contenedores que hayan creado una vez finalizado el comando.
 
-     Si desea conservar un contenedor creado por una operación docker-compose, utilice el comando `docker-compose run` en lugar del comando `bin/magento-docker`.
+    Si desea conservar un contenedor creado por una operación docker-compose, utilice el comando `docker-compose run` en lugar del comando `bin/magento-docker`.
 
-   - **Ejecutar vínculos posteriores a la implementación**: El comando `cloud-deploy` ya no ejecuta los vínculos posteriores a la implementación. Utilice el nuevo comando `cloud-post-deploy` para ejecutar los vínculos posteriores a la implementación después de la implementación. Actualice los scripts para agregar el comando y ejecutar los vínculos posteriores a la implementación.
+  - **Ejecutar vínculos posteriores a la implementación**: El comando `cloud-deploy` ya no ejecuta los vínculos posteriores a la implementación. Utilice el nuevo comando `cloud-post-deploy` para ejecutar los vínculos posteriores a la implementación después de la implementación. Actualice los scripts para agregar el comando y ejecutar los vínculos posteriores a la implementación.
 
-     ```shell
-     bin/magento-docker ece-deploy
-     bin/magento-docker ece-post-deploy
-     ```
+    ```shell
+    bin/magento-docker ece-deploy
+    bin/magento-docker ece-post-deploy
+    ```
 
-     Como alternativa, si utiliza los comandos de `docker-compose` directamente, ejecute el comando `docker-compose run deploy cloud-post-deploy` después del comando de implementación.
+    Como alternativa, si utiliza los comandos de `docker-compose` directamente, ejecute el comando `docker-compose run deploy cloud-post-deploy` después del comando de implementación.
 
 - **Actualizando la base de datos**: el contenedor de la base de datos ahora está almacenado en el volumen Docker persistente `magento-db`. Al actualizar el entorno de Docker, la base de datos ya no se elimina automáticamente. Si es necesario, utilice uno de los siguientes comandos para eliminarlo manualmente.
 
-   - Quitar el contenedor `magento-db`:
+  - Quitar el contenedor `magento-db`:
 
-     ```bash
-     docker volume rm magento-db
-     ```
+    ```bash
+    docker volume rm magento-db
+    ```
 
-   - Elimine todos los volúmenes asociados al cerrar los contenedores de Docker:
+  - Elimine todos los volúmenes asociados al cerrar los contenedores de Docker:
 
-     ```bash
-     docker-compose down -v
-     ```
+    ```bash
+    docker-compose down -v
+    ```
 
 - **Anular la configuración de sincronización de archivos para archivos de archivado y copia de seguridad**: Los archivos de archivado y copia de seguridad con las siguientes extensiones ya no se sincronizan al usar docker-sync o mutagen: SQL, GZ, ZIP y BZ2. Puede anular la sincronización de archivos predeterminada para estos tipos de archivos cambiando el nombre del archivo para que termine con una extensión diferente. Por ejemplo: `synchronize-me.zip-backup`

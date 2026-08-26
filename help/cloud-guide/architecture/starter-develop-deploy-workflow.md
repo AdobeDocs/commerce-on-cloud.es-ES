@@ -15,9 +15,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 2168
+source-wordcount: 2170
 ht-degree: 0%
 
 ---
@@ -175,7 +175,7 @@ A medida que desarrolla funciones, agrega extensiones y diseña temas, es útil 
 
 Para ayudar a exportar los datos de producción como datos de prueba para utilizarlos en entornos de ensayo e integración:
 
-- [Ejecute los comandos CLI de &#x200B;](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html?lang=es) de las utilidades de soporte técnico (recomendado) al exportar una copia de seguridad protegida del cliente y almacenar datos mediante la clave de cifrado de Adobe Commerce
+- [Ejecute los comandos CLI de &#x200B;](https://experienceleague.adobe.com/es/docs/commerce-operations/configuration-guide/cli/run-support-utilities) de las utilidades de soporte técnico (recomendado) al exportar una copia de seguridad protegida del cliente y almacenar datos mediante la clave de cifrado de Adobe Commerce
 
 - Herramienta [Recopilación de datos](https://experienceleague.adobe.com/es/docs/commerce-admin/systems/tools/support#data-collector) para generar y exportar datos
 
@@ -185,7 +185,7 @@ Para migrar estos datos, consulte [Migrar e implementar datos y archivos estáti
 
 >[!NOTE]
 >
->Antes de transferir los datos a otro entorno, debe considerar la posibilidad de sanearlos. Tiene un par de opciones, entre ellas [usar utilidades de soporte](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/cli/run-support-utilities.html?lang=es) o desarrollar un script para eliminar los datos de los clientes.
+>Antes de transferir los datos a otro entorno, debe considerar la posibilidad de sanearlos. Tiene un par de opciones, entre ellas [usar utilidades de soporte](https://experienceleague.adobe.com/es/docs/commerce-operations/configuration-guide/cli/run-support-utilities) o desarrollar un script para eliminar los datos de los clientes.
 
 >[!WARNING]
 >

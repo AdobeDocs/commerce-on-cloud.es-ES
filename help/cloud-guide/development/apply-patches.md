@@ -9,9 +9,9 @@ product_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 910
+source-wordcount: 911
 ht-degree: 0%
 
 ---
@@ -21,7 +21,7 @@ ht-degree: 0%
 [Parches de nube para Commerce](https://github.com/magento/magento-cloud-patches) y la [Herramienta de parches de calidad](https://github.com/magento/quality-patches) te entregarán parches en la aplicación Adobe Commerce que hayas instalado.
 
 - El paquete Cloud Patches for Commerce ofrece los parches necesarios con correcciones críticas
-- Los parches de calidad ofrecen correcciones de calidad opcionales y de bajo impacto como [parches individuales](https://experienceleague.adobe.com/docs/commerce-operations/release/planning/versioning-policy.html?lang=es#individual-patch) que no contienen cambios incompatibles con versiones anteriores
+- Los parches de calidad ofrecen correcciones de calidad opcionales y de bajo impacto como [parches individuales](https://experienceleague.adobe.com/es/docs/commerce-operations/release/planning/versioning-policy#individual-patch) que no contienen cambios incompatibles con versiones anteriores
 
 Consulte [Parches disponibles](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=es) en la _Guía de herramientas de operaciones de Commerce_ para obtener una lista completa de los parches publicados.
 
@@ -98,20 +98,20 @@ Magento 2 Enterprise Edition, version 2.3.5.0
 La tabla de estado contiene los siguientes tipos de información:
 
 - **Tipo**:
-   - `Optional`: todos los parches de la herramienta Parches de calidad y del paquete Parches de nube son opcionales para las instalaciones de Adobe Commerce y Magento Open Source. Para Adobe Commerce en la infraestructura en la nube, todos los parches son opcionales.
-   - `Required`: todos los parches del paquete de Cloud Patches para Commerce son necesarios para los clientes de Cloud.
-   - `Deprecated`: el parche individual está marcado como obsoleto y le recomendamos que lo revierta si lo ha aplicado. Después de revertir un parche obsoleto, ya no se mostrará en la tabla de estado.
-   - `Custom`: todos los parches del directorio &quot;m2-hotfixes&quot;.
+  - `Optional`: todos los parches de la herramienta Parches de calidad y del paquete Parches de nube son opcionales para las instalaciones de Adobe Commerce y Magento Open Source. Para Adobe Commerce en la infraestructura en la nube, todos los parches son opcionales.
+  - `Required`: todos los parches del paquete de Cloud Patches para Commerce son necesarios para los clientes de Cloud.
+  - `Deprecated`: el parche individual está marcado como obsoleto y le recomendamos que lo revierta si lo ha aplicado. Después de revertir un parche obsoleto, ya no se mostrará en la tabla de estado.
+  - `Custom`: todos los parches del directorio &quot;m2-hotfixes&quot;.
 
 - **Estado**:
-   - `Applied`: se ha aplicado el parche.
-   - `Not applied`: el parche no se ha aplicado.
-   - `N/A`: el estado del parche no se puede definir debido a varios conflictos.
+  - `Applied`: se ha aplicado el parche.
+  - `Not applied`: el parche no se ha aplicado.
+  - `N/A`: el estado del parche no se puede definir debido a varios conflictos.
 
 - **Detalles**:
-   - `Affected components`: la lista de módulos afectados.
-   - `Required patches`: lista de parches necesarios (dependencias).
-   - `Recommended replacement`: parche que se recomienda para reemplazar un parche obsoleto.
+  - `Affected components`: la lista de módulos afectados.
+  - `Required patches`: lista de parches necesarios (dependencias).
+  - `Recommended replacement`: parche que se recomienda para reemplazar un parche obsoleto.
 
 ## Aplicación de un parche en un entorno local
 

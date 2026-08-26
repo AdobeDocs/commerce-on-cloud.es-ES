@@ -13,9 +13,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 874
+source-wordcount: 884
 ht-degree: 0%
 
 ---
@@ -51,7 +51,7 @@ hooks:
 
 >[!NOTE]
 >
->Con la versión de `ece-tools` 2002.1.x, hay un nuevo formato de [configuración de enlaces](https://experienceleague.adobe.com/docs/commerce-on-cloud/user-guide/configure/app/properties/hooks-property.html?lang=es). El formato heredado de `ece-tools` versiones 2002.0.x sigue siendo compatible. Sin embargo, debe actualizar al nuevo formato para utilizar la función de implementación basada en escenarios.
+>Con la versión de `ece-tools` 2002.1.x, hay un nuevo formato de [configuración de enlaces](https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/configure/app/properties/hooks-property). El formato heredado de `ece-tools` versiones 2002.0.x sigue siendo compatible. Sin embargo, debe actualizar al nuevo formato para utilizar la función de implementación basada en escenarios.
 
 ## Revisar pasos del escenario
 
@@ -92,9 +92,9 @@ Durante la implementación, los escenarios personalizados se combinan con el esc
 
   En el ejemplo, los escenarios tienen la siguiente prioridad:
 
-   1. `vendor/vendor-name/module-name/deploy2.xml`
-   1. `vendor/vendor-name/module-name/deploy.xml`
-   1. `scenario/deploy.xml` (escenario predeterminado o de línea de base)
+  1. `vendor/vendor-name/module-name/deploy2.xml`
+  1. `vendor/vendor-name/module-name/deploy.xml`
+  1. `scenario/deploy.xml` (escenario predeterminado o de línea de base)
 
 - Los pasos del escenario de mayor prioridad anulan los pasos que tienen el mismo nombre en los demás escenarios. Se añaden nuevos pasos a la configuración. Las mismas reglas se aplican a más de dos escenarios, y cada escenario se prioriza de derecha a izquierda, por ejemplo (C → B → A).
 

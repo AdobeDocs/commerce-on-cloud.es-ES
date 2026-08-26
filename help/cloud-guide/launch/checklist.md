@@ -1,6 +1,6 @@
 ---
 title: Iniciar lista de comprobación
-description: Revise los elementos de la lista de comprobación para el lanzamiento del sitio.
+description: Revise la lista de comprobación de Launch para la infraestructura de nube de Adobe Commerce para confirmar la configuración, las pruebas y la configuración de Fastly antes de implementarla en Producción.
 exl-id: efc97d4a-a9f3-49fa-b977-061282765e90
 TQID: https://experienceleague.adobe.com/-27J2-qKGpa71AJliIomIC7heTbTelOnFf960NODt0E
 product_v2:
@@ -15,9 +15,9 @@ role_v2:
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: 285a91916015e03b506195f3cb027c779976fdf0
 workflow-type: tm+mt
-source-wordcount: 1155
+source-wordcount: 1194
 ht-degree: 0%
 
 ---
@@ -85,7 +85,8 @@ Cuando esté listo para iniciar el sitio, debe actualizar la configuración DNS 
 
 >[!IMPORTANT]
 >
->Las instrucciones DNS de [RFC1034](https://www.rfc-editor.org/rfc/rfc1912) (**sección 2.4**) indican que:>_No se permite que un registro CNAME coexista con ningún otro dato. En otras palabras, si suzy.podunk.xx es un alias de sue.podunk.xx, no puede tener también un registro MX para suzy.podunk.edu, un registro A o incluso un registro TXT._
+>Las instrucciones DNS de [RFC1034](https://www.rfc-editor.org/rfc/rfc1912) (**sección 2.4**) indican que:
+>_No se permite que un registro CNAME coexista con otros datos. En otras palabras, si suzy.podunk.xx es un alias de sue.podunk.xx, no puede tener también un registro MX para suzy.podunk.edu, un registro A o incluso un registro TXT._
 >
 >Por este motivo, los registros DNS deben ser del tipo `CNAME` para subdominios y del tipo `A` para dominios Apex (dominios raíz). Descartar esta regla puede provocar interrupciones en el servicio de correo o en la propagación de DNS, ya que se pierde la capacidad de agregar otros registros, como MX o NS. Algunos proveedores DNS pueden evitar esto utilizando personalizaciones internas, pero seguir el estándar garantiza estabilidad y flexibilidad (como el cambio del proveedor DNS).
 
@@ -103,7 +104,7 @@ Cuando esté listo para iniciar el sitio, debe actualizar la configuración DNS 
      php bin/magento setup:store-config:set --base-url="https://www.<domain-name>.com/"
      ```
 
-   **NOTA**: también puede actualizar la dirección URL base desde el administrador. Ver [URL de la tienda](https://experienceleague.adobe.com/docs/commerce-admin/stores-sales/site-store/store-urls.html?lang=es) en la _Guía de experiencia de compra y tiendas Adobe Commerce_.
+   **NOTA**: también puede actualizar la dirección URL base desde el administrador. Ver [URL de la tienda](https://experienceleague.adobe.com/es/docs/commerce-admin/stores-sales/site-store/store-urls) en la _Guía de experiencia de compra y tiendas Adobe Commerce_.
 
 1. Espere unos minutos para que el sitio se actualice.
 
@@ -155,7 +156,7 @@ También puede realizar pruebas con las siguientes opciones de terceros:
 
 - [Elimine los usuarios que ya no estén en el proyecto de infraestructura de Adobe Commerce en la nube](../project/user-access.md)
 
-- [Configuración de la autenticación de doble factor](https://developer.adobe.com/commerce/testing/functional-testing-framework/two-factor-authentication/)
+- [Configuración de la autenticación de doble factor](https://developer.adobe.com/commerce/testing/functional-testing-framework/two-factor-authentication)
 
 ## Monitorización del rendimiento
 

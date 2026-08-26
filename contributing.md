@@ -1,8 +1,8 @@
 ---
-source-git-commit: 305df8acb8c41369b34e2c20d9c7df6824222931
+source-git-commit: eab32e2f5155e3aa6c0924fa332cbef6e4dc502d
 workflow-type: tm+mt
-source-wordcount: '559'
-ht-degree: 1%
+source-wordcount: '600'
+ht-degree: 0%
 
 ---
 # Contribución
@@ -13,7 +13,7 @@ A continuación se proporciona un conjunto de directrices que se deben seguir al
 
 ## Código de conducta
 
-Este proyecto se adhiere al [código de conducta](code-of-conduct.md) de Adobe. Al participar,
+Este proyecto cumple con el [código de conducta](code-of-conduct.md) de Adobe. Al participar,
 se espera que respete este código. Informe de cualquier comportamiento inaceptable a
 [Grp-opensourceoffice@adobe.com](mailto:Grp-opensourceoffice@adobe.com).
 
@@ -38,7 +38,7 @@ solo necesita enviar un contrato de licencia de colaborador de Adobe, por lo que
 ## Revisiones de código
 
 Todos los envíos deben ser solicitudes de extracción y deben revisarse
-por los supervisores del proyecto. Leer [documentación de solicitud de extracción de GitHub](https://docs.github.com/articles/about-pull-requests/)
+por los supervisores del proyecto. Leer la documentación de las solicitudes de extracción de [GitHub](https://docs.github.com/articles/about-pull-requests/)
 para obtener más información sobre el envío de solicitudes de extracción.
 
 Por último, siga la [plantilla de solicitud de extracción](PULL_REQUEST_TEMPLATE.md) cuando
@@ -59,7 +59,7 @@ Los problemas de seguridad no deben notificarse en este rastreador de problemas.
 
 ## Aspectos destacados de las novedades
 
-Si los cambios introducen nuevos temas, actualizaciones significativas o correcciones que es necesario resaltar, puede agregar una breve descripción a la [sección Novedades](https://experienceleague.adobe.com/es/docs/commerce-cloud-service/user-guide/overview#whats-new) directamente desde el cuerpo de la solicitud de extracción.
+Si los cambios introducen nuevos temas, actualizaciones significativas o correcciones que es necesario resaltar, puede agregar una breve descripción a la [sección Novedades](https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/overview#whats-new) directamente desde el cuerpo de la solicitud de extracción.
 
 Para añadir un resaltado de Novedades:
 
@@ -67,29 +67,29 @@ Para añadir un resaltado de Novedades:
 
    ```text
    whatsnew
-   Short description of the change in the [target topic](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/target-topic.html).
+   Short description of the change in the [target topic](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/target-topic.html).
    ```
 
    o, si hay varios temas:
 
    ```text
    whatsnew
-   Short description of the changes in the [first target topic](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/target-topic.html), [second target topic](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/second-target-topic.html), and [third target topic](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/third-target-topic.html).
+   Short description of the changes in the [first target topic](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/target-topic.html), [second target topic](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/second-target-topic.html), and [third target topic](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/third-target-topic.html).
    ```
 
    también puede utilizar listas para varios elementos destacados:
 
    ```text
    whatsnew
-   - Short description of the first change in the [first topic](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/first-topic.html).
-   - Short description of the second change in the [second topic](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/second-topic.html).
+   - Short description of the first change in the [first topic](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/first-topic.html).
+   - Short description of the second change in the [second topic](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/second-topic.html).
    ```
 
    ```text
    whatsnew
    The following changes were made to the documentation:
-   - Short description of the first change in the [first topic](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/first-topic.html).
-   - Short description of the second change in the [second topic](https://experienceleague.adobe.com/en/docs/commerce-cloud-service/user-guide/second-topic.html).
+   - Short description of the first change in the [first topic](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/first-topic.html).
+   - Short description of the second change in the [second topic](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/second-topic.html).
    ```
 
 1. Añada etiquetas compatibles que indiquen el tipo de cambio. Las etiquetas admitidas incluyen etiquetas para cada tipo de cambio, como:
@@ -103,4 +103,4 @@ Para añadir un resaltado de Novedades:
 1. La parte `whatsnew` debe comenzar desde la etiqueta `whatsnew` y estar al final del cuerpo de la solicitud de extracción.
 1. Las descripciones de los cambios deben incluir vínculos de trabajo. Asegúrese de que los vínculos sean correctos y lleven a los temas deseados. Si el tema es nuevo, compruebe que los vínculos funcionan después de combinar la solicitud de extracción y publicar el nuevo tema. Es aceptable corregir los vínculos después de combinar la solicitud de extracción.
 
-Por ejemplo, busque en solicitudes de extracción cerradas en el repositorio para ver el formato de los resaltados existentes y compárelos con la [sección Novedades](https://experienceleague.adobe.com/es/docs/commerce-cloud-service/user-guide/overview#whats-new) para ver cómo aparecen en la documentación.
+Por ejemplo, busque en solicitudes de extracción cerradas en el repositorio para ver el formato de los resaltados existentes y compárelos con la [sección Novedades](https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/overview#whats-new) para ver cómo aparecen en la documentación.

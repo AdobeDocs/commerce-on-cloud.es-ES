@@ -13,9 +13,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
 workflow-type: tm+mt
-source-wordcount: 413
+source-wordcount: 414
 ht-degree: 0%
 
 ---
@@ -32,7 +32,7 @@ La fase _build_ organiza contenedores para los servicios definidos en los archiv
 
 ## ![Fase de implementación](../../assets/status-deploy.png) Fase de implementación
 
-La fase _deploy_ suspende temporalmente las solicitudes entrantes y pasa el sitio a [modo de mantenimiento](https://experienceleague.adobe.com/docs/commerce-operations/configuration-guide/setup/application-modes.html?lang=es). La fase de implementación utiliza los nuevos contenedores y, después de montar el sistema de archivos, abre las conexiones de red, activa los servicios definidos en la sección `relationships` del archivo `.magento.app.yaml` y ejecuta los vínculos de implementación definidos en el archivo `.magento.app.yaml`. Todo es _solo lectura_, excepto los directorios definidos en el archivo `.magento.app.yaml`. De manera predeterminada, la propiedad [`mounts` &#x200B;](../application/properties.md#mounts) incluye los siguientes directorios:
+La fase _deploy_ suspende temporalmente las solicitudes entrantes y pasa el sitio a [modo de mantenimiento](https://experienceleague.adobe.com/es/docs/commerce-operations/configuration-guide/setup/application-modes). La fase de implementación utiliza los nuevos contenedores y, después de montar el sistema de archivos, abre las conexiones de red, activa los servicios definidos en la sección `relationships` del archivo `.magento.app.yaml` y ejecuta los vínculos de implementación definidos en el archivo `.magento.app.yaml`. Todo es _solo lectura_, excepto los directorios definidos en el archivo `.magento.app.yaml`. De manera predeterminada, la propiedad [`mounts` &#x200B;](../application/properties.md#mounts) incluye los siguientes directorios:
 
 - `app/etc`: contiene los archivos de configuración `env.php` y `config.php`
 - `pub/media`: contiene todos los datos multimedia, como productos o categorías
