@@ -23,7 +23,7 @@ Esta página contiene los cambios realizados en los últimos 60 días. Excluimos
   </thead>
   <tbody>
     <tr>
-      <td><p>Se ha actualizado <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">Referencia de CLI</a> después de la versión de ECE-Tools, v2002.2.13.</p>
+      <td><p>Se ha actualizado <a href="https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">Referencia de CLI</a> después de la versión de ECE-Tools, v2002.2.13.</p>
 </td>
       <td>
         Técnico
@@ -31,7 +31,7 @@ Esta página contiene los cambios realizados en los últimos 60 días. Excluimos
       <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/0ac31574952505e92744535f861591abcdd8ac56">comprometer</a></td>
     </tr>
     <tr>
-      <td><p>Se ha agregado la disponibilidad de <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/autoscaling#vertical-auto-scaling">escalado automático vertical</a> a Adobe Commerce en la infraestructura de nube.</p>
+      <td><p>Se ha agregado la disponibilidad de <a href="https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/architecture/autoscaling#vertical-auto-scaling">escalado automático vertical</a> a Adobe Commerce en la infraestructura de nube.</p>
 </td>
       <td>
         Actualización importante
@@ -53,7 +53,7 @@ Esta página contiene los cambios realizados en los últimos 60 días. Excluimos
   </thead>
   <tbody>
     <tr>
-      <td><p>Se ha actualizado <a href="https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">Referencia de CLI</a> después de la versión de ECE-Tools, v2002.2.12. No se han realizado otros cambios aparte del número de versión.</p>
+      <td><p>Se ha actualizado <a href="https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">Referencia de CLI</a> después de la versión de ECE-Tools, v2002.2.12. No se han realizado otros cambios aparte del número de versión.</p>
 </td>
       <td>
         Técnico
