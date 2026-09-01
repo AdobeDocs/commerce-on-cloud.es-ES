@@ -54,7 +54,7 @@ Adobe Commerce en la infraestructura en la nube admite los siguientes servicios,
 - [OpenSearch](opensearch.md)
 
 >[!NOTE]
->[Actualizar RabbitMQ secuencialmente entre versiones disponibles](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/rabbitmq#upgrading-the-rabbitmq-service). Por ejemplo, no actualice directamente de 3.9 a 4.1.
+>[Actualizar RabbitMQ secuencialmente entre versiones disponibles](https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/configure/service/rabbitmq#upgrading-the-rabbitmq-service). Por ejemplo, no actualice directamente de 3.9 a 4.1.
 >
 >Para asegurarse de que las colas de mensajes personalizadas se vuelvan a crear en RabbitMQ después de actualizar a una nueva versión, déclencheur una implementación completa.
 
@@ -200,7 +200,7 @@ Puede recuperar los datos de configuración de todas las relaciones de servicio 
 
 ## Versiones de servicio
 
-Las versiones implementadas y probadas en la infraestructura en la nube determinan la versión del servicio y la compatibilidad con Adobe Commerce en dicha infraestructura, que a veces difieren de las versiones admitidas en las implementaciones locales de Adobe Commerce. Consulte [Requisitos del sistema](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements) en la guía _Instalación_ para obtener una lista de dependencias de software de terceros que Adobe ha probado con versiones específicas de Adobe Commerce y Magento Open Source.
+Las versiones implementadas y probadas en la infraestructura en la nube determinan la versión del servicio y la compatibilidad con Adobe Commerce en dicha infraestructura, que a veces difieren de las versiones admitidas en las implementaciones locales de Adobe Commerce. Consulte [Requisitos del sistema](https://experienceleague.adobe.com/es/docs/commerce-operations/installation-guide/system-requirements) en la guía _Instalación_ para obtener una lista de dependencias de software de terceros que Adobe ha probado con versiones específicas de Adobe Commerce y Magento Open Source.
 
 ### Comprobaciones de EOL de software
 
