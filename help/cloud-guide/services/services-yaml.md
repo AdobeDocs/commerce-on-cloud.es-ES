@@ -1,33 +1,27 @@
 ---
 title: Configurar servicios
-description: Obtenga información sobre cómo configurar los servicios que utiliza Adobe Commerce en la infraestructura en la nube.
+description: Obtenga información sobre cómo configurar los servicios que utiliza Adobe Commerce en la infraestructura en la nube, como MySQL, Redis y Elasticsearch.
 feature: Cloud, Configuration, Services
 exl-id: ddf44b7c-e4ae-48f0-97a9-a219e6012492
 TQID: https://experienceleague.adobe.com/qvCjqNc8E9QGme-zM42vMg-kb1WjwTlWUqjbm-NI2bg
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: 660f62d8bb809675ec872da2e87301308d333ba8
 workflow-type: tm+mt
-source-wordcount: 1187
+source-wordcount: 1176
 ht-degree: 0%
 
 ---
 
 # Configurar servicios
 
-El archivo `services.yaml` define los servicios admitidos y utilizados por Adobe Commerce en la infraestructura de la nube, como MySQL, Redis y Elasticsearch o OpenSearch. No es necesario suscribirse a proveedores de servicios externos.
+El archivo `services.yaml` define los servicios admitidos y utilizados por Adobe Commerce en la infraestructura de la nube, como MySQL, Redis o Valkey, y Elasticsearch o OpenSearch. No es necesario suscribirse a proveedores de servicios externos.
 
 >[!NOTE]
 >
->El archivo `.magento/services.yaml` se administra localmente en el directorio `.magento` del proyecto. Durante la implementación, Adobe Commerce en la infraestructura de la nube utiliza esta configuración para proporcionar servicios compatibles con el entorno de destino. El directorio `.magento` se quitó del servidor remoto después de la implementación, por lo que no encontrará `services.yaml` en el entorno implementado.
+>El archivo `.magento/services.yaml` se administra localmente en el directorio `.magento` del proyecto. Durante la implementación, Adobe Commerce en la infraestructura de la nube utiliza esta configuración para proporcionar servicios compatibles con el entorno de destino. El directorio `.magento` se quita del servidor remoto después de la implementación, por lo que `services.yaml` no existe en el entorno implementado.
 
 El script de implementación utiliza los archivos de configuración del directorio `.magento` para aprovisionar el entorno con los servicios configurados. Hay un servicio disponible para su aplicación si está incluido en la propiedad [`relationships`](../application/properties.md#relationships) del archivo `.magento.app.yaml`. El archivo `services.yaml` contiene los valores _type_ y _disk_. El tipo de servicio define el servicio _name_ y _version_.
 
@@ -40,7 +34,7 @@ Al cambiar una configuración de servicio, una implementación aprovisiona el en
 - Todos los entornos iniciales, incluida la producción `master`
 - Entornos de integración Pro
 
-{{pro-update-service}}
+{{$include /help/_includes/pro-services-support.md}}
 
 ## Servicios predeterminados y admitidos
 
@@ -48,20 +42,19 @@ Adobe Commerce en la infraestructura en la nube admite los siguientes servicios,
 
 - [ActiveMQ](activemq.md)
 - [MySQL](mysql.md)
-- [Valkey](valkey.md)
-- [Redis](redis.md)
+- [Redis](redis.md) o [Valkey](valkey.md)
 - [RabbitMQ](rabbitmq.md)
 - [Elasticsearch](elasticsearch.md)
 - [OpenSearch](opensearch.md)
 
 >[!NOTE]
->Debe [actualizar RabbitMQ secuencialmente entre las versiones disponibles](https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/configure/service/rabbitmq#upgrading-the-rabbitmq-service); por ejemplo, no puede actualizar de la versión 3.9 directamente a la 4.1
+>[Actualizar RabbitMQ secuencialmente entre versiones disponibles](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/configure/service/rabbitmq#upgrading-the-rabbitmq-service). Por ejemplo, no actualice directamente de 3.9 a 4.1.
 >
->Después de actualizar a una nueva versión de RabbitMQ, déclencheur una implementación completa para garantizar que las colas de mensajes personalizadas se vuelvan a crear en RabbitMQ.
+>Para asegurarse de que las colas de mensajes personalizadas se vuelvan a crear en RabbitMQ después de actualizar a una nueva versión, déclencheur una implementación completa.
 
 ## Ver servicios y versiones configurados
 
-Puede ver ejemplos de definiciones de servicios y valores de disco en el archivo de plantilla actual [`services.yaml` &#x200B;](https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml). Las versiones reales del servicio predeterminado y admitido dependen de la versión de Adobe Commerce y de la plantilla de nube actual.
+Puede ver ejemplos de definiciones de servicios y valores de disco en el archivo de plantilla actual [`services.yaml` ](https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml). Las versiones reales del servicio predeterminado y admitido dependen de la versión de Adobe Commerce y de la plantilla de nube actual.
 
 El ejemplo siguiente muestra definiciones de servicio en el archivo de configuración `services.yaml`:
 
@@ -88,7 +81,7 @@ activemq-artemis:
 
 ## Valores de servicio
 
-Debe proporcionar el identificador de servicio y la configuración del tipo de servicio `type: <name>:<version>`. Si el servicio utiliza almacenamiento persistente, debe proporcionar un valor de disco.
+Proporcione la ID de servicio y la configuración del tipo de servicio `type: <name>:<version>`. Si el servicio utiliza almacenamiento persistente, debe proporcionar un valor de disco.
 
 Utilice el siguiente formato:
 
@@ -100,29 +93,29 @@ Utilice el siguiente formato:
 
 ### `service-id`
 
-El valor `service-id` identifica el servicio en el proyecto. Solo puede utilizar caracteres alfanuméricos en minúsculas: `a` a `z` y `0` a `9`, como `redis`.
+El valor `service-id` identifica el servicio en el proyecto. Solo puede utilizar caracteres alfanuméricos en minúsculas: `a` a `z` y `0` a `9`, como `valkey`.
 
 Este valor de _service-id_ se usa en la propiedad [`relationships`](../application/properties.md#relationships) del archivo de configuración `.magento.app.yaml`:
 
 ```yaml
 relationships:
-    redis: "<name>:redis"
+    valkey: "valkey:valkey"
 ```
 
-Puede asignar nombres a varias instancias de cada tipo de servicio. Por ejemplo, puede utilizar varias instancias de Redis, una para la sesión y otra para la caché.
+Puede asignar nombres a varias instancias de cada tipo de servicio. Por ejemplo, puede utilizar varias instancias de Valkey, una para la sesión y otra para la caché.
 
 ```yaml
-redis:
-    type: redis:<version>
+valkey:
+    type: valkey:<version>
 
-redis2:
-    type: redis:<version>
+valkey2:
+    type: valkey:<version>
 ```
 
-Al cambiar el nombre de un servicio en el archivo `services.yaml` **se quita de forma permanente** lo siguiente:
+Cambiando el nombre de un servicio en el archivo `services.yaml`:
 
 - El servicio existente antes de crear un servicio con el nuevo nombre especificado.
-- Se eliminarán todos los datos existentes del servicio. Adobe recomienda encarecidamente que [haga una copia de seguridad de su entorno de inicio](../storage/snapshots.md) antes de cambiar el nombre de un servicio existente.
+- Se eliminarán todos los datos existentes del servicio. Adobe recomienda [realizar una copia de seguridad del entorno de inicio](../storage/snapshots.md) antes de cambiar el nombre de un servicio existente.
 
 ### `type`
 
@@ -135,7 +128,7 @@ mysql:
 
 ### `disk`
 
-El valor `disk` especifica el tamaño del almacenamiento en disco persistente (en MB) que se va a asignar al servicio. Los servicios que utilizan almacenamiento persistente, como MySQL, deben proporcionar un valor de disco. Los servicios que utilizan memoria en lugar de almacenamiento persistente, como Redis, no requieren un valor de disco.
+El valor `disk` especifica el tamaño del almacenamiento en disco persistente (en MB) que se va a asignar al servicio. Los servicios que utilizan almacenamiento persistente, como MySQL, deben proporcionar un valor de disco. Los servicios que utilizan memoria en lugar de almacenamiento persistente, como Valkey, no requieren un valor de disco.
 
 ```yaml
 mysql:
@@ -143,7 +136,7 @@ mysql:
     disk: 5120
 ```
 
-La cantidad de almacenamiento predeterminada actual por proyecto es de 5 GB o 512 0 MB. Puede distribuir esta cantidad entre su aplicación y cada uno de sus servicios.
+La cantidad de almacenamiento predeterminada actual por proyecto es de 5 GB o 5120 MB. Puede distribuir esta cantidad entre su aplicación y cada uno de sus servicios.
 
 ## Relaciones de servicio
 
@@ -151,7 +144,7 @@ En Adobe Commerce en proyectos de infraestructura en la nube, las [relaciones](.
 
 Puede recuperar los datos de configuración de todas las relaciones de servicio desde la variable de entorno [`$MAGENTO_CLOUD_RELATIONSHIPS`](../environment/variables-cloud.md). Los datos de configuración incluyen el nombre, el tipo y la versión del servicio junto con los detalles de conexión necesarios, como el número de puerto y las credenciales de inicio de sesión.
 
-**Para comprobar relaciones desde su entorno de desarrollo local**:
+### Compruebe las relaciones desde el entorno de desarrollo local
 
 1. En el entorno de desarrollo local, muestre las relaciones del entorno activo.
 
@@ -164,10 +157,10 @@ Puede recuperar los datos de configuración de todas las relaciones de servicio 
    >Respuesta de muestra abreviada
 
    ```yaml
-   redis:
+   valkey:
        -
    ...
-           type: 'redis:7.0'
+           type: 'valkey:8.0'
            port: 6379
    opensearch:
        -
@@ -181,7 +174,7 @@ Puede recuperar los datos de configuración de todas las relaciones de servicio 
            port: 3306
    ```
 
-**Para comprobar las relaciones en entornos remotos**:
+### Verificar relaciones en entornos remotos
 
 1. Utilice SSH para iniciar sesión en el entorno remoto.
 
@@ -197,11 +190,11 @@ Puede recuperar los datos de configuración de todas las relaciones de servicio 
    php ./vendor/bin/ece-tools env:config:show services
    ```
 
-1. Confirme `service` y `type` de la respuesta. La respuesta proporciona información de conexión, como la dirección IP y el número de puerto, así como las credenciales de nombre de usuario y contraseña necesarias.
+1. Confirme `service` y `type` de la respuesta. La respuesta proporciona información de conexión, como la dirección IP, el número de puerto y las credenciales de nombre de usuario y contraseña requeridas.
 
 ## Versiones de servicio
 
-La compatibilidad y la versión del servicio para Adobe Commerce en la infraestructura en la nube están determinadas por las versiones implementadas y probadas en la infraestructura en la nube, y a veces difieren de las versiones admitidas por las implementaciones locales de Adobe Commerce. Consulte [Requisitos del sistema](https://experienceleague.adobe.com/es/docs/commerce-operations/installation-guide/system-requirements) en la guía _Instalación_ para obtener una lista de dependencias de software de terceros que Adobe ha probado con versiones específicas de Adobe Commerce y Magento Open Source.
+Las versiones implementadas y probadas en la infraestructura en la nube determinan la versión del servicio y la compatibilidad con Adobe Commerce en dicha infraestructura, que a veces difieren de las versiones admitidas en las implementaciones locales de Adobe Commerce. Consulte [Requisitos del sistema](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements) en la guía _Instalación_ para obtener una lista de dependencias de software de terceros que Adobe ha probado con versiones específicas de Adobe Commerce y Magento Open Source.
 
 ### Comprobaciones de EOL de software
 
@@ -270,7 +263,7 @@ No puede reducir un servicio instalado directamente. Tiene dos opciones:
 
 Cuando cambie la versión del servicio, debe actualizar la configuración del servicio en el archivo `services.yaml` y actualizar las relaciones en el archivo `.magento.app.yaml`.
 
-**Para reducir la versión de un servicio cambiando el nombre de un servicio existente**:
+#### Cambiar la versión de un servicio cambiando el nombre de un servicio existente
 
 1. Cambie el nombre del servicio existente en el archivo `.magento/services.yaml` y cambie la versión.
 
@@ -314,7 +307,7 @@ Cuando cambie la versión del servicio, debe actualizar la configuración del se
 
 1. Agregue, confirme e inserte los cambios de código.
 
-**Para reducir la categoría de un servicio creando un servicio**:
+#### Degradación de un servicio creando un servicio
 
 1. Agregue una definición de servicio al archivo `services.yaml` para su proyecto con la especificación de versión degradada. Consulte _mysql2_ en el siguiente ejemplo:
 
@@ -329,7 +322,7 @@ Cuando cambie la versión del servicio, debe actualizar la configuración del se
        disk: 5120
    ```
 
-1. Cambie la configuración de relaciones en el archivo `.magento.app.yaml` para utilizar el nuevo servicio.
+1. Para usar el nuevo servicio, cambie la configuración de relaciones en el archivo `.magento.app.yaml`.
 
    > Configuración original de `.magento.app.yaml`
 

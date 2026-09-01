@@ -4,43 +4,36 @@ description: Obtenga información sobre cómo actualizar la versión de Adobe Co
 feature: Cloud, Upgrade
 exl-id: 0cc070cf-ab25-4269-b18c-b2680b895c17
 TQID: https://experienceleague.adobe.com/XCHw9c0bX8UE8LLmFOYjMFRLTaIk8sT57dESptRTUXs
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: d1e21356-0064-4f48-9089-16e3f0dbd2a6id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
+source-git-commit: a8c3a083e7003b63452961925e0a7c1aa185b8da
 workflow-type: tm+mt
-source-wordcount: 1024
+source-wordcount: 1050
 ht-degree: 0%
 
 ---
 
 # Actualizar la versión de Commerce
 
-Puede actualizar el código base de Adobe Commerce a una versión más reciente. Antes de actualizar el entorno, revise los [requisitos del sistema](https://experienceleague.adobe.com/es/docs/commerce-operations/installation-guide/system-requirements) en la guía de _Instalación_ para conocer los requisitos de la última versión de software.
+Puede actualizar el código base de Adobe Commerce a una versión más reciente. Antes de actualizar el entorno, revise los [requisitos del sistema](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements) en la guía de _Instalación_ para conocer los requisitos de la última versión de software.
 
 Según el tipo de entorno (desarrollo, ensayo o producción), las tareas de actualización pueden incluir las siguientes:
 
 - Actualice las extensiones de terceros a la última versión compatible.
-- Para los proyectos Pro, debe enviar un ticket de asistencia de Adobe Commerce para instalar o actualizar servicios en entornos de ensayo y producción.
-- Para las ramas de desarrollo/integración/PR:
-  - Actualice el archivo `.magento/services.yaml` con nuevas versiones para MariaDB (MySQL), OpenSearch, RabbitMQ y Redis para comprobar la compatibilidad con las nuevas versiones de Adobe Commerce.
-  - Actualice el archivo `.magento.app.yaml` con la nueva configuración para los vínculos y las variables de entorno.
+- Actualice el archivo `.magento/services.yaml` con las versiones de servicio necesarias para MariaDB (MySQL), OpenSearch, RabbitMQ y Redis o Valkey para que sigan siendo compatibles con la versión de Adobe Commerce de destino.
+  - Para las ramas de desarrollo/integración/PR, estos cambios se utilizan directamente como parte de la configuración del entorno.
+  - Para los entornos de ensayo y producción de Pro, el soporte de Adobe Commerce realiza la instalación o actualización del servicio real, pero debe mantener `.magento/services.yaml` actualizado, completo y válido, ya que su contenido se valida durante la implementación.
+- Actualice el archivo `.magento.app.yaml` con la nueva configuración para los vínculos y las variables de entorno.
 
 {{upgrade-tip}}
 
-{{pro-update-service}}
+{{$include /help/_includes/pro-services-support.md}}
 
 ## Archivos de configuración
 
-Antes de actualizar la aplicación, debe actualizar los archivos de configuración del proyecto para tener en cuenta los cambios en los valores de configuración predeterminados de Adobe Commerce en la infraestructura en la nube o en la aplicación. Los valores predeterminados más recientes se encuentran en el [repositorio de GitHub de Magento en la nube](https://github.com/magento/magento-cloud).
+Para tener en cuenta los cambios realizados en las opciones de configuración predeterminadas de Adobe Commerce en la infraestructura en la nube o en la aplicación, actualice los archivos de configuración del proyecto antes de actualizar la aplicación. Los valores predeterminados más recientes se encuentran en el [repositorio de GitHub de Magento en la nube](https://github.com/magento/magento-cloud).
 
 ### composer.json
 
@@ -84,7 +77,7 @@ Para actualizar el archivo `composer.json` para Adobe Commerce versión 2.4.4 y 
 
 ## Copia de seguridad de entorno
 
-Se recomienda crear una copia de seguridad de la instancia antes de una actualización. Siga estos pasos para realizar una copia de seguridad de los entornos de integración, ensayo y producción.
+Adobe recomienda crear una copia de seguridad de la instancia antes de una actualización. Siga estos pasos para realizar una copia de seguridad de los entornos de integración, ensayo y producción.
 
 **Para hacer una copia de seguridad de la base de datos y el código del entorno de integración**:
 
@@ -142,7 +135,7 @@ Revise la información de [versiones de servicio](../services/services-yaml.md#s
    composer require-commerce magento/product-enterprise-edition 2.4.8 --no-update
    ```
 
-1. Si utiliza B2B, actualice el archivo `composer.json` con la [versión compatible](https://experienceleague.adobe.com/es/docs/commerce-operations/release/product-availability#adobe-authored-extensions) para Commerce.
+1. Si utiliza B2B, actualice el archivo `composer.json` con la [versión compatible](https://experienceleague.adobe.com/en/docs/commerce-operations/release/product-availability#adobe-authored-extensions) para Commerce.
 
    ```bash
    composer require-commerce magento/extension-b2b 1.5.2 --no-update
@@ -156,15 +149,15 @@ Revise la información de [versiones de servicio](../services/services-yaml.md#s
 
 1. Revise los parches que se aplican actualmente:
 
-   - Si hay parches instalados en el directorio `m2-hotfixes`, [envíe un ticket de soporte de Adobe Commerce](https://experienceleague.adobe.com/es/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#support-case) y trabaje con el soporte técnico de Adobe Commerce para comprobar qué parches se pueden seguir aplicando a la nueva versión. Quite los parches no aplicables del directorio `m2-hotfixes`.
+   - Si hay parches instalados en el directorio `m2-hotfixes`, [envíe un ticket de soporte de Adobe Commerce](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#support-case) y trabaje con el soporte técnico de Adobe Commerce para comprobar qué parches se pueden seguir aplicando a la nueva versión. Quite los parches no aplicables del directorio `m2-hotfixes`.
 
    - Si hay [Parches de calidad] aplicados en el archivo `.magento.env.yaml`, compruebe si aún se pueden aplicar a la nueva versión. Quite los parches no aplicables de la sección `QUALITY_PATCHES` del archivo `.magento.env.yaml`.
 
-   **Método 1**: [Compruebe las versiones aplicables en las notas de la versión de parches de calidad](https://experienceleague.adobe.com/es/docs/commerce-operations/tools/quality-patches-tool/release-notes)
+   **Método 1**: [Compruebe las versiones aplicables en las notas de la versión de parches de calidad](https://experienceleague.adobe.com/en/docs/commerce-operations/tools/quality-patches-tool/release-notes)
 
-   **Método 2**: [Ver parches y estado disponibles](https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches#view-available-patches-and-status)
+   **Método 2**: [Ver parches y estado disponibles](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches#view-available-patches-and-status)
 
-   **Método 3**: [Buscar parches](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=es)
+   **Método 3**: [Buscar parches](https://experienceleague.adobe.com/en/tools/commerce-quality-patches)
 
 
 1. Agregar, confirmar y enviar cambios de código.
@@ -185,7 +178,7 @@ Revise la información de [versiones de servicio](../services/services-yaml.md#s
 
    Los archivos a los que Composer calcula las referencias pertenecen a la nueva versión de Adobe Commerce, para sobrescribir la versión obsoleta de esos mismos archivos. En la actualidad, el cálculo de referencias está deshabilitado en Adobe Commerce, por lo que debe agregar los archivos para calcular referencias al control de código fuente.
 
-1. Espere a que se complete la implementación.
+1. Para completar la actualización, espere a la implementación.
 
 1. Compruebe la actualización en el entorno de integración, ensayo o producción utilizando SSH para iniciar sesión y comprobar la versión.
 
@@ -213,9 +206,9 @@ Revise las páginas de módulos y extensiones de terceros en Marketplace u otros
 
 1. Envíe a y pruebe en su entorno de integración.
 
-1. Insertar en el entorno de ensayo para realizar pruebas en un entorno de preproducción.
+1. Para realizar pruebas en un entorno de preproducción, vaya al entorno de ensayo.
 
-Adobe recomienda encarecidamente actualizar el entorno de producción _antes de_, incluidas las extensiones actualizadas en el proceso de lanzamiento del sitio.
+Adobe recomienda actualizar el entorno de producción _antes de_, incluidas las extensiones actualizadas en el proceso de inicio del sitio.
 
 >[!NOTE]
 >
