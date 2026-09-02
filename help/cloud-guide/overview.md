@@ -1,34 +1,26 @@
 ---
 title: Commerce en infraestructura en la nube
-description: Obtenga información sobre la creación, implementación y administración de Commerce en la infraestructura en la nube.
+description: Obtenga información sobre la creación, implementación y administración de Adobe Commerce en Cloud Infrastructure, una plataforma segura como servicio (PaaS) alojada en las regiones de AWS y Azure.
 exl-id: a37d0403-df14-4bb9-8cc4-25436560ba0c
 TQID: https://experienceleague.adobe.com/-sgz85xapPKNipyFVB4yMrLilEku3ff5IJg3OddymsA
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-subfeature_v2:
-  - id: f8ddfd3b-6194-46e8-a176-0e918039be56
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: d095671a-1355-40aa-8b5f-06c33c68080b
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: ba9e5be9-7de1-4f71-a5d2-baead0e425eeid: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+subfeature_v2: id: f8ddfd3b-6194-46e8-a176-0e918039be56
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: d095671a-1355-40aa-8b5f-06c33c68080b
 last-update: 2026-08-28
-source-git-commit: 646dc40e0fe48293665e15b01a0f581adae3568d
+source-git-commit: d5d947f9858ab15e2e5daed7848163846580f883
 workflow-type: tm+mt
-source-wordcount: 324
-ht-degree: 3%
+source-wordcount: 356
+ht-degree: 0%
 
 ---
 
 # Commerce en infraestructura en la nube
 
-Adobe Commerce en la nube proporciona una plataforma de alojamiento automatizada con un enfoque de **autoservicio** para crear, implementar y administrar su aplicación [!DNL Commerce] en un entorno nativo de la nube. Adobe Commerce en la infraestructura en la nube incluye funciones adicionales que lo diferencian de las plataformas locales de Adobe Commerce y Magento Open Source:
+Adobe Commerce en la nube proporciona una plataforma de alojamiento automatizada con un enfoque de **autoservicio** para crear, implementar y administrar su aplicación [!DNL Commerce] en un entorno nativo de la nube. Adobe Commerce en la infraestructura en la nube incluye funciones adicionales que lo distinguen de las plataformas locales de Adobe Commerce y Magento Open Source:
 
-- Infraestructura aprovisionada previamente que incluye PHP, MySQL (MariaDB), Redis, servicios de cola de mensajes ([!DNL RabbitMQ] o [!DNL ActiveMQ]) y tecnologías de motores de búsqueda compatibles.
+- Una infraestructura aprovisionada previamente que incluye PHP, MySQL (MariaDB), Redis o Valkey, servicios de cola de mensajes ([!DNL RabbitMQ] o [!DNL ActiveMQ]) y tecnologías de motores de búsqueda compatibles.
 - Flujo de trabajo basado en Git con compilación e implementación automáticas para un desarrollo rápido y una implementación continua eficientes cada vez que inserte cambios en el código en un entorno de Platform as a Service (PaaS).
 - Los archivos de configuración de entorno altamente personalizables y la interfaz de línea de comandos (CLI) administran e implementan herramientas.
 - Alojamiento de Amazon Web Service (AWS) que ofrece un entorno escalable y seguro para las ventas y la venta minorista en línea.
@@ -37,7 +29,7 @@ Adobe Commerce en la nube proporciona una plataforma de alojamiento automatizada
 
 >[!NOTE]
 >
->Para obtener más información sobre seguridad, consulte la [lista de comprobación de inicio de seguridad](https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration).
+>Para obtener más información sobre seguridad, consulte la [lista de comprobación de inicio de seguridad](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration).
 
 Vea en detalle [la pila de tecnología](architecture/tech-stack.md) o aprenda más acerca de características específicas y productos compatibles en la [arquitectura de la nube para Commerce](architecture/cloud-architecture.md).
 
@@ -58,7 +50,7 @@ Las secciones siguientes proporcionan detalles sobre las diferentes regiones de 
 
 >[!NOTE]
 >
-> Solo local en China y Rusia.
+> Adobe Commerce sobre la infraestructura en la nube no está disponible en China ni en Rusia. En esos países solo se admiten implementaciones locales.
 
 ## Regiones de Azure
 
@@ -66,7 +58,7 @@ Las secciones siguientes proporcionan detalles sobre las diferentes regiones de 
 
 >[!NOTE]
 >
-> Solo local en China y Rusia. Todos los comerciantes que requieran entornos de integración deben utilizar regiones de EE. UU.
+> Solo se admiten implementaciones locales en China y Rusia. Todos los comerciantes que requieran entornos de integración deben utilizar regiones de EE. UU.
 
 ## Documentación de Adobe Commerce
 
@@ -74,7 +66,7 @@ La guía de Commerce sobre la infraestructura en la nube supone que tiene alguno
 
 - [Documentación para desarrolladores de Adobe Commerce](https://developer.adobe.com/commerce/docs/) (sitio de Adobe Developer): desarrolle, personalice, integre, amplíe y utilice funciones avanzadas
 
-- [Documentación de Adobe Commerce](https://experienceleague.adobe.com/es/docs/commerce) (Adobe Experience League): Planifique, implemente, utilice, actualice y mantenga sus [!DNL Commerce] proyectos
+- [Documentación de Adobe Commerce](https://experienceleague.adobe.com/en/docs/commerce) (Adobe Experience League): Planifique, implemente, utilice, actualice y mantenga sus [!DNL Commerce] proyectos
 
 {{$include /help/_includes/templated/whats-new.md}}
 

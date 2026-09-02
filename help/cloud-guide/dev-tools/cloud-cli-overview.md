@@ -3,19 +3,12 @@ title: CLI de nube
 description: Obtenga información acerca de la CLI de magento en la nube y cómo le ayuda a administrar los entornos de desarrollo local para su proyecto de infraestructura de Adobe Commerce en la nube.
 exl-id: 71a705f2-8672-4125-b539-b7b1621f2f64
 TQID: https://experienceleague.adobe.com/cp-mG1bOtIxmm4bKKFmABa-vrudh-paS7E6x6IlWHmU
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
-  - id: d1e21356-0064-4f48-9089-16e3f0dbd2a6
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: bd989d82-1e15-4534-88db-f1f51dd77ffaid: d1e21356-0064-4f48-9089-16e3f0dbd2a6id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 60adcf7e68659eb76895208cec80a93ddf690a2e
 workflow-type: tm+mt
-source-wordcount: 862
+source-wordcount: 859
 ht-degree: 0%
 
 ---
@@ -28,14 +21,14 @@ Esta herramienta amplía la funcionalidad de [[!DNL Cloud Console]](../../get-st
 
 >[!NOTE]
 >
->Se trata de una herramienta local y solo es compatible con sistemas operativos basados en Unix. Windows no es compatible. No se puede instalar en el entorno de nube (que es de solo lectura) mediante el método descrito en esta página. Solo puede instalar módulos en el entorno de la nube mediante uno de los **flujos de trabajo de implementación** siguientes.
+>Esta herramienta local solo es compatible con sistemas operativos basados en Unix. Windows no es compatible. No se puede instalar en el entorno de nube (que es de solo lectura) mediante el método descrito en esta página. Solo puede instalar módulos en el entorno de la nube mediante uno de los **flujos de trabajo de implementación** siguientes.
 >
->- [Flujo de trabajo de implementación Pro](https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)
->- [Flujo de trabajo de implementación inicial](https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/architecture/starter-develop-deploy-workflow)
+>- [Flujo de trabajo de implementación Pro](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow)
+>- [Flujo de trabajo de implementación inicial](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/architecture/starter-develop-deploy-workflow)
 
 **Para instalar la CLI** de `magento-cloud`:
 
-1. En su _estación de trabajo local_, cambie al directorio donde quiere clonar el proyecto de Cloud y donde el [propietario del sistema de archivos](https://experienceleague.adobe.com/es/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions) tiene acceso de _escritura_.
+1. En su _estación de trabajo local_, cambie al directorio donde quiere clonar el proyecto de Cloud y donde el [propietario del sistema de archivos](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions) tiene acceso de _escritura_.
 
 1. Instale la CLI `magento-cloud`.
 
@@ -43,7 +36,7 @@ Esta herramienta amplía la funcionalidad de [[!DNL Cloud Console]](../../get-st
    curl -sS https://accounts.magento.cloud/cli/installer | php
    ```
 
-1. Agregar CLI `magento-cloud` al perfil bash.
+1. Agregue la CLI `magento-cloud` al perfil bash.
 
    ```bash
    export PATH=$PATH:$HOME/.magento-cloud/bin
@@ -105,7 +98,11 @@ magento-cloud environment:list
 
 ### Volver a implementar el entorno
 
-Déclencheur una reimplementación sin utilizar una notificación push. Compruebe y confirme el entorno que desea volver a implementar. No utilice volver a implementar si hay una compilación en estado pendiente.
+Déclencheur una reimplementación sin utilizar una notificación push. Compruebe y confirme el entorno que desea volver a implementar.
+
+>[!CAUTION]
+>
+>No utilice volver a implementar si hay una compilación en estado pendiente.
 
 ```bash
 magento-cloud environment:redeploy
@@ -121,7 +118,7 @@ Are you sure you want to redeploy the environment <environment-name>? [Y/n]
 
 ## Comandos Git
 
-Puede observar que algunos de estos comandos son similares a los comandos Git. Los comandos de `magento-cloud` se conectan directamente al proyecto de nube basado en Git con características adicionales. Si crea una rama sin usar la CLI `magento-cloud`, no se &quot;activa&quot; y no se genera automáticamente al insertar cambios en el entorno remoto. El comando CLI `magento-cloud` incluye la activación.
+Algunos de estos comandos son similares a los comandos Git. Los comandos de `magento-cloud` se conectan directamente al proyecto de nube basado en Git con características adicionales. Si crea una rama sin usar la CLI `magento-cloud`, no se &quot;activa&quot; y no se genera automáticamente al insertar cambios en el entorno remoto. El comando CLI `magento-cloud` incluye la activación.
 
 Para crear una rama, use el comando `magento-cloud` para que se active la rama.
 
@@ -148,7 +145,7 @@ Los siguientes pasos muestran el uso de los comandos CLI y Git de forma intercam
 
 1. En la estación de trabajo local, cambie al directorio del proyecto.
 
-1. Cambiar al [propietario del sistema de archivos](https://experienceleague.adobe.com/es/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions).
+1. Cambiar al [propietario del sistema de archivos](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/prerequisites/file-system/configure-permissions).
 
 1. Inicie sesión en el proyecto.
 
@@ -190,7 +187,7 @@ Los siguientes pasos muestran el uso de los comandos CLI y Git de forma intercam
    >
    >Puede crear una rama de entorno utilizando la sintaxis de comando `magento-cloud environment:branch <environment-name> <parent-environment-ID>`. Puede llevar algún tiempo adicional crear y activar una rama de entorno.
 
-1. Utilice el ID de entorno para extraer cualquier código actualizado de su local de. Esto no es necesario si la rama de entorno es nueva.
+1. Utilice el ID de entorno para extraer cualquier código actualizado de su entorno local. Este paso no es necesario si la rama de entorno es nueva.
 
    ```bash
    git pull origin <environment-ID>
