@@ -1,7 +1,7 @@
 ---
-source-git-commit: 5fefabb5795e68abd467a7115bc2a6e554e0d832
+source-git-commit: 67ed09e3b7c5f5218407b6648e8ca2c32933bbda
 workflow-type: tm+mt
-source-wordcount: '1392'
+source-wordcount: '1008'
 ht-degree: 0%
 
 ---
@@ -11,7 +11,7 @@ ht-degree: 0%
 
 >[!WARNING]
 >
->Elasticsearch 7 y versiones posteriores no son compatibles con Adobe Commerce en infraestructuras en la nube. Las versiones de Adobe Commerce 2.3.7-p3, 2.4.3-p2 y 2.4.4 y posteriores admiten el servicio OpenSearch.
+>Elasticsearch 7 y versiones posteriores no son compatibles con Adobe Commerce en infraestructuras en la nube. Adobe Commerce 2.4.4 y versiones posteriores admiten el servicio OpenSearch.
 
 ## Integración mejorada {#enhanced-integration-envs}
 
@@ -32,7 +32,7 @@ Establezca la opción `_merge` en una de las siguientes opciones:
 
 >[!NOTE]
 >
->Adobe recomienda encarecidamente utilizar un repositorio privado para su proyecto de infraestructura de Adobe Commerce en la nube a fin de proteger cualquier trabajo de desarrollo o información de propiedad, como extensiones y configuraciones confidenciales.
+>Adobe recomienda utilizar un repositorio privado para su proyecto de infraestructura de Adobe Commerce en la nube a fin de proteger cualquier trabajo de desarrollo o información de propiedad, como extensiones y configuraciones confidenciales.
 
 ## Advertencia de autoservicio de Pro {#pro-self-service-warning}
 
@@ -43,42 +43,11 @@ Establezca la opción `_merge` en una de las siguientes opciones:
 >
 >Si los cambios no se reflejan en los sitios de ensayo después de la reimplementación y no hay mensajes de error relacionados en el registro, **debe** [enviar un ticket de soporte de Adobe Commerce](https://experienceleague.adobe.com/es/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket). En el ticket, describa claramente los cambios de configuración que ha intentado y adjunte cualquier archivo de configuración YAML actualizado en el ticket.
 
-## Asistencia de servicios Pro {#pro-update-service}
-
->[!BEGINSHADEBOX]
-
-- Para los proyectos Pro, debe [enviar un ticket de soporte de Adobe Commerce](https://experienceleague.adobe.com/es/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) para instalar o actualizar [servicios](https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/configure/service/services-yaml) solo en `Staging` y `Production` entornos.
-
-- Indique los cambios de servicio necesarios, incluya los `.magento.app.yaml` y `services.yaml` archivos actualizados y especifique la versión de PHP en el ticket. Para ver los cambios de autoservicio en la versión, las extensiones o la configuración del entorno de PHP, consulte [Configuración de PHP](https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/configure/app/php-settings) en _Configuración de la aplicación_.
-
-  >[!IMPORTANT]
-  >
-  >Al seleccionar el campo Entorno en el formulario de nuevo ticket, utilice la denominación de entorno de Adobe. Por ejemplo, seleccione Ensayo aunque llame internamente a ese entorno **Dev**. Puede mencionar su nombre interno en la descripción, pero el campo Entorno en sí debe utilizar la nomenclatura de Adobe.
-
-- Para los cambios en un entorno de producción activo (**Solo Pro**), se requiere un aviso con un mínimo de 48 horas. Esto permite al equipo de infraestructura en la nube disponer de tiempo suficiente para recopilar recursos y realizar una actualización segura. El periodo de aviso comienza cuando el equipo de infraestructura reconoce la solicitud y programa la actualización, excepto los fines de semana. Por ejemplo, para que las actualizaciones del servicio se completen un lunes, se debe recibir un acuse de recibo de la actualización programada antes del miércoles. Durante los períodos de mayor demanda, puede tardar más tiempo en procesar la solicitud.
-
-  >[!NOTE]
-  >
-  >Todas las ventanas de mantenimiento programadas deben proporcionarse en formato UTC para garantizar la claridad y coherencia en todas las comunicaciones. Las actualizaciones de servicios no se pueden programar en el entorno de ensayo; en la mayoría de los casos, las actualizaciones en ensayo se realizan el mismo día que la solicitud.
-  >
-  >Si solicita una actualización de RabbitMQ, asegúrese de volver a implementar el entorno una vez completada la actualización para que se reinicien las colas de mensajes.
-
-- **Proceso de enlace en dos partes para programar actualizaciones**
-
-  Para garantizar un proceso de actualización fluido y coordinado, la asistencia de Adobe Commerce sigue un proceso de protocolo de enlace en dos partes para todas las actualizaciones del entorno de producción:
-
-  1. **Confirmación del cliente**: El Soporte de Adobe solicita primero que el cliente confirme la fecha y hora deseadas para la actualización. Este paso garantiza que el tiempo se ajuste a las necesidades comerciales y a los períodos de mantenimiento del cliente.
-  2. **Programación y confirmación final**: una vez que el cliente confirma el momento, el Soporte de Adobe envía la solicitud al equipo de Infraestructura, que luego revisa la solicitud y proporciona la confirmación final de la ventana de actualización programada.
-
-La actualización no se considera programada hasta que el equipo de infraestructura haya proporcionado la confirmación final. Se recomienda a los clientes que respondan rápidamente al menos 48 horas antes de la ventana de actualización para evitar retrasos y permitir un aviso adecuado.
-
->[!ENDSHADEBOX]
-
 ## Backups Pro {#pro-backups}
 
 >[!TIP]
 >
->En los entornos de ensayo y producción de Pro, debe [enviar un ticket de soporte de Adobe Commerce](https://experienceleague.adobe.com/es/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) para recuperar una copia de seguridad específica que indique la fecha, la hora y la zona horaria del ticket.
+>Para recuperar una copia de seguridad específica en entornos de ensayo y producción de Pro, [envíe un ticket de soporte de Adobe Commerce](https://experienceleague.adobe.com/es/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) indicando la fecha, la hora y la zona horaria en el ticket.
 >
 >Adobe **no** restaura ningún entorno desde una copia de seguridad automática. Consulte [Restaurar una instantánea de base de datos desde Ensayo o Producción](https://experienceleague.adobe.com/es/docs/commerce-knowledge-base/kb/how-to/restore-a-db-snapshot-from-staging-or-production) para obtener ayuda sobre cómo elegir un método para restaurar una instantánea de ensayo o producción.
 
@@ -118,13 +87,13 @@ Siga estas instrucciones para la configuración del servicio en entornos de inte
 
 >[!NOTE]
 >
->[Envíe un ticket de soporte de Adobe Commerce](https://experienceleague.adobe.com/es/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) para cambiar la configuración del servicio en los entornos de ensayo y producción de Pro.
+>Para cambiar la configuración del servicio en los entornos de ensayo y producción de Pro, [envíe un vale de soporte de Adobe Commerce](https://experienceleague.adobe.com/es/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket). Para conocer los requisitos de programación y las instrucciones de disponibilidad del cliente, consulte [Soporte de servicios Pro](https://experienceleague.adobe.com/en/docs/cloud-guide/services/services-yaml.md#pro-services-support) en _Configurar servicios_.
 
 ## Cambio de servicio {#service-change-tip}
 
 >[!TIP]
 >
->Después de la instalación inicial del servicio, puede cambiar la versión del software de un servicio instalado actualizando los archivos de configuración `services.yaml` y `.magento.app.yaml`. Consulte [Cambiar la versión del servicio](/help/cloud-guide/services/services-yaml.md#change-service-version) para obtener instrucciones sobre cómo actualizar o degradar un servicio.
+>Después de la instalación inicial del servicio, puede cambiar la versión del software de un servicio instalado actualizando los archivos de configuración `services.yaml` y `.magento.app.yaml`. Consulte [Cambiar la versión del servicio](/help/cloud-guide/services/services-yaml.md#change-service-version) para obtener instrucciones sobre cómo actualizar o degradar un servicio. Este método de autoservicio no se aplica a los entornos de ensayo o producción Pro; consulte [Compatibilidad con servicios Pro](https://experienceleague.adobe.com/en/docs/cloud-guide/services/services-yaml.md#pro-services-support) en _Configurar servicios_.
 
 ## Sugerencia de implementación atascada {#stuck-deployment-tip}
 
@@ -136,7 +105,7 @@ Siga estas instrucciones para la configuración del servicio en entornos de inte
 
 >[!NOTE]
 >
->Si usa una versión de Adobe Commerce en una infraestructura en la nube que no contiene el paquete `ece-tools`, debe realizar una [actualización única](/help/cloud-guide/dev-tools/install-package.md) a su proyecto en la nube para eliminar los paquetes obsoletos. Si actualmente usa el paquete `ece-tools` y necesita actualizarlo, consulte [Actualizar el paquete ECE-Tools](/help/cloud-guide/dev-tools/update-package.md).
+>Para quitar los paquetes obsoletos de las versiones de Adobe Commerce en la infraestructura en la nube que no contienen el paquete `ece-tools`, debe realizar una [actualización única](/help/cloud-guide/dev-tools/install-package.md) a su proyecto en la nube. Si actualmente usa el paquete `ece-tools` y necesita actualizarlo, consulte [Actualizar el paquete ECE-Tools](/help/cloud-guide/dev-tools/update-package.md).
 
 ## Sugerencia de actualización {#upgrade-tip}
 
@@ -148,11 +117,11 @@ Siga estas instrucciones para la configuración del servicio en entornos de inte
 
 >[!NOTE]
 >
->New Relic puede mostrar Redis incluso después de la migración a Valkey
+>New Relic puede mostrar Redis incluso después de la migración a Valkey.
 >
 >Se espera que New Relic continúe refiriéndose al servicio de caché como Redis incluso después de que el entorno se haya migrado a Valkey.
 >
->Valkey es una ramificación de código abierto de Redis, y algunas herramientas e integraciones siguen identificando el servicio mediante el uso de nombres de Redis en lugar de una etiqueta de Valkey distinta. Esto no indica necesariamente que Redis siga instalado.
+>Valkey es una ramificación de código abierto de Redis, y algunas herramientas e integraciones siguen identificando el servicio mediante el uso de nombres de Redis en lugar de una etiqueta de Valkey distinta. Este comportamiento no indica necesariamente que Redis siga instalado.
 
 <!-- Fastly-related snippets begin -->
 

@@ -15,9 +15,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: a8c3a083e7003b63452961925e0a7c1aa185b8da
 workflow-type: tm+mt
-source-wordcount: 1024
+source-wordcount: 1050
 ht-degree: 0%
 
 ---
@@ -29,18 +29,18 @@ Puede actualizar el código base de Adobe Commerce a una versión más reciente.
 Según el tipo de entorno (desarrollo, ensayo o producción), las tareas de actualización pueden incluir las siguientes:
 
 - Actualice las extensiones de terceros a la última versión compatible.
-- Para los proyectos Pro, debe enviar un ticket de asistencia de Adobe Commerce para instalar o actualizar servicios en entornos de ensayo y producción.
-- Para las ramas de desarrollo/integración/PR:
-  - Actualice el archivo `.magento/services.yaml` con nuevas versiones para MariaDB (MySQL), OpenSearch, RabbitMQ y Redis para comprobar la compatibilidad con las nuevas versiones de Adobe Commerce.
-  - Actualice el archivo `.magento.app.yaml` con la nueva configuración para los vínculos y las variables de entorno.
+- Actualice el archivo `.magento/services.yaml` con las versiones de servicio necesarias para MariaDB (MySQL), OpenSearch, RabbitMQ y Redis o Valkey para que sigan siendo compatibles con la versión de Adobe Commerce de destino.
+  - Para las ramas de desarrollo/integración/PR, estos cambios se utilizan directamente como parte de la configuración del entorno.
+  - Para los entornos de ensayo y producción de Pro, el soporte de Adobe Commerce realiza la instalación o actualización del servicio real, pero debe mantener `.magento/services.yaml` actualizado, completo y válido, ya que su contenido se valida durante la implementación.
+- Actualice el archivo `.magento.app.yaml` con la nueva configuración para los vínculos y las variables de entorno.
 
 {{upgrade-tip}}
 
-{{pro-update-service}}
+{{$include /help/_includes/pro-services-support.md}}
 
 ## Archivos de configuración
 
-Antes de actualizar la aplicación, debe actualizar los archivos de configuración del proyecto para tener en cuenta los cambios en los valores de configuración predeterminados de Adobe Commerce en la infraestructura en la nube o en la aplicación. Los valores predeterminados más recientes se encuentran en el [repositorio de GitHub de Magento en la nube](https://github.com/magento/magento-cloud).
+Para tener en cuenta los cambios realizados en las opciones de configuración predeterminadas de Adobe Commerce en la infraestructura en la nube o en la aplicación, actualice los archivos de configuración del proyecto antes de actualizar la aplicación. Los valores predeterminados más recientes se encuentran en el [repositorio de GitHub de Magento en la nube](https://github.com/magento/magento-cloud).
 
 ### composer.json
 
@@ -84,7 +84,7 @@ Para actualizar el archivo `composer.json` para Adobe Commerce versión 2.4.4 y 
 
 ## Copia de seguridad de entorno
 
-Se recomienda crear una copia de seguridad de la instancia antes de una actualización. Siga estos pasos para realizar una copia de seguridad de los entornos de integración, ensayo y producción.
+Adobe recomienda crear una copia de seguridad de la instancia antes de una actualización. Siga estos pasos para realizar una copia de seguridad de los entornos de integración, ensayo y producción.
 
 **Para hacer una copia de seguridad de la base de datos y el código del entorno de integración**:
 
@@ -164,7 +164,7 @@ Revise la información de [versiones de servicio](../services/services-yaml.md#s
 
    **Método 2**: [Ver parches y estado disponibles](https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/develop/upgrade/apply-patches#view-available-patches-and-status)
 
-   **Método 3**: [Buscar parches](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=es)
+   **Método 3**: [Buscar parches](https://experienceleague.adobe.com/es/tools/commerce-quality-patches)
 
 
 1. Agregar, confirmar y enviar cambios de código.
@@ -185,7 +185,7 @@ Revise la información de [versiones de servicio](../services/services-yaml.md#s
 
    Los archivos a los que Composer calcula las referencias pertenecen a la nueva versión de Adobe Commerce, para sobrescribir la versión obsoleta de esos mismos archivos. En la actualidad, el cálculo de referencias está deshabilitado en Adobe Commerce, por lo que debe agregar los archivos para calcular referencias al control de código fuente.
 
-1. Espere a que se complete la implementación.
+1. Para completar la actualización, espere a la implementación.
 
 1. Compruebe la actualización en el entorno de integración, ensayo o producción utilizando SSH para iniciar sesión y comprobar la versión.
 
@@ -213,9 +213,9 @@ Revise las páginas de módulos y extensiones de terceros en Marketplace u otros
 
 1. Envíe a y pruebe en su entorno de integración.
 
-1. Insertar en el entorno de ensayo para realizar pruebas en un entorno de preproducción.
+1. Para realizar pruebas en un entorno de preproducción, vaya al entorno de ensayo.
 
-Adobe recomienda encarecidamente actualizar el entorno de producción _antes de_, incluidas las extensiones actualizadas en el proceso de lanzamiento del sitio.
+Adobe recomienda actualizar el entorno de producción _antes de_, incluidas las extensiones actualizadas en el proceso de inicio del sitio.
 
 >[!NOTE]
 >
