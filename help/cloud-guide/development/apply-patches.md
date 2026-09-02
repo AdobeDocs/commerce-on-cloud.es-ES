@@ -1,6 +1,6 @@
 ---
 title: Aplicar parches
-description: Obtenga información sobre cómo aplicar parches en el proyecto de infraestructura de Adobe Commerce en la nube.
+description: Aprenda a aplicar los parches necesarios, opcionales y personalizados a un proyecto de Adobe Commerce en la infraestructura de la nube mediante ECE-Tools y la herramienta de parches de calidad.
 feature: Cloud, Upgrade
 exl-id: 923c1e43-45da-450f-bdfc-de84a901400d
 TQID: https://experienceleague.adobe.com/SyS-AIRHp0LW7Z4JwZw2FNtbvy9FVzISUID12MjlMrc
@@ -9,9 +9,9 @@ product_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: f3a3403ffd55c2e08e20592fa719f42a9473e72d
 workflow-type: tm+mt
-source-wordcount: 911
+source-wordcount: 922
 ht-degree: 0%
 
 ---
@@ -119,7 +119,7 @@ Puede aplicar parches manualmente en un entorno local y probarlos antes de la im
 
 **Para aplicar parches individuales en un entorno de desarrollo local**:
 
-1. Agregue la variable &quot;QUALITY_PATCHES&quot; al archivo `.magento.env.yaml` y enumere los parches necesarios debajo.
+1. Agregue la variable `QUALITY_PATCHES` al archivo `.magento.env.yaml` y enumere los parches necesarios debajo.
 
    ```yaml
    stage:
@@ -194,7 +194,7 @@ Al implementar, ECE-Tools aplica todas las revisiones de Adobe y todas las revis
 
 **Para aplicar y probar un parche personalizado en un entorno de nube**:
 
-1. En la raíz del proyecto, cree un directorio llamado `m2-hotfixes` si no existe
+1. En la raíz del proyecto, cree un directorio llamado `m2-hotfixes` si no existe.
 
    ```bash
    mkdir m2-hotfixes

@@ -1,6 +1,6 @@
 ---
 title: Arquitectura profesional
-description: Obtenga información acerca de los entornos admitidos por la arquitectura Pro.
+description: Obtenga información acerca de la arquitectura del entorno Pro, incluidos los entornos Master, Integration, Staging y Production, además de la ampliación de clústeres y las copias de seguridad.
 feature: Cloud, Auto Scaling, Iaas, Paas, Storage
 topic: Architecture
 exl-id: a6eb562b-1b97-4285-a271-989d9fddc4f9
@@ -18,9 +18,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: bce87dde-a4ab-44c9-8a18-ad66e4ddb377
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: bdc2bedd2696e7dde0ffb55f846a8bced2dbd25d
 workflow-type: tm+mt
-source-wordcount: 1619
+source-wordcount: 1621
 ht-degree: 0%
 
 ---
@@ -46,6 +46,8 @@ La siguiente tabla resume las diferencias entre entornos:
 | Incluye el servicio New Relic | No | APM | APM + NRI |
 | Copias de seguridad automáticas | No | Sí | Sí |
 
+**APM** hace referencia a la supervisión del rendimiento de la aplicación [!DNL New Relic's].
+
 >[!NOTE]
 >
 >Adobe proporciona la herramienta Cloud Docker para Commerce para su implementación en un entorno local de Cloud Docker, de modo que pueda desarrollar y probar proyectos de Adobe Commerce. Consulte [Desarrollo de Docker](../dev-tools/cloud-docker.md).
@@ -64,7 +66,7 @@ En proyectos Pro, la rama `master` proporciona un entorno PaaS activo con su ent
 
 - **no** crea una rama basada en la rama `master`. Utilice el entorno de integración para crear ramas activas para el desarrollo.
 
-- No utilice el entorno `master` para pruebas de desarrollo, UAT o de rendimiento
+- No utilice el entorno `master` para desarrollo, pruebas de aceptación de usuarios (UAT) o pruebas de rendimiento
 
 ### Entorno de integración
 
@@ -99,11 +101,11 @@ Para comprobar el número de productos en el catálogo, ejecute la siguiente con
 
 - La arquitectura del entorno de integración no coincide con la arquitectura de ensayo y producción
 
-- No utilice el entorno `integration` para pruebas de desarrollo, pruebas de rendimiento o pruebas de aceptación de usuarios (UAT)
+- No utilice el entorno `integration` para pruebas de desarrollo, pruebas de rendimiento o UAT
 
 - No utilice el entorno `integration` para probar la funcionalidad B2B de Adobe Commerce
 
-- No puede restaurar la base de datos en el entorno de integración desde la producción o el ensayo de la base de datos
+- No puede restaurar la base de datos en el entorno de integración desde la base de datos de producción o de ensayo
 
 {{enhanced-integration-envs}}
 
@@ -160,11 +162,9 @@ El entorno de producción tiene tres máquinas virtuales (VM) detrás de un equi
   - `pub/static`
   - `app/etc`
 
-- **Redis**: un servidor por VM con solo uno activo y los otros dos como réplicas
+- **Redis** o **Valkey**: un servidor por VM con solo uno activo y los otros dos como réplicas.
 
-- **Elasticsearch**: busque Adobe Commerce en la infraestructura en la nube 2.2 a 2.4.3-p2
-
-- **OpenSearch**: busque Adobe Commerce en la infraestructura en la nube 2.3.7-p3, 2.4.3-p2, 2.4.4 y posterior
+- **OpenSearch**: busque Adobe Commerce en la infraestructura en la nube 2.4.4 y posterior
 
 - **Galera**: clúster de base de datos con una base de datos MariaDB MySQL por nodo con una configuración de incremento automático de tres para identificadores únicos en cada base de datos
 
@@ -191,7 +191,7 @@ Adobe Commerce en la infraestructura en la nube utiliza una arquitectura de alta
 
 >[!NOTE]
 >
->Los volúmenes montados solo incluyen los [montajes grabables](https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/configure/app/properties/properties#mounts), o hacen referencia a ellos, y no incluirán todo el directorio `app/`. En cuanto a los demás archivos, se crean o generan mediante el [proceso de compilación e implementación](https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow), y también tendrá que comprobar si quedan archivos en el repositorio Git.
+>Los volúmenes montados solo incluyen o hacen referencia a [montajes grabables](https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/configure/app/properties/properties#mounts) y no incluyen todo el directorio `app/`. En cuanto a los demás archivos, se crean o generan mediante el [proceso de compilación e implementación](https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/architecture/pro-develop-deploy-workflow#deployment-workflow), y también tendrá que comprobar si quedan archivos en el repositorio Git.
 
 {{pro-backups}}
 
@@ -213,11 +213,11 @@ Adobe conserva las copias de seguridad automáticas según la siguiente polític
 | Semanas 8 a 12 | Una copia de seguridad quincenal |
 | Meses 3 a 5 | Una copia de seguridad al mes |
 
-Esta política puede variar según su plan de infraestructura en la nube.
+Esta política varía según el plan de infraestructura en la nube.
 
 ### Objetivo de tiempo de recuperación
 
-RTO depende del tamaño del almacenamiento. Los volúmenes grandes de EBS tardan más tiempo en restaurarse. Los tiempos de restauración pueden variar según el tamaño de la base de datos. Póngase en contacto con el administrador de éxito del cliente de Adobe para obtener más información.
+RTO depende del tamaño del almacenamiento. Los volúmenes grandes de EBS tardan más tiempo en restaurarse. Los tiempos de restauración varían según el tamaño de la base de datos. Póngase en contacto con el administrador de éxito del cliente de Adobe para obtener más información.
 
 ## Escalado de clúster Pro
 

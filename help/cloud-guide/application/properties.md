@@ -11,9 +11,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: 330a8bbd9298a28b5c007f4a79f684ce7adca9ff
 workflow-type: tm+mt
-source-wordcount: 857
+source-wordcount: 858
 ht-degree: 0%
 
 ---
@@ -31,7 +31,7 @@ El archivo `.magento.app.yaml` utiliza propiedades para administrar la compatibi
 | [`hooks`](hooks-property.md) | Personalice los comandos del shell para las fases de compilación, implementación y posterior a la implementación | — | No |
 | [`mounts`](#mounts) | Definir rutas | Rutas:<ul><li>`"var": "shared:files/var"`</li><li>`"app/etc": "shared:files/etc"`</li><li>`"pub/media": "shared:files/media"`</li><li>`"pub/static": "shared:files/static"`</li></ul> | No |
 | [`name`](#name) | Definición del nombre de la aplicación | `mymagento` | Sí |
-| [`relationships`](#relationships) | Servicios de mapa | Servicios:<ul><li>`database: "mysql:mysql"`</li><li>`redis: "redis:redis"`</li><li>`opensearch: "opensearch:opensearch"`</li></ul> | No |
+| [`relationships`](#relationships) | Servicios de mapa | Servicios:<ul><li>`database: "mysql:mysql"`</li><li>`redis: "redis:redis"` o `valkey: "cache:valkey"`</li><li>`opensearch: "opensearch:opensearch"`</li></ul> | No |
 | [`runtime`](#runtime) | La propiedad Runtime incluye extensiones requeridas por la aplicación [!DNL Commerce]. | Extensiones:<ul><li>`xsl`</li><li>`newrelic`</li><li>`sodium`</li></ul> | Sí |
 | [`type`](#type-and-build) | Establecer la imagen del contenedor base | `php:8.3` | Sí |
 | [`variables`](variables-property.md) | Aplicar una variable de entorno para una versión específica de Commerce | — | No |

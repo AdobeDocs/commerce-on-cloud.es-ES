@@ -11,9 +11,9 @@ feature_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: d85c65f2c8c6fdb0ce016e894dd10d882525cc38
 workflow-type: tm+mt
-source-wordcount: 284
+source-wordcount: 286
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ Puede configurar la configuración de la aplicación, las rutas, las acciones de
 | [Aplicación](../application/configure-app-yaml.md) | `.magento.app.yaml` | Define cómo generar e implementar Adobe Commerce, incluidos servicios, vínculos y trabajos cron. |
 | [Entorno](configure-env-yaml.md) | `.magento.env.yaml` | Centraliza la administración de acciones de compilación e implementación en todos sus entornos, incluidos el ensayo y la producción profesionales, mediante variables de entorno. |
 | [Rutas](../routes/routes-yaml.md) | `.magento/routes.yaml` | Configure el almacenamiento en caché, las redirecciones y las inclusiones del lado del servidor. |
-| [Servicio](../services/services-yaml.md) | `.magento/services.yaml` | Define los servicios que utiliza Adobe Commerce por nombre y versión. Por ejemplo, este archivo puede incluir versiones de MariaDB, extensiones PHP, Redis, RabbitMQ y Elasticsearch o OpenSearch. Debe abrir un ticket de asistencia para insertar estos cambios en los entornos de ensayo y producción de planificación profesional. |
+| [Servicio](../services/services-yaml.md) | `.magento/services.yaml` | Define los servicios que utiliza Adobe Commerce por nombre y versión. Por ejemplo, este archivo puede incluir versiones de MariaDB, extensiones PHP, Redis o Valkey, RabbitMQ y Elasticsearch o OpenSearch. Debe abrir un ticket de asistencia para insertar estos cambios en los entornos de ensayo y producción de planificación profesional. |
 | [Configuración de PHP](../application/php-settings.md#configure-php) | `php.ini` | Archivo opcional que se puede agregar al proyecto. La configuración contenida en este archivo se anexa a la que mantiene la infraestructura en la nube. |
 
 {style="table-layout:auto"}

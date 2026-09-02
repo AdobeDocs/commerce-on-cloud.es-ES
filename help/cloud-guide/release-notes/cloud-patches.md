@@ -1,6 +1,6 @@
 ---
 title: Parches de nube para Commerce
-description: Consulte la lista de las mejoras más recientes del paquete Parches en la nube.
+description: Obtenga información sobre las últimas mejoras del paquete de Cloud Patches para Commerce, incluidas correcciones de seguridad, mejoras de caché y actualizaciones de fiabilidad de parches.
 recommendations: noDisplay, catalog
 last-substantial-update: 2025-08-07T00:00:00.000Z
 exl-id: a4454ebc-72a4-42c1-b591-6237c97fe913
@@ -19,9 +19,9 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 58dbe1e1135c77d7061deec91246f1657b6e91c6
+source-git-commit: 60adcf7e68659eb76895208cec80a93ddf690a2e
 workflow-type: tm+mt
-source-wordcount: 2969
+source-wordcount: 2978
 ht-degree: 0%
 
 ---

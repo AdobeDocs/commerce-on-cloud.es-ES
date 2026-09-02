@@ -13,9 +13,9 @@ role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+source-git-commit: d85c65f2c8c6fdb0ce016e894dd10d882525cc38
 workflow-type: tm+mt
-source-wordcount: 473
+source-wordcount: 475
 ht-degree: 0%
 
 ---
@@ -29,7 +29,7 @@ En la tabla siguiente se describen los archivos incluidos en un proyecto de la n
 | Archivo | Descripción |
 | ------------------------- | ------------ |
 | `/.magento/routes.yaml` | Archivo de configuración que redirige a `www` al dominio Apex y a la aplicación `php` para servir HTTP. Consulte [Configurar rutas](../routes/routes-yaml.md). |
-| `/.magento/services.yaml` | Archivo de configuración que define una instancia de MySQL (MariaDB), Redis y OpenSearch o Elasticsearch. Consulte [Configurar servicios](../services/services-yaml.md). |
+| `/.magento/services.yaml` | Archivo de configuración que define una instancia de MySQL (MariaDB), Redis o Valkey, y OpenSearch o Elasticsearch. Consulte [Configurar servicios](../services/services-yaml.md). |
 | `/app` | La carpeta `code` se usa para módulos personalizados. La carpeta `design` se usa para [temáticas personalizadas](../store/custom-theme.md). La carpeta `etc` contiene archivos de configuración para la aplicación. |
 | `/m2-hotfixes` | Se utiliza para parches personalizados. |
 | `/update` | Carpeta de servicio utilizada por el módulo de soporte técnico. |

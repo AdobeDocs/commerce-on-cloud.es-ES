@@ -1,6 +1,6 @@
 ---
 title: Configurar servicios de Fastly
-description: Aprenda a configurar los servicios de Fastly para su proyecto de Adobe Commerce.
+description: Obtenga información sobre cómo configurar, probar y almacenar en caché Fastly, los fragmentos de VCL y el cortafuegos de aplicaciones web (WAF) para los entornos de ensayo y producción.
 feature: Cloud, Configuration, Iaas, Cache, Security
 exl-id: f9ce1e8b-4e9f-488e-8a4d-f866567c41d8
 TQID: https://experienceleague.adobe.com/sDx6n5Qgt1lI3-3FDzhUR-JyKgI59woXmoVHSjKFT9w
@@ -16,9 +16,9 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: 60adcf7e68659eb76895208cec80a93ddf690a2e
 workflow-type: tm+mt
-source-wordcount: 2254
+source-wordcount: 2216
 ht-degree: 0%
 
 ---
@@ -33,7 +33,7 @@ Fastly funciona con Varnish para proporcionar capacidades de almacenamiento en c
 >
 >Fastly no está disponible en entornos de integración.
 
-Complete los siguientes pasos para habilitar, configurar y probar Fastly al principio del proceso de desarrollo del sitio para habilitar el acceso seguro al sitio.
+Complete los siguientes pasos para habilitar, configurar y probar Fastly durante las primeras etapas del proceso de desarrollo del sitio para habilitar el acceso seguro al sitio.
 
 - Obtenga rápidamente credenciales para los entornos de ensayo y producción
 - Habilitar el almacenamiento en caché de CDN
@@ -111,27 +111,27 @@ Necesita los siguientes componentes para habilitar y configurar los servicios de
 
 {{admin-login-step}}
 
-1. Haga clic en **Tiendas** > Configuración > **Configuración** > **Avanzado** > **Sistema** y expanda **Caché de página completa**.
+1. Haga clic en **[!UICONTROL Stores]** > **[!UICONTROL Settings]** > **[!UICONTROL Configuration]** > **[!UICONTROL Advanced]** > **[!UICONTROL System]** y expanda **[!UICONTROL Full Page Cache]**.
 
    ![Expandir para seleccionar Fastly](../../assets/cdn/fastly-menu.png)
 
-1. En la sección _Aplicación de almacenamiento en caché_, quite la selección de **Usar valor del sistema** y, a continuación, seleccione **Fastly CDN** de la lista desplegable.
+1. En la sección _[!UICONTROL Caching Application]_, quite la selección de **[!UICONTROL Use system value]**&#x200B;y, a continuación, seleccione **[!UICONTROL Fastly CDN]**&#x200B;en la lista desplegable.
 
    ![Elegir rápidamente](../../assets/cdn/fastly-enable-admin.png)
 
-1. Expanda **Configuración rápida** y [elija opciones de almacenamiento en caché](https://github.com/fastly/fastly-magento2/blob/master/Documentation/CONFIGURATION.md#configure-the-module).
+1. Expanda **[!UICONTROL Fastly Configuration]** y [elija opciones de almacenamiento en caché](https://github.com/fastly/fastly-magento2/blob/master/Documentation/CONFIGURATION.md#configure-the-module).
 
-1. Después de configurar las opciones de almacenamiento en caché, haga clic en **Guardar configuración** en la parte superior de la página.
+1. Después de configurar las opciones de almacenamiento en caché, haga clic en **[!UICONTROL Save Config]** en la parte superior de la página.
 
 1. Borre la caché según la notificación.
 
-1. Siga configurando Fastly navegando de nuevo a **Tiendas** > **Configuración** > **Configuración** > **Avanzado** > **Sistema** > **Configuración Fastly**.
+1. Siga configurando Fastly volviendo a **[!UICONTROL Stores]** > **[!UICONTROL Settings]** > **[!UICONTROL Configuration]** > **[!UICONTROL Advanced]** > **[!UICONTROL System]** > **[!UICONTROL Fastly Configuration]**.
 
 ### Probar las credenciales de Fastly
 
-1. En el Administrador, vaya a **Tiendas** > Configuración > **Configuración** > **Avanzado** > **Sistema** > **Configuración rápida**.
+1. En el Administrador, vaya a **[!UICONTROL Stores]** > **[!UICONTROL Settings]** > **[!UICONTROL Configuration]** > **[!UICONTROL Advanced]** > **[!UICONTROL System]** > **[!UICONTROL Fastly Configuration]**.
 
-1. Si es necesario, agregue los valores **Fastly service ID** y **API token** para su entorno de proyecto.
+1. Si es necesario, agregue los valores **[!UICONTROL Fastly service ID]** y **[!UICONTROL API token]** para el entorno del proyecto.
 
    ![Administrador de credenciales de Fastly](../../assets/cdn/fastly-credentials-admin-ui.png)
 
@@ -139,9 +139,9 @@ Necesita los siguientes componentes para habilitar y configurar los servicios de
    >
    >No seleccione el vínculo para crear el token de API de Fastly. En su lugar, use las [credenciales de Fastly (ID de servicio y token de API) proporcionadas por Adobe](#get-fastly-credentials).
 
-1. Haga clic en **Probar credenciales**.
+1. Haga clic en **[!UICONTROL Test credentials]**.
 
-1. Si la prueba se realiza correctamente, haga clic en **Guardar configuración** y, a continuación, borre la caché.
+1. Si la prueba se realiza correctamente, haga clic en **[!UICONTROL Save Config]** y, a continuación, borre la caché.
 
    Si la prueba falla, compruebe que los valores correctos del ID de servicio y del token de API coinciden con las credenciales del entorno actual.
 
@@ -161,7 +161,7 @@ Después de habilitar el módulo de Fastly, cargue el [código VCL predeterminad
 
 **Para cargar Fastly VCL**:
 
-1. En la sección _Configuración de Fastly_, haga clic en **Cargar VCL a Fastly** como se muestra en la siguiente ilustración.
+1. En la sección _[!UICONTROL Fastly Configuration]_, haga clic en **[!UICONTROL Upload VCL to Fastly]**, como se muestra en la siguiente ilustración.
 
    ![Cargar una VCL de Magento en Fastly](../../assets/cdn/fastly-upload-vcl-admin.png)
 
@@ -190,7 +190,7 @@ Esta automatización requiere que actualice la configuración DNS del sitio para
 >
 >Si tiene un dominio de producción que no está activo, utilice los registros CNAME del desafío ACME para la validación del dominio. Añadir los registros a la configuración DNS antes de tiempo permite a Adobe aprovisionar el certificado SSL/TLS con los dominios correctos antes del inicio del sitio. Antes de iniciar la producción, debe reemplazar estos registros de marcador de posición con los registros CNAME proporcionados por Adobe.
 
-Cuando se completa la validación del dominio, Adobe aprovisiona el certificado TLS/SSL de Let&#39;s Encrypt y lo carga en entornos de ensayo o producción activos. Este proceso puede tardar hasta 12 horas. Adobe recomienda completar las actualizaciones de la configuración DNS con varios días de antelación para evitar retrasos en el desarrollo del sitio y el inicio del mismo.
+Cuando se completa la validación del dominio, Adobe aprovisiona el certificado TLS/SSL de Let&#39;s Encrypt y lo carga en entornos de ensayo o producción activos. Este proceso puede tardar hasta 12 horas. Adobe recomienda completar las actualizaciones de configuración de DNS con varios días de antelación para evitar retrasos en el desarrollo del sitio y el inicio.
 
 ## Actualizar la configuración de DNS con la configuración de desarrollo
 
@@ -297,7 +297,7 @@ Después de completar los cambios de configuración de DNS, use la herramienta d
    curl -vo /dev/null -H Fastly-Debug:1 --resolve <live-URL-hostname>:443:<live-IP-address>
    ```
 
-1. En la respuesta, compruebe los [encabezados](fastly-troubleshooting.md#check-cache-hit-and-miss-response-headers) para asegurarse de que Fastly funciona. Por ejemplo, debería ver los siguientes encabezados únicos en la respuesta:
+1. En la respuesta, compruebe los [encabezados](fastly-troubleshooting.md#check-cache-hit-and-miss-response-headers) para asegurarse de que Fastly funciona. Por ejemplo, consulte los siguientes encabezados únicos en la respuesta de:
 
    ```http
    < Fastly-Magento-VCL-Uploaded: 1.2.228

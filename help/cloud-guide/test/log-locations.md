@@ -15,9 +15,9 @@ role_v2:
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: 50c653aa6f78056f3fa8fe300fd224693a4460b0
 workflow-type: tm+mt
-source-wordcount: 1369
+source-wordcount: 1371
 ht-degree: 0%
 
 ---
@@ -283,6 +283,7 @@ Por ejemplo, si crea una ruta de acceso personalizada para almacenar registros e
 Dado que cada servicio se ejecuta en un contenedor independiente, los registros del servicio no están disponibles en el entorno de integración. Adobe Commerce en la infraestructura en la nube proporciona acceso al contenedor del servidor web solo en el entorno de integración. Las siguientes ubicaciones de registro de servicio son para los entornos de ensayo y producción de Pro:
 
 - **Registro de redis**: `/var/log/platform/<project-ID>*/redis-server-<project-ID>*.log`
+- **Registro de Valkey**: `/var/log/platform/<project-ID>*/valkey-server-<project-ID>*.log`
 - **Registro de Elasticsearch**: `/var/log/elasticsearch/elasticsearch.log`
 - **Registro de recolección de elementos no utilizados de Java**: `/var/log/elasticsearch/gc.log`
 - **Registro de correo**: `/var/log/mail.log`
