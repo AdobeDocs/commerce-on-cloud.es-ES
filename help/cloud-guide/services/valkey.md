@@ -98,7 +98,7 @@ Una vez finalizada la implementación, compruebe que la relación de servicio de
 
 ## Personalización de la configuración de Valkey
 
-Para las recomendaciones de caché, sesión, L2 y conexión de réplica, consulte [Prácticas recomendadas para la configuración de los servicios Valkey y Redis](https://experienceleague.adobe.com/en/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration) en la _Guía de prácticas recomendadas de implementación del libro de estrategias_.
+Para las recomendaciones de caché, sesión, L2 y conexión de réplica, consulte [Prácticas recomendadas para la configuración de los servicios Valkey y Redis](https://experienceleague.adobe.com/es/docs/commerce-operations/implementation-playbook/best-practices/planning/redis-valkey-service-configuration) en la _Guía de prácticas recomendadas de implementación del libro de estrategias_.
 
 ## Verificar la relación de servicio
 
