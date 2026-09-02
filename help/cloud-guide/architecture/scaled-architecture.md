@@ -4,20 +4,13 @@ description: Obtenga información acerca de la arquitectura de dos niveles y có
 feature: Cloud, Auto Scaling, Iaas, Logs
 exl-id: 45c0cf14-99e6-4643-88f0-98ebcdb3a98c
 TQID: https://experienceleague.adobe.com/jbO3zavC7ZZs6nlYlMC0Isj0QLl-wlr-opAfxOKCNao
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
-  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
-subfeature_v2:
-  - id: db6b6496-d1b5-4ad4-9e18-dea78dae3aa8
-  - id: df5e974b-6742-4873-a687-a6bedaafdaa2
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: bd989d82-1e15-4534-88db-f1f51dd77ffaid: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+subfeature_v2: id: db6b6496-d1b5-4ad4-9e18-dea78dae3aa8id: df5e974b-6742-4873-a687-a6bedaafdaa2
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: 2defc3f82cdada4e9576721ae7a7b3dd25a84adc
 workflow-type: tm+mt
-source-wordcount: 828
+source-wordcount: 807
 ht-degree: 0%
 
 ---
@@ -36,27 +29,27 @@ Históricamente, la arquitectura Pro constaba de tres nodos, cada uno de los cua
 
 ### Nivel de servicio
 
-Hay tres nodos de servicio para almacenamiento de datos, caché y servicios: **OpenSearch** o **Elasticsearch**, **MariaDB**, **Redis** y más. Cuando el nivel de servicio se acerca a la capacidad, la única manera de escalarlo es aumentar el tamaño del servidor, como aumentar la potencia y la memoria de CPU. La capacidad está limitada al tamaño del nodo disponible. Debido a que el clúster de base de datos está diseñado para alta disponibilidad, no puede escalar horizontalmente de forma fiable con las tecnologías utilizadas.
+Cada uno de los tres nodos de servicio ejecuta el mismo conjunto de servicios: **OpenSearch** o **Elasticsearch** para la búsqueda, **MariaDB** para la base de datos y **Redis** o **Valkey** para el almacenamiento en caché, entre otros. Cuando el nivel de servicio se acerca a la capacidad, solo puede escalarse verticalmente si aumenta el tamaño del servidor (CPU y memoria). La capacidad está limitada al tamaño de nodo más grande disponible. Debido a que el clúster de base de datos está diseñado para alta disponibilidad, no puede escalar los nodos de base de datos de forma fiable con las tecnologías utilizadas.
 
 ![Escala de nivel de servicio](../../assets/scaling-service.png)
 
-Considere un ejemplo de que el tipo de instancia del nodo de servicio es _m5.2xlarge_ con 32 Gb de RAM. Un servicio, como la base de datos, utiliza una cantidad considerable de memoria (30 Gb). Ampliar al siguiente tamaño de instancia disponible _m5.4xlarge_ proporciona 64 Gb de RAM, lo que duplica la memoria y se adapta a las crecientes necesidades de la base de datos.
+Tomemos un ejemplo en el que el tipo de instancia del nodo de servicio es _m5.2xlarge_ con 32 Gb de RAM. Un servicio, como la base de datos, utiliza una cantidad considerable de memoria (30 Gb). Ampliar al siguiente tamaño de instancia disponible _m5.4xlarge_ proporciona 64 Gb de RAM, lo que duplica la memoria y se adapta a las crecientes necesidades de la base de datos.
 
 Puede optimizar aún más el rendimiento del nivel de servicio enrutando el tráfico en función del tipo de nodo. De forma predeterminada, el nodo de la base de datos está aislado del tráfico web. Por ejemplo, puede optar por servir tráfico web en el nodo de la base de datos.
 
 ### Nivel web
 
-Hay tres nodos web para procesar solicitudes y tráfico web: **php-fpm** y **NGINX**. Además del escalado vertical al aumentar la potencia y la memoria, el nivel web puede escalarse horizontalmente al añadir servidores web a un clúster existente cuando se restringe al nivel de PHP. Consulte [Escalado automático](autoscaling.md) para conocer la escala automática de los nodos web.
+Hay tres nodos web para procesar solicitudes y tráfico web: **php-fpm** y **NGINX**. Además del escalado vertical al aumentar la potencia y la memoria, el nivel web puede escalarse horizontalmente al añadir servidores web a un clúster existente cuando se restringe al nivel de PHP. Para saber cómo se escalan automáticamente los nodos web, consulte [Escalado automático](autoscaling.md).
 
 ![Escala de nivel web](../../assets/scaling-web.png)
 
-Esto complementa la escala vertical proporcionada por el nivel de servicio. A medida que el nivel de servicio se amplía en tamaño y potencia para adaptarse a una base de datos y un uso de servicio cada vez mayores, el nivel web se amplía en tamaño, potencia e instancias para adaptarse a un aumento en las solicitudes de procesos y a los requisitos de tráfico más altos.
+Esto complementa la escala vertical proporcionada por el nivel de servicio. A medida que el nivel de servicio se adapta a una base de datos en crecimiento, el nivel web se adapta para gestionar un aumento de solicitudes y tráfico.
 
-Imagine un ejemplo de que el tipo de instancia del nodo web es _C5.2xlarge con ocho CPU y 16 Gb de RAM_. El número de solicitudes al sitio aumentó considerablemente. Puede agregar un nodo C5.2xlarge para controlar el aumento de procesos php-fpm o puede cambiar cada tipo de instancia a _C5.4xlarge con 16 CPU y 32 Gb RAM_. Añadir un nodo reduce el riesgo de una capacidad de sobretensión insuficiente.
+Tomemos un ejemplo en el que el tipo de instancia del nodo web es _C5.2xlarge con ocho CPU y 16 Gb de RAM_. El número de solicitudes al sitio aumentó considerablemente. Para manejar el aumento en los procesos de php-fpm, puede agregar un nodo grande C5.2xo o puede cambiar cada tipo de instancia a _C5.4xlarge con 16 CPU y 32 Gb RAM_. Añadir un nodo reduce el riesgo de una capacidad de sobretensión insuficiente.
 
 ## Estructura del proyecto
 
-Como mínimo, los proyectos Pro con la arquitectura a escala tienen seis nodos disponibles.
+Los proyectos profesionales con la arquitectura a escala tienen seis nodos disponibles.
 
 - 3 nodos web c5.2xlarge (8 CPU, 16 Gb RAM)
 
@@ -114,7 +107,6 @@ project-id@server-id:~$
 
 ### Ubicaciones de registro
 
-Las ubicaciones de registro varían ligeramente según el nodo. Por ejemplo, un registro de base de datos, como el **registro de errores MySQL**, está disponible en un nodo de servicio (`/var/log/mysql/mysql-error.log`), pero no está disponible en un nodo web.
+Las ubicaciones de registro varían ligeramente según el nodo. Por ejemplo, el **registro de errores de MySQL** (`/var/log/mysql/mysql-error.log`) está disponible en un nodo de servicio, pero no en un nodo web.
 
 Cada cuenta Pro incluye el [servicio New Relic Logs](../monitor/new-relic-service.md), que se conecta automáticamente con los datos de registro de la aplicación para proporcionar administración dinámica de registros. Los datos de registro agregados de todos los nodos se muestran en la aplicación New Relic Logs para que pueda solucionar problemas de rendimiento en nodos específicos desde un solo panel.
-

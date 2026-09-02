@@ -5,15 +5,11 @@ feature: Cloud, Build, Configuration, Deploy, SCD
 role: Developer
 exl-id: f39c73fc-351a-41ed-9e74-2c3f14871246
 TQID: https://experienceleague.adobe.com/Ub0FWkUN9uOVzLhVbNbPhUV5kj808ODlbjVrRDDA-4E
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+source-git-commit: c754e69243236bbf862ea636261c6d2a6cae9eb7
 workflow-type: tm+mt
 source-wordcount: 706
 ht-degree: 0%
@@ -33,14 +29,14 @@ El archivo `.magento.env.yaml` utiliza variables de entorno para centralizar la 
 El archivo `.magento.env.yaml` contiene dos secciones: `stage` y `log`. La sección `stage` controla las acciones que se producen durante las fases del [proceso de implementación en la nube](../deploy/process.md).
 
 - `stage`: utilice la sección de fase para definir determinadas acciones para las siguientes fases de la implementación:
-   - `global`: controla las acciones en las fases de compilación, implementación y posterior a la implementación. Puede anular esta configuración en las secciones compilación, implementación y posterior a la implementación.
-   - `build`: controla solo las acciones en la fase de compilación. Si no especifica la configuración en esta sección, la fase de compilación utiliza la configuración de la sección global.
-   - `deploy`: controla solo las acciones en la fase de implementación. Si no especifica la configuración en esta sección, la fase de implementación utiliza la configuración de la sección global.
-   - `post-deploy`: controla las acciones _después de_ implementar la aplicación y _después de_ el contenedor comienza a aceptar conexiones.
+  - `global`: controla las acciones en las fases de compilación, implementación y posterior a la implementación. Puede anular esta configuración en las secciones compilación, implementación y posterior a la implementación.
+  - `build`: controla solo las acciones en la fase de compilación. Si no especifica la configuración en esta sección, la fase de compilación utiliza la configuración de la sección global.
+  - `deploy`: controla solo las acciones en la fase de implementación. Si no especifica la configuración en esta sección, la fase de implementación utiliza la configuración de la sección global.
+  - `post-deploy`: controla las acciones _después de_ implementar la aplicación y _después de_ el contenedor comienza a aceptar conexiones.
 - `log`: utilice la sección de registro para configurar [notificaciones](set-up-notifications.md), incluidos los tipos de notificación y el nivel de detalle.
-   - `slack`: configure un mensaje para enviarlo a un bot de Slack.
-   - `email`: configure un correo electrónico para enviarlo a uno o varios destinatarios de correo electrónico.
-   - [controladores de registro](log-handlers.md): configure los mensajes de aplicaciones de hardware y software enviados a un servidor de registro remoto.
+  - `slack`: configure un mensaje para enviarlo a un bot de Slack.
+  - `email`: configure un correo electrónico para enviarlo a uno o varios destinatarios de correo electrónico.
+  - [controladores de registro](log-handlers.md): configure los mensajes de aplicaciones de hardware y software enviados a un servidor de registro remoto.
 
 ### Variables de entorno
 
@@ -172,7 +168,7 @@ Si ha habilitado la administración de la configuración después de volcar las 
     SCD_STRATEGY: compact
     SCD_MATRIX:
       ...
-    REDIS_USE_SLAVE_CONNECTION: 1
+    MYSQL_USE_SLAVE_CONNECTION: 1
 ```
 
 >Después de habilitar la administración de la configuración, mueva las variables SCD_* a la fase de compilación:
@@ -182,10 +178,9 @@ Si ha habilitado la administración de la configuración después de volcar las 
     CRON_CONSUMERS_RUNNER:
       cron_run: true
       consumers: []
-    REDIS_USE_SLAVE_CONNECTION: 1
+    MYSQL_USE_SLAVE_CONNECTION: 1
   build:
     SCD_STRATEGY: compact
     SCD_MATRIX:
       ...
 ```
-

@@ -4,16 +4,12 @@ description: Obtenga información sobre la configuración del entorno de infraes
 feature: Cloud, Configuration, Services, Iaas, Paas
 exl-id: 305380b0-1920-4037-a1db-80e72c6af333
 TQID: https://experienceleague.adobe.com/mFjzrTN6R7LC3e9ADnzzulcWAwun4k-g3aCjc9Bo3gQ
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: d85c65f2c8c6fdb0ce016e894dd10d882525cc38
 workflow-type: tm+mt
-source-wordcount: 284
+source-wordcount: 286
 ht-degree: 0%
 
 ---
@@ -29,14 +25,14 @@ Puede configurar la configuración de la aplicación, las rutas, las acciones de
 | [Aplicación](../application/configure-app-yaml.md) | `.magento.app.yaml` | Define cómo generar e implementar Adobe Commerce, incluidos servicios, vínculos y trabajos cron. |
 | [Entorno](configure-env-yaml.md) | `.magento.env.yaml` | Centraliza la administración de acciones de compilación e implementación en todos sus entornos, incluidos el ensayo y la producción profesionales, mediante variables de entorno. |
 | [Rutas](../routes/routes-yaml.md) | `.magento/routes.yaml` | Configure el almacenamiento en caché, las redirecciones y las inclusiones del lado del servidor. |
-| [Servicio](../services/services-yaml.md) | `.magento/services.yaml` | Define los servicios que utiliza Adobe Commerce por nombre y versión. Por ejemplo, este archivo puede incluir versiones de MariaDB, extensiones PHP, Redis, RabbitMQ y Elasticsearch o OpenSearch. Debe abrir un ticket de asistencia para insertar estos cambios en los entornos de ensayo y producción de planificación profesional. |
+| [Servicio](../services/services-yaml.md) | `.magento/services.yaml` | Define los servicios que utiliza Adobe Commerce por nombre y versión. Por ejemplo, este archivo puede incluir versiones de MariaDB, extensiones PHP, Redis o Valkey, RabbitMQ y Elasticsearch o OpenSearch. Debe abrir un ticket de asistencia para insertar estos cambios en los entornos de ensayo y producción de planificación profesional. |
 | [Configuración de PHP](../application/php-settings.md#configure-php) | `php.ini` | Archivo opcional que se puede agregar al proyecto. La configuración contenida en este archivo se anexa a la que mantiene la infraestructura en la nube. |
 
 {style="table-layout:auto"}
 
 ## Actualizaciones de configuración para entornos Pro
 
-Para los entornos de ensayo y producción de Adobe Commerce en la infraestructura en la nube Pro, puede actualizar muchas opciones de configuración en su entorno de desarrollo local y confirmar los cambios para aplicarlos a estos entornos. Sin embargo, debe [enviar un ticket de soporte de Adobe Commerce](https://experienceleague.adobe.com/es/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) para actualizar las siguientes opciones de configuración:
+Para los entornos de ensayo y producción de Adobe Commerce en la infraestructura en la nube Pro, puede actualizar muchas opciones de configuración en su entorno de desarrollo local y confirmar los cambios para aplicarlos a estos entornos. Sin embargo, debe [enviar un ticket de soporte de Adobe Commerce](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) para actualizar las siguientes opciones de configuración:
 
 - Instale o actualice los servicios en el archivo `.magento/services.yaml`.
 - Cambie la configuración de las propiedades `mounts` y `disk` en el archivo `.magento.app.yaml`.

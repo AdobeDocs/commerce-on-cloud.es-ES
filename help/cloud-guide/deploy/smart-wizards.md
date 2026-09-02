@@ -4,16 +4,12 @@ description: Aprenda a utilizar asistentes inteligentes para evaluar si su proye
 feature: Cloud, Build, Deploy, SCD
 exl-id: a9f042cd-861f-4b1c-b80f-2569f12bcde8
 TQID: https://experienceleague.adobe.com/hgBYQsTM3WkX2p9SJ4UeWM1IGRwiPOUTwWBEwSnPq5A
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: d863fc70609dcc66d21eb95e709db80e29114714
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+source-git-commit: d85c65f2c8c6fdb0ce016e894dd10d882525cc38
 workflow-type: tm+mt
-source-wordcount: 326
+source-wordcount: 328
 ht-degree: 0%
 
 ---
@@ -23,7 +19,7 @@ ht-degree: 0%
 Los asistentes inteligentes pueden ayudarle a determinar si la configuración de Cloud cumple las prácticas recomendadas. Los asistentes disponibles le ayudarán con las siguientes configuraciones:
 
 - Estado ideal para un tiempo de inactividad mínimo de la implementación
-- Configuración de equilibrio de carga para la base de datos y Redis
+- Configuración de equilibrio de carga para la base de datos y Redis o Valkey
 - Implementación de contenido estático (SCD) para bajo demanda, la fase de compilación o la fase de implementación
 
 Cada uno de los comandos del asistente inteligente proporciona una respuesta de verificación y, si procede, una recomendación para la configuración adecuada.
