@@ -18,7 +18,7 @@ ht-degree: 0%
 >
 >Use la aplicación [Adobe Commerce Traffic Insights](../monitor/traffic-insights/overview.md) en New Relic para analizar el tráfico de Fastly y los patrones de bots, y determinar si la seguridad avanzada es adecuada para usted.
 
-[!DNL Adobe Commerce on Cloud Infrastructure] incluye [protección DDoS de nivel 3 y 4](./fastly.md#ddos-protection) integrada y [Firewall de aplicaciones web (WAF)](./fastly-waf-service.md). Bajo el modelo de responsabilidad compartida [1}, la detección DDoS de nivel 7, la protección de bots y el bloqueo proactivo de IP son responsabilidades del comerciante, que [!DNL Adobe Commerce Advanced Security] está diseñado para abordar.](https://experienceleague.adobe.com/en/docs/commerce-operations/security-and-compliance/shared-responsibility)
+[!DNL Adobe Commerce on Cloud Infrastructure] incluye [protección DDoS de nivel 3 y 4](./fastly.md#ddos-protection) integrada y [Firewall de aplicaciones web (WAF)](./fastly-waf-service.md). Bajo el modelo de responsabilidad compartida [1&rbrace;, la detección DDoS de nivel 7, la protección de bots y el bloqueo proactivo de IP son responsabilidades del comerciante, que [!DNL Adobe Commerce Advanced Security] está diseñado para abordar.](https://experienceleague.adobe.com/en/docs/commerce-operations/security-and-compliance/shared-responsibility)
 
 [!DNL Advanced Security] amplía la protección de la tienda mediante funciones de seguridad perimetral con tecnología Fastly, que ofrece administración de bots, limitación avanzada de velocidad y protección DDoS de nivel 7 como parte de una plataforma perimetral unificada que combina escala, rendimiento y seguridad en el perímetro de la red.
 
