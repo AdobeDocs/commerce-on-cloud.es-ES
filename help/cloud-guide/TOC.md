@@ -6,10 +6,10 @@ breadcrumb-title: Commerce en la nube
 user-guide-description: Aprenda a administrar la aplicación de Adobe Commerce en la infraestructura en la nube.
 product: magento
 feature: Cloud
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: 6bab2df0240c8b74a455de73fbf7a7645a46e904
 workflow-type: tm+mt
-source-wordcount: '390'
-ht-degree: 8%
+source-wordcount: '398'
+ht-degree: 9%
 
 ---
 
@@ -27,7 +27,7 @@ ht-degree: 8%
   + [Flujo de trabajo profesional](architecture/pro-develop-deploy-workflow.md)
   + [Arquitectura a escala](architecture/scaled-architecture.md)
   + [Escalado automático](architecture/autoscaling.md)
-+ [Introducción](https://experienceleague.adobe.com/es/docs/commerce-on-cloud/start/overview)
++ [Introducción](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/start/overview)
 + Notas de la versión {#release-notes}
   + [Conjunto de herramientas de nube](release-notes/cloud-tools-suite.md)
   + [Paquete ECE-Tools](release-notes/ece-tools-package.md)
@@ -183,3 +183,7 @@ ht-degree: 8%
       + [Ingesta de datos](monitor/ingest-data.md)
       + [Seguimiento de implementaciones](monitor/track-deployments.md)
     + [Administración de registros](monitor/log-management.md)
+    + Traffic Insights {#traffic-insights}
+      + [Información general](monitor/traffic-insights/overview.md)
+      + [Explicación de la aplicación](monitor/traffic-insights/understanding-the-app.md)
+      + [Guía de investigación](monitor/traffic-insights/investigation-playbook.md)
