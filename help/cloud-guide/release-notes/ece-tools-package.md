@@ -16,9 +16,9 @@ role_v2:
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
   - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+source-git-commit: 86a182b19d49cb7abd91a716f6f403cd44ecc0ae
 workflow-type: tm+mt
-source-wordcount: 3631
+source-wordcount: 3685
 ht-degree: 0%
 
 ---
@@ -40,11 +40,19 @@ Las notas de la versión incluyen:
 
 <!--Add release notes below-->
 
-## v2002.2.13 {#latest}
+## v2002.2.14 {#latest}
+
+Fecha de la versión: 08 de septiembre de 2026
+
+- ![icono de corrección](../../assets/fix.svg) **Cobertura de prueba funcional de Valkey 8.5**: cobertura mejorada para la configuración de la caché de Symfony L2.<!-- MCLOUD-15487 -->
+- ![icono de corrección](../../assets/fix.svg) **Mejoras de almacenamiento en caché**—Se ha resuelto un problema de aislamiento de caché de página.<!-- MCLOUD-15509 -->
+- ![Icono de correcciones](../../assets/fix.svg) **Mejoras en Redis y Valkey**: manejo mejorado de `REDIS_BACKEND` y `VALKEY_BACKEND` para admitir configuraciones de caché heredadas y modernas (caché de Symfony, 2.4.9+) de Redis y Valkey.<!-- MCLOUD-15546 -->
+
+## v2002.2.13
 
 Fecha de lanzamiento: 19 de agosto de 2026
 
-- ![Icono de correcciones](../../assets/fix.svg) **Mejoras en el almacenamiento en caché** Compatibilidad mejorada con la caché Symfony_l2 para las conexiones esclavas de Redis y Valkey y problemas resueltos de caché, índice de etiquetas, precarga e implementación estática relacionados.<!-- MCLOUD-15433 -->
+- ![icono de corrección](../../assets/fix.svg) **Mejoras de almacenamiento en caché**: compatibilidad mejorada con la caché Symfony_l2 para las conexiones esclavas de Redis y Valkey, y problemas resueltos de caché, índice de etiquetas, precarga e implementación estática relacionados..<!-- MCLOUD-15433 -->
 
 ## v2002.2.12
 
