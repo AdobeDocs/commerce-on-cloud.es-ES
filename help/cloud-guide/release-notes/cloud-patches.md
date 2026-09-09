@@ -19,9 +19,9 @@ topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 2b2dee7e34c753ad18c7df6886557de1e57508d6
+source-git-commit: 9e10bdbdc726a85bea99a9b5f23d9211ac09c661
 workflow-type: tm+mt
-source-wordcount: 3027
+source-wordcount: 3043
 ht-degree: 0%
 
 ---
@@ -54,7 +54,7 @@ Fecha de la versión: 08 de septiembre de 2026
 
 Fecha de la versión: 08 de septiembre de 2026
 
-- ![Icono de correcciones](../../assets/fix.svg) **Mejoras de seguridad**—Se ha incluido compatibilidad con la revisión de seguridad aislada de septiembre de 2026.<!-- MCLOUD-15053 -->
+- ![Icono de correcciones](../../assets/fix.svg) **Mejoras de seguridad**—Se ha incluido compatibilidad con las revisiones de seguridad aisladas de septiembre de 2026 a las que se hace referencia en [Actualización de seguridad de Adobe Commerce APSB26-138](https://helpx.adobe.com/security/products/magento/apsb26-138.html).<!-- MCLOUD-15053 -->
 
 ## v1.1.19
 
