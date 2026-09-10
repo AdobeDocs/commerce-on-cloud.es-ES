@@ -16,9 +16,9 @@ role_v2:
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
   - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
-source-git-commit: 86a182b19d49cb7abd91a716f6f403cd44ecc0ae
+source-git-commit: 9e21b435447f7b87b1105f9d435314b5a3efb072
 workflow-type: tm+mt
-source-wordcount: 3685
+source-wordcount: 3676
 ht-degree: 0%
 
 ---
@@ -461,7 +461,7 @@ Fecha de publicación: 6 de febrero de 2020
 
   - ![nuevo icono](../../assets/new.svg) **Se agregó un paquete independiente para Cloud Docker para Commerce**—Se desacopló el paquete Docker del paquete `ece-tools` para mantener la calidad del código y proporcionar versiones independientes. Las actualizaciones y correcciones relacionadas con `ece-tools` se administran desde el repositorio de [magento-cloud-docker](https://github.com/magento/magento-cloud-docker) de GitHub.<!--MAGECLOUD-2927-->
 
-  - ![nuevo icono](../../assets/new.svg) **Funciones de parches actualizadas**—Se ha movido la funcionalidad de parches del paquete ECE-Tools a un paquete [magento-cloud-patch](https://github.com/magento/magento-cloud-patches) independiente. Durante la implementación, `ece-tools` usa el nuevo paquete para aplicar parches. Ver [Notas de la versión de parches de nube](cloud-patches.md).<!--MAGECLOUD-4567-->
+  - ![nuevo icono](../../assets/new.svg) **Funcionalidades de aplicación de parches actualizadas**—Se ha movido la funcionalidad de aplicación de parches del paquete ECE-Tools a un paquete `magento-cloud-patches` independiente. Durante la implementación, `ece-tools` usa el nuevo paquete para aplicar parches. Ver [Notas de la versión de parches de nube](cloud-patches.md).<!--MAGECLOUD-4567-->
 
   - ![nuevo icono](../../assets/new.svg) **Dependencias actualizadas del compositor**—Se ha actualizado el archivo `composer.json` para Adobe Commerce en la infraestructura en la nube con una dependencia para el paquete `magento/magento-cloud-docker`. Ahora, `ece-tools` incluye dependencias para todos los paquetes en [`Cloud Tools Suite for Commerce`](cloud-tools-suite.md). Estos paquetes se instalan y actualizan automáticamente al instalar o actualizar `ece-tools`.
 

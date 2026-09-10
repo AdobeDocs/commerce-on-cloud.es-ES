@@ -9,7 +9,7 @@ product_v2:
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: f3a3403ffd55c2e08e20592fa719f42a9473e72d
+source-git-commit: 8b6f9dbc2010ec0afe5904490a2f6d6a22ad2b39
 workflow-type: tm+mt
 source-wordcount: 922
 ht-degree: 0%
@@ -18,28 +18,30 @@ ht-degree: 0%
 
 # Aplicar parches
 
-[Parches de nube para Commerce](https://github.com/magento/magento-cloud-patches) y la [Herramienta de parches de calidad](https://github.com/magento/quality-patches) te entregarán parches en la aplicación Adobe Commerce que hayas instalado.
+El paquete del Compositor `magento/magento-cloud-patches` (consulte [Parches de nube para las notas de la versión de Commerce](../release-notes/cloud-patches.md)) y la [Herramienta de parches de calidad](https://github.com/magento/quality-patches) le entregarán parches a su aplicación de Adobe Commerce instalada.
 
 - El paquete Cloud Patches for Commerce ofrece los parches necesarios con correcciones críticas
 - Los parches de calidad ofrecen correcciones de calidad opcionales y de bajo impacto como [parches individuales](https://experienceleague.adobe.com/es/docs/commerce-operations/release/planning/versioning-policy#individual-patch) que no contienen cambios incompatibles con versiones anteriores
 
-Consulte [Parches disponibles](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=es) en la _Guía de herramientas de operaciones de Commerce_ para obtener una lista completa de los parches publicados.
+Para revisar una lista completa de parches publicados, consulte [Parches disponibles](https://experienceleague.adobe.com/es/tools/commerce-quality-patches) en la _Guía de herramientas de operaciones de Commerce_.
 
 Ambos paquetes mejoran la integración de todas las versiones de Adobe Commerce con los entornos en la nube y admiten la entrega rápida de correcciones críticas, opcionales y personalizadas. Puede utilizar estos paquetes para aplicar, revertir y ver información general sobre todos los parches individuales que están disponibles para Commerce.
 
 >[!TIP]
 >
->Puede usar la [Herramienta de parches de calidad](https://experienceleague.adobe.com/tools/commerce-quality-patches/index.html?lang=es) y los parches de nube para Commerce como paquetes independientes para proyectos de Magento Open Source y Adobe Commerce. Se recomienda utilizar la herramienta Parches de calidad para proyectos que no estén en la nube.
+>Puede usar la [Herramienta de parches de calidad](https://experienceleague.adobe.com/es/tools/commerce-quality-patches) y los parches de nube para Commerce como paquetes independientes para proyectos de Magento Open Source y Adobe Commerce. Adobe recomienda utilizar la herramienta Parches de calidad para proyectos que no estén en la nube.
 
 Cuando implementa cambios en el entorno remoto, el paquete `ece-tools` usa `magento/magento-cloud-patches` y `magento/quality-patches` para comprobar si hay parches pendientes y los aplica automáticamente en el siguiente orden:
 
 1. Aplique todos los parches de Commerce necesarios incluidos en el paquete Parches de Cloud para Commerce.
 1. Aplicar los parches opcionales seleccionados de Commerce incluidos en la herramienta Parches de calidad.
-1. Aplicar parches personalizados en el directorio `/m2-hotfixes` en orden alfabético por nombre de parche.
+1. Aplicar parches personalizados en el directorio `/m2-hotfixes` alfabéticamente por nombre de parche.
 
 >[!NOTE]
 >
->Al actualizar el paquete `ece-tools` o los parches de Cloud para el paquete Commerce, la próxima vez que implemente el proyecto se aplicarán los parches necesarios más recientes, o bien puede implementarlos de inmediato mediante el comando CLI `ece-patches apply` y volver a implementar el entorno de Cloud. No puede omitir [parches necesarios](https://github.com/magento/magento-cloud-patches/tree/develop/patches) durante el proceso de implementación.
+>Al actualizar `ece-tools` o los parches de nube para el paquete de Commerce, se aplican los parches necesarios más recientes durante la siguiente implementación. También puede usar el comando CLI `ece-patches apply` para aplicar y validar parches localmente en su entorno de nube antes de implementarlos. No puede omitir los parches necesarios durante el proceso de implementación.
+>
+>Solo los clientes con derecho a Adobe Commerce EE pueden descargar el paquete [Cloud Patches for Commerce](../release-notes/cloud-patches.md) desde el repositorio de Commerce Composer en `repo.magento.com`.
 
 ## Requisitos previos
 
@@ -100,8 +102,8 @@ La tabla de estado contiene los siguientes tipos de información:
 - **Tipo**:
   - `Optional`: todos los parches de la herramienta Parches de calidad y del paquete Parches de nube son opcionales para las instalaciones de Adobe Commerce y Magento Open Source. Para Adobe Commerce en la infraestructura en la nube, todos los parches son opcionales.
   - `Required`: todos los parches del paquete de Cloud Patches para Commerce son necesarios para los clientes de Cloud.
-  - `Deprecated`: el parche individual está marcado como obsoleto y le recomendamos que lo revierta si lo ha aplicado. Después de revertir un parche obsoleto, ya no se mostrará en la tabla de estado.
-  - `Custom`: todos los parches del directorio &quot;m2-hotfixes&quot;.
+  - `Deprecated`: el parche individual está marcado como obsoleto. Adobe recomienda revertirla si se ha aplicado. Después de revertir un parche obsoleto, ya no se muestra en la tabla de estado.
+  - `Custom`: todos los parches del directorio `m2-hotfixes`.
 
 - **Estado**:
   - `Applied`: se ha aplicado el parche.
@@ -152,7 +154,7 @@ Puede aplicar parches manualmente en un entorno local y probarlos antes de la im
 
 >[!WARNING]
 >
->Se recomienda encarecidamente probar todos los parches en una integración o entornos de ensayo antes de implementarlos en el entorno de producción.
+>Adobe recomienda probar todos los parches en un entorno de integración o ensayo antes de implementarlos en el entorno de producción.
 
 **Para aplicar parches en un entorno remoto**:
 
