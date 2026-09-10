@@ -21,15 +21,15 @@ ht-degree: 0%
 El paquete del Compositor `magento/magento-cloud-patches` (consulte [Parches de nube para las notas de la versión de Commerce](../release-notes/cloud-patches.md)) y la [Herramienta de parches de calidad](https://github.com/magento/quality-patches) le entregarán parches a su aplicación de Adobe Commerce instalada.
 
 - El paquete Cloud Patches for Commerce ofrece los parches necesarios con correcciones críticas
-- Los parches de calidad ofrecen correcciones de calidad opcionales y de bajo impacto como [parches individuales](https://experienceleague.adobe.com/en/docs/commerce-operations/release/planning/versioning-policy#individual-patch) que no contienen cambios incompatibles con versiones anteriores
+- Los parches de calidad ofrecen correcciones de calidad opcionales y de bajo impacto como [parches individuales](https://experienceleague.adobe.com/es/docs/commerce-operations/release/planning/versioning-policy#individual-patch) que no contienen cambios incompatibles con versiones anteriores
 
-Para revisar una lista completa de parches publicados, consulte [Parches disponibles](https://experienceleague.adobe.com/en/tools/commerce-quality-patches) en la _Guía de herramientas de operaciones de Commerce_.
+Para revisar una lista completa de parches publicados, consulte [Parches disponibles](https://experienceleague.adobe.com/es/tools/commerce-quality-patches) en la _Guía de herramientas de operaciones de Commerce_.
 
 Ambos paquetes mejoran la integración de todas las versiones de Adobe Commerce con los entornos en la nube y admiten la entrega rápida de correcciones críticas, opcionales y personalizadas. Puede utilizar estos paquetes para aplicar, revertir y ver información general sobre todos los parches individuales que están disponibles para Commerce.
 
 >[!TIP]
 >
->Puede usar la [Herramienta de parches de calidad](https://experienceleague.adobe.com/en/tools/commerce-quality-patches) y los parches de nube para Commerce como paquetes independientes para proyectos de Magento Open Source y Adobe Commerce. Adobe recomienda utilizar la herramienta Parches de calidad para proyectos que no estén en la nube.
+>Puede usar la [Herramienta de parches de calidad](https://experienceleague.adobe.com/es/tools/commerce-quality-patches) y los parches de nube para Commerce como paquetes independientes para proyectos de Magento Open Source y Adobe Commerce. Adobe recomienda utilizar la herramienta Parches de calidad para proyectos que no estén en la nube.
 
 Cuando implementa cambios en el entorno remoto, el paquete `ece-tools` usa `magento/magento-cloud-patches` y `magento/quality-patches` para comprobar si hay parches pendientes y los aplica automáticamente en el siguiente orden:
 
