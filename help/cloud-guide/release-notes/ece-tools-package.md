@@ -5,20 +5,13 @@ recommendations: noDisplay, catalog
 last-substantial-update: 2026-05-07T00:00:00.000Z
 exl-id: 3cbfe698-d75d-4a16-877a-52c214595344
 TQID: https://experienceleague.adobe.com/pa4D-RsauRtCBS7puKWVBQtA37-Mcv9IZG4lah41l1U
-product_v2:
-  - id: eadea719-cf89-469b-a6fd-a236a7138047
-feature_v2:
-  - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
-  - id: f42e0a1a-0d79-488d-a83f-f2c30672b137
-role_v2:
-  - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
-  - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-topic_v2:
-  - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
-  - id: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
-source-git-commit: 86a182b19d49cb7abd91a716f6f403cd44ecc0ae
+product_v2: id: eadea719-cf89-469b-a6fd-a236a7138047
+feature_v2: id: dac87252-6066-4d6e-a9d2-f6d84c323de7id: f42e0a1a-0d79-488d-a83f-f2c30672b137
+role_v2: id: c66ffd68-0f65-42bb-aa23-b4020f12e0bdid: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+topic_v2: id: aa2f3246-cb95-4b30-8899-fdf7d73550ccid: ebde5b41-29c9-4f5e-9ef6-1197e85409e3
+source-git-commit: 9e21b435447f7b87b1105f9d435314b5a3efb072
 workflow-type: tm+mt
-source-wordcount: 3685
+source-wordcount: 3676
 ht-degree: 0%
 
 ---
@@ -461,7 +454,7 @@ Fecha de publicación: 6 de febrero de 2020
 
   - ![nuevo icono](../../assets/new.svg) **Se agregó un paquete independiente para Cloud Docker para Commerce**—Se desacopló el paquete Docker del paquete `ece-tools` para mantener la calidad del código y proporcionar versiones independientes. Las actualizaciones y correcciones relacionadas con `ece-tools` se administran desde el repositorio de [magento-cloud-docker](https://github.com/magento/magento-cloud-docker) de GitHub.<!--MAGECLOUD-2927-->
 
-  - ![nuevo icono](../../assets/new.svg) **Funciones de parches actualizadas**—Se ha movido la funcionalidad de parches del paquete ECE-Tools a un paquete [magento-cloud-patch](https://github.com/magento/magento-cloud-patches) independiente. Durante la implementación, `ece-tools` usa el nuevo paquete para aplicar parches. Ver [Notas de la versión de parches de nube](cloud-patches.md).<!--MAGECLOUD-4567-->
+  - ![nuevo icono](../../assets/new.svg) **Funcionalidades de aplicación de parches actualizadas**—Se ha movido la funcionalidad de aplicación de parches del paquete ECE-Tools a un paquete `magento-cloud-patches` independiente. Durante la implementación, `ece-tools` usa el nuevo paquete para aplicar parches. Ver [Notas de la versión de parches de nube](cloud-patches.md).<!--MAGECLOUD-4567-->
 
   - ![nuevo icono](../../assets/new.svg) **Dependencias actualizadas del compositor**—Se ha actualizado el archivo `composer.json` para Adobe Commerce en la infraestructura en la nube con una dependencia para el paquete `magento/magento-cloud-docker`. Ahora, `ece-tools` incluye dependencias para todos los paquetes en [`Cloud Tools Suite for Commerce`](cloud-tools-suite.md). Estos paquetes se instalan y actualizan automáticamente al instalar o actualizar `ece-tools`.
 
