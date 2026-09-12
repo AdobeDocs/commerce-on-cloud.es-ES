@@ -1,7 +1,7 @@
 ---
-source-git-commit: d82eee385906c4cf6119a1b0b846f8f794163186
+source-git-commit: 8370be461f731f73fcb382d74f5e20886abde2db
 workflow-type: tm+mt
-source-wordcount: '310'
+source-wordcount: '504'
 ht-degree: 1%
 
 ---
@@ -10,6 +10,72 @@ ht-degree: 1%
 ## Novedades
 
 Esta página contiene los cambios realizados en los últimos 60 días. Excluimos todas las actualizaciones menores, como la edición de copias, de esta lista.
+
+### 10 de septiembre de 2026
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Descripción</th>
+      <th>Tipo</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>Se ha aclarado en <a href="https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/release-notes/cloud-patches">Parches de nube para Commerce</a> y <a href="https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/release-notes/cloud-tools-suite">Notas de la versión para el conjunto de herramientas de Commerce Cloud</a> que, a partir de la versión 1.1.15, los clientes deben descargar el paquete de Parches de nube para Commerce mediante Composer desde <code>repo.magento.com</code> en lugar de desde GitHub, y que se requiere una asignación de derechos de Adobe Commerce en la infraestructura de nube.</p>
+</td>
+      <td>
+        Comentarios, asistencia técnica
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/ccc122ea36aa8709ac5fa281f94f0814d62e71db">comprometer</a></td>
+    </tr>
+  </tbody>
+</table>
+
+### 9 de septiembre de 2026
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Descripción</th>
+      <th>Tipo</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>Se ha actualizado <a href="https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/ece-tools-cli-reference">referencia de CLI</a> y <a href="https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/dev-tools/ece-tools/error-reference">mensajes de error</a> tras la versión de ECE-Tools, v2002.2.14.</p>
+</td>
+      <td>
+        Técnico
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/0e2395ce240935dd67032fe7d2d9d7005958e026">comprometer</a></td>
+    </tr>
+  </tbody>
+</table>
+
+### 8 de septiembre de 2026
+
+<table style="table-layout:auto;">
+  <thead>
+    <tr>
+      <th>Descripción</th>
+      <th>Tipo</th>
+      <th>Source</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><p>La nueva aplicación <a href="https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/monitor/new-relic/traffic-insights/overview">Traffic Insights</a> ayuda a los usuarios a visualizar su tráfico de CDN.</p>
+</td>
+      <td>
+        Actualización principal, nuevo tema
+      </td>
+      <td><a href="https://github.com/AdobeDocs/commerce-on-cloud.en/commit/74ff686398d92e74f6f889aa10eca67205beb42e">comprometer</a></td>
+    </tr>
+  </tbody>
+</table>
 
 ### 1 de septiembre de 2026
 
