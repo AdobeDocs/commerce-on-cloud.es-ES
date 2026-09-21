@@ -24,8 +24,8 @@ role_v2:
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
     internal-label: Security
-last-update: 2026-09-11
-source-git-commit: 17ac172f51966dedf3317d87cb9e49d3dd946f06
+last-update: 2026-09-18
+source-git-commit: 6b9cbce898860cf5d35c6ee81c9ee60841a2c304
 workflow-type: tm+mt
 source-wordcount: '356'
 ht-degree: 0%
@@ -43,7 +43,7 @@ Adobe Commerce en la nube proporciona una plataforma de alojamiento automatizada
 
 >[!NOTE]
 >
->Para obtener más información sobre seguridad, consulte la [lista de comprobación de inicio de seguridad](https://experienceleague.adobe.com/es/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration).
+>Para obtener más información sobre seguridad, consulte la [lista de comprobación de inicio de seguridad](https://experienceleague.adobe.com/en/docs/commerce-on-cloud/user-guide/launch/checklist#security-configuration).
 
 Vea en detalle [la pila de tecnología](architecture/tech-stack.md) o aprenda más acerca de características específicas y productos compatibles en la [arquitectura de la nube para Commerce](architecture/cloud-architecture.md).
 
@@ -80,7 +80,7 @@ La guía de Commerce sobre la infraestructura en la nube supone que tiene alguno
 
 - [Documentación para desarrolladores de Adobe Commerce](https://developer.adobe.com/commerce/docs/) (sitio de Adobe Developer): desarrolle, personalice, integre, amplíe y utilice funciones avanzadas
 
-- [Documentación de Adobe Commerce](https://experienceleague.adobe.com/es/docs/commerce) (Adobe Experience League): Planifique, implemente, utilice, actualice y mantenga sus [!DNL Commerce] proyectos
+- [Documentación de Adobe Commerce](https://experienceleague.adobe.com/en/docs/commerce) (Adobe Experience League): Planifique, implemente, utilice, actualice y mantenga sus [!DNL Commerce] proyectos
 
 {{$include /help/_includes/templated/whats-new.md}}
 
