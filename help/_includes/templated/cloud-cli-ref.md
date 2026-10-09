@@ -1,9 +1,8 @@
 ---
 source-git-commit: fddcfdb97aede07b2cd6ef12bda6d7998f941951
 workflow-type: tm+mt
-source-wordcount: '13721'
-ht-degree: 0%
-
+source-wordcount: '14749'
+ht-degree: 6%
 ---
 # magento-cloud (Adobe Commerce en infraestructura en la nube)
 
@@ -813,13 +812,13 @@ No generar el encabezado de tabla
 magento-cloud auth:api-token-login
 ```
 
-Inicie sesión en Magento Cloud mediante un token de API
+Inicie sesión en Magento Cloud con un token de API
 
 ```
 Use this command to log in to your Magento Cloud account using an API token.
 
 You can create an account at:
-    https://business.adobe.com/es/products/magento/magento-commerce.html
+    https://business.adobe.com/products/magento/magento-commerce.html
 
 If you have an account, but you do not already have an API token, you can create one here:
     https://accounts.magento.cloud/user/api-tokens
@@ -961,7 +960,7 @@ No generar el encabezado de tabla
 magento-cloud logout [-a|--all] [--other]
 ```
 
-Cerrar sesión en Magento Cloud
+Cierre la sesión de Magento Cloud
 
 ### Opciones
 
@@ -1429,7 +1428,7 @@ Mostrar detalles de confirmación
 
 #### `commit`
 
-El SHA de compromiso. Esto también puede aceptar sufijos de &quot;HEAD&quot; y acento circunflejo (^) o tilde (~) para confirmaciones principales.
+El SHA de compromiso. Esto también puede aceptar sufijos &quot;HEAD&quot; y acento circunflejo (^) o tilde (~) para confirmaciones principales.
 
 - Predeterminado: `HEAD`
 
@@ -1475,7 +1474,7 @@ Enumerar confirmaciones
 
 #### `commit`
 
-El SHA de confirmación de Git de inicio. Esto también puede aceptar sufijos de &quot;HEAD&quot; y acento circunflejo (^) o tilde (~) para confirmaciones principales.
+El SHA de confirmación de Git de inicio. Esto también puede aceptar sufijos &quot;HEAD&quot; y acento circunflejo (^) o tilde (~) para confirmaciones principales.
 
 ### Opciones
 
@@ -5589,7 +5588,7 @@ Para ver las opciones globales, consulte [Opciones globales](#global-options).
 
 #### `--commit`, `-c`
 
-El SHA de compromiso. Esto también puede aceptar sufijos de &quot;HEAD&quot; y acento circunflejo (^) o tilde (~) para confirmaciones principales.
+El SHA de compromiso. Esto también puede aceptar sufijos &quot;HEAD&quot; y acento circunflejo (^) o tilde (~) para confirmaciones principales.
 
 - Requiere un valor
 
@@ -5647,7 +5646,7 @@ Salida de estilo similar a &quot;git ls-tree&quot;
 
 #### `--commit`, `-c`
 
-El SHA de compromiso. Esto también puede aceptar sufijos de &quot;HEAD&quot; y acento circunflejo (^) o tilde (~) para confirmaciones principales.
+El SHA de compromiso. Esto también puede aceptar sufijos &quot;HEAD&quot; y acento circunflejo (^) o tilde (~) para confirmaciones principales.
 
 - Requiere un valor
 
@@ -5684,7 +5683,7 @@ Para ver las opciones globales, consulte [Opciones globales](#global-options).
 
 #### `--commit`, `-c`
 
-El SHA de compromiso. Esto también puede aceptar sufijos de &quot;HEAD&quot; y acento circunflejo (^) o tilde (~) para confirmaciones principales.
+El SHA de compromiso. Esto también puede aceptar sufijos &quot;HEAD&quot; y acento circunflejo (^) o tilde (~) para confirmaciones principales.
 
 - Requiere un valor
 
