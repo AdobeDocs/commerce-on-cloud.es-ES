@@ -69,7 +69,7 @@ Adobe Commerce en la infraestructura en la nube admite los siguientes servicios,
 
 ## Ver servicios y versiones configurados
 
-Puede ver ejemplos de definiciones de servicios y valores de disco en el archivo de plantilla actual [`services.yaml` ](https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml). Las versiones reales del servicio predeterminado y admitido dependen de la versión de Adobe Commerce y de la plantilla de nube actual.
+Puede ver ejemplos de definiciones de servicios y valores de disco en el archivo de plantilla actual [`services.yaml` &#x200B;](https://github.com/magento/magento-cloud/blob/master/.magento/services.yaml). Las versiones reales del servicio predeterminado y admitido dependen de la versión de Adobe Commerce y de la plantilla de nube actual.
 
 El ejemplo siguiente muestra definiciones de servicio en el archivo de configuración `services.yaml`:
 
