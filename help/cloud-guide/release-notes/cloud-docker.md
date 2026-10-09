@@ -8,23 +8,29 @@ exl-id: 95cf4f30-6bce-4bac-8e11-cfe53cac2c70
 TQID: https://experienceleague.adobe.com/H-A-2jStZ7GuPn2oE-OrZWhScp1GsjEUU1NHDQKhRBU
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
   - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+    internal-label: Architecture
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Security
+source-git-commit: e8754280e9df523442d29f0a6d203a183407cff5
 workflow-type: tm+mt
-source-wordcount: 4509
+source-wordcount: '4535'
 ht-degree: 0%
-
 ---
-
 # Paquete Cloud Docker
 
 El paquete [`magento/magento-cloud-docker`](https://github.com/magento/magento-cloud-docker) proporciona funcionalidad e imágenes de Docker para implementar Adobe Commerce en un entorno de nube local. En estas notas de la versión se describen las mejoras más recientes realizadas en este paquete, que es un componente de [Cloud Tools Suite para Commerce](cloud-tools-suite.md).
@@ -38,7 +44,13 @@ Las notas de la versión incluyen:
 
 <!--Add release notes below-->
 
-## Versión 1.4.9 {#latest}
+## Versión 1.4.10 {#latest}
+
+Fecha de la versión: 8 de octubre de 2026
+
+- ![nuevo icono](../../assets/new.svg) **Pruebas funcionales para los servicios**: Se ha agregado la cobertura de pruebas funcionales de Magento 2.4.10 para ActiveMQ Artemis, OpenSearch, RabbitMQ, MariaDB y Valkey.<!-- MCLOUD-15399 -->
+
+## Versión 1.4.9
 
 Fecha de la versión: 20 de julio de 2026
 
@@ -433,7 +445,7 @@ Fecha de la versión: 5 de febrero de 2020
 
     - ![nuevo icono](../../assets/new.svg) **Certificados NGINX generados automáticamente**—El archivo de configuración de Docker ahora incluye la configuración para generar automáticamente certificados NGINX para el contenedor web.<!--MAGECLOUD-4258-->
 
-  - ![nuevo icono](../../assets/new.svg) **Nuevo contenedor de Selenium**—Se agregó un [contenedor de Selenium](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#selenium-container) para admitir las pruebas de aplicaciones de Adobe Commerce mediante el Marco de prueba funcional de Magento (MFTF).<!--MAGECLOUD-4040-->
+  - ![nuevo icono](../../assets/new.svg) **Nuevo contenedor de Selenium**—Se ha agregado un [contenedor de Selenium](https://developer.adobe.com/commerce/cloud-tools/docker/containers/service#selenium-container) para admitir las pruebas de aplicaciones de Adobe Commerce mediante el Marco de prueba funcional de Magento (MFTF).<!--MAGECLOUD-4040-->
 
   - ![nuevo icono](../../assets/new.svg) **[!DNL RabbitMQ]compatibilidad con la versión**—Se ha actualizado la configuración del contenedor [!DNL RabbitMQ] para admitir [!DNL RabbitMQ] versión 3.8.<!--MAGECLOUD-4674-->
 
