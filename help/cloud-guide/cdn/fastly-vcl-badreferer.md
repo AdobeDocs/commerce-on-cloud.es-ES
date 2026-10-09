@@ -3,25 +3,31 @@ title: Bloquear spam de referencia
 description: Bloquee el correo no deseado de referencia de su sitio mediante el diccionario Fastly de Edge y un fragmento de VCL personalizado.
 feature: Cloud, Configuration, Security
 exl-id: 4ed47a71-7fee-4f37-a7da-3e30052004df
-TQID: https://experienceleague.adobe.com/Ssuym1h44Jr5-yJxD7adItpPIx-tDWR9b3sRyijXzEA
+last-update: 2025-01-29
+TQID: 'https://experienceleague.adobe.com/Ssuym1h44Jr5-yJxD7adItpPIx-tDWR9b3sRyijXzEA'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-last-update: 2025-01-29
-source-git-commit: b9272078492b9240c8a4bee6216dd4987d95794f
+    internal-label: Security
+source-git-commit: 35ab85b64dabcaab652e3f0025b99bdcba81a080
 workflow-type: tm+mt
-source-wordcount: 725
+source-wordcount: '725'
 ht-degree: 0%
-
 ---
-
 # Bloquear spam de referencia
 
 El siguiente ejemplo muestra cómo configurar [Fastly Edge Dictionary](https://docs.fastly.com/guides/edge-dictionaries/working-with-dictionaries-using-the-api) con un fragmento de VCL personalizado para bloquear el correo no deseado de referencia de su Adobe Commerce en el sitio de infraestructura de la nube.
@@ -92,7 +98,7 @@ Antes de crear un fragmento basado en este ejemplo, revise los valores para dete
 
 - `dynamic` — El valor 0 indica que hay [un fragmento normal](https://docs.fastly.com/en/guides/using-regular-vcl-snippets) que cargar en el VCL con versiones para la configuración de Fastly.
 
-- `priority` — Determina cuándo se ejecuta el fragmento de VCL. La prioridad es `5` para ejecutar este código de fragmento antes de que cualquiera de los fragmentos de VCL predeterminados de Magento (`magentomodule_*`) tenga asignada una prioridad de 50. Establezca la prioridad de cada fragmento personalizado por encima o por debajo de 50, según el momento en el que desee que se ejecute el fragmento. Los fragmentos con números de prioridad más bajos se ejecutan primero.
+- `priority` — Determina cuándo se ejecuta el fragmento de VCL. La prioridad es `5` para ejecutar este código de fragmento antes de que cualquiera de los fragmentos predeterminados de Magento VCL (`magentomodule_*`) tenga asignada una prioridad de 50. Establezca la prioridad de cada fragmento personalizado por encima o por debajo de 50, según el momento en el que desee que se ejecute el fragmento. Los fragmentos con números de prioridad más bajos se ejecutan primero.
 
 - `type` — especifica una ubicación para insertar el fragmento de código en la versión de VCL. En este ejemplo, el fragmento VCL es un fragmento `recv`. Cuando el fragmento se inserta en la versión de VCL, se agrega a la subrutina `vcl_recv`, debajo del código VCL predeterminado de Fastly y encima de cualquier objeto.
 

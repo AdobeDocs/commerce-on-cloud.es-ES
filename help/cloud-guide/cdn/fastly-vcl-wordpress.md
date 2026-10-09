@@ -3,22 +3,28 @@ title: Redireccionar solicitudes a un servidor de CMS
 description: Aprenda a redireccionar las solicitudes entrantes de una tienda de Adobe Commerce a un sitio de WordPress independiente mediante el módulo Fastly edge.
 feature: Cloud, Configuration, Routes
 exl-id: ef024c68-395b-4d47-9362-a8404a93dbbe
-TQID: https://experienceleague.adobe.com/zRM-iTFGNPgSmT5xu1B9Lo3-onUtCHh-tVY-WPPiVC8
+last-update: 2025-01-29
+TQID: 'https://experienceleague.adobe.com/zRM-iTFGNPgSmT5xu1B9Lo3-onUtCHh-tVY-WPPiVC8'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: 1783ae9f-7157-5aeb-a915-91e260301e46
+    internal-label: Routes
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-last-update: 2025-01-29
-source-git-commit: b9272078492b9240c8a4bee6216dd4987d95794f
+    internal-label: Developer
+source-git-commit: 35ab85b64dabcaab652e3f0025b99bdcba81a080
 workflow-type: tm+mt
-source-wordcount: 322
+source-wordcount: '322'
 ht-degree: 0%
-
 ---
-
 # Redireccionar solicitudes a un servidor de CMS
 
 Redireccione las solicitudes entrantes de una tienda Adobe Commerce a un sitio de WordPress independiente mediante el módulo Fastly Edge _Otra integración de CMS/back-end_ con un diccionario de Edge. Puede seguir un proceso similar para redireccionar las solicitudes a otros backends de CMS.
@@ -55,7 +61,7 @@ Utilice los módulos de Fastly Edge para crear y cargar código VCL personalizad
 
    - Configure el módulo _Other CMS/backend integration_ de Edge para administrar las reescrituras de URL de Adobe Commerce al backend de WordPress.
 
-     Para obtener instrucciones detalladas, consulte [Módulos Edge de Fastly: otra integración de CMS/back-end](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/Edge-Modules/EDGE-MODULE-OTHER-CMS-INTEGRATION.md) en el módulo CDN de _Fastly para la documentación de Magento 2_.
+     Para obtener instrucciones detalladas, consulte [Módulos Edge de Fastly: otra integración de CMS/back-end](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/Edge-Modules/EDGE-MODULE-OTHER-CMS-INTEGRATION.md) en el módulo CDN de _Fastly para Magento 2_.
 
 1. Después de actualizar la configuración del servicio Fastly, pruebe la tienda de Adobe Commerce para asegurarse de que las solicitudes de URL especificadas para WordPress se redireccionan correctamente.
 
