@@ -3,25 +3,31 @@ title: VCL personalizado para permitir solicitudes
 description: Filtre las solicitudes entrantes y permita el acceso por dirección IP a los sitios de Adobe Commerce mediante una lista ACL de Fastly Edge y un fragmento de VCL personalizado.
 feature: Cloud, Configuration, Security
 exl-id: 836779b5-5029-4a21-ad77-0c82ebbbcdd5
-TQID: https://experienceleague.adobe.com/szgjjm841ttfcCwULGf3lBNSRhixIhMPfmoYILbNGKY
+last-update: 2026-08-25
+TQID: 'https://experienceleague.adobe.com/szgjjm841ttfcCwULGf3lBNSRhixIhMPfmoYILbNGKY'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-last-update: 2026-08-25
-source-git-commit: ccff84c55425e8e4f91812b54f5e6ccf9a700104
+    internal-label: Security
+source-git-commit: 35ab85b64dabcaab652e3f0025b99bdcba81a080
 workflow-type: tm+mt
-source-wordcount: 874
+source-wordcount: '874'
 ht-degree: 0%
-
 ---
-
 # VCL personalizado para permitir solicitudes
 
 Puede utilizar una lista ACL de Fastly Edge con un fragmento de código VCL personalizado para filtrar solicitudes entrantes y permitir el acceso por dirección IP. La lista ACL especifica las direcciones IP que se permiten.
@@ -91,7 +97,7 @@ Antes de [crear un fragmento personalizado](https://experienceleague.adobe.com/e
 
 - `name`: nombre del fragmento de VCL. Para este ejemplo, `allowlist`.
 
-- `priority` — Determina cuándo se ejecuta el fragmento de VCL. La prioridad es `5` para ejecutar inmediatamente y comprobar si las solicitudes de un administrador provienen de una dirección IP permitida. El fragmento se ejecuta antes de que cualquiera de los fragmentos de VCL predeterminados de Magento (`magentomodule_*`) tenga asignada una prioridad de 50. Establezca la prioridad de cada fragmento personalizado por encima o por debajo de 50, según el momento en el que desee que se ejecute el fragmento. Los fragmentos con números de prioridad más bajos se ejecutan primero.
+- `priority` — Determina cuándo se ejecuta el fragmento de VCL. La prioridad es `5` para ejecutar inmediatamente y comprobar si las solicitudes de un administrador provienen de una dirección IP permitida. El fragmento se ejecuta antes de que cualquiera de los fragmentos predeterminados de Magento VCL (`magentomodule_*`) tenga asignada una prioridad de 50. Establezca la prioridad de cada fragmento personalizado por encima o por debajo de 50, según el momento en el que desee que se ejecute el fragmento. Los fragmentos con números de prioridad más bajos se ejecutan primero.
 
 - `type` — especifica una ubicación para insertar el fragmento en el código de VCL con versiones. Este VCL es un tipo de fragmento `recv` que agrega el código de fragmento a la subrutina `vcl_recv` debajo del código VCL predeterminado de Fastly y encima de cualquier objeto.
 
@@ -103,7 +109,7 @@ En el ejemplo de código, la condición `!req.http.Fastly-FF` es importante cuan
 
 Después de revisar y actualizar el código para su entorno, utilice cualquiera de los siguientes métodos para agregar el fragmento de VCL personalizado a la configuración del servicio de Fastly:
 
-- [Agregar el fragmento de VCL personalizado del administrador](#add-the-custom-vcl-snippet). Se recomienda utilizar este método si puede acceder al administrador. (Requiere el módulo [Fastly CDN para Magento 2 versión 1.2.58](fastly-configuration.md#upgrade) o posterior).
+- [Agregar el fragmento de VCL personalizado del administrador](#add-the-custom-vcl-snippet). Se recomienda utilizar este método si puede acceder al administrador. (Requiere el módulo CDN de [Fastly para Magento 2 versión 1.2.58](fastly-configuration.md#upgrade) o posterior).
 
 - Guarde el ejemplo de código JSON en un archivo (por ejemplo, `allowlist.json`) y [cárguelo mediante la API de Fastly](fastly-vcl-custom-snippets.md#manage-custom-vcl-snippets-using-the-api). Utilice este método si no puede acceder al administrador.
 

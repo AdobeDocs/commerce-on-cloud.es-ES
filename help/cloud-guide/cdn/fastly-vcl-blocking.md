@@ -3,25 +3,31 @@ title: VCL personalizado para bloquear solicitudes
 description: Bloquear solicitudes entrantes por dirección IP mediante una lista de control de acceso (ACL) de Edge con un fragmento de VCL personalizado.
 feature: Cloud, Configuration, Security
 exl-id: eb21c166-21ae-4404-85d9-c3a26137f82c
-TQID: https://experienceleague.adobe.com/AhSqQYill1D5hYn06pkQXnUsIW-0pc6k51OZwHA8Qtg
+last-update: 2025-01-29
+TQID: 'https://experienceleague.adobe.com/AhSqQYill1D5hYn06pkQXnUsIW-0pc6k51OZwHA8Qtg'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-last-update: 2025-01-29
-source-git-commit: b9272078492b9240c8a4bee6216dd4987d95794f
+    internal-label: Security
+source-git-commit: 35ab85b64dabcaab652e3f0025b99bdcba81a080
 workflow-type: tm+mt
-source-wordcount: 1026
+source-wordcount: '1026'
 ht-degree: 0%
-
 ---
-
 # VCL personalizado para bloquear solicitudes
 
 Puede utilizar el módulo Fastly CDN para Magento 2 para crear una ACL de Edge con una lista de direcciones IP que desee bloquear. A continuación, puede utilizar esa lista con un fragmento de VCL para bloquear solicitudes entrantes. El código comprueba la dirección IP de la solicitud entrante. Si coincide con una dirección IP incluida en la lista ACL, Fastly bloquea la solicitud para que no acceda al sitio y devuelve un `403 Forbidden error`. Todas las demás direcciones IP de cliente tienen acceso permitido.
@@ -51,7 +57,7 @@ Se hace referencia a la ACL de Edge por su nombre en el código de fragmento de 
 
 >[!NOTE]
 >
->Este ejemplo muestra a usuarios avanzados cómo crear un fragmento de código VCL para configurar reglas de bloqueo personalizadas y cargarlo en el servicio Fastly. Puede configurar una lista de bloqueados o lista de permitidos según el país desde el administrador de Adobe Commerce mediante la función [Bloqueo](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/BLOCKING.md) disponible en el módulo Fastly CDN para Magento 2.
+>Este ejemplo muestra a usuarios avanzados cómo crear un fragmento de código VCL para configurar reglas de bloqueo personalizadas y cargarlo en el servicio Fastly. Puede configurar una lista de bloqueados o lista de permitidos basada en el país desde el administrador de Adobe Commerce mediante la función [Bloqueo](https://github.com/fastly/fastly-magento2/blob/master/Documentation/Guides/BLOCKING.md) disponible en el módulo Fastly CDN para Magento 2.
 
 Después de definir la ACL de Edge, puede utilizarla para crear el fragmento de VCL y bloquear el acceso a las direcciones IP especificadas en la ACL. Puede utilizar el mismo fragmento de VCL en los entornos de Ensayo y Producción, pero debe cargar el fragmento en cada entorno por separado.
 
@@ -71,7 +77,7 @@ Antes de crear un fragmento basado en este ejemplo, revise los valores para dete
 
 - `name`: nombre del fragmento de VCL. Para este ejemplo, se usó el nombre `blocklist`.
 
-- `priority`: Determina cuándo se ejecuta el fragmento de VCL. La prioridad es `5` para que se ejecute inmediatamente y compruebe si una solicitud de administrador proviene de una dirección IP permitida. El fragmento se ejecuta antes de que cualquiera de los fragmentos de VCL predeterminados de Magento (`magentomodule_*`) tenga asignada una prioridad de 50. Establezca la prioridad de cada fragmento personalizado por encima o por debajo de 50, según el momento en el que desee que se ejecute el fragmento. Los fragmentos con números de prioridad más bajos se ejecutan primero.
+- `priority`: Determina cuándo se ejecuta el fragmento de VCL. La prioridad es `5` para que se ejecute inmediatamente y compruebe si una solicitud de administrador proviene de una dirección IP permitida. El fragmento se ejecuta antes de que cualquiera de los fragmentos predeterminados de Magento VCL (`magentomodule_*`) tenga asignada una prioridad de 50. Establezca la prioridad de cada fragmento personalizado por encima o por debajo de 50, según el momento en el que desee que se ejecute el fragmento. Los fragmentos con números de prioridad más bajos se ejecutan primero.
 
 - `type`: especifica el tipo de fragmento de VCL que determina la ubicación del fragmento en el código de VCL generado. En este ejemplo, utilizamos `recv`, que inserta el código VCL en la subrutina `vcl_recv`, debajo de la VCL de plantillas y encima de cualquier objeto. Consulte [Fastly VCL snippet reference](https://docs.fastly.com/api/config#api-section-snippet) para obtener la lista de tipos de fragmentos.
 
