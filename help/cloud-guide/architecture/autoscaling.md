@@ -4,23 +4,28 @@ description: Descubra cómo se puede ampliar Adobe Commerce en la infraestructur
 feature: Cloud, Auto Scaling
 topic: Architecture
 exl-id: 11bfde40-79d1-4d51-9233-150c4cfb80fd
-TQID: https://experienceleague.adobe.com/uL--0lHHJ-4SN3BkFU8reAefWhpMQOLBRVG7fX3jTM8
+TQID: 'https://experienceleague.adobe.com/uL--0lHHJ-4SN3BkFU8reAefWhpMQOLBRVG7fX3jTM8'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+    internal-label: Architecture
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
 subfeature_v2:
   - id: db6b6496-d1b5-4ad4-9e18-dea78dae3aa8
+    internal-label: Auto Scaling
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: a542dac902dc0de7c0836c1e5e4aece40fc6cbee
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 979
+source-wordcount: '979'
 ht-degree: 0%
-
 ---
-
 # Escalado automático
 
 El escalado automático añade o elimina automáticamente los recursos a la infraestructura de la nube para mantener un rendimiento óptimo y costes razonables. Adobe ofrece dos tipos de escalado automático para [!DNL Adobe Commerce on cloud infrastructure] proyectos:
@@ -31,14 +36,14 @@ El escalado automático añade o elimina automáticamente los recursos a la infr
 
 ## Habilitar escalado automático
 
-Para habilitar o deshabilitar el escalado automático horizontal o vertical para su proyecto [!DNL Adobe Commerce on cloud infrastructure], [Envíe un ticket de soporte de Adobe Commerce](https://experienceleague.adobe.com/es/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket). Elija las siguientes razones en el ticket:
+Para habilitar o deshabilitar el escalado automático horizontal o vertical para su proyecto [!DNL Adobe Commerce on cloud infrastructure], [Envíe un ticket de soporte de Adobe Commerce](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket). Elija las siguientes razones en el ticket:
 
 - **Razón de contacto**: Solicitud de cambio de infraestructura
 - **Motivo de contacto de infraestructura de Adobe Commerce**: otra solicitud de cambio de infraestructura
 
 >[!IMPORTANT]
 >
->La función de escalado automático captura eventos no anticipados. Aunque tenga habilitada la escala automática, Adobe recomienda que continúe [enviando un ticket de soporte de Adobe Commerce](https://experienceleague.adobe.com/es/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) si espera un evento próximo.
+>La función de escalado automático captura eventos no anticipados. Aunque tenga habilitada la escala automática, Adobe recomienda que continúe [enviando un ticket de soporte de Adobe Commerce](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) si espera un evento próximo.
 
 ### Prueba de carga
 

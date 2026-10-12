@@ -3,25 +3,34 @@ title: Flujo de trabajo de proyecto inicial
 description: Aprenda a utilizar los flujos de trabajo de desarrollo e implementación de Starter.
 feature: Cloud, Paas
 exl-id: 75d170b6-1ec2-4099-82c8-5c4df3442843
-TQID: https://experienceleague.adobe.com/ohBEYApu-9AJmxBvtoxGxpQcmK67ppeACPl7xNvycsQ
+TQID: 'https://experienceleague.adobe.com/ohBEYApu-9AJmxBvtoxGxpQcmK67ppeACPl7xNvycsQ'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: c1256247-af4b-46d8-9dca-0c654ecfa157
+    internal-label: Order Management System
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
   - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+    internal-label: Architecture
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: 00451af3-7b97-5414-9992-3a6c269e413f
+    internal-label: Paas
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: d3cdead0-685a-4489-9250-4bb709942f66
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Data collection
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 2170
+source-wordcount: '2170'
 ht-degree: 0%
-
 ---
-
 # Flujo de trabajo de proyecto inicial
 
 Adobe Commerce en la infraestructura de la nube incluye un único repositorio Git con una rama `master` para el entorno de producción que se puede bifurcar para crear entornos de ensayo y de integración múltiple para el trabajo de prueba y desarrollo. Puede tener hasta cuatro entornos activos, incluido un entorno `master` para el servidor de producción. Consulte [Arquitectura inicial](starter-architecture.md) para obtener una descripción general.
@@ -117,9 +126,9 @@ Cuando esté listo para configurar su tienda, inserte todo el código en el ento
 Para obtener la mejor información sobre las configuraciones, consulte la documentación de Adobe Commerce y las extensiones instaladas. A continuación se muestran algunos vínculos e ideas que le ayudan a empezar:
 
 - [Prácticas recomendadas para la configuración de tiendas](../store/best-practices.md) para prácticas recomendadas específicas en la nube
-- [Configuración básica](https://experienceleague.adobe.com/es/docs/commerce-admin/start/setup/store-details) para acceso de administrador de tienda, nombre, idiomas, divisas, marca, sitios, vistas de tienda y mucho más
-- [Tema](https://experienceleague.adobe.com/es/docs/commerce-admin/content-design/content-menu#design-features) por tu aspecto del sitio y de las tiendas, incluyendo CSS y diseños
-- [Configuración del sistema](https://experienceleague.adobe.com/es/docs/commerce-admin/systems/guide-overview) para funciones, herramientas, notificaciones y la clave de cifrado de la base de datos
+- [Configuración básica](https://experienceleague.adobe.com/en/docs/commerce-admin/start/setup/store-details) para acceso de administrador de tienda, nombre, idiomas, divisas, marca, sitios, vistas de tienda y mucho más
+- [Tema](https://experienceleague.adobe.com/en/docs/commerce-admin/content-design/content-menu#design-features) por tu aspecto del sitio y de las tiendas, incluyendo CSS y diseños
+- [Configuración del sistema](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/guide-overview) para funciones, herramientas, notificaciones y la clave de cifrado de la base de datos
 - Configuración de extensión mediante su documentación
 
 Más allá de la configuración de tienda, puede configurar varios sitios y tiendas, servicios configurados y mucho más. Ver [Configurar tu tienda](../store/overview.md).
@@ -175,9 +184,9 @@ A medida que desarrolla funciones, agrega extensiones y diseña temas, es útil 
 
 Para ayudar a exportar los datos de producción como datos de prueba para utilizarlos en entornos de ensayo e integración:
 
-- [Ejecute los comandos CLI de &#x200B;](https://experienceleague.adobe.com/es/docs/commerce-operations/configuration-guide/cli/run-support-utilities) de las utilidades de soporte técnico (recomendado) al exportar una copia de seguridad protegida del cliente y almacenar datos mediante la clave de cifrado de Adobe Commerce
+- [Ejecute los comandos CLI de ](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/run-support-utilities) de las utilidades de soporte técnico (recomendado) al exportar una copia de seguridad protegida del cliente y almacenar datos mediante la clave de cifrado de Adobe Commerce
 
-- Herramienta [Recopilación de datos](https://experienceleague.adobe.com/es/docs/commerce-admin/systems/tools/support#data-collector) para generar y exportar datos
+- Herramienta [Recopilación de datos](https://experienceleague.adobe.com/en/docs/commerce-admin/systems/tools/support#data-collector) para generar y exportar datos
 
 Para migrar estos datos, consulte [Migrar e implementar datos y archivos estáticos](../deploy/staging-production.md#migrate-static-files).
 
@@ -185,7 +194,7 @@ Para migrar estos datos, consulte [Migrar e implementar datos y archivos estáti
 
 >[!NOTE]
 >
->Antes de transferir los datos a otro entorno, debe considerar la posibilidad de sanearlos. Tiene un par de opciones, entre ellas [usar utilidades de soporte](https://experienceleague.adobe.com/es/docs/commerce-operations/configuration-guide/cli/run-support-utilities) o desarrollar un script para eliminar los datos de los clientes.
+>Antes de transferir los datos a otro entorno, debe considerar la posibilidad de sanearlos. Tiene un par de opciones, entre ellas [usar utilidades de soporte](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/run-support-utilities) o desarrollar un script para eliminar los datos de los clientes.
 
 >[!WARNING]
 >

@@ -3,21 +3,29 @@ title: Prácticas recomendadas para actualizar el proyecto
 description: Consulte una lista de prácticas recomendadas para actualizar los archivos de proyecto.
 feature: Cloud, Best Practices, Upgrade
 exl-id: 64f92739-9170-4cbf-90ef-aab6593a37ca
-TQID: https://experienceleague.adobe.com/Nnr9fNMT210WTnaLTWyRM-YCWRXrZuOv0m-EZYpzKVw
+TQID: 'https://experienceleague.adobe.com/Nnr9fNMT210WTnaLTWyRM-YCWRXrZuOv0m-EZYpzKVw'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: cdfd3bc1-dc23-5cf0-b965-d3c0c55cde67
+    internal-label: Best Practices
+  - id: a8ae7a5a-6cdc-5922-bd0d-6feb44b04984
+    internal-label: Upgrade
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 705
+source-wordcount: '705'
 ht-degree: 0%
-
 ---
-
 # Prácticas recomendadas para actualizar el proyecto
 
 Siga las prácticas recomendadas para compilaciones e implementación, y use el flujo de trabajo [Actualizaciones y parches](../development/commerce-version.md) para actualizar su aplicación. Siga estas directrices para planificar el trabajo de actualización y posterior a la actualización:
@@ -58,10 +66,10 @@ Siga las prácticas recomendadas para compilaciones e implementación, y use el 
 
   - Utilice SSH para iniciar sesión en el servidor remoto y compruebe lo siguiente:
 
-    - Compruebe el estado del indexador y vuelva a indexar según sea necesario. Consulte [Administrar los indexadores](https://experienceleague.adobe.com/es/docs/commerce-operations/configuration-guide/cli/manage-indexers) en la _Guía de configuración_.
+    - Compruebe el estado del indexador y vuelva a indexar según sea necesario. Consulte [Administrar los indexadores](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/manage-indexers) en la _Guía de configuración_.
 
     - Compruebe los registros de `cron` y la tabla `cron_schedule` en la base de datos de Adobe Commerce para comprobar el estado de cron y volver a ejecutar los trabajos de cron según sea necesario.
-      Consulte [Registro](https://experienceleague.adobe.com/es/docs/commerce-operations/configuration-guide/cli/configure-cron-jobs#logging) en la _Guía de configuración_.
+      Consulte [Registro](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/cli/configure-cron-jobs#logging) en la _Guía de configuración_.
 
   - Complete el UAT de prueba de aceptación de usuarios posterior a la actualización en entornos de ensayo y producción y corrija cualquier problema relacionado con las actualizaciones de extensiones personalizadas y de terceros.
 
@@ -75,8 +83,8 @@ Ejecute la herramienta de compatibilidad de actualización (UCT) como parte del 
 
 Para obtener más información sobre la configuración y el uso, consulte:
 
-- [Descripción general de la herramienta de compatibilidad de actualización](https://experienceleague.adobe.com/es/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/overview)
-- [Ejecutar la herramienta de compatibilidad de actualización](https://experienceleague.adobe.com/es/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/run)
+- [Descripción general de la herramienta de compatibilidad de actualización](https://experienceleague.adobe.com/en/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/overview)
+- [Ejecutar la herramienta de compatibilidad de actualización](https://experienceleague.adobe.com/en/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/run)
 
-Para los comerciantes de Cloud que utilizan la herramienta de análisis de todo el sitio, también puede almacenar en déclencheur UCT desde el panel y descargar el informe de HTML directamente desde el widget. Consulte Integrar la [herramienta de análisis de todo el sitio](https://experienceleague.adobe.com/es/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/integrate-analysis-tool).
+Para los comerciantes de Cloud que utilizan la herramienta de análisis de todo el sitio, también puede almacenar en déclencheur UCT desde el panel y descargar el informe de HTML directamente desde el widget. Consulte Integrar la [herramienta de análisis de todo el sitio](https://experienceleague.adobe.com/en/docs/commerce-operations/upgrade-guide/upgrade-compatibility-tool/use-upgrade-compatibility-tool/integrate-analysis-tool).
 

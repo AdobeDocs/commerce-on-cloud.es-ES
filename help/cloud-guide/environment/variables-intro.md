@@ -3,21 +3,30 @@ title: Variables de entorno
 description: Consulte una lista de variables de entorno específicas de Adobe Commerce en la infraestructura en la nube.
 feature: Cloud, Build, Configuration, Deploy
 exl-id: 38b2cdc2-1a98-48bd-90b2-13ef179da26f
-TQID: https://experienceleague.adobe.com/qRdv72nxgkwRjRz0lXqs33rSmZKc3akq2W0pJK4CM7k
+TQID: 'https://experienceleague.adobe.com/qRdv72nxgkwRjRz0lXqs33rSmZKc3akq2W0pJK4CM7k'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: bcd8874c-7b93-5596-bdaa-22660e84df14
+    internal-label: Deploy
+subfeature_v2:
+  - id: adedf3b3-e153-47a3-ae73-b5d65067b544
+    internal-label: Build system
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 266
+source-wordcount: '266'
 ht-degree: 0%
-
 ---
-
 # Variables de entorno
 
 Adobe Commerce en la infraestructura de la nube le permite asignar variables de entorno para anular las opciones de configuración. El paquete `ece-tools` establece valores en el archivo `env.php` en función de los valores de [variables de nube](variables-cloud.md), las variables establecidas en [!DNL Cloud Console] y el archivo de configuración `.magento.env.yaml`.
@@ -29,10 +38,10 @@ Los tipos de variables de entorno incluyen:
 - [ADMIN](variables-admin.md): las variables anulan las variables de ADMIN del proyecto
 - [MAGENTO_CLOUD](variables-cloud.md): variables específicas de la infraestructura en la nube
 - Variables utilizadas en el archivo `.magento.env.yaml`:
-   - [Global](variables-global.md): las variables afectan a las fases de compilación, implementación y posteriores a la implementación
-   - [Build](variables-build.md): las variables controlan las acciones de compilación
-   - [Implementar](variables-deploy.md): las variables controlan las acciones de implementación
-   - [Después de la implementación](variables-post-deploy.md): las variables controlan las acciones después de la implementación
+  - [Global](variables-global.md): las variables afectan a las fases de compilación, implementación y posteriores a la implementación
+  - [Build](variables-build.md): las variables controlan las acciones de compilación
+  - [Implementar](variables-deploy.md): las variables controlan las acciones de implementación
+  - [Después de la implementación](variables-post-deploy.md): las variables controlan las acciones después de la implementación
 
 Las variables son _jerárquicas_, lo que significa que si una variable no se reemplaza, se hereda del entorno principal.
 

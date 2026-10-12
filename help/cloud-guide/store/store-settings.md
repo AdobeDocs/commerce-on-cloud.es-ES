@@ -3,37 +3,44 @@ title: Administración de configuración de tienda
 description: Obtenga información sobre cómo administrar y sincronizar los ajustes de configuración de la tienda en todos los entornos de Adobe Commerce en la nube.
 feature: Cloud, Configuration, SCD
 exl-id: 01850a7b-2c03-45e8-8051-b24ae95c5f87
-TQID: https://experienceleague.adobe.com/TF-K8g48q2fnuldOLdnwxjAJrxGzsRJlongd7cRqV9U
+TQID: 'https://experienceleague.adobe.com/TF-K8g48q2fnuldOLdnwxjAJrxGzsRJlongd7cRqV9U'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: d05f97c9-0a96-5792-92cf-f66ce7326e3a
+    internal-label: SCD
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Optimization
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 1512
+source-wordcount: '1512'
 ht-degree: 0%
-
 ---
-
 # Administración de configuración de tienda
 
 Las configuraciones predeterminadas para su tienda se almacenan en un `config.xml` para el módulo correspondiente. Cuando cambia la configuración en el administrador de Commerce o en el comando `bin/magento config:set` de CLI, los cambios se reflejan en la base de datos principal, específicamente en la tabla `core_config_data`. Esta configuración sobrescribe las configuraciones predeterminadas almacenadas en el archivo `config.xml`.
 
 La configuración del almacén, que hace referencia a las configuraciones de la sección Administración **Almacenes** > **Configuración** > **Configuración**, se almacena en los archivos de configuración de implementación en función del tipo de configuración:
 
-- `app/etc/config.php`: ajustes de configuración para tiendas, sitios web, módulos o extensiones, optimización de archivos estáticos y valores del sistema relacionados con la implementación de contenido estático. Consulte la [referencia de config.php](https://experienceleague.adobe.com/es/docs/commerce-operations/configuration-guide/files/config-reference-configphp) en la _Guía de configuración_.
-- `app/etc/env.php`: valores para invalidaciones específicas del sistema y configuración confidencial que deberían _NO_ almacenarse en el control de código fuente. Consulte la [referencia env.php](https://experienceleague.adobe.com/es/docs/commerce-operations/configuration-guide/files/config-reference-envphp) en la _Guía de configuración_.
+- `app/etc/config.php`: ajustes de configuración para tiendas, sitios web, módulos o extensiones, optimización de archivos estáticos y valores del sistema relacionados con la implementación de contenido estático. Consulte la [referencia de config.php](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/files/config-reference-configphp) en la _Guía de configuración_.
+- `app/etc/env.php`: valores para invalidaciones específicas del sistema y configuración confidencial que deberían _NO_ almacenarse en el control de código fuente. Consulte la [referencia env.php](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/files/config-reference-envphp) en la _Guía de configuración_.
 
 >[!NOTE]
 >
 >Como Adobe Commerce en la infraestructura en la nube solo admite los modos de producción y mantenimiento, no se puede acceder a la sección **Avanzado** > **Desarrollador** desde el administrador. Debe tener [privilegios de administrador del entorno](../project/user-access.md) para completar las tareas de administración de la configuración. Puede configurar opciones adicionales mediante [variables de entorno](../environment/configure-env-yaml.md).
 
-La administración de la configuración proporciona una forma de implementar configuraciones de tienda coherentes en todos los entornos con un tiempo de inactividad mínimo mediante la implementación de canalización. El proyecto de infraestructura de Adobe Commerce en la nube incluye el servidor de compilación, los scripts de compilación e implementación y los entornos de implementación diseñados teniendo en cuenta la [estrategia de implementación de canalización](https://experienceleague.adobe.com/es/docs/commerce-operations/configuration-guide/deployment/technical-details).
+La administración de la configuración proporciona una forma de implementar configuraciones de tienda coherentes en todos los entornos con un tiempo de inactividad mínimo mediante la implementación de canalización. El proyecto de infraestructura de Adobe Commerce en la nube incluye el servidor de compilación, los scripts de compilación e implementación y los entornos de implementación diseñados teniendo en cuenta la [estrategia de implementación de canalización](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/deployment/technical-details).
 
 ## Esquema de anulación de configuración
 
@@ -47,7 +54,7 @@ En resumen, las variables de entorno anulan todos los demás valores.
 
 >[!TIP]
 >
->Consulte [Administración de configuración](https://experienceleague.adobe.com/es/docs/commerce-operations/configuration-guide/deployment/technical-details) en la _Guía de configuración_ para obtener más información sobre el esquema de invalidación para la implementación de canalización.
+>Consulte [Administración de configuración](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/deployment/technical-details) en la _Guía de configuración_ para obtener más información sobre el esquema de invalidación para la implementación de canalización.
 
 Si la misma configuración se configura en varios lugares, la aplicación depende de la siguiente jerarquía de configuración para determinar qué valor se aplicará al entorno
 
@@ -80,7 +87,7 @@ Los datos &quot;descargados&quot; en el archivo `app/etc/config.php` se conviert
 
 Cualquier configuración confidencial se exporta al archivo `app/etc/env.php` cuando se usa el comando `bin/magento app:config:dump`. Puede establecer valores confidenciales mediante el comando CLI: `bin/magento config:sensitive:set`. Consulte [Configuración confidencial y específica del entorno](https://developer.adobe.com/commerce/php/development/configuration/sensitive-environment-settings) en la guía de _Extensiones de Commerce PHP_ para obtener información sobre cómo designar las opciones de configuración como confidenciales o específicas del sistema.
 
-Vea una lista de [configuraciones confidenciales o específicas del sistema](https://experienceleague.adobe.com/es/docs/commerce-operations/configuration-guide/paths/config-reference-sens) en la _Guía de configuración_.
+Vea una lista de [configuraciones confidenciales o específicas del sistema](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/paths/config-reference-sens) en la _Guía de configuración_.
 
 ### Rendimiento de SCD
 

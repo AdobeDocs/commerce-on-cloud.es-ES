@@ -3,24 +3,34 @@ title: Implementación sin tiempo de inactividad
 description: Aprenda a reducir el tiempo de inactividad general al implementar Adobe Commerce en proyectos de infraestructura en la nube.
 feature: Cloud, Deploy, SCD, Themes
 exl-id: c216c5e9-d787-4428-b67a-b6aee814ded5
-TQID: https://experienceleague.adobe.com/wYFZNd42AoVZxdlWWG6Jr-K6FV2XhTdWp-9HFoof4rE
+TQID: 'https://experienceleague.adobe.com/wYFZNd42AoVZxdlWWG6Jr-K6FV2XhTdWp-9HFoof4rE'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: bcd8874c-7b93-5596-bdaa-22660e84df14
+    internal-label: Deploy
+  - id: d05f97c9-0a96-5792-92cf-f66ce7326e3a
+    internal-label: SCD
+  - id: 8b440f30-6794-5ed6-981f-391de4e9b0cc
+    internal-label: Themes
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 503
+source-wordcount: '503'
 ht-degree: 0%
-
 ---
-
 # Implementación sin tiempo de inactividad
 
-Adobe Commerce en la infraestructura en la nube ejecuta la aplicación en [_mantenimiento_ modo](https://experienceleague.adobe.com/es/docs/commerce-operations/configuration-guide/setup/application-modes#production-mode) durante la fase de implementación, lo que desconecta el sitio hasta que se complete la implementación. El tiempo que el sitio de producción esté en modo de mantenimiento depende del tamaño del sitio, el número de cambios aplicados durante la implementación y la configuración para la implementación de contenido estático. Es posible configurar el proyecto de modo que se implemente con un efecto de tiempo de inactividad de **zero**.
+Adobe Commerce en la infraestructura en la nube ejecuta la aplicación en [_mantenimiento_ modo](https://experienceleague.adobe.com/en/docs/commerce-operations/configuration-guide/setup/application-modes#production-mode) durante la fase de implementación, lo que desconecta el sitio hasta que se complete la implementación. El tiempo que el sitio de producción esté en modo de mantenimiento depende del tamaño del sitio, el número de cambios aplicados durante la implementación y la configuración para la implementación de contenido estático. Es posible configurar el proyecto de modo que se implemente con un efecto de tiempo de inactividad de **zero**.
 
 Durante el proceso de implementación, todas las conexiones se ponen en cola durante un máximo de 5 minutos y conservan las sesiones activas y las acciones pendientes, como agregar al carro de compras o cerrar la compra. Después de la implementación, la cola se libera y las conexiones continúan sin interrupción. Para aprovechar esta _conexión_ y reducir el tiempo de inactividad de la implementación a _cero_, debe configurar el proyecto para que utilice la estrategia de implementación más eficiente.
 

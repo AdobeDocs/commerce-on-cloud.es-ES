@@ -4,26 +4,34 @@ description: Obtenga información sobre cómo administrar los requisitos de aute
 feature: Cloud, Security
 topic: Security
 exl-id: 90458fa8-42b0-4825-948e-56ef7884eb82
-TQID: https://experienceleague.adobe.com/KWGl-ZyF5aKZ-XxOOmL85ip8arBeH-G1pN5ckUdAqNw
+TQID: 'https://experienceleague.adobe.com/KWGl-ZyF5aKZ-XxOOmL85ip8arBeH-G1pN5ckUdAqNw'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: bd989d82-1e15-4534-88db-f1f51dd77ffa
+    internal-label: Accounts
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Security
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 1084
+source-wordcount: '1084'
 ht-degree: 0%
-
 ---
-
 # Habilitar la autenticación multifactor para el acceso SSH
 
 Para mayor seguridad, Adobe Commerce en la infraestructura en la nube proporciona aplicación de autenticación de varios factores (MFA) para administrar los requisitos de autenticación para el acceso SSH a los entornos en la nube.
@@ -32,7 +40,7 @@ Cuando MFA está habilitado en un proyecto, todas las cuentas de usuario con acc
 
 >[!NOTE]
 >
->MFA no está habilitado en los proyectos de Cloud de manera predeterminada. El propietario de la cuenta para el proyecto de Adobe Commerce en la nube debe [enviar un vale de soporte de Adobe Commerce](https://experienceleague.adobe.com/es/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) para habilitarlo. Cuando MFA está habilitado, todos los usuarios deben tener habilitada la autenticación de doble factor (TFA) en su cuenta de Adobe Commerce en la infraestructura de la nube para el acceso SSH a los entornos del proyecto.
+>MFA no está habilitado en los proyectos de Cloud de manera predeterminada. El propietario de la cuenta para el proyecto de Adobe Commerce en la nube debe [enviar un vale de soporte de Adobe Commerce](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket) para habilitarlo. Cuando MFA está habilitado, todos los usuarios deben tener habilitada la autenticación de doble factor (TFA) en su cuenta de Adobe Commerce en la infraestructura de la nube para el acceso SSH a los entornos del proyecto.
 
 ## Certificados para acceso SSH
 

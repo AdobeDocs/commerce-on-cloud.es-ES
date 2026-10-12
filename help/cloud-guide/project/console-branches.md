@@ -1,29 +1,38 @@
 ---
-title: Administrar ramas con  [!DNL Cloud Console]
-description: Obtenga información sobre cómo administrar las ramas de entorno para Adobe Commerce en la infraestructura en la nube mediante  [!DNL Cloud Console].
+title: Administrar ramas con [!DNL Cloud Console]
+description: Obtenga información sobre cómo administrar las ramas de entorno para Adobe Commerce en la infraestructura en la nube mediante [!DNL Cloud Console].
 role: Developer
 feature: Cloud, Install
 exl-id: 2c254586-b670-4dd7-8f82-edcc139e9800
-TQID: https://experienceleague.adobe.com/-9EfBaTgSBPQa6HspiaqngBtwURAeUGlNP9hREcXrQQ
+TQID: 'https://experienceleague.adobe.com/-9EfBaTgSBPQa6HspiaqngBtwURAeUGlNP9hREcXrQQ'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
   - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+    internal-label: Architecture
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: 6388cf7b-8a81-5248-a1e4-7bb57bbe250f
+    internal-label: Install
 subfeature_v2:
   - id: f8ddfd3b-6194-46e8-a176-0e918039be56
+    internal-label: Cloud architecture
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 52e52563cfe435f28ab153f737b537ebb476ab92
+    internal-label: Security
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 1642
+source-wordcount: '1642'
 ht-degree: 0%
-
 ---
-
 # Administrar ramas con [!DNL Cloud Console]
 
 Puede administrar sus entornos mediante la CLI [!DNL Cloud Console] o `magento-cloud`. Los archivos de proyecto se almacenan en un repositorio Git. Puede usar comandos Git para administrar su código, pero la CLI de `magento-cloud` está diseñada para interactuar con características de plataforma, mientras que los comandos Git no lo hacen. Consulte [Comandos Git](../dev-tools/cloud-cli-overview.md#git-commands) en el tema de la CLI de la nube.
@@ -47,7 +56,7 @@ La estrategia de ramificación utiliza un flujo de trabajo Git común en el que 
 
 Su cuenta admite un número limitado de ![ramas activas](../../assets/icon-active.png){width="32"} (activas) y un número ilimitado de ![ramas de desarrollo inactivas](../../assets/icon-inactive.png){width="32"} (inactivas). Administre ramas activas e inactivas agregando o eliminando una rama usando solamente la [!DNL Cloud Console] o la CLI de nube. Antes de eliminar una rama, debe desactivarla, que permanece en la lista _Entornos_ como _inactiva_. Puede reactivar la rama más tarde o [eliminar la rama](../dev-tools/cloud-cli-overview.md#) en la configuración del entorno o mediante la CLI de nube.
 
-Si necesita entornos activos adicionales para el desarrollo, envíe un [ticket de asistencia](https://experienceleague.adobe.com/es/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket).
+Si necesita entornos activos adicionales para el desarrollo, envíe un [ticket de asistencia](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide#submit-ticket).
 
 **Para agregar una rama**:
 
@@ -101,7 +110,7 @@ Antes de poder eliminar un entorno, debe desactivarlo. Una vez que un entorno es
 
 1. Haga clic en el icono de configuración en la parte derecha de la barra de navegación superior, que abre la configuración del entorno.
 
-1. En la ficha _[!UICONTROL General]_, desplácese hacia abajo hasta la sección&#x200B;_[!UICONTROL Deactivate environment]_, haga clic en **[!UICONTROL Deactivate environment and delete data]** y siga las instrucciones.
+1. En la ficha _[!UICONTROL General]_, desplácese hacia abajo hasta la sección_[!UICONTROL Deactivate environment]_, haga clic en **[!UICONTROL Deactivate environment and delete data]** y siga las instrucciones.
 
 ## Sincronizar un entorno
 

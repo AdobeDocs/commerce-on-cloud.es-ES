@@ -3,26 +3,43 @@ title: Configurar servicios de Fastly
 description: Obtenga información sobre cómo configurar, probar y almacenar en caché Fastly, los fragmentos de VCL y el cortafuegos de aplicaciones web (WAF) para los entornos de ensayo y producción.
 feature: Cloud, Configuration, Iaas, Cache, Security
 exl-id: f9ce1e8b-4e9f-488e-8a4d-f866567c41d8
-TQID: https://experienceleague.adobe.com/sDx6n5Qgt1lI3-3FDzhUR-JyKgI59woXmoVHSjKFT9w
+TQID: 'https://experienceleague.adobe.com/sDx6n5Qgt1lI3-3FDzhUR-JyKgI59woXmoVHSjKFT9w'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+    internal-label: Architecture
+  - id: e7dae43f-215c-4cdf-90d3-c5a461a6e669
+    internal-label: Admin tools and workspace
+subfeature_v2:
+  - id: df5e974b-6742-4873-a687-a6bedaafdaa2
+    internal-label: IaaS
+  - id: b673188e-f9fa-492a-b470-c8f949bf7827
+    internal-label: Cache
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
+    internal-label: Troubleshooting
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: 60adcf7e68659eb76895208cec80a93ddf690a2e
+    internal-label: Security
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 2216
+source-wordcount: '2216'
 ht-degree: 0%
-
 ---
-
 # Configurar servicios de Fastly
 
 Se requiere rápidamente para Adobe Commerce en entornos de ensayo y producción de infraestructura en la nube.
@@ -53,7 +70,7 @@ Necesita las credenciales de Fastly para configurar los servicios de CDN de Fast
 
 Con Adobe Commerce en la infraestructura en la nube, no puede acceder directamente al panel de administración de Fastly.
 
-Utilice el administrador de Adobe Commerce para revisar y actualizar la configuración de Fastly para sus entornos. Si no puede resolver un problema con las funciones de Fastly en el administrador, envíe un [ticket de soporte de Adobe Commerce](https://experienceleague.adobe.com/es/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide).
+Utilice el administrador de Adobe Commerce para revisar y actualizar la configuración de Fastly para sus entornos. Si no puede resolver un problema con las funciones de Fastly en el administrador, envíe un [ticket de soporte de Adobe Commerce](https://experienceleague.adobe.com/en/docs/support-resources/adobe-support-tools-guide/adobe-commerce-support/adobe-commerce-help-center-user-guide).
 
 ## Obtener credenciales rápidamente
 
@@ -89,7 +106,7 @@ En proyectos de Cloud Starter, obtenga las credenciales de la consola en la nube
 
 - Si no encuentra las credenciales de Fastly para los entornos de ensayo o producción, póngase en contacto con su asesor técnico del cliente de Adobe (CTA).
 
-- [Error al validar las credenciales de Fastly](https://experienceleague.adobe.com/es/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/error-when-validating-fastly-credentials#solution).
+- [Error al validar las credenciales de Fastly](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/troubleshooting/miscellaneous/error-when-validating-fastly-credentials#solution).
 
 ## Proteja sus credenciales
 
@@ -115,7 +132,7 @@ Necesita los siguientes componentes para habilitar y configurar los servicios de
 
    ![Expandir para seleccionar Fastly](../../assets/cdn/fastly-menu.png)
 
-1. En la sección _[!UICONTROL Caching Application]_, quite la selección de **[!UICONTROL Use system value]**&#x200B;y, a continuación, seleccione **[!UICONTROL Fastly CDN]**&#x200B;en la lista desplegable.
+1. En la sección _[!UICONTROL Caching Application]_, quite la selección de **[!UICONTROL Use system value]**y, a continuación, seleccione **[!UICONTROL Fastly CDN]**en la lista desplegable.
 
    ![Elegir rápidamente](../../assets/cdn/fastly-enable-admin.png)
 
@@ -163,13 +180,13 @@ Después de habilitar el módulo de Fastly, cargue el [código VCL predeterminad
 
 1. En la sección _[!UICONTROL Fastly Configuration]_, haga clic en **[!UICONTROL Upload VCL to Fastly]**, como se muestra en la siguiente ilustración.
 
-   ![Cargar una VCL de Magento en Fastly](../../assets/cdn/fastly-upload-vcl-admin.png)
+   ![Cargar una VCL de Magento a Fastly](../../assets/cdn/fastly-upload-vcl-admin.png)
 
 1. Una vez finalizada la carga, actualice la caché según la notificación que aparece en la parte superior de la página.
 
 ## Aprovisionar certificados SSL/TLS
 
-Adobe proporciona un certificado Let&#39;s Encrypt SSL/TLS validado por el dominio para servir tráfico HTTPS seguro desde Fastly. Adobe proporciona un certificado para cada entorno de Producción profesional, Ensayo y Producción inicial para proteger todos los dominios de ese entorno. Para obtener información detallada sobre el certificado proporcionado, consulte [Certificados SSL (TLS) de Adobe para Adobe Commerce en la infraestructura en la nube](https://experienceleague.adobe.com/es/docs/commerce-knowledge-base/kb/how-to/ssl-tls-certificates-for-magento-commerce-cloud-faq).
+Adobe proporciona un certificado Let&#39;s Encrypt SSL/TLS validado por el dominio para servir tráfico HTTPS seguro desde Fastly. Adobe proporciona un certificado para cada entorno de Producción profesional, Ensayo y Producción inicial para proteger todos los dominios de ese entorno. Para obtener información detallada sobre el certificado proporcionado, consulte [Certificados SSL (TLS) de Adobe para Adobe Commerce en la infraestructura en la nube](https://experienceleague.adobe.com/en/docs/commerce-knowledge-base/kb/how-to/ssl-tls-certificates-for-magento-commerce-cloud-faq).
 
 >[!NOTE]
 >
@@ -273,7 +290,7 @@ Para enrutar el tráfico desde las direcciones URL de la tienda al servicio Fast
 
    >[!NOTE]
    >
-   >Como alternativa al uso de la CLI de la nube, puede actualizar la URL base desde [Admin](https://experienceleague.adobe.com/es/docs/commerce-admin/stores-sales/site-store/store-urls)
+   >Como alternativa al uso de la CLI de la nube, puede actualizar la URL base desde [Admin](https://experienceleague.adobe.com/en/docs/commerce-admin/stores-sales/site-store/store-urls)
 
 1. Reinicie el explorador web.
 
@@ -311,7 +328,7 @@ Si los encabezados no tienen los valores correctos, consulte [Resolver errores e
 Actualiza rápidamente el módulo de Fastly CDN para Magento 2 para resolver problemas, aumentar el rendimiento y proporcionar nuevas funciones.
 Adobe recomienda actualizar el módulo Fastly en los entornos de ensayo y producción a la [última versión](https://github.com/fastly/fastly-magento2/blob/master/VERSION).
 
-Para obtener la información más reciente sobre versiones y actualizaciones de módulos, consulte las [Notas de la versión de Fastly CDN para el módulo de Magento2](https://github.com/fastly/fastly-magento2/blob/master/Release-Notes.md) en GitHub.
+Para obtener la información más reciente sobre versiones y actualizaciones de módulos, consulte las [Notas de la versión de Fastly CDN para el módulo Magento2](https://github.com/fastly/fastly-magento2/blob/master/Release-Notes.md) en GitHub.
 
 Después de actualizar el módulo, debe cargar el código VCL para aplicar los cambios a la configuración del servicio de Fastly.
 
@@ -319,7 +336,7 @@ Después de actualizar el módulo, debe cargar el código VCL para aplicar los c
 >
 > Si ha personalizado el código VCL predeterminado de Fastly con una versión personalizada, al actualizar el módulo Fastly se sobrescriben los cambios. Si ha añadido fragmentos de VCL personalizados con nombres únicos, esos cambios se conservan durante el proceso de actualización. Como práctica recomendada, actualice el entorno de ensayo y valide los cambios antes de aplicar los cambios al entorno de producción.
 
-**Para comprobar la versión del módulo de Fastly CDN para Magento 2**:
+**Para comprobar la versión del módulo CDN de Fastly para Magento 2**:
 
 1. Cambie al directorio raíz del entorno de Cloud.
 
@@ -350,4 +367,4 @@ Después de comprobar los servicios de Fastly en el sitio de ensayo, repita el p
 
 >[!TIP]
 >
-> Si tiene problemas con los servicios de Fastly en sus entornos de Adobe Commerce, consulte [Solucionador de problemas de Fastly de Adobe Commerce](https://experienceleague.adobe.com/es/docs/experience-cloud-kcs/kbarticles/ka-29661).
+> Si tiene problemas con los servicios de Fastly en sus entornos de Adobe Commerce, consulte [Solucionador de problemas de Fastly de Adobe Commerce](https://experienceleague.adobe.com/en/docs/experience-cloud-kcs/kbarticles/ka-29661).

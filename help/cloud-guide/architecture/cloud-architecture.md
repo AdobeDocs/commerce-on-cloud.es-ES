@@ -5,32 +5,47 @@ feature: Cloud, Iaas, Paas
 topic: Architecture
 recommendations: noDisplay
 exl-id: 7c1e895d-0f88-4f11-919a-b3b5748ca5f0
-TQID: https://experienceleague.adobe.com/01S8Fhs8J-qy3nc0lXGg3u17h66rF2Qgs2bRG135tVE
+TQID: 'https://experienceleague.adobe.com/01S8Fhs8J-qy3nc0lXGg3u17h66rF2Qgs2bRG135tVE'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: ba9e5be9-7de1-4f71-a5d2-baead0e425ee
+    internal-label: Security
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
   - id: e8818fe6-9c8b-4bc0-9ef8-377a10b7bc75
+    internal-label: Architecture
   - id: f42e0a1a-0d79-488d-a83f-f2c30672b137
+    internal-label: Reporting
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: 00451af3-7b97-5414-9992-3a6c269e413f
+    internal-label: Paas
 subfeature_v2:
   - id: df5e974b-6742-4873-a687-a6bedaafdaa2
+    internal-label: IaaS
   - id: f8ddfd3b-6194-46e8-a176-0e918039be56
+    internal-label: Cloud architecture
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: aa2f3246-cb95-4b30-8899-fdf7d73550cc
+    internal-label: Reporting
   - id: b5ce8718-c3af-4fdb-a1a9-fca32f83a87c
+    internal-label: Implementation
   - id: cdd65e7e-8839-44a2-bc21-0e03623b5dd1
+    internal-label: Optimization
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
-source-git-commit: d85c65f2c8c6fdb0ce016e894dd10d882525cc38
+    internal-label: Security
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 808
+source-wordcount: '808'
 ht-degree: 0%
-
 ---
-
 # Arquitectura de nube para Commerce
 
 Adobe Commerce en la infraestructura en la nube tiene un plan Starter y un plan Pro. Cada plan tiene una arquitectura única para dirigir el proceso de desarrollo e implementación de Adobe Commerce. Tanto el plan Starter como la arquitectura del plan Pro implementan bases de datos, servidores web y servidores de almacenamiento en caché en varios entornos para realizar pruebas de extremo a extremo y, al mismo tiempo, admiten la integración continua.
@@ -39,13 +54,13 @@ Para comparar, cada plan incluye las siguientes funciones de infraestructura y p
 
 |          | Starter | Pro |
 | -------- | --------------------| ------------------ |
-| Funciones principales | <ul><li>[Todas las características de Adobe Commerce](https://experienceleague.adobe.com/es/docs/commerce-operations/release/features)</li><li>Herramienta de incorporación de PayPal</li><li>[Informes de Commerce](https://business.adobe.com/es/products/magento/business-intelligence.html?_ga=2.85288604.442698376.1665067470-1322106587.1655147209)</li></ul> | <ul><li>[Todas las características de Adobe Commerce](https://experienceleague.adobe.com/es/docs/commerce-operations/release/features)</li><li>Herramienta de incorporación de PayPal</li><li>[Informes de Commerce](https://business.adobe.com/es/products/magento/business-intelligence.html?_ga=2.85288604.442698376.1665067470-1322106587.1655147209)</li><li>[Módulo B2B](https://business.adobe.com/es/products/magento/b2b-ecommerce.html?_ga=2.105948422.442698376.1665067470-1322106587.1655147209)</li></ul> |
+| Funciones principales | <ul><li>[Todas las características de Adobe Commerce](https://experienceleague.adobe.com/en/docs/commerce-operations/release/features)</li><li>Herramienta de incorporación de PayPal</li><li>[Informes de Commerce](https://business.adobe.com/products/magento/business-intelligence.html?_ga=2.85288604.442698376.1665067470-1322106587.1655147209)</li></ul> | <ul><li>[Todas las características de Adobe Commerce](https://experienceleague.adobe.com/en/docs/commerce-operations/release/features)</li><li>Herramienta de incorporación de PayPal</li><li>[Informes de Commerce](https://business.adobe.com/products/magento/business-intelligence.html?_ga=2.85288604.442698376.1665067470-1322106587.1655147209)</li><li>[Módulo B2B](https://business.adobe.com/products/magento/b2b-ecommerce.html?_ga=2.105948422.442698376.1665067470-1322106587.1655147209)</li></ul> |
 | Infraestructura e implementación | <ul><li>Herramientas de integración continua en la nube con usuarios ilimitados</li><li>Rápidamente, la red de distribución de contenido (CDN), la optimización de imágenes (IO) y la seguridad añadida con generosas asignaciones de ancho de banda. El servicio Web Application Firewall (WAF) solo está disponible en entornos de producción.</li><li>[New Relic](../monitor/new-relic-service.md) APM (supervisión del rendimiento) en 3 ramas: `master` y 2 de su elección<br>Entornos de producción, ensayo y desarrollo de Platform as a service (PaaS) optimizados para Adobe Commerce</li></ul> | <ul><li>Herramientas de integración continua en la nube con usuarios ilimitados</li><li>Rápidamente, la red de distribución de contenido (CDN), la optimización de imágenes (IO) y la seguridad añadida con generosas asignaciones de ancho de banda. El servicio Web Application Firewall (WAF) solo está disponible en entornos de producción.</li><li>Infraestructura de [New Relic](../monitor/new-relic-service.md) en producción + APM (supervisión del rendimiento) en ensayo y producción. La directiva [Alertas administradas](../monitor/investigate-performance.md#monitor-performance-with-managed-alerts) para Adobe Commerce implementa prácticas recomendadas de supervisión para notificarle de forma proactiva los problemas de infraestructura y aplicaciones que afectan el rendimiento del sitio.</li><li>Entornos [desarrollo de integración](pro-architecture.md#integration-environment) basados en la plataforma como servicio (PaaS) (2 entornos activos totales) optimizados para Adobe Commerce</li><li>Infraestructura como servicio (IaaS): infraestructura virtual dedicada para entornos de ensayo y producción</li></ul> |
 | Infraestructura de alta disponibilidad | | [Arquitectura de alta disponibilidad](pro-architecture.md#redundant-hardware) con una configuración de tres servidores en la infraestructura como servicio (IaaS) subyacente para proporcionar confiabilidad y disponibilidad de nivel empresarial |
 | Hardware dedicado | | Hardware aislado y dedicado en la infraestructura como servicio (IaaS) subyacente para proporcionar niveles aún más altos de fiabilidad y disponibilidad |
 | asistencia por correo electrónico ininterrumpida | Monitorización y asistencia por correo electrónico ininterrumpidas para la aplicación principal y la infraestructura en la nube | Monitorización y asistencia por correo electrónico ininterrumpidas para la aplicación principal y la infraestructura en la nube |
 | Un asesor técnico para clientes (CTA) | | Administración de cuentas técnicas dedicadas para el período de inicio, empezando por la suscripción hasta el inicio del sitio |
-| Complementos\* | <ul><li>[Módulo B2B](https://business.adobe.com/es/products/magento/b2b-ecommerce.html)</li></ul> | |
+| Complementos\* | <ul><li>[Módulo B2B](https://business.adobe.com/products/magento/b2b-ecommerce.html)</li></ul> | |
 
 \* _Disponible por una tarifa adicional_
 
@@ -96,7 +111,7 @@ Puede configurar los siguientes servicios:
 
 >[!NOTE]
 >
->Consulte [Requisitos del sistema](https://experienceleague.adobe.com/es/docs/commerce-operations/installation-guide/system-requirements) en la _Guía de instalación_ para ver las versiones recomendadas.
+>Consulte [Requisitos del sistema](https://experienceleague.adobe.com/en/docs/commerce-operations/installation-guide/system-requirements) en la _Guía de instalación_ para ver las versiones recomendadas.
 
 El módulo Fastly CDN se utiliza para los servicios de CDN y almacenamiento en caché en entornos de ensayo y producción. Consulte [Configurar servicios de Fastly](../cdn/fastly.md).
 
