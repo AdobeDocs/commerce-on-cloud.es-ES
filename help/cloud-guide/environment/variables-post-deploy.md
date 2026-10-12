@@ -5,20 +5,28 @@ feature: Cloud, Configuration, Cache
 recommendations: noDisplay, catalog
 role: Developer
 exl-id: 42523ff9-d8ca-470a-ac7b-d2ce21edd830
-TQID: https://experienceleague.adobe.com/w60X0FgUZr-ff1cJJmo5y8frgYW5MlR0pyBy8tTFfSg
+TQID: 'https://experienceleague.adobe.com/w60X0FgUZr-ff1cJJmo5y8frgYW5MlR0pyBy8tTFfSg'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: e7dae43f-215c-4cdf-90d3-c5a461a6e669
+    internal-label: Admin tools and workspace
+subfeature_v2:
+  - id: b673188e-f9fa-492a-b470-c8f949bf7827
+    internal-label: Cache
 role_v2:
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+    internal-label: Developer
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 516
+source-wordcount: '516'
 ht-degree: 0%
-
 ---
-
 # Variables posteriores a la implementación
 
 Las siguientes variables _posteriores a la implementación_ controlan las acciones en la fase posterior a la implementación y pueden heredar y anular los valores de las [variables globales](variables-global.md). Inserte estas variables en la fase `post-deploy` del archivo `.magento.env.yaml`:
@@ -104,54 +112,54 @@ Personalice la lista de páginas utilizadas para precargar la caché en la fase 
   <entity_type>:<pattern|url|product_sku>:<store_id|store_code>
   ```
 
-   - `entity_type`: posibles variantes `category`, `cms-page`, `product`, `store-page`
-   - `pattern|url|product_sku`: use un patrón `regexp` o una coincidencia exacta `url` para filtrar las direcciones URL, o use un asterisco (\*) para todas las páginas. Usar SKU de producto para el tipo de entidad `product`
-   - `store_id|store_code`: use el identificador o el código de la tienda o un asterisco (\*) para todas las tiendas, puede pasar varios identificadores o códigos de tienda separados por `|`
+  - `entity_type`: posibles variantes `category`, `cms-page`, `product`, `store-page`
+  - `pattern|url|product_sku`: use un patrón `regexp` o una coincidencia exacta `url` para filtrar las direcciones URL, o use un asterisco (\*) para todas las páginas. Usar SKU de producto para el tipo de entidad `product`
+  - `store_id|store_code`: use el identificador o el código de la tienda o un asterisco (\*) para todas las tiendas, puede pasar varios identificadores o códigos de tienda separados por `|`
 
   El siguiente ejemplo almacena en caché los tipos de entidad `category` y `cms-page` según estos criterios:
-   - todas las páginas de categoría de la tienda con id. `1`
-   - todas las páginas de categoría para tiendas con código `store1` y `store2`
-   - página de categoría `cars` para el almacén con código `store_en`
-   - página de cms `contact` para todas las tiendas
-   - página cms `contact` para tiendas con ID `1` y `2`
-   - cualquier página de categoría que contenga `car_` y termine con `html` para la tienda con ID 2
-   - cualquier página de categoría que contenga `tires_` para la tienda con código `store_gb`
+  - todas las páginas de categoría de la tienda con id. `1`
+  - todas las páginas de categoría para tiendas con código `store1` y `store2`
+  - página de categoría `cars` para el almacén con código `store_en`
+  - página de cms `contact` para todas las tiendas
+  - página cms `contact` para tiendas con ID `1` y `2`
+  - cualquier página de categoría que contenga `car_` y termine con `html` para la tienda con ID 2
+  - cualquier página de categoría que contenga `tires_` para la tienda con código `store_gb`
 
-     ```yaml
-     stage:
-       post-deploy:
-         WARM_UP_PAGES:
-           - "category:*:1"
-           - "category:*:store1|store2"
-           - "category:cars:store_en"
-           - "cms-page:contact:*"
-           - "cms-page:contact:1|2"
-           - "category:|car_.*?\\.html$|:2"
-           - "category:|tires_.*|:store_gb"
-     ```
+    ```yaml
+    stage:
+      post-deploy:
+        WARM_UP_PAGES:
+          - "category:*:1"
+          - "category:*:store1|store2"
+          - "category:cars:store_en"
+          - "cms-page:contact:*"
+          - "cms-page:contact:1|2"
+          - "category:|car_.*?\\.html$|:2"
+          - "category:|tires_.*|:store_gb"
+    ```
 
   El siguiente ejemplo almacena en caché el tipo de entidad `product` según estos criterios:
-   - todos los productos para todas las tiendas (con una programación limitada a 100 por tienda para evitar problemas de rendimiento)
-   - todos los productos de la tienda `store1`
-   - productos con `sku1` para todas las tiendas
-   - productos con `sku1` para tiendas con código `store1` y `store2`
-   - productos con `sku1`, `sku2` y `sku3` para tiendas con código `store1` y `store2`
+  - todos los productos para todas las tiendas (con una programación limitada a 100 por tienda para evitar problemas de rendimiento)
+  - todos los productos de la tienda `store1`
+  - productos con `sku1` para todas las tiendas
+  - productos con `sku1` para tiendas con código `store1` y `store2`
+  - productos con `sku1`, `sku2` y `sku3` para tiendas con código `store1` y `store2`
 
-     ```yaml
-     stage:
-       post-deploy:
-         WARM_UP_PAGES:
-           - "product:*:*"
-           - "product:*:store1"
-           - "product:sku1:*"
-           - "product:sku1:store1|store2"
-           - "product:sku1|sku2|sku3:store1|store2"
-     ```
+    ```yaml
+    stage:
+      post-deploy:
+        WARM_UP_PAGES:
+          - "product:*:*"
+          - "product:*:store1"
+          - "product:sku1:*"
+          - "product:sku1:store1|store2"
+          - "product:sku1|sku2|sku3:store1|store2"
+    ```
 
   El siguiente ejemplo almacena en caché el tipo de entidad `store-page` según estos criterios:
-   - página `/contact-us` para todas las tiendas
-   - página `/contact-us` para tienda con ID `1`
-   - página `/contact-us` para tiendas con código `code1` y `code2`
+  - página `/contact-us` para todas las tiendas
+  - página `/contact-us` para tienda con ID `1`
+  - página `/contact-us` para tiendas con código `code1` y `code2`
 
   ```yaml
         stage:

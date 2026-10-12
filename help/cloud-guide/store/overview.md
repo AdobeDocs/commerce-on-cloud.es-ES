@@ -3,23 +3,30 @@ title: Información general sobre las opciones de tienda y la administración de
 description: Personalice su tienda Adobe Commerce en la infraestructura en la nube.
 feature: Cloud, Configuration, Services
 exl-id: e653172f-7370-4761-b2ce-3a420b33b948
-TQID: https://experienceleague.adobe.com/iseYcfjh61-4ArUf9rKBGKFVuOz1dbS1xVq-FYiCxsw
+TQID: 'https://experienceleague.adobe.com/iseYcfjh61-4ArUf9rKBGKFVuOz1dbS1xVq-FYiCxsw'
 product_v2:
   - id: eadea719-cf89-469b-a6fd-a236a7138047
+    internal-label: Commerce
 feature_v2:
   - id: dac87252-6066-4d6e-a9d2-f6d84c323de7
+    internal-label: Configuration
+  - id: 5a951749-fac9-5bc7-9a98-ebe4ff066437
+    internal-label: Cloud
+  - id: da76473c-f99b-5ad0-9b14-896aed473f8a
+    internal-label: Services
 role_v2:
   - id: c66ffd68-0f65-42bb-aa23-b4020f12e0bd
+    internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
+    internal-label: Developer
 topic_v2:
   - id: c1579802-ddd4-4214-8a91-97b2066abe11
-source-git-commit: fd3ef8201c368f889344452e334976070a6c7157
+    internal-label: Troubleshooting
+source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
 workflow-type: tm+mt
-source-wordcount: 193
+source-wordcount: '193'
 ht-degree: 0%
-
 ---
-
 # Información general sobre las opciones de tienda y la administración de configuración
 
 Existen muchas formas de personalizar la tienda, como añadir una temática personalizada, instalar una extensión o aplicar una configuración específica en entornos de infraestructura en la nube. Puede configurar las opciones de servicios específicos directamente en los entornos de ensayo y producción. Puede configurar varios sitios web y tiendas. La configuración de Almacenamiento le ayuda a configurar estas opciones en su estación de trabajo local e implementar configuraciones específicas en entornos.
