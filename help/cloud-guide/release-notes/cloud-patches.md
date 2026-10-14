@@ -29,9 +29,9 @@ topic_v2:
     internal-label: Optimization
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
     internal-label: Security
-source-git-commit: 6f7a0fb23a3b479c766f82273658d4404707a171
+source-git-commit: df46dbad973a1042e02fccc47c3fc17227a453a5
 workflow-type: tm+mt
-source-wordcount: '3097'
+source-wordcount: '3098'
 ht-degree: 0%
 ---
 # Parches de nube para Commerce
@@ -60,7 +60,7 @@ El paquete `magento/magento-cloud-patches` usa la siguiente secuencia de version
 
 Fecha de la versión: 13 de octubre de 2026
 
-- ![Icono de correcciones](../../assets/fix.svg) **Mejoras de seguridad**—Se han aplicado las correcciones de seguridad a las que se hace referencia en [Actualización de seguridad de Adobe Commerce APSB26-153](https://helpx.adobe.com/security/products/magento/apsb26-153.html).<!--MCLOUD-15727 -->
+- ![Icono de correcciones](../../assets/fix.svg) **Mejoras de seguridad**—Se han aplicado las correcciones de seguridad a las que se hace referencia en [Actualización de seguridad de Adobe Commerce APSB26-153](https://www.adobe.com/trust/security/products/commerce/apsb26-153.html).<!--MCLOUD-15727 -->
 
 ## v1.1.21
 
@@ -408,7 +408,7 @@ Fecha de la versión: 12 de mayo de 2020
 
 - **Mejora del rendimiento del sitio**: corrige un problema de rendimiento con la función `Magento\Framework\App\DeploymentConfig\Reader::load`, que periódicamente experimentaba largos tiempos de carga que afectaban al rendimiento del sitio. <!--MCLOUD-5650-->
 
-- Se ha actualizado la asignación de parches para los parches de método de pago con el fin de que se dirijan a los módulos de pago en lugar del paquete base de Magento (base de Magento/magento2), de modo que los parches de pago se apliquen únicamente si existen los módulos de pago.<!--MCLOUD-5666-->
+- Se ha actualizado la asignación de parches para los parches de métodos de pago con el fin de que se dirijan a los módulos de pago en lugar del paquete base de Magento (base de magento/magento2), de modo que los parches de pago se apliquen únicamente si existen los módulos de pago.<!--MCLOUD-5666-->
 
 - Se han actualizado los parches para la compatibilidad con Magento Open Source.<!--MCLOUD-5701-->
 
