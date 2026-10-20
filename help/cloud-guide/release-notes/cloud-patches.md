@@ -29,9 +29,9 @@ topic_v2:
     internal-label: Optimization
   - id: d095671a-1355-40aa-8b5f-06c33c68080b
     internal-label: Security
-source-git-commit: df46dbad973a1042e02fccc47c3fc17227a453a5
+source-git-commit: d7aff88a23f73345c5ad5c80f1131b77a8f797ca
 workflow-type: tm+mt
-source-wordcount: '3098'
+source-wordcount: '3143'
 ht-degree: 0%
 ---
 # Parches de nube para Commerce
@@ -56,7 +56,13 @@ El paquete `magento/magento-cloud-patches` usa la siguiente secuencia de version
 
 <!--Add release notes below-->
 
-## v1.1.22 {#latest}
+## v1.1.23 {#latest}
+
+Fecha de la versión: 19 de octubre de 2026
+
+- ![icono de corrección](../../assets/fix.svg) **Mejoras de seguridad**: se ha actualizado la revisión de seguridad aislada de octubre de 2026 para 2.4.8-p5 a fin de incluir protecciones de seguridad adicionales (defensa en profundidad) para reducir aún más el riesgo. Ver [KA-50927](https://experienceleague.adobe.com/es/docs/experience-cloud-kcs/kbarticles/ka-50927).<!--MCLOUD-15841 -->
+
+## v1.1.22
 
 Fecha de la versión: 13 de octubre de 2026
 
