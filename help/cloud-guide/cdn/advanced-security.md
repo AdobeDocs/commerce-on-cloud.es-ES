@@ -18,9 +18,9 @@ role_v2:
     internal-label: Admin
   - id: ff6a42d2-313e-452e-93a6-792e4fad9ff8
     internal-label: Developer
-source-git-commit: e6e0bd8e116b2f0b93557b6aeb2aac7cbb8e1d8a
+source-git-commit: 800e5c27d4d0879bafd32101fd70ec0f00f1880c
 workflow-type: tm+mt
-source-wordcount: '2514'
+source-wordcount: '2599'
 ht-degree: 0%
 ---
 # [!DNL Adobe Commerce Advanced Security]
@@ -57,11 +57,11 @@ ht-degree: 0%
 >
 >**Limitaciones actuales**
 >
->Hasta finales del tercer trimestre de 2026, los clientes no podrán modificar ni administrar directamente las reglas de administración de bots.
+>Actualmente, los clientes no pueden modificar ni administrar directamente las reglas de Administración de bots.
 >
 >Para cualquier adición, modificación o ajuste de regla, póngase en contacto con el Soporte técnico de Adobe Commerce a través de un [ticket de asistencia](https://experienceleague.adobe.com/home?lang=es&support-tab=home#support). El equipo de asistencia implementará los cambios solicitados.
 >
->A partir del cuarto trimestre de 2026, se ha programado que Fastly publique una función de complemento que permitirá a los clientes administrar las reglas de administración de bots en el panel de administración de Commerce.
+>A partir del primer trimestre de 2027, se ha programado el lanzamiento de Fastly una función de complemento que permitirá a los clientes administrar las reglas de administración de bots en el administrador de Commerce.
 
 ## Reglas y protecciones predeterminadas
 
@@ -174,6 +174,12 @@ Se recomienda abordar los siguientes escenarios con [!DNL Advanced Security]:
 | Las direcciones URL o los extremos de API específicos están dirigidos a tráfico distribuido de gran volumen que la dirección IP no puede bloquear | La limitación avanzada de velocidad proporciona controles granulares para extremos específicos y patrones de tráfico |
 | Desea administrar los rastreadores de IA y los buscadores que acceden al contenido de la tienda | La administración de bots incluye políticas configurables de detección y aplicación de bots de IA |
 | Necesita una solución de seguridad perimetral compatible con Adobe integrada con su CDN de Fastly existente | [!DNL Advanced Security] se ejecuta en la misma plataforma de Fastly edge que ya atiende tu tienda |
+
+#### Directrices para implementaciones sin encabezado
+
+Si su sitio de Adobe Commerce utiliza una implementación sin encabezado, en la que la tienda no es la tienda predeterminada de Adobe Commerce y está alojada o entregada a través de un proveedor de tienda independiente, considere dónde se está sirviendo el tráfico afectado antes de seleccionar una solución de protección de bots.
+
+Para el tráfico de tiendas, si la actividad de bots o rastreadores se dirige principalmente a páginas de tiendas de front-end, como páginas de detalles de productos (PDP), páginas de listas de productos (PLP) o páginas de categorías, colabore con su proveedor de tiendas para evaluar la administración de bots o las capacidades de seguridad disponibles para esa tienda.
 
 ### Cuándo utilizar las protecciones existentes
 
